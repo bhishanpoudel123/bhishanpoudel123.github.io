@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 style="background-color:tomato;">
+Project Description
+</h1>
+<p>In this project, I build a scorecard for the insurance modelling. The data is taken from <a href="https://www.lendingclub.com/">lending club</a>. Here, I am using years 2007-2014 for data and 2015 as testing.</p>
+<h1 style="background-color:tomato;">
+Data Preparation
+</h1>
+<p>For the insurance data modelling, I binned the continous variables using Weight of Evidence methods. For example, the continous feature <code>open_acc</code> was broken into multiple discrete bins as shown below: <img src="notebooks/images/open_acc.png" /> There are many small number and woe curve is flat. I looked at number of observations and group them to following bins:</p>
+<pre><code>open_acc:&lt;=3
+open_acc:4_5
+open_acc:6_13
+open_acc:13_17
+open_acc:&gt;17</code></pre>
+<h1 style="background-color:tomato;">
+Insurance Modelling
+</h1>
+<p>Then with the clean binned data, I used logistic regression to estimate the probability of good and bad policies. - Build logistic regression and got the p-values. - Feature selection using p_values - Logistic Regression with p-values selected features. - Do the model evaluation on test data. - Plot Gini Curve. - Plot Kolmogorov-Smirnov curve. - Then I built the scorecard. <img src="notebooks/images/gini_curve.png" /> <img src="notebooks/images/ks_curve.png" /> <img src="notebooks/images/df_scorecard.png" /></p>
+<h1 style="background-color:tomato;">
+EDA Results
+</h1>
+<p><img src="notebooks/images/dti.png" /> <img src="notebooks/images/annual_inc.png" /> <img src="notebooks/images/loan_amnt.png" /></p>
+</body>
+</html>

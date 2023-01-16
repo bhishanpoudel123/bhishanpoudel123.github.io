@@ -1,0 +1,14 @@
+/**************
+ * Two sided dev
+ * Ref: https://stackoverflow.com/questions/5387392/how-to-get-these-two-divs-side-by-side
+ */
+#parent_div_1, #parent_div_2{
+    width:100px;
+    height:100px;
+    margin-right:10px;
+    float:left;
+}
+.child_div_1{
+    float:left;
+    margin-right:5px;
+}

@@ -1,0 +1,14 @@
+Certificates
+
+1. Deep learning A-Z ANN (udemy)
+   I have not completed the course.
+
+2. Python data structure (udemy)
+   It does not have certificate.
+
+3. Learn Tableau Desktop for Accurate Business Analysis (udemy)
+   This is free course and it does not have certificate.
+
+4. Intro to tableau
+   I have certificate but no GitHub.
+

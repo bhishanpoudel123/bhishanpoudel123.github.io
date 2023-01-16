@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#installation-and-uninstallation-of-mysql-on-local-machine">Installation and Uninstallation of MySQL on Local Machine</a></li>
+<li><a href="#installing-postgresql-on-macos-mojave">Installing postgresql on MacOS Mojave</a></li>
+<li><a href="#syntax-highlight-sql-codes">syntax highlight SQL codes</a>
+<ul>
+<li><a href="#install-magiclight">Install magiclight</a></li>
+<li><a href="#this-method-did-not-worked-for-me-in-july-2021">This method did not worked for me in July 2021</a></li>
+</ul>
+</li>
+<li><a href="#using-jupyter-cell-magic-sql-and-inline-magic-sql">Using jupyter cell magic \x\xsql and inline magic \xsql</a></li>
+<li><a href="#online-websites-to-learn-sql">Online websites to learn SQL</a></li>
+<li><a href="#using-sql-magic-in-jupyter-notebook">Using sql magic in jupyter notebook</a></li>
+<li><a href="#jupyter-notebook-code-format-for-sql">Jupyter notebook code format for SQL</a></li>
+</ul>
+<h1 id="installation-and-uninstallation-of-mysql-on-local-machine">Installation and Uninstallation of MySQL on Local Machine</h1>
+<ul>
+<li>https://dev.mysql.com/downloads/mysql/   then download
+<ul>
+<li>MySQL Community Server</li>
+<li>MySQL Shell</li>
+<li>MySQL Workbench</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># after installing mysql server and mysql shell</span>
+<span class="hljs-comment"># add a path to mysql in .bash_profile</span>
+
+<span class="hljs-comment"># inside ~/.bash_profile</span>
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">${PATH}</span>:/usr/<span class="hljs-built_in">local</span>/mysql/bin/
+
+<span class="hljs-comment"># in the terminal</span>
+mysql -u root -p
+
+show databases;
+use mysql;
+show tables;
+
+<span class="hljs-comment"># Uninstallation if you have used homebrew</span>
+https://gist.github.com/vitorbritto/0555879fe4414d18569d
+</div></code></pre>
+<h1 id="installing-postgresql-on-macos-mojave">Installing postgresql on MacOS Mojave</h1>
+<ul>
+<li>First install pgadmin4 separately, copy the app to Applications.</li>
+<li>Then, go to <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">postgresql download website</a></li>
+<li>Choose 11.5 for macOS which is the latest version.</li>
+<li>Install the dmg file, UNCHECK pgadmin4, give password and other credentials. Save credentials at <code>~/.postgres_conf.yaml</code>.</li>
+<li>I have example postgresql database called <code>dvdrental.tar</code> here in github, download it to <code>~/Datasets/SQL/dvdrental.tar</code>, do not untar it, just download it to <code>~/Datasets/SQL/dvdrental/dvdrental.tar</code>. I can double click and open the .dat files inside it in office computer Yosemite, but in my laptop Mojave double click can not open it, also tar -xvz does not work. Basically Mojave have no any method to uncompress that file that it to my knowledge.</li>
+<li>Open the app pgAdmin, it will show the servers icon on left hand side.</li>
+<li>For some reasons, pgadmin still shows postgres10, it is crossed by red cross sign, it is unused, just ignore it.
+postgres11 is blue and shows its active and running good.</li>
+<li>Servers &gt; PostgreSQL11 &gt; Databases &gt; right click &gt; Create database &gt; give name dvdrental.</li>
+<li>Servers &gt; Databases &gt; dvdrental &gt; right click &gt; restore &gt; Go to file name and click ... button to go to Finder
+and locate the file <code>dvdrental.tar</code>, it will be hidden, but change Format backupt to All files in right bottom corner
+of window and dvdrental.tar is shown, select it.</li>
+<li>This shows errors, ignore it.</li>
+<li>Restart pgAdmin couple of times, it shows error, but if you see tables you are fine. (Confirmed worked: Sep 12, 2019)</li>
+<li>Go to dvdrental &gt; Schemas &gt; Tables &gt; actor &gt; Column to see the columns for the table <code>actor</code> of database <code>dvdrental</code>.</li>
+<li>Right click dvdrental database &gt; Query tool</li>
+<li>Do some queries like <code>SELECT * FROM customer limit 5;</code></li>
+<li>Now go to your favorite conda env and install psycopg2 and setup sql magic in jupyter notebook.</li>
+<li>WARNING: In this dvdrental file the table <code>staff</code> is corrupted, it runs fine in pgadmin but fails in jupyter notebook.</li>
+</ul>
+<h1 id="syntax-highlight-sql-codes">syntax highlight SQL codes</h1>
+<h2 id="install-magiclight">Install magiclight</h2>
+<ul>
+<li>download the github repo <a href="https://github.com/wRosie/notebook_magiclight">notebook_magiclight</a></li>
+<li>keep this as <code>~/.jupyter/notebook_magiclight</code></li>
+<li>it only works for cell magic <code>%%sql</code> but does not work for inline magic <code>%sql</code>.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># download the github repo and put it in ~/.jupyter</span>
+ls ~/.jupyter <span class="hljs-comment"># there should be a folder notebook_magicligh</span>
+sudo -H jupyter nbextension install ~/.jupyter/notebook_magiclight <span class="hljs-comment"># without sudo it does not work</span>
+jupyter nbextension <span class="hljs-built_in">enable</span> notebook_magiclight/index
+</div></code></pre>
+<h2 id="this-method-did-not-worked-for-me-in-july-2021">This method did not worked for me in July 2021</h2>
+<p>Ref: https://stackoverflow.com/questions/43641362/adding-syntax-highlighting-to-jupyter-notebook-cell-magic/43686552</p>
+<p>Put following text in  ~/.jupyter/custom/custom.js</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">require</span>([<span class="hljs-string">'notebook/js/codecell'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">codecell</span>) </span>{
+  codecell.CodeCell.options_default.highlight_modes[<span class="hljs-string">'magic_text/x-mssql'</span>] = {<span class="hljs-string">'reg'</span>:[<span class="hljs-regexp">/^%%sql/</span>]} ;
+  Jupyter.notebook.events.one(<span class="hljs-string">'kernel_ready.Kernel'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  Jupyter.notebook.get_cells().map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cell</span>)</span>{
+      <span class="hljs-keyword">if</span> (cell.cell_type == <span class="hljs-string">'code'</span>){ cell.auto_highlight(); } }) ;
+  });
+});
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">// Date: Aug 4, 2020</span>
+<span class="hljs-comment">// purpose: syntax hightlight google bigquery</span>
+<span class="hljs-comment">// cell magic: %%bigquery</span>
+<span class="hljs-built_in">require</span>([<span class="hljs-string">'notebook/js/codecell'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">codecell</span>) </span>{
+  codecell.CodeCell.options_default.highlight_modes[<span class="hljs-string">'magic_text/x-mssql'</span>] = {<span class="hljs-string">'reg'</span>:[<span class="hljs-regexp">/^%%bigquery/</span>]} ;
+  Jupyter.notebook.events.one(<span class="hljs-string">'kernel_ready.Kernel'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  Jupyter.notebook.get_cells().map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cell</span>)</span>{
+      <span class="hljs-keyword">if</span> (cell.cell_type == <span class="hljs-string">'code'</span>){ cell.auto_highlight(); } }) ;
+  });
+});
+</div></code></pre>
+<h1 id="using-jupyter-cell-magic-sql-and-inline-magic-sql">Using jupyter cell magic %%sql and inline magic %sql</h1>
+<ul>
+<li>These magics are provided by <code>ipython-sql</code> module.</li>
+<li>postgres requires additional <code>psycopg2</code> module from conda not pip.</li>
+<li>sqlite needs additional moduel <code>sqlite3</code></li>
+</ul>
+<pre class="hljs"><code><div>%load_ext sql
+%config SqlMagic.displaycon=<span class="hljs-literal">False</span>
+%config SqlMagic.feedback=<span class="hljs-literal">False</span>  <span class="hljs-comment"># no Done, rows affected</span>
+%config SqlMagic.autopandas=<span class="hljs-literal">True</span>
+
+<span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> %sql does not need pyspark, it needs only postgres, sqlite, msserver etc</span>
+
+<span class="hljs-comment"># for sqlite we need to install sqlite</span>
+%sql sqlite::/
+%sql sqlite:////Volumes/Media/github/Tutorials_and_Lessons/SQL/a05_sqlite3/mydb.db
+
+
+<span class="hljs-comment"># for postgres we need to install psycopg2 and pgadmin MUST be running</span>
+<span class="hljs-keyword">import</span> os,json
+data = json.load(open(os.path.expanduser(<span class="hljs-string">'~/.config/postgres/credentials.json'</span>)))
+pw,port = data[<span class="hljs-string">'password'</span>], data[<span class="hljs-string">'port'</span>]
+
+%sql postgres://postgres:$pw@localhost:$port/<span class="hljs-keyword">try</span> <span class="hljs-comment"># user=postgres, localhost=localhost, port=5432</span>
+
+</div></code></pre>
+<h1 id="online-websites-to-learn-sql">Online websites to learn SQL</h1>
+<ul>
+<li>https://practice.datacamp.com/p/15</li>
+<li>https://modeanalytics.com/home/bhishan/search</li>
+<li>https://community.modeanalytics.com/sql/tutorial/sql-in-mode/  # tutorial</li>
+<li>https://www.youtube.com/watch?v=9Pzj7Aj25lw</li>
+</ul>
+<h1 id="using-sql-magic-in-jupyter-notebook">Using sql magic in jupyter notebook</h1>
+<p>Ref: https://www.datacamp.com/community/tutorials/sql-interface-within-jupyterlab</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">source</span> activate spk
+<span class="hljs-built_in">which</span> pip
+/Users/poudel/miniconda3/bin/pip install ipython-sql
+
+conda install psycopg2 -n spk -c conda-forge <span class="hljs-comment"># pip install psycopg2 FAILS</span>
+
+
+<span class="hljs-comment"># Now open the jupyter notebook and use env dataSc</span>
+<span class="hljs-comment"># If we use postgres, then PgAdmin must be running.</span>
+%load_ext sql
+
+<span class="hljs-comment"># create database</span>
+%%sql
+CREATE TABLE EMPLOYEE(firstname varchar(50),lastname varchar(50));
+INSERT INTO EMPLOYEE VALUES(<span class="hljs-string">'Tom'</span>,<span class="hljs-string">'Mitchell'</span>);
+INSERT INTO EMPLOYEE VALUES(<span class="hljs-string">'Jack'</span>,<span class="hljs-string">'Ryan'</span>);
+
+<span class="hljs-comment"># read database</span>
+%sql SELECT * from EMPLOYEE;
+
+<span class="hljs-comment"># read database</span>
+%%sql
+SELECT * from EMPLOYEE;
+</div></code></pre>
+<h1 id="jupyter-notebook-code-format-for-sql">Jupyter notebook code format for SQL</h1>
+<ul>
+<li>Open jupyter notebook in dataSc environment where I have installed nbextension configurator.</li>
+<li>Edit &gt; nbextensions config &gt; code_prettify &gt; json defining library</li>
+</ul>
+<p>Paste following code:</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"python"</span>: {
+    <span class="hljs-attr">"library"</span>: <span class="hljs-string">"import json\r\n \r\ndef code_reformat(cell_text):\r\n    import yapf.yapflib.yapf_api\r\n    import sqlparse\r\n    import re\r\n \r\n    pyspark_sql_head = \"#%%sql\"\r\n    if cell_text.startswith(pyspark_sql_head):\r\n        sql = cell_text.split(pyspark_sql_head)\r\n        pat = r\"\"\"\\\"\\\"\\\"(.*?)\\\"\\\"\\\"|'''(.*?)'''|\"(.*?)\"|'(.*?)'\"\"\"\r\n        sql = re.search(pat,cell_text,flags=re.MULTILINE|re.DOTALL)[0]\r\n        sql = sql.replace(\"'\",'').replace('\"','')\r\n        formatted_sql = sqlparse.format(sql, keyword_case='upper',reindent=True)\r\n\r\n        pat2 = r\"(.*)\" + re.escape('\"\"\"' + sql + '\"\"\"') + \"(.*)\"\r\n        pre = re.match(pat2,cell_text,flags=re.DOTALL).groups()[0]\r\n        post = re.match(pat2,cell_text,flags=re.DOTALL).groups()[1]\r\n        formatted_post = yapf.yapflib.yapf_api.FormatCode(post)[0]\r\n\r\n        reformatted_text = pre + '\"\"\"' + formatted_sql + '\\n\"\"\"\\n'+ formatted_post\r\n\r\n        return reformatted_text\r\n\r\n    def sqlmatch(match):\r\n        return '%sql'+sqlparse.format(match.group(1), keyword_case='upper')\r\n \r\n    comment = '--%--' if cell_text.startswith('%%sql') else '#%#'\r\n    cell_text = re.sub('^%', comment, cell_text, flags=re.M)\r\n    \r\n    reformatted_text = yapf.yapflib.yapf_api.FormatCode(cell_text)[0] if comment=='#%#' else sqlparse.format(cell_text, keyword_case='upper', reindent=True)\r\n    \r\n    reformatted_text = re.sub('^{}'.format(comment), '%', reformatted_text, flags=re.M)\r\n    if not cell_text.startswith('%%sql'):\r\n        reformatted_text=re.sub('%sql(.*)',sqlmatch , reformatted_text, re.MULTILINE)\r\n    return reformatted_text"</span>,
+    <span class="hljs-attr">"prefix"</span>: <span class="hljs-string">"print(json.dumps(code_reformat(u"</span>,
+    <span class="hljs-attr">"postfix"</span>: <span class="hljs-string">")))"</span>
+  },
+  <span class="hljs-attr">"r"</span>: {
+    <span class="hljs-attr">"library"</span>: <span class="hljs-string">"library(formatR)\nlibrary(jsonlite)"</span>,
+    <span class="hljs-attr">"prefix"</span>: <span class="hljs-string">"cat(toJSON(paste(tidy_source(text="</span>,
+    <span class="hljs-attr">"postfix"</span>: <span class="hljs-string">", output=FALSE)[['text.tidy']], collapse='\n')))"</span>
+  },
+  <span class="hljs-attr">"javascript"</span>: {
+    <span class="hljs-attr">"library"</span>: <span class="hljs-string">"jsbeautify = require('js-beautify')"</span>,
+    <span class="hljs-attr">"prefix"</span>: <span class="hljs-string">"console.log(JSON.stringify(jsbeautify.js_beautify("</span>,
+    <span class="hljs-attr">"postfix"</span>: <span class="hljs-string">")));"</span>
+  }
+}
+</div></code></pre>
+
+</body>
+</html>

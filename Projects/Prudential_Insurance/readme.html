@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 style="background-color:tomato;">
+Project Description
+</h1>
+<ul>
+<li>Author: <a href="https://bhishanpdl.github.io/index.html">Bhishan Poudel</a></li>
+<li>Project: Prudential Life Insurance policy prediction (<a href="https://www.prudential.com/">Company</a>)</li>
+<li>Kaggle project page: <a href="https://www.kaggle.com/c/prudential-life-insurance-assessment">Prudential Life Insurance Assessment</a></li>
+<li>Task: Multiclass classification (Response 1 to 8)</li>
+<li>Metric of evaluation: Quadratic Weighted Kappa</li>
+</ul>
+<p>Data</p>
+<pre><code>Here Response 8 has the highest counts, I assume it the quote that is granted.
+
+Records: 60k
+Features: 127
+Target: Response (has 8 categories, 1-8)
+
+Features:
+
+1 Misc             : Age ht wt bmi              4
+2 Product Info     : Product_Info_1 to 7        7
+3 Employment Info  : Employment_Info_1 to 6     6
+4 Insured Info     : InsuredInfo_1 to 7         7
+5 Insurance History: Insurance_History_1 to 9   9
+6 Family History   : Family_Hist_1 to 5         5
+7 Medical History  : Medical_History_1 to 41    41
+8 Medical Keywords : Medical_Keyword_1 to 48    48
+Target: Response                                1
+ID    : ID                                      1
+---------------------------------------------------
+Total Features: 127
+Dependent Variable: 1 (Response)</code></pre>
+<h1 style="background-color:tomato;">
+Metric of Evaluation
+</h1>
+<p>Quadratic weighted kappa is rank based metric used for multiclass classification. It has the minimum value 0 (random guess) and maximum value 1 (total agreement).</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> sklearn <span class="im">import</span> metrics
+score <span class="op">=</span> metrics.cohen_kappa_score(ytest,ypreds,weights<span class="op">=</span><span class="st">&#39;quadratic&#39;</span>)</code></pre></div>
+<h1 style="background-color:tomato;">
+Exploratory Data Analysis
+</h1>
+<p><img src="images/target_dist.png" /> <img src="images/missing_medical.png" /> <img src="images/target_pareto.png" /> <img src="images/corr_medical.png" /> <img src="images/age_target8_kde.png" /></p>
+<h1 style="background-color:tomato;">
+Modelling
+</h1>
+<p>I have tried various machine learning models for this project. The results are presented below.</p>
+<p style="color:green;">
+Linear Regression
+</p>
+<pre><code>Weighted quadratic kappa = 0.569630318923444</code></pre>
+<p style="color:green;">
+Xgboost Classifier softprob
+</p>
+<pre><code>objective = &quot;multi:softprob&quot;
+
+Cleaning   eval_metric   kappa
+simple     default       0.5377897181694622
+detailed   default       0.5438646999324421
+simple     custom        0.5530053047703208
+detailed   custom        0.5407784634778012
+</code></pre>
+<p style="color:green;">
+Xgboost poission regressor
+</p>
+<pre><code>objective = &quot;count:poisson&quot;
+
+   Model                    TrainKappa  TestKappa
+0   xgb reg                 0.669651      0.603765
+1   xgb reg + offset        0.720368      0.649496
+2   xgb poisson             0.682188      0.609387
+3   xgb poisson + offset    0.735050      0.655627
+</code></pre>
+<p style="color:green;">
+Xgboost poisson regressor ensemble voting
+</p>
+<pre><code>    Model                   TrainKappa     TestKappa
+0   xgb reg                 0.669651         0.603765
+1   xgb reg + offset        0.720368         0.649496
+2   xgb poisson             0.682188         0.609387
+3   xgb poisson + offset    0.735050         0.655627
+4   ensemble                0.623919         0.593312
+5   ensemble + offset       0.683268         0.644076</code></pre>
+<h1 style="background-color:tomato;">
+Model Explanation
+</h1>
+<p><img src="images/feat_imp.png" /> <img src="images/perm_imp.png" /> <img src="images/shap_target.png" /> <img src="images/shap_target8.png" /></p>
+</body>
+</html>

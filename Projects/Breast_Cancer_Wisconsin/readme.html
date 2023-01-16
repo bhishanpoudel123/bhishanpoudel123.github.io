@@ -1,0 +1,49 @@
+<h1 id="introduction">Introduction</h1>
+<p>This project uses the data from <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">Wisconsin Cancer Data from UCI Archive</a>. There are 569 samples.</p>
+<p>Each sample has id feature and target is <code>diagnosis</code>. The target feature <code>diagnosis</code> is binary with two possible values <code>Benign and Malignant</code>. There are 10 main features with three statitstics: mean, Standard Error, and Worst (mean of top three samples).</p>
+<p>The main 10 features are following:</p>
+<pre><code>1. radius: mean of distances from center to points on the perimeter
+2. texture: standard deviation of gray-scale value.
+3. perimeter: sum(l_i) for i=1 to n vertices.
+4. area: area of tumor cell
+5. smoothness: local variation in radius lengths.
+6. compactness: Psquared / A - 1 where P is perimeter and A is area.
+7. concavity: Severity of concave portions of the contour.
+8. concave points: Number of concave points in the contour.
+9. symmetry: Relative difference between two half-planes.
+10. fractal dimension: coastline approximation - 1  ([Reference](https://www.kaggle.com/daniboy370/can-ai-outperform-radiologists))
+
+The data look like this:
+
+id diagnosis 10_mean_features 10_SE_features 10_worst_features
+</code></pre>
+<h1 id="data-cleaning">Data Cleaning</h1>
+<ul>
+<li>The data is already clean. There are no missing values.</li>
+</ul>
+<h1 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h1>
+<h2 id="correlation">Correlation</h2>
+<ul>
+<li>There are few correlated features. radius is highly correlated with area and perimeter. Concavity is highly correlated with Concave points. The correlation affects the linear models (eg. Logistic Regression) but does not affect the tree methods (eg. Xgboost). I have not dropped the correlated features.</li>
+</ul>
+<p><img src="images/corrplot_mean_features.png" alt="corrplot_mean_features.png" width="600"/></p>
+<h2 id="density-plots">Density Plots</h2>
+<p>Here the density plots of benign and malignant cases are distinct, this means these features are useful for machine learning.</p>
+<p><img src="images/densityplot_mean_features.png" alt="densityplot_mean_features.png" height="1000" width=1000/></p>
+<h2 id="spider-diagram-for-minmax-normalized-features">Spider Diagram for minmax normalized features</h2>
+<p>Here, I plotted the spider diagram for benign and malignant cases after min-max normalization of mean features. The figure shows for all the data points, highest values of malignant cases is always larger than that of benign cases. The figures gives tentative representation of benign vs malignant cases in multi-dimensional space.</p>
+<p><img src="images/radar_plot_mean_features_minmax.png" alt="radar_plot_mean_features_minmax.png" width="600"/></p>
+<h1 id="modelling">Modelling</h1>
+<h2 id="machine-learning-boosting-method-xgboost">Machine Learning: Boosting method Xgboost</h2>
+<p>Here, I used boosting algorithm <code>XGBoost</code> with various feature selection and grid search methods. The various versions of boosting trials and improvements are summariezed below: <img src="images/df_eval_xgb.png" /></p>
+<p><img src="images/cm_xgb.png" alt="images/cm_xgb.png" width="600"/></p>
+<p>Here, we can see that only two values are misclassified. This means the 10 features extracted by the radiologists from the tumor cell image are highly relevant and extensive feature creation/selection is not much important in this case.</p>
+<h2 id="deep-learning-keras-sequential">Deep Learning: Keras Sequential</h2>
+<p>I used keras simple sequential model for the cancel cell image classification. I used simple 3 layer neural network with 8-4-2 units. The important thing to note here is that the chosen THRESHOLD is very high 0.9 instead of usual value 0.5. The data is slightly imbalanced and doing threshold optimization from the traing data I came up with this value. Then for the test data, I got only 3 values missclassified. We should also not that unlike deterministic xgboost model, the Keras model gives different output each time. We can try using fixing seeds of numpy,tensorflow and still due to the internal working of neural nets, we may come up with slightly different results. Here in this run I got 3 values missclassified.</p>
+<p><img src="images/cm_keras_842.png" alt="images/cm_keras_842.png" width="600"/></p>
+<h2 id="metic-of-evaluation">Metic of Evaluation</h2>
+<p>In this binary classification we may have different metrics of evaluations to consider: such as accuracy, precison, recall. The dataset is imbalanced, so accuracy is not a good metric of evaluation to separate different model performances. In this case, classifying a cancer patient as non-cancer is much more severe that classifying non-cancer patient as cancer patient. So, we may consider Precision as the better metric of evaluation.</p>
+<pre><code>Precision = TP / (TP + FP)
+
+TP = true cancer classified as cancer
+FP = false cancer classified as cancer</code></pre>

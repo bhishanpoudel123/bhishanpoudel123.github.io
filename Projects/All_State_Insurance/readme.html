@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 style="background-color:tomato;">
+Project Description
+</h1>
+<ul>
+<li>Project date: Apr 3, 2020</li>
+<li>Readme updated: Oct 19, 2020</li>
+</ul>
+<p><a href="https://www.allstate.com/">The Allstate Corporation</a> is an American insurance company that is in the United States. The company also has personal lines insurance operations in Canada.</p>
+<p>Data Source Kaggle: https://www.kaggle.com/c/allstate-claims-severity/data</p>
+<h1 style="background-color:tomato;">
+Approach
+</h1>
+<p>Here, in this linear regression machine learning problem, I tried various approaches to predict the target variable &quot;loss&quot; from given continuous features (<code>cont</code>) and categorical features (<code>cat</code>).</p>
+<p>Rather than building one huge notebook for data processing, hyperparameter tuning, modelling, and model evaluation, I break up the project into EDA, Cleaning and, Modelling parts.</p>
+<h1 style="background-color:tomato;">
+Data Cleaning
+</h1>
+<p>Here, I did following cleaning: - Box-Cox transform high skewed continuous variables - One hot encoding categorical variables - Missing values imputation.</p>
+<h1 style="background-color:tomato;">
+Modelling
+</h1>
+<p>In this project I used following procedure for modelling the problem: - Choose boxcox transformed continuous features. - Choose One hot encoded categorical features. - Standard Scaling the data. - Log transformation of Target.</p>
+<p>Algorithms Used: - Random Forest Regressor - Extra Tree Regressor - Xgboost Regressor - Stacking of these three estimators</p>
+<h1 style="background-color:tomato;">
+Results
+</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Model</th>
+<th align="right">2-Fold Cross Validation MAE</th>
+<th align="right">Time Taken</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Random Forest</td>
+<td align="right">1292.87</td>
+<td align="right">1min 37s</td>
+</tr>
+<tr class="even">
+<td align="left">Extra Trees</td>
+<td align="right">1243.44</td>
+<td align="right">6min 32s</td>
+</tr>
+<tr class="odd">
+<td align="left">Xgboost</td>
+<td align="right">1156.78</td>
+<td align="right">12min 25s</td>
+</tr>
+<tr class="even">
+<td align="left">Stacking</td>
+<td align="right">1165.00</td>
+<td align="right">55.5 s</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

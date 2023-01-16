@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 style="background-color:tomato;">
+Description
+</h1>
+<p>Author: <a href="https://bhishanpdl.github.io/index.html">Bhishan Poudel</a><br />
+Project: Insurance Claim Prediction for Brazilian company <a href="https://www.portoseguro.com.br/en/institutional">Porto Seguro</a><br />
+Kaggle project page: <a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction">Porto Seguro’s Safe Driver Prediction</a><br />
+Task: Binary classification (will the client file the insurance next year or not?)<br />
+Metric of evaluation: Normalized Gini Index (same as gini index or gini coeff) (<code>2*auc - 1</code>)</p>
+<p>Data</p>
+<pre><code>xxx_bin # binary features
+xxx_cat # categorical features
+continuous or ordinal features: ind reg car (individual, registration, and car)
+calc features are excluded in this analysis.</code></pre>
+<h1 style="background-color:tomato;">
+Metric of Evaluation
+</h1>
+<p><img src="images/gini_coeff.png" /> Ususally binary classification problems have AUC as the evaluation metric but this project has the evaluation metric normalized gini index. In the above figure the normalized gini index is given by ratio <code>A/(A+B)</code>. We can also calculate gini from area under the curve. <code>normalized gini = 2 * auc -1</code>. AUC can vary 0.5 to 1 so gini varies from -1 to 1. -1 to 0 is useless, we can get 0 to 1 simply by reversing the labels 0 to 1 and vice versa. 0 is the absolute worst and 1 is the perfect score.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># if the output is binary gini = 2*auc -1</span>
+gini <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> sklearn.metrics.auc_roc_score(X,y) <span class="op">-</span> <span class="dv">1</span>
+
+<span class="co"># calculation of gini</span>
+<span class="kw">def</span> ginic(actual, pred):
+    n <span class="op">=</span> <span class="bu">len</span>(actual)
+    a_s <span class="op">=</span> actual[np.argsort(pred)]
+    a_c <span class="op">=</span> a_s.cumsum()
+    giniSum <span class="op">=</span> a_c.<span class="bu">sum</span>() <span class="op">/</span> a_c[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> (n <span class="op">+</span> <span class="dv">1</span>) <span class="op">/</span> <span class="fl">2.0</span>
+    <span class="cf">return</span> giniSum <span class="op">/</span> n
+
+<span class="kw">def</span> gini_normalizedc(a, p):
+    <span class="cf">return</span> ginic(a, p) <span class="op">/</span> ginic(a, a)</code></pre></div>
+<h1 style="background-color:tomato;">
+Exploratory Data Analysis
+</h1>
+<p><img src="images/class_dist.png" /> <img src="images/missing_values.png" /> <img src="images/corr_car.png" /> <img src="images/cols_bin.png" /> <img src="images/cols_cat.png" /></p>
+<h1 style="background-color:tomato;">
+Modelling
+</h1>
+<p>I have tried various machine learning models for this project. Out of which stacking of three different lgb classifiers gave me the best outcome. <img src="images/lgb_results.png" /> <img src="images/xgb_results.png" /> <img src="images/stack_results.png" /></p>
+<h1 style="background-color:tomato;">
+Feature selection
+</h1>
+<p>There are various methods of feature selection. One of the useful way is looking at the <code>feature_importances_</code> method of the classifer. This gives the feature importance for that model. However, there are other methods to get the feature importances. Particularly I looked at <a href="https://github.com/scikit-learn-contrib/boruta_py">Boruta Feature Importances</a>. The first few selected features are shown below: <img src="images/feat_imp_boruta.png" /></p>
+</body>
+</html>

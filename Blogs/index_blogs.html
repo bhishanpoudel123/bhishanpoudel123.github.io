@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Bhishan Poudel</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/style1.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/style2.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/style3.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/style4.css">
+
+</head>
+
+<body>
+
+  <nav id="nav01"></nav>
+  <header class="myheader">
+    <h1>Bhishan Poudel,<span class="phd"> Ph.D. Candidate</span> </h1>
+    <h4>Data Scientist </h4>
+
+    <p><span style="width:300px;display:inline-block"></span>
+
+      <span style="width:230px;display:inline-block"></span> <a
+        href="https://www.linkedin.com/in/bhishan-poudel-a83351b4/" target="_blank"> <img class="icon"
+          src="../figures/linkedinimage.png" width="20" height="20" alt="Linkedin" /></a>
+
+      <span style="width:10px;display:inline-block"></span> <a href="https://www.github.com/bhishanpdl" target="_blank">
+        <img class="icon" src="../figures/GitHubimage.png" width="50" height="25" alt="GitHub" /></a>
+
+      <span style="width:10px;display:inline-block"></span> <a href="https://twitter.com/bhishan_poudel"
+        target="_blank">
+        <img class="icon" src="../figures/twitter.png" width="20" height="20" alt="twitter" /></a>
+
+      <span style="width:10px;display:inline-block"></span> <a href="https://stackoverflow.com/users/5200329/poudel"
+        target="_blank"> <img class="icon" src="../figures/stackoverflow.png" width="20" height="20"
+          alt="stackoverflow" /></a>
+    </p>
+  </header>
+
+  <nav class="mynav">
+    <ul>
+      <li><a class="mybanner" style="text-decoration:none" href="../index.html">Home</a></li>
+      <li><a class="mybanner" style="text-decoration:none" href="../education.html">Education</a></li>
+      <li><a class="mybanner" style="text-decoration:none" href="../DL/index_dl.html">DeepLearning</a></li>
+      <li>
+        <div class="dropdown" style="color: #e419a0;"><span>DataScience</span>
+          <div class="dropdown-content">
+            <a class="mybanner2" style="text-decoration:none" href="../DS/Topics/index_topics.html">Topics</a><br />
+            <a class="mybanner2" style="text-decoration:none" href="../DS/Mini_Projects/index_mini_projects.html">Mini
+              Projects</a><br />
+            <a class="mybanner2" style="text-decoration:none" href="../DS/Pandas/index_pandas.html">Pandas</a><br />
+            <a class="mybanner2" style="text-decoration:none"
+              href="../DS/Algorithms/index_algo.html">Algorithms</a><br />
+            <a class="mybanner2" style="text-decoration:none" href="../DS/Bash/index_bash.html">Bash</a><br />
+            <a class="mybanner2" style="text-decoration:none" href="../DS/cPlusPlus/index_cpp.html">C++</a><br />
+            <a class="mybanner2" style="text-decoration:none" href="../DS/SQL/index_sql.html">SQL</a><br />
+            <a class="mybanner2" style="text-decoration:none" href="../DS/Mixed/index_mixed.html">Mixed</a><br />
+          </div>
+        </div>
+      <li>
+        <div class="dropdown"><span>BigData</span>
+          <div class="dropdown-content">
+            <a class="mybanner2" style="text-decoration:none" href="../BigData/Dask/index_dask.html">Dask</a><br />
+            <a class="mybanner2" style="text-decoration:none"
+              href="../BigData/PySpark/index_pyspark.html">PySpark</a><br />
+          </div>
+        </div>
+      </li>
+      <li><a class="mybanner" style="text-decoration:none" href="../Statistics/index_stats.html">Statistics</a></li>
+      <li><a class="mybanner" style="text-decoration:none" href="../Resources/index_resources.html">Resources</a>
+      <li><a class="mybanner" style="text-decoration:none" href="../Entertainment/index_entertainment.html">Entertainment</a>
+        <li><a class="mybanner" style="text-decoration:none" href="../Blogs/index_blogs.html">Blogs</a>
+      <li><a class="mybanner" style="color: #e419a0;" href="../Projects/index_projects.html">MYProjects</a></li>
+      <li><a class="mybanner" style="text-decoration:none" href="../Contacts/index_contacts.html">Contacts</a></li>
+
+  </nav>
+
+  </head>
+
+
+  <link rel="stylesheet"
+  href="../libraries/highlighters/highlight/styles/solarized-dark.css">
+
+  <link rel="stylesheet"
+  href="bhishan.css">
+
+
+  </head>
+
+
+<!-- ======================= Useful Code ================================ -->
+<section>
+  <h1> Useful Codes</h1>
+
+  <pre><code class="language-python">
+    import numpy as np
+    import pandas as pd
+    from datetime import date, datetime
+
+    # datetime addition
+    nextday = datetime.today() + pd.DateOffset(days=1)
+
+    # get multi-index column names
+    df.columns.get_level_values(1)
+
+    # filter some values
+    df.iloc[0,df.columns.get_loc(mycol)]
+
+    # style
+    df.style.highlight_min(axis=1)
+
+    # pivot table (groupby/unstack is faster than pivot)
+    # the values of column 'col_pivot' will go to columns
+    df.pivot_table(index=cols_idx,values=col_val,columns=col_pivot)
+    df.groupby(['A','B',col_pivot])[col_val].sum().unstack(col_pivot).reset_index().rename_axis(None,axis=1)
+  </code></pre>
+
+
+  <!-- ======================= Useful Code ================================ -->
+</br>
+</br>
+  <h1> Useful Notes and Caveats</h1>
+
+  <br>
+  <h4> Useful Notes </h3>
+  <ol>
+    <li>Pandas needs openpyxl,pytables,pyarrow to read/write files.</li>
+    <li></li>
+  </ol>
+
+  <pre><code class="language-python">
+  # Pandas dt vs isocalendar
+  # isocalendar always starts from Monday, not the actual start.
+  pd.Timestamp('2022-01-01').year # 2022
+  pd.Timestamp('2022-01-01').isocalendar().year # 2021 (iso calendar starts from Monday)
+  </code></pre>
+
+
+
+  <!-- ======================= Useful Code ================================ -->
+  </br>
+  </br>
+  <h1> Troubleshoots </h1>
+  <h4> PIP ssl error</h4>
+  <pre><code>
+    # if we get ssl verification of pip, we can use following method:
+    # we also can use full path of python -m pip and rest.
+    pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org openpyxl
+  </code></pre>
+
+
+
+  <!-- ======================= Useful Code ================================ -->
+  </br>
+  </br>
+  <h1> Blogs </h1>
+  <h4> <strong>Dec 2021</strong></h4><br/>
+
+  <br/><h3> Date: Dec 15, 2021 <br/>Topic: pandas validation</h3><br />
+  Today, I came across this awesome python module called
+  <a href="https://github.com/pandera-dev/pandera", target="_blank">pandera</a>.
+
+  It is a data validation library.
+  Examples: We can check for null values, check for negative values, check for hypothesis testing and so on.
+  <br /><img src="dec-2021/pandera.png" alt="dec-2021/pandera.png">
+
+
+  <br/> <br /><h3> Date: Dec 13, 2021 <br/>Topic: sort a list using two keys</h3><br />
+  Today, I learned how to sort a list using two keys.
+  <br/><img src='dec-2021/sort_list.png' alt='dec-2021/sort_list.png'>
+
+
+</section>
+
+
+<!-- ===================END OF Examples ============================ -->
+<!-- =====================Some Scripts ================================ -->
+<script>
+  function go(href){
+    window.open(href,'_blank');
+  }
+</script>
+
+<!-- Script for the tooltip -->
+<script>
+  $(document).ready(function(){
+      $('[data-bs-toggle="tooltip"]').tooltip();
+  });
+  </script>
+
+<!-- Script for collapsible headers -->
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+      var btn = document.getElementById("myBtn");
+      var element = document.getElementById("myCollapse");
+
+      // Create a collapse instance, toggles the collapse element on invocation
+      var myCollapse = new bootstrap.Collapse(element);
+
+      btn.addEventListener("click", function(){
+          myCollapse.toggle();
+      });
+  });
+  </script>
+
+</br>
+</br>
+</br>
+    </main>
+    <script src="../libraries/highlighters/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+
+
+  </div>
+
+</html>
