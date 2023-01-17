@@ -66,6 +66,8 @@
   </head>
 
 <!-- ======================= Useful Codes for Databricks SQL ================================ -->
+<pre><code class="language-python">
+
   <div id="snippets_databricks"></div>
   <script>
     fetch('snippets_databricks.html')
@@ -75,40 +77,28 @@
     });
   </script>
   
+
+</code></pre>
+  
   
 <!-- ======================= Useful Codes for Databricks SQL ================================ -->
 
   
  
-<!-- ======================= Useful Code ================================ -->
+<!-- ======================= Useful Python Codes ================================ -->
 <section>
-  <h1> Useful Codes</h1>
-
+  <h1> Useful Python Codes</h1>
   <pre><code class="language-python">
-    import numpy as np
-    import pandas as pd
-    from datetime import date, datetime
 
-    # datetime addition
-    nextday = datetime.today() + pd.DateOffset(days=1)
+  <div id="snippets_python"></div>
+  <script> includeOtherFile("snippets_python.html", "snippets_python"); </script>
 
-    # get multi-index column names
-    df.columns.get_level_values(1)
-
-    # filter some values
-    df.iloc[0,df.columns.get_loc(mycol)]
-
-    # style
-    df.style.highlight_min(axis=1)
-
-    # pivot table (groupby/unstack is faster than pivot)
-    # the values of column 'col_pivot' will go to columns
-    df.pivot_table(index=cols_idx,values=col_val,columns=col_pivot)
-    df.groupby(['A','B',col_pivot])[col_val].sum().unstack(col_pivot).reset_index().rename_axis(None,axis=1)
   </code></pre>
+  </section>
 
 
-  <!-- ======================= Useful Code ================================ -->
+  <!-- ======================= Useful Notes and Caveats ================================ -->
+  <section>
 </br>
 </br>
   <h1> Useful Notes and Caveats</h1>
@@ -126,10 +116,12 @@
   pd.Timestamp('2022-01-01').year # 2022
   pd.Timestamp('2022-01-01').isocalendar().year # 2021 (iso calendar starts from Monday)
   </code></pre>
+</section>
 
 
 
-  <!-- ======================= Useful Code ================================ -->
+  <!-- ======================= Troubleshoots ================================ -->
+<section>
   </br>
   </br>
   <h1> Troubleshoots </h1>
@@ -139,6 +131,7 @@
     # we also can use full path of python -m pip and rest.
     pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org openpyxl
   </code></pre>
+</section>
 
 
 
@@ -167,6 +160,29 @@
 
 <!-- ===================END OF Examples ============================ -->
 <!-- =====================Some Scripts ================================ -->
+
+<!-- == script to include HTML parts (or any text) from other files -->
+<! -- added: 2023-01-17 -->
+
+<script>
+function includeOtherFile(filePath, elementId) {
+  fetch(filePath)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(elementId).innerHTML = data;
+    });
+}
+</script>
+
+
+<script>
+  function go(href){
+    window.open(href,'_blank');
+  }
+</script>
+
+
+
 <script>
   function go(href){
     window.open(href,'_blank');
