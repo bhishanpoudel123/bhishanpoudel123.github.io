@@ -66,21 +66,25 @@
   </head>
 
 <!-- ======================= Useful Codes for Databricks SQL ================================ -->
-<pre><code class="language-python">
+<section>
+  <h1> Databricks Snippets </h1>
 
-  <div id="snippets_databricks"></div>
-  <script>
-    fetch('snippets_databricks.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("snippets_databricks").innerHTML = data;
-    });
-  </script>
-  
+  <pre><code class="language-python">
+    # setup pyspark
+    # note: there is no .precision in pyspark
+    # sdf.select(F.format_number('mycol',2,',').alias('formatted_number')).show()
+    spark = pyspark.sql.SparkSession.builder.getOrCreate()
+    sc = spark.sparkContext
+    sqlContext = SQLContext(sc) # spark_df = sqlContext.createDataFrame(pandas_df)
+    sc.setLogLevel('INFO')
+    
+    # get table names in database
+    sqlContext.sql("show tables in datascience").filter("tableName like '%bp' ").toPandas()
 
-</code></pre>
-  
-  
+
+  </code></pre>
+</section>
+
 <!-- ======================= End: Snippets for Databricks SQL ================================ -->
 
   
@@ -111,18 +115,6 @@
     df.groupby(['A','B',col_pivot])[col_val].sum().unstack(col_pivot).reset_index().rename_axis(None,axis=1)
   </code></pre>
   </section>
-  
- 
- <div id="snippets_python"></div>  
- <script>
-  fetch('snippets_python.py')
-    .then(response => response.text())
-    .then(data => {
-      var code = "<pre><code class='language-python'>" + data + "</code></pre>";
-      document.getElementById("snippets_python").innerHTML = code;
-    });
- </script>
-
 
   <!-- ======================= Useful Notes and Caveats ================================ -->
   <section>
