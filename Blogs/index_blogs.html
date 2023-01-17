@@ -88,12 +88,10 @@
 <!-- ======================= Useful Python Codes ================================ -->
 <section>
   <h1> Useful Python Codes</h1>
-  <pre><code class="language-python">
-
-  <div id="snippets_python"></div>
-  <script> includeOtherFile("snippets_python.html", "snippets_python"); </script>
-
-  </code></pre>
+<div id="snippets_python"></div>
+<script>
+    includePythonCode("snippets_python.py", "snippets_python");
+</script>
   </section>
 
 
@@ -165,11 +163,12 @@
 <! -- added: 2023-01-17 -->
 
 <script>
-function includeOtherFile(filePath, elementId) {
+function includePythonCode(filePath, elementId) {
   fetch(filePath)
     .then(response => response.text())
     .then(data => {
-      document.getElementById(elementId).innerHTML = data;
+      var code = "<pre><code class='language-python'>" + data + "</code></pre>";
+      document.getElementById(elementId).innerHTML = code;
     });
 }
 </script>
