@@ -66,26 +66,20 @@
   </head>
 
 <!-- ======================= Useful Codes for Databricks SQL ================================ -->
-<section>
-  <h1> Useful Codes</h1>
+  <div id="snippets_databricks"></div>
+  <script>
+    fetch('snippets_databricks.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("snippets_databricks").innerHTML = data;
+    });
+  </script>
+  
+  
+<!-- ======================= Useful Codes for Databricks SQL ================================ -->
 
-  <pre><code class="language-python">
-    # setup pyspark
-    # note: there is no .precision in pyspark
-    # sdf.select(F.format_number('mycol',2,',').alias('formatted_number')).show()
-    spark = pyspark.sql.SparkSession.builder.getOrCreate()
-    sc = spark.sparkContext
-    sqlContext = SQLContext(sc) # spark_df = sqlContext.createDataFrame(pandas_df)
-    sc.setLogLevel('INFO')
-    
-    # get table names in database
-    sqlContext.sql("show tables in datascience").filter("tableName like '%bp' ").toPandas()
-
-
-  </code></pre>
-  </section>
-  <!-- ======================= Useful Codes for Databricks SQL ================================ -->
-
+  
+ 
 <!-- ======================= Useful Code ================================ -->
 <section>
   <h1> Useful Codes</h1>
