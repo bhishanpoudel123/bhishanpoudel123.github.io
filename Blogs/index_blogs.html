@@ -81,11 +81,11 @@
 </code></pre>
   
   
-<!-- ======================= Useful Codes for Databricks SQL ================================ -->
+<!-- ======================= End: Snippets for Databricks SQL ================================ -->
 
   
  
-<!-- ======================= Useful Python Codes ================================ -->
+<!-- ======================= Snippets for Python  ================================ -->
 <section>
   <h1> Useful Python Codes</h1>
   <pre><code class="language-python">
@@ -111,6 +111,17 @@
     df.groupby(['A','B',col_pivot])[col_val].sum().unstack(col_pivot).reset_index().rename_axis(None,axis=1)
   </code></pre>
   </section>
+  
+ 
+ <div id="snippets_python"></div>  
+ <script>
+  fetch('snippets_python.py')
+    .then(response => response.text())
+    .then(data => {
+      var code = "<pre><code class='language-python'>" + data + "</code></pre>";
+      document.getElementById("snippets_python").innerHTML = code;
+    });
+ </script>
 
 
   <!-- ======================= Useful Notes and Caveats ================================ -->
