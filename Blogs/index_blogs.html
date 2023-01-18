@@ -73,9 +73,10 @@
     # setup pyspark
     # note: there is no .precision in pyspark
     # sdf.select(F.format_number('mycol',2,',').alias('formatted_number')).show()
+    import pyspark
     spark = pyspark.sql.SparkSession.builder.getOrCreate()
     sc = spark.sparkContext
-    sqlContext = SQLContext(sc) # spark_df = sqlContext.createDataFrame(pandas_df)
+    sqlContext = pyspark.SQLContext(sc) # spark_df = sqlContext.createDataFrame(pandas_df)
     sc.setLogLevel('INFO')
     
     # get table names in database
