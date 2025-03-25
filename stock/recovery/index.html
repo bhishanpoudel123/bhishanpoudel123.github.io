@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Recovery Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📉 Stock Recovery Calculator 📈</h1>
+        <p>Find out the required stock price to recover your past losses.</p>
+
+        <div class="input-group">
+            <label for="realised-loss">💰 Realised Loss ($):</label>
+            <input type="number" id="realised-loss" placeholder="Enter total realised loss">
+        </div>
+
+        <div class="input-group">
+            <label for="current-price">📌 Current Price ($):</label>
+            <input type="number" id="current-price" placeholder="Enter current stock price">
+        </div>
+
+        <div class="input-group">
+            <label for="num-shares">📊 Number of Shares:</label>
+            <input type="number" id="num-shares" placeholder="Enter number of shares you hold">
+        </div>
+
+        <button id="calculate">🔍 Calculate Required Price</button>
+
+        <h2 id="result">📢 Required price: <span> </span></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
