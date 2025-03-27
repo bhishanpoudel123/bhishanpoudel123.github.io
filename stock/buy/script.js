@@ -36,9 +36,12 @@ document.getElementById("calculate").addEventListener("click", function () {
     let requiredShares = Math.ceil((totalCost - (targetPrice * totalShares)) / (targetPrice - currentPrice));
     let requiredAmount = requiredShares * currentPrice;
     let formattedRequiredAmount = Math.round(requiredAmount).toLocaleString();
+    let percentIncreaseNeeded = ((avgCost - currentPrice) / currentPrice) * 100;
 
     document.getElementById("result").innerHTML = `
         You need to buy: <strong>${requiredShares} shares</strong><br>
-        Total Cost: <strong>$${formattedRequiredAmount}</strong>
+        Total Cost: <strong>$${formattedRequiredAmount}</strong><br>
+        Overall Stock Average Price: <strong>$${avgCost.toFixed(2)}</strong><br>
+        Percent Increase Needed: <strong>${percentIncreaseNeeded.toFixed(2)}%</strong>
     `;
 });
