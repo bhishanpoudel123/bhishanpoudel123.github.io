@@ -15,15 +15,15 @@ document.getElementById("calculate").addEventListener("click", function () {
 
     let formattedRequiredAmount = Math.round(requiredAmount).toLocaleString();
     let avgCost = totalCost / numShares;
-    let increaseToAvg = ((avgCost - currentPrice) / currentPrice) * 100;
-    let increaseToTarget = ((targetPrice - currentPrice) / currentPrice) * 100;
+    let increaseToAvg = ((avgCost - currentPrice) / currentPrice) * -100;
+    let increaseToTarget = ((targetPrice - currentPrice) / currentPrice) * -100;
 
     let resultHTML = `
         You need to buy: <strong>${requiredShares} shares</strong><br>
         Total Cost: <strong>$${formattedRequiredAmount}</strong><br><br>
         <strong>Price Increase Needed:</strong><br>
-        Match average cost ($${avgCost.toFixed(2)}): <strong>${increaseToAvg.toFixed(2)}%</strong><br>
-        Match target price ($${targetPrice.toFixed(2)}): <strong>${increaseToTarget.toFixed(2)}%</strong>
+        Your Share Price ($${currentPrice.toFixed(2)}): <strong>${increaseToAvg.toFixed(2)}%</strong><br>
+        Target Share Price ($${targetPrice.toFixed(2)}): <strong>${increaseToTarget.toFixed(2)}%</strong>
     `;
 
     document.getElementById("result").innerHTML = resultHTML;
