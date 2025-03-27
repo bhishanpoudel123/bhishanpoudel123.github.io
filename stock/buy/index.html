@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Buy Calculator</title>
+    <title>Stock Average Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Stock Buy Calculator</h1>
-        <p>Enter your past stock purchase:</p>
+        <h1>Stock Average Calculator</h1>
+        <p>Enter your stock purchases from different vendors:</p>
 
         <div id="inputs">
             <div class="input-group">
-                <input type="number" placeholder="Number of Shares" id="shares">
-                <input type="number" placeholder="Current Share Price ($)" id="price">
+                <input type="text" placeholder="Vendor" class="vendor">
+                <input type="number" placeholder="Shares" class="shares">
+                <input type="number" placeholder="Price per Share ($)" class="price">
+                <button class="remove">X</button>
             </div>
         </div>
 
-        <h2>Your Share Price:</h2>
-        <input type="number" id="current-price" placeholder="Your Share Price ($)">
+        <button id="add">+ Add Items</button>
 
-        <h2>Target Average Price:</h2>
-        <input type="number" id="target-price" placeholder="Enter Target Average Price ($)">
+        <h2>Stock Information:</h2>
+        <input type="number" id="current-price" placeholder="Current Stock Price ($)">
+        <input type="number" id="target-price" placeholder="Target Average Price ($)">
 
-        <button id="calculate">Calculate Required Shares</button>
+        <button id="calculate">Calculate</button>
 
         <h2 id="result">You need to buy: 0 shares</h2>
     </div>

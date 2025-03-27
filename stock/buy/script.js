@@ -1,38 +1,44 @@
+document.getElementById("add").addEventListener("click", function () {
+    let inputContainer = document.getElementById("inputs");
+    let newGroup = document.createElement("div");
+    newGroup.classList.add("input-group");
+    newGroup.innerHTML = `
+        <input type="text" placeholder="Vendor" class="vendor">
+        <input type="number" placeholder="Shares" class="shares">
+        <input type="number" placeholder="Price per Share ($)" class="price">
+        <button class="remove">X</button>
+    `;
+    inputContainer.appendChild(newGroup);
+
+    newGroup.querySelector(".remove").addEventListener("click", function () {
+        inputContainer.removeChild(newGroup);
+    });
+});
+
 document.getElementById("calculate").addEventListener("click", function () {
-    let price = parseFloat(document.getElementById("price").value);
-    let numShares = parseFloat(document.getElementById("shares").value);
     let currentPrice = parseFloat(document.getElementById("current-price").value);
     let targetPrice = parseFloat(document.getElementById("target-price").value);
+    let totalShares = 0, totalCost = 0;
 
-    if (isNaN(price) || isNaN(numShares) || isNaN(currentPrice) || isNaN(targetPrice) || price <= 0 || numShares <= 0 || currentPrice <= 0 || targetPrice <= 0) {
+    document.querySelectorAll(".input-group").forEach(group => {
+        let shares = parseFloat(group.querySelector(".shares").value) || 0;
+        let price = parseFloat(group.querySelector(".price").value) || 0;
+        totalShares += shares;
+        totalCost += shares * price;
+    });
+
+    if (totalShares === 0 || isNaN(currentPrice) || isNaN(targetPrice) || currentPrice <= 0 || targetPrice <= 0) {
         document.getElementById("result").textContent = "Enter valid values!";
         return;
     }
 
-    let totalCost = price * numShares;
-    let requiredShares = Math.ceil((totalCost - (targetPrice * numShares)) / (targetPrice - currentPrice));
+    let avgCost = totalCost / totalShares;
+    let requiredShares = Math.ceil((totalCost - (targetPrice * totalShares)) / (targetPrice - currentPrice));
     let requiredAmount = requiredShares * currentPrice;
-
     let formattedRequiredAmount = Math.round(requiredAmount).toLocaleString();
-    let avgCost = totalCost / numShares;
-    let increaseToAvg = ((avgCost - currentPrice) / currentPrice) * -100;
-    let increaseToTarget = ((targetPrice - currentPrice) / currentPrice) * -100;
 
-    let resultHTML = `
+    document.getElementById("result").innerHTML = `
         You need to buy: <strong>${requiredShares} shares</strong><br>
-        Total Cost: <strong>$${formattedRequiredAmount}</strong><br><br>
-        <strong>Price Increase Needed:</strong><br>
-        Your Share Price ($${currentPrice.toFixed(2)}): <strong>${increaseToAvg.toFixed(2)}%</strong><br>
-        Target Share Price ($${targetPrice.toFixed(2)}): <strong>${increaseToTarget.toFixed(2)}%</strong>
+        Total Cost: <strong>$${formattedRequiredAmount}</strong>
     `;
-
-    document.getElementById("result").innerHTML = resultHTML;
-});
-
-// Trigger calculation on Enter key press in target-price input
-document.getElementById("target-price").addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("calculate").click();
-    }
 });
