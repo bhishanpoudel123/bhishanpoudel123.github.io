@@ -23,7 +23,7 @@ async function loadQuestions(tag) {
 	correctCount = 0;
 	userResponses = {};
 
-	const files = ['linear_regression.json', 'machine_learning.json'];
+	const files = ['linear_regression.json'];
 	let questions = [];
 
 	for (let file of files) {
@@ -58,7 +58,7 @@ async function showQuestion() {
 
     if (q.question_long_path) {
         try {
-            questionLong = await fetchMarkdown(`content/${q.question_long_path}`);
+            questionLong = await fetchMarkdown(`${q.question_long_path}`);
         } catch (error) {
             console.warn(`Could not load question markdown: ${error}`);
         }
@@ -66,7 +66,7 @@ async function showQuestion() {
 
     if (q.answer_long_path) {
         try {
-            answerLong = await fetchMarkdown(`content/${q.answer_long_path}`);
+            answerLong = await fetchMarkdown(`${q.answer_long_path}`);
         } catch (error) {
             console.warn(`Could not load answer markdown: ${error}`);
         }
