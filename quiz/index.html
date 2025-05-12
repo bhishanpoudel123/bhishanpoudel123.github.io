@@ -4,9 +4,6 @@
     <title>ML Quiz</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Add Prism.js for syntax highlighting -->
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 </head>
 <body>
     <h1>Data Science Quiz</h1>
@@ -24,6 +21,13 @@
         <button id="next">➡️ Next</button>
         <button id="end-quiz">⏹️ End Quiz</button>
     </div>
+
+    <div class="question-navigation" style="display:none;">
+        <span>Go to Question: </span>
+        <select id="question-selector"></select>
+        <button id="go-to-question">Go</button>
+    </div>
+
     <div id="score-section" style="display:none;"></div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
