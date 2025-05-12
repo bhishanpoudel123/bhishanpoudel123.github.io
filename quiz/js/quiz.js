@@ -1,21 +1,3 @@
-// Add this at the top of quiz.js
-if (typeof marked === 'undefined') {
-    console.error('marked.js is not loaded. Please include it before quiz.js');
-    // Fallback function if marked is not available
-    window.parseMarkdown = function(text) { return text; };
-} else {
-    marked.setOptions({
-        highlight: function(code, lang) {
-            if (typeof Prism !== 'undefined' && Prism.languages[lang]) {
-                return Prism.highlight(code, Prism.languages[lang], lang);
-            }
-            return code;
-        },
-        langPrefix: 'language-'
-    });
-    window.parseMarkdown = marked.parse;
-}
-
 // Quiz state variables
 const quizState = {
     currentTag: "",
@@ -39,6 +21,13 @@ const shuffleBtn = document.getElementById('shuffle');
 const previousBtn = document.getElementById('previous');
 const nextBtn = document.getElementById('next');
 const endQuizBtn = document.getElementById('end-quiz');
+const showAllQuestionsBtn = document.getElementById('show-all-questions');
+const previewControls = document.getElementById('preview-controls');
+
+// Create all questions view container
+const allQuestionsView = document.createElement('div');
+allQuestionsView.id = 'all-questions-view';
+document.body.insertBefore(allQuestionsView, quizContainer.nextSibling);
 
 // Initialize the quiz
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,9 +64,10 @@ function setupEventListeners() {
     nextBtn.addEventListener('click', showNextQuestion);
     endQuizBtn.addEventListener('click', showSummary);
     goToQuestionBtn.addEventListener('click', goToSelectedQuestion);
-    questionSelector.addEventListener('change', function() {
+    questionSelector.addEventListener('change', function () {
         goToQuestionBtn.disabled = this.value === "";
     });
+    showAllQuestionsBtn.addEventListener('click', showAllQuestions);
 }
 
 async function startQuiz() {
@@ -89,10 +79,10 @@ async function startQuiz() {
 
 async function loadQuestions(tag) {
     try {
+        // Clear existing UI elements
         quizContainer.innerHTML = '';
         scoreSection.style.display = 'none';
-        quizControls.style.display = 'flex';
-        questionNavigation.style.display = 'flex';
+        allQuestionsView.style.display = 'none';
 
         // Reset quiz state
         quizState.currentTag = tag;
@@ -100,6 +90,7 @@ async function loadQuestions(tag) {
         quizState.userResponses = {};
         quizState.currentIndex = 0;
 
+        // Load questions
         const files = ['questions/linear_regression.json'];
         let questions = [];
 
@@ -113,18 +104,73 @@ async function loadQuestions(tag) {
 
         if (questions.length === 0) {
             summaryElement.textContent = `No questions found for "${tag}". Please select another topic.`;
-            quizControls.style.display = 'none';
-            questionNavigation.style.display = 'none';
+            previewControls.style.display = 'none';
             return;
         }
 
-        summaryElement.textContent = `Selected topic: "${tag}" | ${questions.length} question${questions.length !== 1 ? 's' : ''}`;
+        summaryElement.textContent = `Selected topic: "${tag}" | ${questions.length} questions`;
+        previewControls.style.display = 'block';
+        quizControls.style.display = 'flex';
+        questionNavigation.style.display = 'flex';
+
+        // Initialize quiz navigation
         setupQuestionNavigation();
         showQuestion();
+
     } catch (error) {
         console.error('Error loading questions:', error);
         summaryElement.textContent = "Error loading questions. Please try again.";
+        previewControls.style.display = 'none';
     }
+}
+
+function showAllQuestions() {
+    if (!quizState.currentQuestions.length) return;
+
+    // Hide quiz interface
+    quizContainer.style.display = 'none';
+    quizControls.style.display = 'none';
+    questionNavigation.style.display = 'none';
+    previewControls.style.display = 'none';
+
+    // Show preview interface
+    allQuestionsView.style.display = 'block';
+    allQuestionsView.innerHTML = `
+        <h2>All Questions (${quizState.currentQuestions.length})</h2>
+        <div class="all-questions-container"></div>
+        <button id="back-to-quiz">← Back to Quiz</button>
+    `;
+
+    const container = allQuestionsView.querySelector('.all-questions-container');
+    const backBtn = allQuestionsView.querySelector('#back-to-quiz');
+
+    backBtn.addEventListener('click', backToQuiz);
+
+    quizState.currentQuestions.forEach((q, index) => {
+        const preview = document.createElement('div');
+        preview.className = 'question-preview';
+        preview.innerHTML = `
+            <h3>Q${index + 1}: ${q.question_short}</h3>
+            <details>
+                <summary>Show Answer</summary>
+                <p>${q.answer_short}</p>
+            </details>
+        `;
+        preview.addEventListener('click', () => {
+            quizState.currentIndex = index;
+            backToQuiz();
+        });
+        container.appendChild(preview);
+    });
+}
+
+function backToQuiz() {
+    allQuestionsView.style.display = 'none';
+    quizContainer.style.display = 'block';
+    quizControls.style.display = 'flex';
+    questionNavigation.style.display = 'flex';
+    previewControls.style.display = 'block';
+    showQuestion();
 }
 
 function setupQuestionNavigation() {
@@ -178,7 +224,7 @@ function showNextQuestion() {
 function toggleZoom(img) {
     img.classList.toggle('zoomed');
     document.body.classList.toggle('zoomed-mode', img.classList.contains('zoomed'));
-    
+
     if (img.classList.contains('zoomed')) {
         img.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -285,6 +331,7 @@ function showSummary() {
     quizContainer.innerHTML = '';
     quizControls.style.display = 'none';
     questionNavigation.style.display = 'none';
+    previewControls.style.display = 'none';
     scoreSection.style.display = 'block';
 
     const total = quizState.currentQuestions.length;

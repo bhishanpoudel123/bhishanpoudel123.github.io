@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ML Quiz</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Add Prism.js for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+        rel="stylesheet">
 </head>
+
 <body>
     <h1>Data Science Quiz</h1>
     <div class="controls">
@@ -14,6 +20,9 @@
         <button id="start-quiz" disabled>Start Quiz</button>
     </div>
     <div id="summary"></div>
+    <div id="preview-controls" style="display:none;">
+        <button id="show-all-questions">📚 Show All Questions</button>
+    </div>
     <div id="quiz-container"></div>
     <div class="quiz-controls" style="display:none;">
         <button id="shuffle">🔀 Shuffle</button>
@@ -29,6 +38,8 @@
     </div>
 
     <div id="score-section" style="display:none;"></div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
@@ -38,4 +49,5 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
     <script src="js/quiz.js"></script>
 </body>
+
 </html>
