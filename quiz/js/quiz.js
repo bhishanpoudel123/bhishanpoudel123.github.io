@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	setupEventListeners();
 });
 
+const parseMarkdown = (text) => {
+    return typeof marked !== 'undefined' ? marked.parse(text) : text;
+};
+
 async function loadTags() {
 	try {
 		const res = await fetch('data/tags.json');
@@ -134,34 +138,63 @@ marked.setOptions({
 	langPrefix: 'language-', // This matches Prism's class pattern
 });
 
-// Then modify your showQuestion() function to add line numbers:
+function toggleZoom(element) {
+    // Handle both image and caption clicks
+    const img = element.classList.contains('quiz-image') ? element : element.previousElementSibling;
+    img.classList.toggle('zoomed');
+
+    if (img.classList.contains('zoomed')) {
+        document.body.classList.add('zoomed-mode');
+        img.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        document.body.classList.remove('zoomed-mode');
+    }
+}
+
+
+// Function to show the current question
 async function showQuestion() {
-	const q = currentQuestions[currentIndex];
-	quizContainer.innerHTML = '';
+    const q = currentQuestions[currentIndex];
+    quizContainer.innerHTML = '';
 
-	let questionLong = '';
-	let answerLong = '';
+    let questionLong = '';
+    let answerLong = '';
 
-	if (q.question_long_path) {
-		questionLong = await fetchMarkdown(q.question_long_path);
-	}
+    if (q.question_long_path) {
+        questionLong = await fetchMarkdown(q.question_long_path);
+    }
 
-	if (q.answer_long_path) {
-		answerLong = await fetchMarkdown(q.answer_long_path);
-	}
+    if (q.answer_long_path) {
+        answerLong = await fetchMarkdown(q.answer_long_path);
+    }
 
-	const div = document.createElement('div');
-	div.className = 'question-block';
+    const div = document.createElement('div');
+    div.className = 'question-block';
 
-	div.innerHTML = `
+    div.innerHTML = `
         <strong>Q${currentIndex + 1}/${currentQuestions.length}: ${q.question_short}</strong><br>
         ${questionLong ? `<details><summary>Show Full Question</summary>
-            <div class="markdown">${marked.parse(questionLong)}</div>
-            ${q.question_image ? `<img src="${q.question_image}" width="300">` : ''}
+            <div class="markdown">${parseMarkdown(questionLong)}</div>
+            ${q.question_image ? `
+            <div class="image-container">
+                <img src="${q.question_image}" 
+                     class="quiz-image" 
+                     alt="Question illustration">
+                <div class="image-caption" onclick="toggleZoom(this)">Click image to zoom</div>
+            </div>` : ''}
         </details>` : ''}
         <details><summary>Show Answer</summary>
             <p><strong>Short Answer:</strong> ${q.answer_short}</p>
-            ${answerLong ? `<div class="markdown">${marked.parse(answerLong)}</div>` : ''}
+            ${answerLong ? `
+            <div class="markdown">${parseMarkdown(answerLong)}</div>
+            ${q.answer_image ? `
+            <div class="image-container">
+                <img src="${q.answer_image}" 
+                     class="quiz-image" 
+                     alt="Answer illustration">
+                <div class="image-caption" onclick="toggleZoom(this)">Click image to zoom</div>
+            </div>` : ''}
+            ` : ''}
         </details>
         <div class="answer-buttons">
             <button onclick="markAnswer(true)">✅ Correct</button>
@@ -169,18 +202,17 @@ async function showQuestion() {
         </div>
     `;
 
-	quizContainer.appendChild(div);
+    quizContainer.appendChild(div);
 
-	// Apply Prism highlighting to all code blocks
-	const codeBlocks = div.querySelectorAll('pre code');
-	codeBlocks.forEach((block) => {
-		Prism.highlightElement(block);
-		block.parentElement.classList.add('line-numbers');
-	});
+    // Apply Prism highlighting to all code blocks
+    const codeBlocks = div.querySelectorAll('pre code');
+    codeBlocks.forEach((block) => {
+        Prism.highlightElement(block);
+        block.parentElement.classList.add('line-numbers');
+    });
 
-	updateNavButtons();
+    updateNavButtons();
 }
-
 
 function updateNavButtons() {
 	previousBtn.disabled = currentIndex === 0;

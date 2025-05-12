@@ -1,42 +1,211 @@
-/* Add these to your existing styles */
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3 {
+    color: #2c3e50;
+}
+
+/* Quiz Controls */
 .controls {
     margin: 20px 0;
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .quiz-controls {
     margin: 20px 0;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 select {
-    padding: 8px;
+    padding: 8px 12px;
     min-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 button {
     padding: 8px 16px;
     cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-/* Add these to your existing styles */
-pre[class*="language-"] {
-    border-radius: 8px;
-    margin: 1em 0;
-    padding: 1em;
-    overflow: auto;
-    background: #f5f5f5;
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Question Styling */
+.question-block {
     border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-code[class*="language-"] {
-    font-family: 'Courier New', Courier, monospace;
+.question-block.review {
+    border-left: 4px solid #3498db;
+}
+
+.answer-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Markdown Content */
+.markdown {
+    margin: 15px 0;
+}
+
+.markdown pre {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.markdown code {
+    font-family: 'Courier New', monospace;
+    background-color: #f8f8f8;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Image Styling */
+.image-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.quiz-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: zoom-in;
+    transition: all 0.3s ease;
+}
+
+.quiz-image.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 1000;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    cursor: zoom-out;
+}
+
+.image-caption {
     font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 8px;
+    cursor: pointer;
 }
 
-.line-numbers .line-numbers-rows {
-    border-right: 1px solid #999;
-    padding-right: 1em;
+.image-caption:hover {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+/* Overlay for zoomed images */
+body.zoomed-mode::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* Score Section */
+#score-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Answer Status */
+.correct {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Details/Spoiler Styling */
+details {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+}
+
+details[open] summary {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .controls,
+    .quiz-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .quiz-image.zoomed {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
 }
