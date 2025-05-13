@@ -2,13 +2,13 @@
 
 To check if a variable (or model residuals) is normally distributed, you can use.
 
-![](../assets/images/normality_test_plot.jpeg)
+![](/assets/images/normality_test_plot.jpeg)
 
 
 ### Test: Use image using html syntax
 
 <div style="text-align: center;">
-    <img src="../assets/images/normality_test_plot.jpeg" 
+    <img src="/assets/images/normality_test_plot.jpeg" 
          alt="Normality Test Plot"
          style="max-width: 100%; height: auto; border: 1px solid #ddd; margin: 1em 0;">
     <p style="font-size: 0.9em; color: #666;">Click image to enlarge</p>
