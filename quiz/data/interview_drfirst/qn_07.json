@@ -1,0 +1,14 @@
+{
+    "id": "qn_07",
+    "question_short": "How comfortable are you using SQL?",
+    "question_long_path": "",
+    "answer_short": "Mostly used databricks sql for many analytics projects in LASH.",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_07_answer_long_01.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "SQL"
+    ]
+}

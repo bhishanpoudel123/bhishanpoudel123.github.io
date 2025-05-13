@@ -1,0 +1,14 @@
+{
+    "id": "qn_02",
+    "question_short": "How to use FastAPI without making unresonable errors in production",
+    "question_long_path": "",
+    "answer_short": "FAISS embedding with sentence-transformer and cosine similarity match.",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_02_answer_long_01.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "Chatbot"
+    ]
+}

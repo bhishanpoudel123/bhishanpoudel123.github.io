@@ -5,17 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Science Quiz</title>
-    <!-- Dynamic base URL for both local and GitHub Pages -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const base = document.createElement('base');
-            base.href = window.location.hostname.includes('github.io')
-                ? '/quiz/'
-                : '/';
-            base.target = '_self';
-            document.head.prepend(base);
-        });
-    </script>
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Prism.js for syntax highlighting -->
@@ -63,12 +52,6 @@
 
     <div id="score-section" style="display:none;"></div>
 
-    <!-- Environment indicator (debug only) -->
-    <div id="env-indicator"
-        style="display:none; position:fixed; bottom:10px; right:10px; background:#eee; padding:5px; border-radius:3px;">
-        Running on: <span id="env-type"></span>
-    </div>
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
@@ -78,17 +61,6 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
     <script src="js/quiz.js"></script>
-
-    <script>
-        // Display environment for debugging
-        document.getElementById('env-type').textContent =
-            window.location.hostname.includes('github.io') ? 'GitHub Pages' : 'Local';
-
-        // Auto-hide debug indicator after 5 seconds
-        setTimeout(() => {
-            document.getElementById('env-indicator').style.display = 'none';
-        }, 5000);
-    </script>
 </body>
 
 </html>

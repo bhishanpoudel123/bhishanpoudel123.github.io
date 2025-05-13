@@ -1,0 +1,16 @@
+{
+    "id": "qn_01",
+    "question_short": "How do you implement the caching in AI chatbot?",
+    "question_long_path": "",
+    "answer_short": "FAISS embedding with sentence-transformer and cosine similarity match.",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_01_answer_long_01.md"
+    ],
+    "answer_long_html": [
+        "/data/interview_drfirst/qn_01_answer_long_01.html"
+    ],
+    "tags": [
+        "Interview_DrFirst",
+        "Chatbot"
+    ]
+}

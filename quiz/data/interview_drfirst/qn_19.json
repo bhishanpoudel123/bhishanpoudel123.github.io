@@ -1,0 +1,16 @@
+{
+    "id": "qn_19",
+    "question_short": "How to share a variable between multiple processes",
+    "question_long_path": "",
+    "answer_short": "```python\nfrom multiprocessing import Process, Value, Array\np = Process(target=process_function, args=use the shared value here)\n```",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_19_answer_long_01.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "Python",
+        "Parallel Computing",
+        "Multiprocessing"
+    ]
+}

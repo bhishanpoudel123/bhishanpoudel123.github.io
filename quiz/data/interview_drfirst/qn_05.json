@@ -1,0 +1,15 @@
+{
+    "id": "qn_05",
+    "question_short": "Explain how have you used A/B Testing.",
+    "question_long_path": "",
+    "answer_short": "power analysis to get sample size using Alpha = 0.05, Power = 0.8.\nTracked Time on dashboard. performed t-test for means.",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_05_answer_long_01.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "Chatbot",
+        "RecSys"
+    ]
+}

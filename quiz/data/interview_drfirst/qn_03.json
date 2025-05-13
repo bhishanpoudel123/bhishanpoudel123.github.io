@@ -1,0 +1,14 @@
+{
+    "id": "qn_03",
+    "question_short": "How do you test FastAPI apps?",
+    "question_long_path": "",
+    "answer_short": "Swagger, Redoc, Postman, bash curl, python requests",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_03_answer_long_01.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "Chatbot"
+    ]
+}

@@ -38,15 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
 async function loadTags() {
     try {
         const res = await fetch('data/tags.json');
+        if (!res.ok) {
+            throw new Error('Failed to load tags');
+        }
         const data = await res.json();
 
-        // Add options to dropdown
+        // Clear existing options except the first one
+        while (tagSelector.options.length > 1) {
+            tagSelector.remove(1);
+        }
+
+        // Add options to dropdown with spaces instead of underscores
         data.tags.forEach(tag => {
             const option = document.createElement('option');
             option.value = tag;
-            option.textContent = tag;
+            option.textContent = tag.replace(/_/g, ' '); // Display with spaces
             tagSelector.appendChild(option);
         });
+
+        // Debug log
+        console.log("Loaded tags:", data.tags);
     } catch (error) {
         console.error('Error loading tags:', error);
         summaryElement.textContent = "Error loading quiz topics. Please refresh the page.";
@@ -77,6 +88,30 @@ function setupEventListeners() {
 
     // Check if mobile on load
     checkIfMobile();
+
+    // Setup image zoom functionality
+    window.toggleZoom = function (img) {
+        img.classList.toggle('zoomed');
+        document.body.classList.toggle('zoomed-mode', img.classList.contains('zoomed'));
+
+        if (img.classList.contains('zoomed')) {
+            img.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    };
+
+    // Setup answer marking functionality
+    window.markAnswer = function (isCorrect) {
+        const q = quizState.currentQuestions[quizState.currentIndex];
+        quizState.userResponses[q.id] = isCorrect;
+        if (isCorrect) quizState.correctCount++;
+
+        if (quizState.currentIndex < quizState.currentQuestions.length - 1) {
+            quizState.currentIndex++;
+            showQuestion();
+        } else {
+            showSummary();
+        }
+    };
 }
 
 function toggleMobileView() {
@@ -107,49 +142,118 @@ async function startQuiz() {
     }
 }
 
+async function getDataFolders() {
+    try {
+        const response = await fetch('data/data_folders.json');
+        if (!response.ok) {
+            throw new Error('Failed to load data folders');
+        }
+        const data = await response.json();
+
+        // Handle both array and object with folders property
+        if (Array.isArray(data)) {
+            return data;
+        } else if (data && Array.isArray(data.folders)) {
+            return data.folders;
+        }
+
+        // Default fallback
+        return ['interview_drfirst', 'linear_regression'];
+    } catch (error) {
+        console.error('Error loading data folders:', error);
+        return ['interview_drfirst', 'linear_regression'];
+    }
+}
+
 async function loadQuestions(tag) {
     try {
-        // Clear existing UI elements
+        // Clear UI elements
         quizContainer.innerHTML = '';
         scoreSection.style.display = 'none';
         allQuestionsView.style.display = 'none';
 
-        // Reset quiz state
+        // Reset state
         quizState.currentTag = tag;
         quizState.correctCount = 0;
         quizState.userResponses = {};
         quizState.currentIndex = 0;
 
-        // Load questions
-        const files = ['questions/linear_regression.json', 'questions/interview_drfirst.json'];
-        let questions = [];
+        // Get folders
+        const dataFolders = await getDataFolders();
+        console.log("Searching folders:", dataFolders);
 
-        for (let file of files) {
-            const res = await fetch(file);
-            const qns = await res.json();
-            questions.push(...qns.filter(q => q.tags.includes(tag)));
+        // Normalize tag
+        const normalizedTag = tag.toLowerCase().replace(/_/g, ' ').trim();
+
+        let allQuestions = [];
+
+        // Search each folder
+        for (const folder of dataFolders) {
+            try {
+                console.group(`Searching folder: ${folder}`);
+
+                // Load index
+                const indexPath = `data/${folder}/index.json`;
+                const indexResponse = await fetch(indexPath);
+                if (!indexResponse.ok) {
+                    console.warn(`Index not found: ${indexPath}`);
+                    continue;
+                }
+
+                const indexData = await indexResponse.json();
+                const questionFiles = indexData.files || [];
+                console.log(`Found ${questionFiles.length} questions in index`);
+
+                // Load each question
+                for (const qnFile of questionFiles) {
+                    try {
+                        const filePath = `data/${folder}/${qnFile}`;
+                        const fileResponse = await fetch(filePath);
+                        if (!fileResponse.ok) continue;
+
+                        const questions = await fileResponse.json();
+                        const questionArray = Array.isArray(questions) ? questions : [questions];
+
+                        // Check tags
+                        for (const q of questionArray) {
+                            if (q.tags && q.tags.some(t =>
+                                t.toLowerCase().replace(/_/g, ' ').trim() === normalizedTag
+                            )) {
+                                console.log(`Found match: ${q.id}`);
+                                allQuestions.push(q);
+                            }
+                        }
+                    } catch (e) {
+                        console.error(`Error loading ${qnFile}:`, e);
+                    }
+                }
+                console.groupEnd();
+            } catch (e) {
+                console.error(`Error with folder ${folder}:`, e);
+            }
         }
 
-        quizState.currentQuestions = questions;
+        // Update state
+        quizState.currentQuestions = allQuestions;
 
-        if (questions.length === 0) {
-            summaryElement.textContent = `No questions found for "${tag}". Please select another topic.`;
+        if (allQuestions.length === 0) {
+            summaryElement.textContent = `No questions found for "${tag}". Check console for details.`;
             previewControls.style.display = 'none';
             return;
         }
 
-        summaryElement.textContent = `Selected topic: "${tag}" | ${questions.length} questions`;
+        // Show questions
+        summaryElement.textContent = `Topic: "${tag}" | ${allQuestions.length} questions`;
         previewControls.style.display = 'block';
         quizControls.style.display = 'flex';
         questionNavigation.style.display = 'flex';
 
-        // Initialize quiz navigation
         setupQuestionNavigation();
         showQuestion();
 
     } catch (error) {
-        console.error('Error loading questions:', error);
-        summaryElement.textContent = "Error loading questions. Please try again.";
+        console.error('Error:', error);
+        summaryElement.textContent = "Error loading questions. See console.";
         previewControls.style.display = 'none';
     }
 }
@@ -251,59 +355,78 @@ function showNextQuestion() {
     }
 }
 
-function toggleZoom(img) {
-    img.classList.toggle('zoomed');
-    document.body.classList.toggle('zoomed-mode', img.classList.contains('zoomed'));
-
-    if (img.classList.contains('zoomed')) {
-        img.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
-
 async function showQuestion() {
     const q = quizState.currentQuestions[quizState.currentIndex];
     quizContainer.innerHTML = '';
 
     let questionLong = '';
     let answerLong = '';
+    let answerLongHtml = '';
 
-    if (q.question_long_path) {
+    // Load long question content if available
+    if (q.question_long_path && q.question_long_path !== '') {
         questionLong = await fetchMarkdown(q.question_long_path);
     }
 
-    if (q.answer_long_path) {
-        answerLong = await fetchMarkdown(q.answer_long_path);
+    // Load long answer content from markdown if available
+    if (q.answer_long_md && q.answer_long_md.length > 0) {
+        answerLong = await fetchMarkdown(q.answer_long_md[0]);
+    }
+
+    // Load HTML answer content if available
+    if (q.answer_long_html && q.answer_long_html.length > 0) {
+        answerLongHtml = await fetchHtml(q.answer_long_html[0]);
     }
 
     const div = document.createElement('div');
     div.className = 'question-block';
 
-    div.innerHTML = `
+    // Get image paths
+    const questionImage = q.question_image || '';
+    const answerImage = q.answer_image || '';
+
+    // Create the question HTML
+    let html = `
         <strong>Q${quizState.currentIndex + 1}/${quizState.currentQuestions.length}: ${q.question_short}</strong><br>
-        ${questionLong ? `<details><summary>Show Full Question</summary>
-            <div class="markdown">${marked.parse(questionLong)}</div>
-            ${q.question_image ? `
+    `;
+
+    // Add long question if available
+    if (questionLong || q.question_long_path) {
+        html += `
+        <details>
+            <summary>Show Full Question</summary>
+            ${questionLong ? `<div class="markdown">${marked.parse(questionLong)}</div>` : ''}
+            ${questionImage ? `
             <div class="image-container">
-                <img src="${q.question_image}" 
+                <img src="${questionImage}" 
                      class="quiz-image" 
                      alt="Question illustration"
                      onclick="toggleZoom(this)">
-                <div class="image-caption" onclick="toggleZoom(this)">Click image to zoom</div>
+                <div class="image-caption">Click image to zoom</div>
             </div>` : ''}
-        </details>` : ''}
-        <details><summary>Show Answer</summary>
+        </details>
+        `;
+    }
+
+    // Add answer section
+    html += `
+        <details>
+            <summary>Show Answer</summary>
             <p><strong>Short Answer:</strong> ${q.answer_short}</p>
             ${answerLong ? `
             <div class="markdown">${marked.parse(answerLong)}</div>
-            ${q.answer_image ? `
+            ` : ''}
+            ${answerLongHtml ? `
+            <div class="markdown html-content">${answerLongHtml}</div>
+            ` : ''}
+            ${answerImage ? `
             <div class="image-container">
-                <img src="${q.answer_image}" 
+                <img src="${answerImage}" 
                      class="quiz-image" 
                      alt="Answer illustration"
                      onclick="toggleZoom(this)">
-                <div class="image-caption" onclick="toggleZoom(this)">Click image to zoom</div>
+                <div class="image-caption">Click image to zoom</div>
             </div>` : ''}
-            ` : ''}
         </details>
         <div class="answer-buttons">
             <button onclick="markAnswer(true)">✅ Correct</button>
@@ -311,6 +434,7 @@ async function showQuestion() {
         </div>
     `;
 
+    div.innerHTML = html;
     quizContainer.appendChild(div);
 
     // Apply Prism highlighting if available
@@ -336,37 +460,32 @@ async function fetchMarkdown(path) {
     try {
         if (!path) return '';
 
-        // Determine if we're running on GitHub Pages
-        const isGitHubPages = window.location.hostname.includes('github.io');
+        // The path is now a full path from the JSON file
+        // Remove leading slash if present to make it relative to the current directory
+        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
 
-        // Fetch the markdown content
-        const res = await fetch(path.startsWith('content/') ? path : `content/${path}`);
+        const res = await fetch(cleanPath);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-        let markdown = await res.text();
-
-        // Fix image paths in markdown
-        markdown = markdown.replace(
-            /!\[(.*?)\]\(\/assets\/images\/(.*?)\)/g,
-            `![$1](${isGitHubPages ? '/quiz' : ''}/assets/images/$2)`
-        );
-
-        return markdown;
+        return await res.text();
     } catch (error) {
-        console.error('Error loading markdown:', error);
+        console.error('Error loading markdown:', error, path);
         return '';
     }
 }
 
-function markAnswer(isCorrect) {
-    const q = quizState.currentQuestions[quizState.currentIndex];
-    quizState.userResponses[q.id] = isCorrect;
-    if (isCorrect) quizState.correctCount++;
+async function fetchHtml(path) {
+    try {
+        if (!path) return '';
 
-    if (quizState.currentIndex < quizState.currentQuestions.length - 1) {
-        quizState.currentIndex++;
-        showQuestion();
-    } else {
-        showSummary();
+        // Remove leading slash if present to make it relative to the current directory
+        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+
+        const res = await fetch(cleanPath);
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return await res.text();
+    } catch (error) {
+        console.error('Error loading HTML:', error, path);
+        return '';
     }
 }
 
@@ -378,11 +497,13 @@ function showSummary() {
     scoreSection.style.display = 'block';
 
     const total = quizState.currentQuestions.length;
-    const percentage = Math.round((quizState.correctCount / total) * 100);
+    const attempted = Object.keys(quizState.userResponses).length;
+    const percentage = Math.round((quizState.correctCount / attempted) * 100) || 0;
 
     scoreSection.innerHTML = `
         <h2>Quiz Complete!</h2>
-        <p>You answered ${quizState.correctCount} out of ${total} correctly (${percentage}%).</p>
+        <p>You attempted ${attempted} out of ${total} questions.</p>
+        <p>You answered ${quizState.correctCount} out of ${attempted} correctly (${percentage}%).</p>
         <button onclick="showReview()">🔍 Review Answers</button>
         <button onclick="location.reload()">🔄 Start New Quiz</button>
     `;
@@ -396,12 +517,18 @@ function showReview() {
         div.className = 'question-block review';
         const correct = quizState.userResponses[q.id];
 
+        // Check if this question was answered
+        const wasAnswered = q.id in quizState.userResponses;
+
         div.innerHTML = `
             <strong>Q${i + 1}: ${q.question_short}</strong>
             <p class="answer"><strong>Answer:</strong> ${q.answer_short}</p>
-            <p class="${correct ? 'correct' : 'incorrect'}">
-                You marked this as ${correct ? 'correct ✅' : 'incorrect ❌'}
-            </p>
+            ${wasAnswered ?
+                `<p class="${correct ? 'correct' : 'incorrect'}">
+                    You marked this as ${correct ? 'correct ✅' : 'incorrect ❌'}
+                </p>` :
+                `<p class="unanswered">Not answered</p>`
+            }
         `;
 
         quizContainer.appendChild(div);
