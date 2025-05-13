@@ -121,7 +121,7 @@ async function loadQuestions(tag) {
         quizState.currentIndex = 0;
 
         // Load questions
-        const files = ['questions/linear_regression.json'];
+        const files = ['questions/linear_regression.json', 'questions/interview_drfirst.json'];
         let questions = [];
 
         for (let file of files) {
@@ -335,9 +335,22 @@ function updateNavButtons() {
 async function fetchMarkdown(path) {
     try {
         if (!path) return '';
+
+        // Determine if we're running on GitHub Pages
+        const isGitHubPages = window.location.hostname.includes('github.io');
+
+        // Fetch the markdown content
         const res = await fetch(path.startsWith('content/') ? path : `content/${path}`);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-        return await res.text();
+        let markdown = await res.text();
+
+        // Fix image paths in markdown
+        markdown = markdown.replace(
+            /!\[(.*?)\]\(\/assets\/images\/(.*?)\)/g,
+            `![$1](${isGitHubPages ? '/quiz' : ''}/assets/images/$2)`
+        );
+
+        return markdown;
     } catch (error) {
         console.error('Error loading markdown:', error);
         return '';
