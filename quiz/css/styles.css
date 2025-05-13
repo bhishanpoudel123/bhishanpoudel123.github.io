@@ -277,3 +277,95 @@ details[open] summary {
         grid-template-columns: 1fr;
     }
 }
+
+/* Mobile View Toggle Styles */
+.mobile-only {
+    display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+
+    /* Default mobile styles (small) */
+    body {
+        font-size: 14px;
+    }
+
+    button,
+    select {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* Enhanced mobile view (when toggled) */
+    body.mobile-view {
+        font-size: 18px !important;
+    }
+
+    body.mobile-view button,
+    body.mobile-view select {
+        font-size: 18px !important;
+        padding: 12px 18px !important;
+        min-height: 44px;
+        /* Better touch target */
+    }
+
+    body.mobile-view .question-block {
+        padding: 25px !important;
+    }
+
+    body.mobile-view .quiz-image {
+        max-width: 95% !important;
+    }
+
+    body.mobile-view .markdown h1,
+    body.mobile-view .markdown h2,
+    body.mobile-view .markdown h3 {
+        font-size: 1.5em !important;
+    }
+
+    body.mobile-view details summary {
+        font-size: 1.2em !important;
+    }
+
+    body.mobile-view .answer-buttons button {
+        font-size: 1.2em !important;
+        padding: 15px 20px !important;
+    }
+}
+
+/* additional mobile view */
+/* Prevent zoom on input for mobile devices */
+@media (max-width: 768px) {
+
+    select,
+    button,
+    input {
+        font-size: 16px !important;
+    }
+
+    /* Better touch targets */
+    .answer-buttons button {
+        min-width: 120px;
+        margin: 5px;
+    }
+
+    /* Adjust zoomed image for mobile */
+    .quiz-image.zoomed {
+        transform: translate(-50%, -50%) scale(1.2) !important;
+    }
+}
+
+/* Replace existing .mobile-only styles with: */
+#mobile-view-toggle {
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+    #mobile-view-toggle {
+        display: block; /* Only show on mobile */
+    }
+}

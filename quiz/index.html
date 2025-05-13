@@ -9,11 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
         rel="stylesheet">
+
+    <script>
+        // Detect if running on GitHub Pages
+        const isGitHubPages = window.location.hostname.includes('github.io');
+        if (isGitHubPages) {
+            document.write('<base href="/quiz/" />');
+        } else {
+            document.write('<base href="/" />');
+        }
+    </script>
 </head>
 
 <body>
     <h1>Data Science Quiz</h1>
     <div class="controls">
+        <button id="mobile-view-toggle" class="mobile-only">📱 Mobile View</button>
         <select id="tag-selector">
             <option value="">-- Select a Topic --</option>
         </select>

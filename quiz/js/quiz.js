@@ -68,6 +68,36 @@ function setupEventListeners() {
         goToQuestionBtn.disabled = this.value === "";
     });
     showAllQuestionsBtn.addEventListener('click', showAllQuestions);
+
+    // Add mobile view toggle
+    const mobileViewToggle = document.getElementById('mobile-view-toggle');
+    if (mobileViewToggle) {
+        mobileViewToggle.addEventListener('click', toggleMobileView);
+    }
+
+    // Check if mobile on load
+    checkIfMobile();
+}
+
+function toggleMobileView() {
+    document.body.classList.toggle('mobile-view');
+    const toggleBtn = document.getElementById('mobile-view-toggle');
+    if (document.body.classList.contains('mobile-view')) {
+        toggleBtn.textContent = '📱 Normal View';
+    } else {
+        toggleBtn.textContent = '📱 Mobile View';
+    }
+}
+
+function checkIfMobile() {
+    if (window.innerWidth <= 768) {
+        // Auto-enable mobile view on small screens
+        document.body.classList.add('mobile-view');
+        const toggleBtn = document.getElementById('mobile-view-toggle');
+        if (toggleBtn) {
+            toggleBtn.textContent = '📱 Normal View';
+        }
+    }
 }
 
 async function startQuiz() {
