@@ -1,0 +1,15 @@
+{
+    "id": "qn_06",
+    "question_short": "How did you do NLP Based Clinical Text classification given in your resume?",
+    "question_long_path": "",
+    "answer_short": "1. Handled messy healthcare text: acronyms, typos, and medical slang.\n2. Removed PII data\n3. fine-tuned biobert\n4. used tuned model for classification",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_06_answer_long_01.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "NLP",
+        "BERT"
+    ]
+}

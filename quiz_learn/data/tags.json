@@ -1,0 +1,191 @@
+{
+    "tags": [
+        "Interview_DrFirst",
+        "Chatbot",
+        "BERT",
+        "LLM",
+        "Linear Regression",
+        "Machine Learning",
+        "Python",
+        "Hypothesis Testing",
+        "Multiprocessing",
+        "NLP",
+        "Parallel Computing",
+        "Personal",
+        "RecSys",
+        "Statistics",
+        "t-test",
+        "A/B Test",
+        "AWS",
+        "Cloud",
+        "Latency",
+        "Projects",
+        "SQL",
+        "TF-IDF"
+    ],
+    "tag_details": {
+        "Interview_DrFirst": {
+            "count": 20,
+            "source_files": [
+                "qn_18.json",
+                "qn_14.json",
+                "qn_02.json",
+                "qn_03.json",
+                "qn_15.json"
+            ]
+        },
+        "Chatbot": {
+            "count": 5,
+            "source_files": [
+                "qn_02.json",
+                "qn_03.json",
+                "qn_04.json",
+                "qn_05.json",
+                "qn_01.json"
+            ]
+        },
+        "BERT": {
+            "count": 4,
+            "source_files": [
+                "qn_12.json",
+                "qn_06.json",
+                "qn_10.json",
+                "qn_11.json"
+            ]
+        },
+        "LLM": {
+            "count": 4,
+            "source_files": [
+                "qn_12.json",
+                "qn_09.json",
+                "qn_10.json",
+                "qn_11.json"
+            ]
+        },
+        "Linear Regression": {
+            "count": 3,
+            "source_files": [
+                "qn_02.json",
+                "qn_03.json",
+                "qn_01.json"
+            ]
+        },
+        "Machine Learning": {
+            "count": 3,
+            "source_files": [
+                "qn_02.json",
+                "qn_03.json",
+                "qn_01.json"
+            ]
+        },
+        "Python": {
+            "count": 3,
+            "source_files": [
+                "qn_18.json",
+                "qn_19.json",
+                "qn_20.json"
+            ]
+        },
+        "Hypothesis Testing": {
+            "count": 2,
+            "source_files": [
+                "qn_16.json",
+                "qn_17.json"
+            ]
+        },
+        "Multiprocessing": {
+            "count": 2,
+            "source_files": [
+                "qn_18.json",
+                "qn_19.json"
+            ]
+        },
+        "NLP": {
+            "count": 2,
+            "source_files": [
+                "qn_13.json",
+                "qn_06.json"
+            ]
+        },
+        "Parallel Computing": {
+            "count": 2,
+            "source_files": [
+                "qn_18.json",
+                "qn_19.json"
+            ]
+        },
+        "Personal": {
+            "count": 2,
+            "source_files": [
+                "qn_14.json",
+                "qn_15.json"
+            ]
+        },
+        "RecSys": {
+            "count": 2,
+            "source_files": [
+                "qn_04.json",
+                "qn_05.json"
+            ]
+        },
+        "Statistics": {
+            "count": 2,
+            "source_files": [
+                "qn_16.json",
+                "qn_17.json"
+            ]
+        },
+        "t-test": {
+            "count": 2,
+            "source_files": [
+                "qn_16.json",
+                "qn_17.json"
+            ]
+        },
+        "A/B Test": {
+            "count": 1,
+            "source_files": [
+                "qn_16.json"
+            ]
+        },
+        "AWS": {
+            "count": 1,
+            "source_files": [
+                "qn_08.json"
+            ]
+        },
+        "Cloud": {
+            "count": 1,
+            "source_files": [
+                "qn_08.json"
+            ]
+        },
+        "Latency": {
+            "count": 1,
+            "source_files": [
+                "qn_09.json"
+            ]
+        },
+        "Projects": {
+            "count": 1,
+            "source_files": [
+                "qn_15.json"
+            ]
+        },
+        "SQL": {
+            "count": 1,
+            "source_files": [
+                "qn_07.json"
+            ]
+        },
+        "TF-IDF": {
+            "count": 1,
+            "source_files": [
+                "qn_13.json"
+            ]
+        }
+    },
+    "total_questions": 65,
+    "unique_tags": 22,
+    "generated_by": "create_tags_json.py"
+}

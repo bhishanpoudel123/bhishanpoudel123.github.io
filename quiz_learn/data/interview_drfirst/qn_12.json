@@ -1,0 +1,16 @@
+{
+    "id": "qn_12",
+    "question_short": "Do you know how BERT was trained?",
+    "question_long_path": "",
+    "answer_short": "- Two Pre-training Tasks are Masked Language Modeling (MLM)  and Next Sentence Prediction (NSP)\n- Model Variants are BERT-base and BERT-large. Later different derivatives such as distilBert, Roberta, etc\n- Trained on unlabeled text from BooksCorpus  and English Wikipedia",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_12_answer_long_01.md",
+        "/data/interview_drfirst/qn_12_answer_long_02.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "LLM",
+        "BERT"
+    ]
+}

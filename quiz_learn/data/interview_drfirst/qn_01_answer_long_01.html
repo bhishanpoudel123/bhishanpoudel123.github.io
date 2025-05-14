@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>drfirst_01_answer_long.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p><strong>Q: One of the things you did to improve the latency was cache the frequently asked questions. Could you explain how you did this, given there might be different variations?</strong></p>
+<p>Yes — latency reduction was critical for ensuring a smooth user experience with the AI chatbot I developed at Cencora. Since users often asked semantically similar questions (e.g., “What are this quarter's KPIs?” vs. “Can I see the Q2 business performance?”), I implemented a <strong>semantic caching mechanism</strong> to accelerate response times:</p>
+<h3 id="%F0%9F%A7%A0-semantic-caching-with-embedding-based-matching">🧠 Semantic Caching with Embedding-Based Matching</h3>
+<ol>
+<li>
+<p><strong>Vector Embedding of Questions</strong>
+I used OpenAI's embedding model (or <code>sentence-transformers</code> for local inference) to convert both incoming user queries and stored FAQs into dense vector representations.</p>
+</li>
+<li>
+<p><strong>Similarity Matching</strong>
+On each query, I compared the incoming vector with existing cached vectors using <strong>cosine similarity</strong>. If a match exceeded a defined similarity threshold (e.g., 0.92), I served the <strong>cached response</strong> instantly without re-querying the LLM or backend systems.</p>
+</li>
+<li>
+<p><strong>Approximate Nearest Neighbor (ANN) Search</strong>
+To scale this efficiently, especially with hundreds of FAQs, I leveraged <code>FAISS</code> (Facebook AI Similarity Search) for high-speed similarity searches within vector space.</p>
+</li>
+<li>
+<p><strong>Dynamic Cache Invalidation</strong>
+Since business data evolves, I tagged cache entries with TTLs (time-to-live) or attached metadata (e.g., timestamp, data version) to invalidate stale answers and ensure real-time relevance.</p>
+</li>
+<li>
+<p><strong>Cold Start Optimization</strong>
+For newly asked questions that didn’t have a match, the chatbot would fetch fresh data, generate a response using the LLM, and <strong>store the new Q&amp;A pair</strong> in the cache for future reuse.</p>
+</li>
+<li>
+<p><strong>Hybrid Strategy with RAG</strong>
+In some cases, I combined this caching approach with Retrieval-Augmented Generation (RAG) using <strong>LlamaIndex</strong> — allowing the system to first check cache, then fallback to a RAG pipeline if needed.</p>
+</li>
+</ol>
+<h1 id="faiss-embedding-code">FAISS embedding Code</h1>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> faiss
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">from</span> sentence_transformers <span class="hljs-keyword">import</span> SentenceTransformer
+
+<span class="hljs-comment"># Load an embedding model (e.g., sentence-transformers)</span>
+embedding_model = SentenceTransformer(<span class="hljs-string">'all-MiniLM-L6-v2'</span>)
+
+<span class="hljs-comment"># Sample cached questions and their responses</span>
+cached_questions = [
+    <span class="hljs-string">"What are this quarter's KPIs?"</span>,
+    <span class="hljs-string">"Show me the latest business performance."</span>,
+    <span class="hljs-string">"Can I see the Q2 financial report?"</span>,
+    <span class="hljs-string">"Give me details about revenue growth."</span>
+]
+
+cached_answers = [
+    <span class="hljs-string">"The KPIs for this quarter are revenue growth, customer retention, and operating margin."</span>,
+    <span class="hljs-string">"Here is the latest business performance report."</span>,
+    <span class="hljs-string">"The Q2 financial report shows a 10% increase in revenue and stable profit margins."</span>,
+    <span class="hljs-string">"Revenue growth is projected at 8% for this quarter."</span>
+]
+
+<span class="hljs-comment"># Convert questions into embeddings</span>
+question_embeddings = embedding_model.encode(cached_questions)
+question_embeddings = np.array(question_embeddings).astype(<span class="hljs-string">'float32'</span>)
+
+<span class="hljs-comment"># Initialize FAISS index for fast similarity search</span>
+dimension = question_embeddings.shape[<span class="hljs-number">1</span>]  <span class="hljs-comment"># Embedding dimension</span>
+index = faiss.IndexFlatL2(dimension)
+index.add(question_embeddings)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_cached_answer</span><span class="hljs-params">(user_query, threshold=<span class="hljs-number">0.92</span>)</span>:</span>
+    <span class="hljs-string">"""Checks the cache for a semantically similar question and returns the cached answer."""</span>
+    query_embedding = embedding_model.encode([user_query]).astype(<span class="hljs-string">'float32'</span>)
+
+    <span class="hljs-comment"># Search for nearest neighbors</span>
+    _, indices = index.search(query_embedding, k=<span class="hljs-number">1</span>)  <span class="hljs-comment"># Find top-1 match</span>
+    matched_index = indices[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]
+
+    <span class="hljs-comment"># Compute cosine similarity</span>
+    query_vector = query_embedding[<span class="hljs-number">0</span>]
+    matched_vector = question_embeddings[matched_index]
+    similarity = np.dot(query_vector, matched_vector) / (np.linalg.norm(query_vector) * np.linalg.norm(matched_vector))
+
+    <span class="hljs-keyword">if</span> similarity &gt;= threshold:
+        <span class="hljs-keyword">return</span> cached_answers[matched_index]  <span class="hljs-comment"># Return cached answer</span>
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>  <span class="hljs-comment"># No match found</span>
+
+<span class="hljs-comment"># Example user input</span>
+user_input = <span class="hljs-string">"How did the business perform in Q2?"</span>
+cached_response = get_cached_answer(user_input)
+
+<span class="hljs-keyword">if</span> cached_response:
+    print(<span class="hljs-string">f"💾 Cached Answer: <span class="hljs-subst">{cached_response}</span>"</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">"🤖 No match found. Querying AI chatbot..."</span>)
+    <span class="hljs-comment"># Call your AI chatbot function here and store the new answer in the cache</span>
+
+</div></code></pre>
+
+</body>
+</html>

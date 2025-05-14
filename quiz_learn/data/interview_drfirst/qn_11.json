@@ -1,0 +1,15 @@
+{
+    "id": "qn_11",
+    "question_short": "How to deal when document is longer than the contenxt window in BERT?",
+    "question_long_path": "",
+    "answer_short": "1. overlapping 512-token chunks\n2. Then use bert tokenizer with     max_length=512, stride=128, truncation=True,",
+    "answer_long_md": [
+        "/data/interview_drfirst/qn_11_answer_long_01.md"
+    ],
+    "answer_long_html": [],
+    "tags": [
+        "Interview_DrFirst",
+        "LLM",
+        "BERT"
+    ]
+}

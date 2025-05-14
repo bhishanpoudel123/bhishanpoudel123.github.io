@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Quiz</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Data Science Quiz</h1>
+        <p class="subtitle">Test your machine learning knowledge</p>
+    </header>
+
+    <div class="controls">
+        <button id="mobile-view-toggle" class="mobile-only">📱 Mobile View</button>
+        <select id="tag-selector">
+            <option value="">-- Select a Topic --</option>
+        </select>
+        <button id="start-quiz" disabled>Start Quiz</button>
+    </div>
+
+    <div id="summary"></div>
+
+    <div id="preview-controls" style="display:none;">
+        <button id="show-all-questions">📚 Show All Questions</button>
+    </div>
+
+    <div id="quiz-container"></div>
+
+    <div class="quiz-controls" style="display:none;">
+        <button id="shuffle">🔀 Shuffle</button>
+        <button id="previous">⬅️ Previous</button>
+        <button id="next">➡️ Next</button>
+        <button id="end-quiz">⏹️ End Quiz</button>
+    </div>
+
+    <div class="question-navigation" style="display:none;">
+        <span>Go to Question: </span>
+        <select id="question-selector"></select>
+        <button id="go-to-question">Go</button>
+    </div>
+
+    <div id="score-section" style="display:none;"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <!-- Add language support -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>

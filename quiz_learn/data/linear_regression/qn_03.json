@@ -1,0 +1,11 @@
+[
+  {
+    "id": "qn_03",
+    "question_short": "How to test the normality of a feature?",
+    "question_long_path": "/data/linear_regression/qn_03_long_question.md",
+    "answer_short": "Use tests like Shapiro-Wilk, Anderson-Darling, and visualizations like histograms and QQ-plots.",
+    "answer_long_md": ["/data/linear_regression/qn_03_long_answer.md"],
+    "answer_long_html": [],
+    "tags": ["Linear Regression", "Machine Learning"]
+  }
+]

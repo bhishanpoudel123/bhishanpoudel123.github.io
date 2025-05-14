@@ -1,0 +1,1 @@
+Explain different statistical methods and plots to test if a feature or variable follows a normal distribution. Include both visual (histograms, QQ-plots) and statistical (Shapiro-Wilk, Anderson-Darling, etc.) techniques.
