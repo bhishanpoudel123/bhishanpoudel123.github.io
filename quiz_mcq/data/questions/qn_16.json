@@ -1,0 +1,20 @@
+{
+  "id": 16,
+  "category": "Python",
+  "question": "Which instruction should replace [B1000] in the class B's __init__ method to properly initialize the parent class A?",
+  "answers": [
+    "super().__init__('hello')"
+  ],
+  "metadata": {
+    "language": "Python",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "medium"
+  },
+  "options": [
+    "super().__init__('hello')",
+    "A.__init__('hello')",
+    "super().__init__(self, 'hello')",
+    "A.__init__(self, 'hello')"
+  ]
+}

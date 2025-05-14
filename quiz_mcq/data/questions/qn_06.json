@@ -1,0 +1,20 @@
+{
+  "id": 6,
+  "category": "Git",
+  "question": "Which flag lets the user type the commit message inline with the [git commit] command?",
+  "answers": [
+    "-m"
+  ],
+  "metadata": {
+    "language": "Bash",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "easy"
+  },
+  "options": [
+    "-m",
+    "-a",
+    "-v",
+    "-i"
+  ]
+}

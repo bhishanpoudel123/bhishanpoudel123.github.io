@@ -1,0 +1,20 @@
+{
+  "id": 12,
+  "category": "Python",
+  "question": "When you run pip install -r requirements.txt what happens?",
+  "answers": [
+    "The command installs the packages listed in requirements.txt."
+  ],
+  "metadata": {
+    "language": "Python",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "easy"
+  },
+  "options": [
+    "It lists available packages in the PyPi repository.",
+    "A new virtual environment is created and saved in requirements.txt.",
+    "The command installs the packages listed in requirements.txt.",
+    "The current environment's packages and their versions are saved to requirements.txt."
+  ]
+}

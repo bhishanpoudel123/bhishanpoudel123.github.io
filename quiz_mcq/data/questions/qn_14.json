@@ -1,0 +1,19 @@
+{
+  "id": 14,
+  "category": "Python",
+  "question": "How does one create a new instance [point] of the Point class?",
+  "answers": [
+    "point = Point(x, y)"
+  ],
+  "metadata": {
+    "language": "Python",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "easy"
+  },
+  "options": [
+    "point = new Point(x, y)",
+    "point = Point(x, y)",
+    "point = Point(point, x, y)"
+  ]
+}
