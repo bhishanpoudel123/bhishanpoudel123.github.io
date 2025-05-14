@@ -1,0 +1,652 @@
+[
+  {
+    "id": 1,
+    "category": "Data Science",
+    "question": "What is the primary goal of data wrangling?",
+    "options": [
+      "Building machine learning models",
+      "Cleaning and transforming raw data into a usable format",
+      "Creating interactive dashboards",
+      "Writing complex SQL queries"
+    ],
+    "answer": "Cleaning and transforming raw data into a usable format",
+    "explanation": "Data wrangling involves cleaning, structuring, and enriching raw data into a format suitable for analysis."
+  },
+  {
+    "id": 2,
+    "category": "Data Science",
+    "question": "Which of the following is NOT a measure of central tendency?",
+    "options": [
+      "Mean",
+      "Median",
+      "Mode",
+      "Standard deviation"
+    ],
+    "answer": "Standard deviation",
+    "explanation": "Standard deviation measures dispersion, not central tendency. The three main measures of central tendency are mean, median, and mode."
+  },
+  {
+    "id": 3,
+    "category": "Data Science",
+    "question": "What type of chart would be most appropriate for comparing proportions of a whole?",
+    "options": [
+      "Scatter plot",
+      "Histogram",
+      "Pie chart",
+      "Line chart"
+    ],
+    "answer": "Pie chart",
+    "explanation": "Pie charts are best for showing proportions of a whole, though they should be used sparingly and only with a small number of categories."
+  },
+  {
+    "id": 4,
+    "category": "Data Science",
+    "question": "Which Python library is primarily used for working with tabular data structures?",
+    "options": [
+      "NumPy",
+      "Matplotlib",
+      "Pandas",
+      "Scikit-learn"
+    ],
+    "answer": "Pandas",
+    "explanation": "Pandas provides DataFrame objects which are ideal for working with tabular data, similar to spreadsheets or SQL tables."
+  },
+  {
+    "id": 5,
+    "category": "Data Science",
+    "question": "What does the groupby() operation in Pandas return before aggregation?",
+    "options": [
+      "A transformed DataFrame",
+      "A list of grouped indices",
+      "A DataFrameGroupBy object",
+      "A Series with group labels"
+    ],
+    "answer": "A DataFrameGroupBy object",
+    "explanation": "groupby() returns a DataFrameGroupBy object which can then be aggregated using functions like sum(), mean(), etc."
+  },
+  {
+    "id": 6,
+    "category": "Data Science",
+    "question": "What does 'NaN' represent in a Pandas DataFrame?",
+    "options": [
+      "A very large number",
+      "Not a Number (missing or undefined value)",
+      "Negative number",
+      "Newly added node"
+    ],
+    "answer": "Not a Number (missing or undefined value)",
+    "explanation": "NaN stands for 'Not a Number' and represents missing or undefined numerical data in Pandas."
+  },
+  {
+    "id": 7,
+    "category": "Data Science",
+    "question": "Which technique is NOT typically used for feature selection?",
+    "options": [
+      "Recursive feature elimination",
+      "Principal Component Analysis (PCA)",
+      "Selecting features by correlation",
+      "Data normalization"
+    ],
+    "answer": "Data normalization",
+    "explanation": "Data normalization scales features but doesn't select them. PCA, correlation analysis, and recursive elimination are feature selection methods."
+  },
+  {
+    "id": 8,
+    "category": "Data Science",
+    "question": "Which metric is NOT used to evaluate regression models?",
+    "options": [
+      "Mean Squared Error (MSE)",
+      "R-squared",
+      "Accuracy",
+      "Root Mean Squared Error (RMSE)"
+    ],
+    "answer": "Accuracy",
+    "explanation": "Accuracy is used for classification problems. MSE, RMSE, and R-squared are common regression metrics."
+  },
+  {
+    "id": 9,
+    "category": "Data Science",
+    "question": "What is the most common method for handling missing numerical data?",
+    "options": [
+      "Deleting all rows with missing values",
+      "Replacing with the mean or median",
+      "Setting all missing values to zero",
+      "Using a placeholder like -999"
+    ],
+    "answer": "Replacing with the mean or median",
+    "explanation": "Mean/median imputation is common for numerical data, though the best approach depends on the data and missingness pattern."
+  },
+  {
+    "id": 10,
+    "category": "Data Science",
+    "question": "Which library is essential for numerical computing in Python?",
+    "options": [
+      "Matplotlib",
+      "Pandas",
+      "NumPy",
+      "Seaborn"
+    ],
+    "answer": "NumPy",
+    "explanation": "NumPy provides foundational support for numerical computing with efficient array operations and mathematical functions."
+  },
+  {
+    "id": 11,
+    "category": "Data Science",
+    "question": "What is the purpose of a correlation matrix?",
+    "options": [
+      "To show relationships between categorical variables",
+      "To measure linear relationships between numerical variables",
+      "To visualize hierarchical clustering",
+      "To perform dimensionality reduction"
+    ],
+    "answer": "To measure linear relationships between numerical variables",
+    "explanation": "A correlation matrix measures the linear relationship between pairs of numerical variables, ranging from -1 to 1."
+  },
+  {
+    "id": 12,
+    "category": "Data Science",
+    "question": "What is the main advantage of using a box plot?",
+    "options": [
+      "Showing exact data points",
+      "Displaying the distribution and outliers of a dataset",
+      "Comparing more than 10 categories clearly",
+      "Showing trends over time"
+    ],
+    "answer": "Displaying the distribution and outliers of a dataset",
+    "explanation": "Box plots effectively show a dataset's quartiles, median, and potential outliers."
+  },
+  {
+    "id": 13,
+    "category": "Data Science",
+    "question": "What does the term 'overfitting' refer to in machine learning?",
+    "options": [
+      "A model that performs well on training data but poorly on unseen data",
+      "A model that performs poorly on both training and test data",
+      "A model that takes too long to train",
+      "A model with too few features"
+    ],
+    "answer": "A model that performs well on training data but poorly on unseen data",
+    "explanation": "Overfitting occurs when a model learns the training data too well, including its noise, reducing generalization to new data."
+  },
+  {
+    "id": 14,
+    "category": "Data Science",
+    "question": "Which of these is a supervised learning algorithm?",
+    "options": [
+      "K-means clustering",
+      "Principal Component Analysis",
+      "Random Forest",
+      "t-SNE"
+    ],
+    "answer": "Random Forest",
+    "explanation": "Random Forest is a supervised learning algorithm. K-means and PCA are unsupervised, and t-SNE is for visualization."
+  },
+  {
+    "id": 15,
+    "category": "Data Science",
+    "question": "What is the purpose of a train-test split?",
+    "options": [
+      "To reduce the size of large datasets",
+      "To evaluate how well a model generalizes to unseen data",
+      "To balance class distributions in classification problems",
+      "To speed up model training"
+    ],
+    "answer": "To evaluate how well a model generalizes to unseen data",
+    "explanation": "Splitting data into training and test sets helps estimate model performance on new, unseen data."
+  },
+  {
+    "id": 16,
+    "category": "Data Science",
+    "question": "Which Python library is most commonly used for creating static visualizations?",
+    "options": [
+      "Plotly",
+      "Matplotlib",
+      "Seaborn",
+      "Bokeh"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "Matplotlib is the foundational plotting library in Python, though Seaborn builds on it for statistical visualizations."
+  },
+  {
+    "id": 17,
+    "category": "Data Science",
+    "question": "What is the main purpose of normalization in data preprocessing?",
+    "options": [
+      "To remove outliers from the data",
+      "To convert categorical variables to numerical",
+      "To scale features to a similar range",
+      "To handle missing values"
+    ],
+    "answer": "To scale features to a similar range",
+    "explanation": "Normalization scales numerical features to a standard range (often [0,1] or with mean=0, std=1) to prevent some features from dominating others."
+  },
+  {
+    "id": 18,
+    "category": "Data Science",
+    "question": "What does SQL stand for?",
+    "options": [
+      "Structured Question Language",
+      "Standard Query Language",
+      "Structured Query Language",
+      "Sequential Query Language"
+    ],
+    "answer": "Structured Query Language",
+    "explanation": "SQL stands for Structured Query Language, used for managing and querying relational databases."
+  },
+  {
+    "id": 19,
+    "category": "Data Science",
+    "question": "Which of these is NOT a common data type in Pandas?",
+    "options": [
+      "DataFrame",
+      "Series",
+      "Array",
+      "Panel"
+    ],
+    "answer": "Array",
+    "explanation": "Pandas' main data structures are DataFrame (2D), Series (1D), and Panel (3D, now deprecated). Arrays are from NumPy."
+  },
+  {
+    "id": 20,
+    "category": "Data Science",
+    "question": "What is the primary use of the Scikit-learn library?",
+    "options": [
+      "Data visualization",
+      "Machine learning algorithms",
+      "Web scraping",
+      "Database management"
+    ],
+    "answer": "Machine learning algorithms",
+    "explanation": "Scikit-learn provides simple and efficient tools for predictive data analysis and machine learning."
+  },
+  {
+    "id": 21,
+    "category": "Data Science",
+    "question": "What is the difference between classification and regression?",
+    "options": [
+      "Classification predicts categories, regression predicts continuous values",
+      "Classification uses unsupervised learning, regression uses supervised",
+      "Classification is for small datasets, regression for large",
+      "There is no difference"
+    ],
+    "answer": "Classification predicts categories, regression predicts continuous values",
+    "explanation": "Classification predicts discrete class labels, while regression predicts continuous numerical values."
+  },
+  {
+    "id": 22,
+    "category": "Data Science",
+    "question": "What is a confusion matrix used for?",
+    "options": [
+      "Visualizing high-dimensional data",
+      "Evaluating the performance of a classification model",
+      "Storing large datasets efficiently",
+      "Performing matrix calculations in linear algebra"
+    ],
+    "answer": "Evaluating the performance of a classification model",
+    "explanation": "A confusion matrix shows true/false positives/negatives, helping evaluate classification model performance."
+  },
+  {
+    "id": 23,
+    "category": "Data Science",
+    "question": "What does ETL stand for in data engineering?",
+    "options": [
+      "Extract, Transform, Load",
+      "Evaluate, Test, Learn",
+      "Extract, Test, Load",
+      "Explore, Transform, Label"
+    ],
+    "answer": "Extract, Transform, Load",
+    "explanation": "ETL refers to the process of extracting data from sources, transforming it, and loading it into a destination system."
+  },
+  {
+    "id": 24,
+    "category": "Data Science",
+    "question": "Which of these is a dimensionality reduction technique?",
+    "options": [
+      "Linear Regression",
+      "Decision Trees",
+      "Principal Component Analysis (PCA)",
+      "K-Nearest Neighbors"
+    ],
+    "answer": "Principal Component Analysis (PCA)",
+    "explanation": "PCA reduces dimensionality by transforming data to a new coordinate system with fewer dimensions."
+  },
+  {
+    "id": 25,
+    "category": "Data Science",
+    "question": "What is the purpose of cross-validation?",
+    "options": [
+      "To increase the size of the training set",
+      "To reduce the need for a test set",
+      "To get more reliable estimates of model performance",
+      "To speed up model training"
+    ],
+    "answer": "To get more reliable estimates of model performance",
+    "explanation": "Cross-validation provides more robust performance estimates by using multiple train/test splits of the data."
+  },
+  {
+    "id": 26,
+    "category": "Data Science",
+    "question": "What is the main advantage of using a Jupyter Notebook?",
+    "options": [
+      "It provides the fastest execution speed",
+      "It combines code, visualizations, and narrative text",
+      "It automatically documents all code",
+      "It doesn't require any programming knowledge"
+    ],
+    "answer": "It combines code, visualizations, and narrative text",
+    "explanation": "Jupyter Notebooks allow interactive development with code, visualizations, and explanatory text in a single document."
+  },
+  {
+    "id": 27,
+    "category": "Data Science",
+    "question": "What is the purpose of one-hot encoding?",
+    "options": [
+      "To compress large datasets",
+      "To convert categorical variables to numerical format",
+      "To normalize numerical data",
+      "To handle missing values"
+    ],
+    "answer": "To convert categorical variables to numerical format",
+    "explanation": "One-hot encoding converts categorical variables to a binary (0/1) numerical format that machine learning algorithms can process."
+  },
+  {
+    "id": 28,
+    "category": "Data Science",
+    "question": "Which metric would you use for an imbalanced classification problem?",
+    "options": [
+      "Accuracy",
+      "Precision-Recall curve",
+      "Mean Squared Error",
+      "R-squared"
+    ],
+    "answer": "Precision-Recall curve",
+    "explanation": "For imbalanced classes, accuracy can be misleading. Precision-Recall curves provide better insight into model performance."
+  },
+  {
+    "id": 29,
+    "category": "Data Science",
+    "question": "What is feature engineering?",
+    "options": [
+      "Creating new features from existing data",
+      "Selecting the most important features",
+      "Building machine learning models",
+      "Visualizing data features"
+    ],
+    "answer": "Creating new features from existing data",
+    "explanation": "Feature engineering involves creating new input features from existing data to improve model performance."
+  },
+  {
+    "id": 30,
+    "category": "Data Science",
+    "question": "What is the purpose of a ROC curve?",
+    "options": [
+      "To visualize the trade-off between true positive and false positive rates",
+      "To show the distribution of a single variable",
+      "To compare regression models",
+      "To perform clustering analysis"
+    ],
+    "answer": "To visualize the trade-off between true positive and false positive rates",
+    "explanation": "ROC curves show the diagnostic ability of a binary classifier by plotting true positive rate vs false positive rate."
+  },
+  {
+    "id": 31,
+    "category": "Data Science",
+    "question": "What is the main advantage of using a random forest over a single decision tree?",
+    "options": [
+      "It's always more accurate",
+      "It reduces overfitting by averaging multiple trees",
+      "It requires less computational power",
+      "It works better with small datasets"
+    ],
+    "answer": "It reduces overfitting by averaging multiple trees",
+    "explanation": "Random forests combine multiple decision trees to reduce variance and overfitting compared to a single tree."
+  },
+  {
+    "id": 32,
+    "category": "Data Science",
+    "question": "What is the purpose of the 'iloc' method in Pandas?",
+    "options": [
+      "To select data by integer position",
+      "To select data by label",
+      "To perform interpolation",
+      "To handle missing values"
+    ],
+    "answer": "To select data by integer position",
+    "explanation": "iloc is primarily integer-location based indexing for selection by position."
+  },
+  {
+    "id": 33,
+    "category": "Data Science",
+    "question": "What is the difference between deep learning and traditional machine learning?",
+    "options": [
+      "Deep learning always performs better",
+      "Deep learning automatically learns feature hierarchies from raw data",
+      "Deep learning requires less data",
+      "There is no difference"
+    ],
+    "answer": "Deep learning automatically learns feature hierarchies from raw data",
+    "explanation": "Deep learning models can learn hierarchical feature representations directly from data, while traditional ML often requires manual feature engineering."
+  },
+  {
+    "id": 34,
+    "category": "Data Science",
+    "question": "What is the purpose of a learning curve in machine learning?",
+    "options": [
+      "To visualize model performance over time",
+      "To show the relationship between training set size and model performance",
+      "To track the learning rate during training",
+      "To compare different optimization algorithms"
+    ],
+    "answer": "To show the relationship between training set size and model performance",
+    "explanation": "Learning curves plot model performance (e.g., accuracy) against training set size or training iterations."
+  },
+  {
+    "id": 35,
+    "category": "Data Science",
+    "question": "What is the bias-variance tradeoff?",
+    "options": [
+      "The balance between model complexity and generalization",
+      "The choice between supervised and unsupervised learning",
+      "The decision to use Python or R",
+      "The selection of training vs test data size"
+    ],
+    "answer": "The balance between model complexity and generalization",
+    "explanation": "The bias-variance tradeoff refers to balancing a model's simplicity (bias) against its sensitivity to training data (variance) to achieve good generalization."
+  },
+  {
+    "id": 36,
+    "category": "Data Science",
+    "question": "What is the purpose of regularization in machine learning?",
+    "options": [
+      "To speed up model training",
+      "To reduce overfitting by penalizing complex models",
+      "To handle missing data",
+      "To normalize input features"
+    ],
+    "answer": "To reduce overfitting by penalizing complex models",
+    "explanation": "Regularization techniques like L1/L2 add penalty terms to prevent overfitting by discouraging overly complex models."
+  },
+  {
+    "id": 37,
+    "category": "Data Science",
+    "question": "What is transfer learning in deep learning?",
+    "options": [
+      "Training multiple models simultaneously",
+      "Using a pre-trained model as a starting point for a new task",
+      "Transferring data between different formats",
+      "Moving models between different hardware"
+    ],
+    "answer": "Using a pre-trained model as a starting point for a new task",
+    "explanation": "Transfer learning leverages knowledge gained from solving one problem and applies it to a different but related problem."
+  },
+  {
+    "id": 38,
+    "category": "Data Science",
+    "question": "What is the purpose of a word embedding in NLP?",
+    "options": [
+      "To count word frequencies",
+      "To represent words as dense vectors capturing semantic meaning",
+      "To correct spelling errors",
+      "To translate between languages"
+    ],
+    "answer": "To represent words as dense vectors capturing semantic meaning",
+    "explanation": "Word embeddings represent words as numerical vectors where similar words have similar vector representations."
+  },
+  {
+    "id": 39,
+    "category": "Data Science",
+    "question": "What is the main advantage of using SQL databases over NoSQL?",
+    "options": [
+      "Better scalability",
+      "More flexible schema",
+      "Stronger consistency guarantees",
+      "Faster write speeds"
+    ],
+    "answer": "Stronger consistency guarantees",
+    "explanation": "SQL databases provide ACID transactions and strong consistency, while NoSQL prioritizes scalability and flexibility."
+  },
+  {
+    "id": 40,
+    "category": "Data Science",
+    "question": "What is the purpose of A/B testing?",
+    "options": [
+      "To compare two machine learning models",
+      "To test two different versions of a product feature",
+      "To analyze variance in datasets",
+      "To balance class distributions"
+    ],
+    "answer": "To test two different versions of a product feature",
+    "explanation": "A/B testing compares two versions (A and B) to determine which performs better on a specific metric."
+  },
+  {
+    "id": 41,
+    "category": "Data Science",
+    "question": "What is the main purpose of the 'apply' function in Pandas?",
+    "options": [
+      "To apply mathematical operations to a DataFrame",
+      "To apply a function along an axis of a DataFrame",
+      "To apply CSS styles to a DataFrame display",
+      "To apply machine learning models to data"
+    ],
+    "answer": "To apply a function along an axis of a DataFrame",
+    "explanation": "The apply() function applies a function along an axis (rows or columns) of a DataFrame or Series."
+  },
+  {
+    "id": 42,
+    "category": "Data Science",
+    "question": "What is the difference between batch gradient descent and stochastic gradient descent?",
+    "options": [
+      "Batch uses all data per update, stochastic uses one sample",
+      "Batch is for classification, stochastic for regression",
+      "Batch is faster but less accurate",
+      "There is no difference"
+    ],
+    "answer": "Batch uses all data per update, stochastic uses one sample",
+    "explanation": "Batch GD computes gradients using the entire dataset, while SGD uses a single random sample per iteration."
+  },
+  {
+    "id": 43,
+    "category": "Data Science",
+    "question": "What is the purpose of the 'dropna' method in Pandas?",
+    "options": [
+      "To drop columns with missing values",
+      "To drop rows or columns with missing values",
+      "To replace missing values with zeros",
+      "To count missing values"
+    ],
+    "answer": "To drop rows or columns with missing values",
+    "explanation": "dropna() removes missing values (NaN) from a DataFrame, either by rows or columns."
+  },
+  {
+    "id": 44,
+    "category": "Data Science",
+    "question": "What is the main advantage of using a pipeline in Scikit-learn?",
+    "options": [
+      "To speed up model training",
+      "To chain multiple processing steps into a single object",
+      "To visualize model performance",
+      "To handle large datasets that don't fit in memory"
+    ],
+    "answer": "To chain multiple processing steps into a single object",
+    "explanation": "Pipelines sequentially apply transforms and a final estimator, ensuring steps are executed in the right order."
+  },
+  {
+    "id": 45,
+    "category": "Data Science",
+    "question": "What is the purpose of the 'value_counts' method in Pandas?",
+    "options": [
+      "To count the number of unique values in a Series",
+      "To calculate the mean of numerical columns",
+      "To count missing values",
+      "To enumerate all values in a DataFrame"
+    ],
+    "answer": "To count the number of unique values in a Series",
+    "explanation": "value_counts() returns a Series containing counts of unique values in descending order."
+  },
+  {
+    "id": 46,
+    "category": "Data Science",
+    "question": "What is the main purpose of feature scaling?",
+    "options": [
+      "To remove unimportant features",
+      "To ensure all features contribute equally to distance-based algorithms",
+      "To reduce the number of features",
+      "To handle categorical variables"
+    ],
+    "answer": "To ensure all features contribute equally to distance-based algorithms",
+    "explanation": "Feature scaling normalizes the range of features so that features with larger scales don't dominate algorithms like KNN or SVM."
+  },
+  {
+    "id": 47,
+    "category": "Data Science",
+    "question": "What is the difference between 'fit' and 'transform' in Scikit-learn?",
+    "options": [
+      "'fit' learns parameters, 'transform' applies them",
+      "'fit' trains models, 'transform' makes predictions",
+      "'fit' is for classification, 'transform' for regression",
+      "There is no difference"
+    ],
+    "answer": "'fit' learns parameters, 'transform' applies them",
+    "explanation": "fit() learns model parameters from training data, while transform() applies the learned transformation to data."
+  },
+  {
+    "id": 48,
+    "category": "Data Science",
+    "question": "What is the purpose of the 'merge' function in Pandas?",
+    "options": [
+      "To combine DataFrames based on common columns",
+      "To concatenate DataFrames vertically",
+      "To merge cells in a DataFrame",
+      "To combine Series objects"
+    ],
+    "answer": "To combine DataFrames based on common columns",
+    "explanation": "merge() combines DataFrames using database-style joins on columns or indices."
+  },
+  {
+    "id": 49,
+    "category": "Data Science",
+    "question": "What is the main advantage of using a dictionary for vectorization in NLP?",
+    "options": [
+      "It preserves word order",
+      "It's more memory efficient than other methods",
+      "It creates a fixed-length representation regardless of document length",
+      "It automatically handles spelling errors"
+    ],
+    "answer": "It creates a fixed-length representation regardless of document length",
+    "explanation": "Dictionary-based vectorization (like CountVectorizer) creates consistent-length vectors from variable-length texts."
+  },
+  {
+    "id": 50,
+    "category": "Data Science",
+    "question": "What is the purpose of the 'pivot_table' function in Pandas?",
+    "options": [
+      "To rotate a DataFrame 90 degrees",
+      "To create a spreadsheet-style pivot table as a DataFrame",
+      "To pivot between different data types",
+      "To transform wide data to long format"
+    ],
+    "answer": "To create a spreadsheet-style pivot table as a DataFrame",
+    "explanation": "pivot_table() creates a multi-dimensional summary table similar to Excel pivot tables, aggregating data."
+  }
+]

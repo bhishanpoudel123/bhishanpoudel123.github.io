@@ -1,0 +1,21 @@
+{
+  "files": [
+    "a_sample.json",
+    "data_analysis_questions.json",
+    "data_cleaning_questions.json",
+    "data_science_questions.json",
+    "data_visualization_questions.json",
+    "iq_questions.json",
+    "machine_learning_questions.json",
+    "modelling_questions.json",
+    "pandas_questions.json",
+    "probability_questions.json",
+    "python_advanced_questions.json",
+    "python_general_questions.json",
+    "sql_general_questions.json",
+    "sqlite_advanced_questions.json",
+    "statistics_questions.json",
+    "timeseries_questions.json"
+  ],
+  "generated_by": "create_index_json.py"
+}

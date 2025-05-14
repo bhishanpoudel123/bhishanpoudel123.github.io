@@ -1,0 +1,20 @@
+{
+  "id": 7,
+  "category": "Git",
+  "question": "Which GitHub feature provides a user-friendly web interface for notifying team members about feature completion, after which proposed changes can be reviewed before being integrated in the master branch?",
+  "answers": [
+    "Pull request"
+  ],
+  "metadata": {
+    "language": "Bash",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "easy"
+  },
+  "options": [
+    "Pull request",
+    "Clause",
+    "Notify",
+    "Fork"
+  ]
+}

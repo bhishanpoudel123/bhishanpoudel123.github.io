@@ -1,0 +1,20 @@
+{
+  "id": 3,
+  "category": "SQL",
+  "question": "You are working with a product table and want to calculate the average unit price of available items (quantity > 0). The query 'SELECT AVG(total / quantity) FROM product' triggers a 'Division by zero' error. What can you do?",
+  "answers": [
+    "SELECT AVG(total / NULLIF(quantity, 0)) FROM product"
+  ],
+  "metadata": {
+    "language": "SQL",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "medium"
+  },
+  "options": [
+    "SELECT AVG(total / COALESCE(quantity, 0)) FROM product",
+    "SELECT AVG(CASE WHEN quantity = 0 THEN 0 ELSE total / quantity END) FROM product",
+    "SELECT AVG(total / quantity) FROM product WHERE quantity IS NOT NULL",
+    "SELECT AVG(total / NULLIF(quantity, 0)) FROM product"
+  ]
+}

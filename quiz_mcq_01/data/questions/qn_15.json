@@ -1,0 +1,20 @@
+{
+  "id": 15,
+  "category": "Python",
+  "question": "What does the command [pip install -e .] do in a Python project?",
+  "answers": [
+    "Installs the current project as a package, using setup.py or pyproject.toml."
+  ],
+  "metadata": {
+    "language": "Python",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "medium"
+  },
+  "options": [
+    "Installs all dependencies listed in requirements.txt.",
+    "Installs the current project as a package, using setup.py or pyproject.toml.",
+    "Creates a virtual environment in the current directory.",
+    "Updates all installed packages to their latest versions."
+  ]
+}

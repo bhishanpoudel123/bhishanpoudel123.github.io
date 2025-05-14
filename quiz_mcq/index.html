@@ -3,47 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCQ Quiz App</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Technical Interview Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Technical Interview Practice</h1>
-        <p class="subtitle">Practice your skills with these interview questions</p>
-    </header>
 
-    <div class="controls">
-        <select id="category-selector">
-            <option value="All">All Categories</option>
-        </select>
-        <span id="progress">Progress: 0/0</span>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Quiz Controls</h2>
+            <select id="category-selector" class="styled-select">
+                <option value="All">All Categories</option>
+            </select>
+        </div>
+
+        <!-- Timer Section -->
+        <div class="timer-section">
+            <h3>Timer Settings</h3>
+            <select id="duration-selector" class="styled-select"></select>
+            <button id="start-quiz" class="control-btn">▶️ Start Quiz</button>
+            <div id="quiz-timer">--:--</div>
+            <div class="time-details">
+                <p>Start: <span id="start-time">-</span></p>
+                <p>End: <span id="end-time">-</span></p>
+            </div>
+        </div>
+
+        <!-- Quiz Controls -->
+        <div class="quiz-controls">
+            <button id="restart-quiz" class="control-btn">🔄 Restart Quiz</button>
+            <button id="end-quiz" class="control-btn">⏹️ End Quiz</button>
+        </div>
+
+        <!-- Question Navigation -->
+        <div class="question-nav">
+            <h3>Jump to Question</h3>
+            <div class="jump-control">
+                <input type="number" id="question-jump" min="1" value="1">
+                <button id="jump-button" class="control-btn">Go</button>
+            </div>
+        </div>
     </div>
 
+    <!-- Main Quiz Content -->
     <div id="quiz-container">
+        <header>
+            <h1>Technical Interview Practice</h1>
+            <p class="subtitle">Test your knowledge with interactive questions</p>
+        </header>
+
+        <!-- Question Block -->
         <div class="question-block">
             <h2 id="question-title">Select a category to begin</h2>
             <div id="question-text"></div>
             <div id="question-images"></div>
             <div id="options-container"></div>
         </div>
+
+        <!-- Answer Feedback -->
+        <div id="answer-section" style="display:none;">
+            <h3>Explanation</h3>
+            <div id="correct-answer"></div>
+            <div id="explanation"></div>
+        </div>
+
+        <!-- Quiz Navigation -->
+        <div class="quiz-controls main-controls">
+            <button id="previous">← Previous</button>
+            <button id="show-answer">🔍 Show Answer</button>
+            <button id="next">Next →</button>
+        </div>
     </div>
 
-    <div class="quiz-controls">
-        <button id="previous">Previous</button>
-        <button id="show-answer">Show Answer</button>
-        <button id="next">Next</button>
-        <button id="finish-quiz">Finish Quiz</button>
-        <button id="reset">Reset Answers</button>
-    </div>
-
-    <div id="answer-section" style="display:none;">
-        <h3>Correct Answer(s)</h3>
-        <div id="correct-answer"></div>
-    </div>
-
+    <!-- Score Section - MOVED OUTSIDE quiz-container -->
     <div id="score-section" style="display:none;"></div>
 
-    <script src="js/quiz.js"></script>
+    <!-- Scripts -->
+    <script src="quiz.js"></script>
+    <script>
+        // Initialize syntax highlighting
+        hljs.configure({
+            languages: ['python', 'sql', 'bash'],
+            ignoreUnescapedHTML: true
+        });
+        hljs.highlightAll();
+    </script>
 </body>
 </html>

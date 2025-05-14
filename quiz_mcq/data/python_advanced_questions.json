@@ -1,0 +1,652 @@
+[
+  {
+    "id": 1,
+    "category": "Python",
+    "question": "What is the time complexity of inserting an element at the beginning of a Python list?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Inserting at the beginning of a Python list requires shifting all elements, hence O(n)."
+  },
+  {
+    "id": 2,
+    "category": "Python",
+    "question": "Which of the following is the most memory-efficient way to handle large numerical data arrays in Python?",
+    "options": [
+      "List of lists",
+      "Pandas DataFrame",
+      "NumPy arrays",
+      "Tuples"
+    ],
+    "answer": "NumPy arrays",
+    "explanation": "NumPy arrays are memory efficient and optimized for numerical operations."
+  },
+  {
+    "id": 3,
+    "category": "Python",
+    "question": "Which Python library provides decorators and context managers to handle retries with exponential backoff?",
+    "options": [
+      "retrying",
+      "backoff",
+      "tenacity",
+      "retry"
+    ],
+    "answer": "tenacity",
+    "explanation": "Tenacity provides powerful retry strategies including exponential backoff."
+  },
+  {
+    "id": 4,
+    "category": "Python",
+    "question": "What is a key difference between multiprocessing and threading in Python?",
+    "options": [
+      "Threads use more memory",
+      "Processes can utilize multiple CPUs",
+      "Threads can run in parallel on multiple cores",
+      "Multiprocessing is slower than threading"
+    ],
+    "answer": "Processes can utilize multiple CPUs",
+    "explanation": "Due to the GIL, threads are limited; multiprocessing uses separate memory space and cores."
+  },
+  {
+    "id": 5,
+    "category": "Python",
+    "question": "What is the purpose of Python's `__slots__` declaration?",
+    "options": [
+      "Reduce memory usage by preventing dynamic attribute creation",
+      "Enable dynamic typing",
+      "Improve readability",
+      "Create private attributes"
+    ],
+    "answer": "Reduce memory usage by preventing dynamic attribute creation",
+    "explanation": "`__slots__` limits attribute assignment and avoids `__dict__` overhead."
+  },
+  {
+    "id": 6,
+    "category": "Python",
+    "question": "What will `functools.lru_cache` do?",
+    "options": [
+      "Cache function output to speed up subsequent calls",
+      "Limit recursion depth",
+      "Create memory leaks",
+      "Parallelize function calls"
+    ],
+    "answer": "Cache function output to speed up subsequent calls",
+    "explanation": "`lru_cache` stores results of expensive function calls for reuse."
+  },
+  {
+    "id": 7,
+    "category": "Python",
+    "question": "What does the `@staticmethod` decorator do in Python?",
+    "options": [
+      "Defines a method that takes no self or cls argument",
+      "Makes method private",
+      "Allows inheritance",
+      "Makes the method static across all classes"
+    ],
+    "answer": "Defines a method that takes no self or cls argument",
+    "explanation": "`@staticmethod` defines a method that does not receive an implicit first argument."
+  },
+  {
+    "id": 8,
+    "category": "Python",
+    "question": "How can you profile memory usage in a Python function?",
+    "options": [
+      "Using memoryview",
+      "Using tracemalloc",
+      "Using psutil only",
+      "Using timeit"
+    ],
+    "answer": "Using tracemalloc",
+    "explanation": "`tracemalloc` tracks memory allocations in Python."
+  },
+  {
+    "id": 9,
+    "category": "Python",
+    "question": "Which built-in function returns the identity of an object?",
+    "options": [
+      "type()",
+      "id()",
+      "hash()",
+      "repr()"
+    ],
+    "answer": "id()",
+    "explanation": "`id()` returns the identity (memory address) of an object."
+  },
+  {
+    "id": 10,
+    "category": "Python",
+    "question": "What happens when you use the `is` operator between two equal strings in Python?",
+    "options": [
+      "It checks value equality",
+      "It compares object identity",
+      "It converts them to integers",
+      "It raises an exception"
+    ],
+    "answer": "It compares object identity",
+    "explanation": "`is` checks whether two variables point to the same object, not if their values are equal."
+  },
+  {
+    "id": 11,
+    "category": "Python",
+    "question": "What is the time complexity of inserting an element at the beginning of a Python list?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Inserting at the beginning of a Python list requires shifting all elements, hence O(n)."
+  },
+  {
+    "id": 12,
+    "category": "Python",
+    "question": "Which of the following is the most memory-efficient way to handle large numerical data arrays in Python?",
+    "options": [
+      "List of lists",
+      "Pandas DataFrame",
+      "NumPy arrays",
+      "Tuples"
+    ],
+    "answer": "NumPy arrays",
+    "explanation": "NumPy arrays are memory efficient and optimized for numerical operations."
+  },
+  {
+    "id": 13,
+    "category": "Python",
+    "question": "Which Python library provides decorators and context managers to handle retries with exponential backoff?",
+    "options": [
+      "retrying",
+      "backoff",
+      "tenacity",
+      "retry"
+    ],
+    "answer": "tenacity",
+    "explanation": "Tenacity provides powerful retry strategies including exponential backoff."
+  },
+  {
+    "id": 14,
+    "category": "Python",
+    "question": "What is a key difference between multiprocessing and threading in Python?",
+    "options": [
+      "Threads use more memory",
+      "Processes can utilize multiple CPUs",
+      "Threads can run in parallel on multiple cores",
+      "Multiprocessing is slower than threading"
+    ],
+    "answer": "Processes can utilize multiple CPUs",
+    "explanation": "Due to the GIL, threads are limited; multiprocessing uses separate memory space and cores."
+  },
+  {
+    "id": 15,
+    "category": "Python",
+    "question": "What is the purpose of Python's `__slots__` declaration?",
+    "options": [
+      "Reduce memory usage by preventing dynamic attribute creation",
+      "Enable dynamic typing",
+      "Improve readability",
+      "Create private attributes"
+    ],
+    "answer": "Reduce memory usage by preventing dynamic attribute creation",
+    "explanation": "`__slots__` limits attribute assignment and avoids `__dict__` overhead."
+  },
+  {
+    "id": 16,
+    "category": "Python",
+    "question": "What will `functools.lru_cache` do?",
+    "options": [
+      "Cache function output to speed up subsequent calls",
+      "Limit recursion depth",
+      "Create memory leaks",
+      "Parallelize function calls"
+    ],
+    "answer": "Cache function output to speed up subsequent calls",
+    "explanation": "`lru_cache` stores results of expensive function calls for reuse."
+  },
+  {
+    "id": 17,
+    "category": "Python",
+    "question": "What does the `@staticmethod` decorator do in Python?",
+    "options": [
+      "Defines a method that takes no self or cls argument",
+      "Makes method private",
+      "Allows inheritance",
+      "Makes the method static across all classes"
+    ],
+    "answer": "Defines a method that takes no self or cls argument",
+    "explanation": "`@staticmethod` defines a method that does not receive an implicit first argument."
+  },
+  {
+    "id": 18,
+    "category": "Python",
+    "question": "How can you profile memory usage in a Python function?",
+    "options": [
+      "Using memoryview",
+      "Using tracemalloc",
+      "Using psutil only",
+      "Using timeit"
+    ],
+    "answer": "Using tracemalloc",
+    "explanation": "`tracemalloc` tracks memory allocations in Python."
+  },
+  {
+    "id": 19,
+    "category": "Python",
+    "question": "Which built-in function returns the identity of an object?",
+    "options": [
+      "type()",
+      "id()",
+      "hash()",
+      "repr()"
+    ],
+    "answer": "id()",
+    "explanation": "`id()` returns the identity (memory address) of an object."
+  },
+  {
+    "id": 20,
+    "category": "Python",
+    "question": "What happens when you use the `is` operator between two equal strings in Python?",
+    "options": [
+      "It checks value equality",
+      "It compares object identity",
+      "It converts them to integers",
+      "It raises an exception"
+    ],
+    "answer": "It compares object identity",
+    "explanation": "`is` checks whether two variables point to the same object, not if their values are equal."
+  },
+  {
+    "id": 21,
+    "category": "Python",
+    "question": "What is the time complexity of inserting an element at the beginning of a Python list?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Inserting at the beginning of a Python list requires shifting all elements, hence O(n)."
+  },
+  {
+    "id": 22,
+    "category": "Python",
+    "question": "Which of the following is the most memory-efficient way to handle large numerical data arrays in Python?",
+    "options": [
+      "List of lists",
+      "Pandas DataFrame",
+      "NumPy arrays",
+      "Tuples"
+    ],
+    "answer": "NumPy arrays",
+    "explanation": "NumPy arrays are memory efficient and optimized for numerical operations."
+  },
+  {
+    "id": 23,
+    "category": "Python",
+    "question": "Which Python library provides decorators and context managers to handle retries with exponential backoff?",
+    "options": [
+      "retrying",
+      "backoff",
+      "tenacity",
+      "retry"
+    ],
+    "answer": "tenacity",
+    "explanation": "Tenacity provides powerful retry strategies including exponential backoff."
+  },
+  {
+    "id": 24,
+    "category": "Python",
+    "question": "What is a key difference between multiprocessing and threading in Python?",
+    "options": [
+      "Threads use more memory",
+      "Processes can utilize multiple CPUs",
+      "Threads can run in parallel on multiple cores",
+      "Multiprocessing is slower than threading"
+    ],
+    "answer": "Processes can utilize multiple CPUs",
+    "explanation": "Due to the GIL, threads are limited; multiprocessing uses separate memory space and cores."
+  },
+  {
+    "id": 25,
+    "category": "Python",
+    "question": "What is the purpose of Python's `__slots__` declaration?",
+    "options": [
+      "Reduce memory usage by preventing dynamic attribute creation",
+      "Enable dynamic typing",
+      "Improve readability",
+      "Create private attributes"
+    ],
+    "answer": "Reduce memory usage by preventing dynamic attribute creation",
+    "explanation": "`__slots__` limits attribute assignment and avoids `__dict__` overhead."
+  },
+  {
+    "id": 26,
+    "category": "Python",
+    "question": "What will `functools.lru_cache` do?",
+    "options": [
+      "Cache function output to speed up subsequent calls",
+      "Limit recursion depth",
+      "Create memory leaks",
+      "Parallelize function calls"
+    ],
+    "answer": "Cache function output to speed up subsequent calls",
+    "explanation": "`lru_cache` stores results of expensive function calls for reuse."
+  },
+  {
+    "id": 27,
+    "category": "Python",
+    "question": "What does the `@staticmethod` decorator do in Python?",
+    "options": [
+      "Defines a method that takes no self or cls argument",
+      "Makes method private",
+      "Allows inheritance",
+      "Makes the method static across all classes"
+    ],
+    "answer": "Defines a method that takes no self or cls argument",
+    "explanation": "`@staticmethod` defines a method that does not receive an implicit first argument."
+  },
+  {
+    "id": 28,
+    "category": "Python",
+    "question": "How can you profile memory usage in a Python function?",
+    "options": [
+      "Using memoryview",
+      "Using tracemalloc",
+      "Using psutil only",
+      "Using timeit"
+    ],
+    "answer": "Using tracemalloc",
+    "explanation": "`tracemalloc` tracks memory allocations in Python."
+  },
+  {
+    "id": 29,
+    "category": "Python",
+    "question": "Which built-in function returns the identity of an object?",
+    "options": [
+      "type()",
+      "id()",
+      "hash()",
+      "repr()"
+    ],
+    "answer": "id()",
+    "explanation": "`id()` returns the identity (memory address) of an object."
+  },
+  {
+    "id": 30,
+    "category": "Python",
+    "question": "What happens when you use the `is` operator between two equal strings in Python?",
+    "options": [
+      "It checks value equality",
+      "It compares object identity",
+      "It converts them to integers",
+      "It raises an exception"
+    ],
+    "answer": "It compares object identity",
+    "explanation": "`is` checks whether two variables point to the same object, not if their values are equal."
+  },
+  {
+    "id": 31,
+    "category": "Python",
+    "question": "What is the time complexity of inserting an element at the beginning of a Python list?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Inserting at the beginning of a Python list requires shifting all elements, hence O(n)."
+  },
+  {
+    "id": 32,
+    "category": "Python",
+    "question": "Which of the following is the most memory-efficient way to handle large numerical data arrays in Python?",
+    "options": [
+      "List of lists",
+      "Pandas DataFrame",
+      "NumPy arrays",
+      "Tuples"
+    ],
+    "answer": "NumPy arrays",
+    "explanation": "NumPy arrays are memory efficient and optimized for numerical operations."
+  },
+  {
+    "id": 33,
+    "category": "Python",
+    "question": "Which Python library provides decorators and context managers to handle retries with exponential backoff?",
+    "options": [
+      "retrying",
+      "backoff",
+      "tenacity",
+      "retry"
+    ],
+    "answer": "tenacity",
+    "explanation": "Tenacity provides powerful retry strategies including exponential backoff."
+  },
+  {
+    "id": 34,
+    "category": "Python",
+    "question": "What is a key difference between multiprocessing and threading in Python?",
+    "options": [
+      "Threads use more memory",
+      "Processes can utilize multiple CPUs",
+      "Threads can run in parallel on multiple cores",
+      "Multiprocessing is slower than threading"
+    ],
+    "answer": "Processes can utilize multiple CPUs",
+    "explanation": "Due to the GIL, threads are limited; multiprocessing uses separate memory space and cores."
+  },
+  {
+    "id": 35,
+    "category": "Python",
+    "question": "What is the purpose of Python's `__slots__` declaration?",
+    "options": [
+      "Reduce memory usage by preventing dynamic attribute creation",
+      "Enable dynamic typing",
+      "Improve readability",
+      "Create private attributes"
+    ],
+    "answer": "Reduce memory usage by preventing dynamic attribute creation",
+    "explanation": "`__slots__` limits attribute assignment and avoids `__dict__` overhead."
+  },
+  {
+    "id": 36,
+    "category": "Python",
+    "question": "What will `functools.lru_cache` do?",
+    "options": [
+      "Cache function output to speed up subsequent calls",
+      "Limit recursion depth",
+      "Create memory leaks",
+      "Parallelize function calls"
+    ],
+    "answer": "Cache function output to speed up subsequent calls",
+    "explanation": "`lru_cache` stores results of expensive function calls for reuse."
+  },
+  {
+    "id": 37,
+    "category": "Python",
+    "question": "What does the `@staticmethod` decorator do in Python?",
+    "options": [
+      "Defines a method that takes no self or cls argument",
+      "Makes method private",
+      "Allows inheritance",
+      "Makes the method static across all classes"
+    ],
+    "answer": "Defines a method that takes no self or cls argument",
+    "explanation": "`@staticmethod` defines a method that does not receive an implicit first argument."
+  },
+  {
+    "id": 38,
+    "category": "Python",
+    "question": "How can you profile memory usage in a Python function?",
+    "options": [
+      "Using memoryview",
+      "Using tracemalloc",
+      "Using psutil only",
+      "Using timeit"
+    ],
+    "answer": "Using tracemalloc",
+    "explanation": "`tracemalloc` tracks memory allocations in Python."
+  },
+  {
+    "id": 39,
+    "category": "Python",
+    "question": "Which built-in function returns the identity of an object?",
+    "options": [
+      "type()",
+      "id()",
+      "hash()",
+      "repr()"
+    ],
+    "answer": "id()",
+    "explanation": "`id()` returns the identity (memory address) of an object."
+  },
+  {
+    "id": 40,
+    "category": "Python",
+    "question": "What happens when you use the `is` operator between two equal strings in Python?",
+    "options": [
+      "It checks value equality",
+      "It compares object identity",
+      "It converts them to integers",
+      "It raises an exception"
+    ],
+    "answer": "It compares object identity",
+    "explanation": "`is` checks whether two variables point to the same object, not if their values are equal."
+  },
+  {
+    "id": 41,
+    "category": "Python",
+    "question": "What is the time complexity of inserting an element at the beginning of a Python list?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Inserting at the beginning of a Python list requires shifting all elements, hence O(n)."
+  },
+  {
+    "id": 42,
+    "category": "Python",
+    "question": "Which of the following is the most memory-efficient way to handle large numerical data arrays in Python?",
+    "options": [
+      "List of lists",
+      "Pandas DataFrame",
+      "NumPy arrays",
+      "Tuples"
+    ],
+    "answer": "NumPy arrays",
+    "explanation": "NumPy arrays are memory efficient and optimized for numerical operations."
+  },
+  {
+    "id": 43,
+    "category": "Python",
+    "question": "Which Python library provides decorators and context managers to handle retries with exponential backoff?",
+    "options": [
+      "retrying",
+      "backoff",
+      "tenacity",
+      "retry"
+    ],
+    "answer": "tenacity",
+    "explanation": "Tenacity provides powerful retry strategies including exponential backoff."
+  },
+  {
+    "id": 44,
+    "category": "Python",
+    "question": "What is a key difference between multiprocessing and threading in Python?",
+    "options": [
+      "Threads use more memory",
+      "Processes can utilize multiple CPUs",
+      "Threads can run in parallel on multiple cores",
+      "Multiprocessing is slower than threading"
+    ],
+    "answer": "Processes can utilize multiple CPUs",
+    "explanation": "Due to the GIL, threads are limited; multiprocessing uses separate memory space and cores."
+  },
+  {
+    "id": 45,
+    "category": "Python",
+    "question": "What is the purpose of Python's `__slots__` declaration?",
+    "options": [
+      "Reduce memory usage by preventing dynamic attribute creation",
+      "Enable dynamic typing",
+      "Improve readability",
+      "Create private attributes"
+    ],
+    "answer": "Reduce memory usage by preventing dynamic attribute creation",
+    "explanation": "`__slots__` limits attribute assignment and avoids `__dict__` overhead."
+  },
+  {
+    "id": 46,
+    "category": "Python",
+    "question": "What will `functools.lru_cache` do?",
+    "options": [
+      "Cache function output to speed up subsequent calls",
+      "Limit recursion depth",
+      "Create memory leaks",
+      "Parallelize function calls"
+    ],
+    "answer": "Cache function output to speed up subsequent calls",
+    "explanation": "`lru_cache` stores results of expensive function calls for reuse."
+  },
+  {
+    "id": 47,
+    "category": "Python",
+    "question": "What does the `@staticmethod` decorator do in Python?",
+    "options": [
+      "Defines a method that takes no self or cls argument",
+      "Makes method private",
+      "Allows inheritance",
+      "Makes the method static across all classes"
+    ],
+    "answer": "Defines a method that takes no self or cls argument",
+    "explanation": "`@staticmethod` defines a method that does not receive an implicit first argument."
+  },
+  {
+    "id": 48,
+    "category": "Python",
+    "question": "How can you profile memory usage in a Python function?",
+    "options": [
+      "Using memoryview",
+      "Using tracemalloc",
+      "Using psutil only",
+      "Using timeit"
+    ],
+    "answer": "Using tracemalloc",
+    "explanation": "`tracemalloc` tracks memory allocations in Python."
+  },
+  {
+    "id": 49,
+    "category": "Python",
+    "question": "Which built-in function returns the identity of an object?",
+    "options": [
+      "type()",
+      "id()",
+      "hash()",
+      "repr()"
+    ],
+    "answer": "id()",
+    "explanation": "`id()` returns the identity (memory address) of an object."
+  },
+  {
+    "id": 50,
+    "category": "Python",
+    "question": "What happens when you use the `is` operator between two equal strings in Python?",
+    "options": [
+      "It checks value equality",
+      "It compares object identity",
+      "It converts them to integers",
+      "It raises an exception"
+    ],
+    "answer": "It compares object identity",
+    "explanation": "`is` checks whether two variables point to the same object, not if their values are equal."
+  }
+]

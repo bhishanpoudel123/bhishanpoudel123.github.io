@@ -1,0 +1,652 @@
+[
+  {
+    "id": 1,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 2,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 3,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 4,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 5,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 6,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 7,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 8,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 9,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 10,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 11,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 12,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 13,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 14,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 15,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 16,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 17,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 18,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 19,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 20,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 21,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 22,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 23,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 24,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 25,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 26,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 27,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 28,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 29,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 30,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 31,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 32,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 33,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 34,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 35,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 36,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 37,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 38,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 39,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 40,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 41,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 42,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 43,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 44,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 45,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  },
+  {
+    "id": 46,
+    "category": "DataVisualization",
+    "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+    "options": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "answer": "Matplotlib",
+    "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts."
+  },
+  {
+    "id": 47,
+    "category": "DataVisualization",
+    "question": "Which function is used to create a line plot in Matplotlib?",
+    "options": [
+      "line()",
+      "plot()",
+      "draw()",
+      "graph()"
+    ],
+    "answer": "plot()",
+    "explanation": "`plot()` is used to generate line plots in Matplotlib."
+  },
+  {
+    "id": 48,
+    "category": "DataVisualization",
+    "question": "What does the `Seaborn` library primarily focus on?",
+    "options": [
+      "Statistical data visualization",
+      "Machine learning",
+      "Data preprocessing",
+      "Text analysis"
+    ],
+    "answer": "Statistical data visualization",
+    "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots."
+  },
+  {
+    "id": 49,
+    "category": "DataVisualization",
+    "question": "Which method can be used to show the distribution of a single variable?",
+    "options": [
+      "barplot()",
+      "distplot()",
+      "scatterplot()",
+      "lineplot()"
+    ],
+    "answer": "distplot()",
+    "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable."
+  },
+  {
+    "id": 50,
+    "category": "DataVisualization",
+    "question": "How do you display a plot in Jupyter Notebook?",
+    "options": [
+      "%show",
+      "%graph",
+      "%matplotlib inline",
+      "%display inline"
+    ],
+    "answer": "%matplotlib inline",
+    "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook."
+  }
+]

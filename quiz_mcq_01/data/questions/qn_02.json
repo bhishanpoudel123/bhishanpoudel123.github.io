@@ -1,0 +1,20 @@
+{
+  "id": 2,
+  "category": "SQL",
+  "question": "Given a year and a month, what would be the simplest way to get the number of days of that month, in SQL?",
+  "answers": [
+    "With some date arithmetic. The function DAYS_IN_MONTH exists in some database engines. If not, it is possible to go one day backward from the first day of the next month."
+  ],
+  "metadata": {
+    "language": "SQL",
+    "type": "MCQ",
+    "answer_format": "code",
+    "difficulty": "easy"
+  },
+  "options": [
+    "With the ANSI SQL function DAYS_IN_MONTH, which exists in all the common database engines.",
+    "With some date arithmetic. The function DAYS_IN_MONTH exists in some database engines. If not, it is possible to go one day backward from the first day of the next month.",
+    "Generate the number of days for all months between the years 1980 and 2200 with an external program, then record them in a static table in your database.",
+    "Install an external code library dedicated to date and time operations, use the appropriate stored procedure in this library."
+  ]
+}

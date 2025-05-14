@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "category": "ML Modeling",
+    "question": "When implementing stacking ensemble with scikit-learn, what's the most rigorous approach to prevent target leakage in the meta-learner?",
+    "options": [
+      "Use StackingClassifier with cv=5",
+      "Manually implement out-of-fold predictions for each base learner",
+      "Train base models on 70% of data and meta-model on remaining 30%",
+      "Use scikit-learn's pipeline to ensure proper nesting of cross-validation"
+    ],
+    "answer": "Manually implement out-of-fold predictions for each base learner",
+    "explanation": "Manually generating out-of-fold predictions ensures the meta-learner only sees predictions made on data that base models weren't trained on, fully preventing leakage while utilizing all data. This approach is more flexible than StackingClassifier and can incorporate diverse base models while maintaining proper validation boundaries."
+  },
+  {
+    "id": 2,
+    "category": "ML Modeling",
+    "question": "What's the most effective technique for calibrating probability estimates from a gradient boosting classifier?",
+    "options": [
+      "Use XGBoost's built-in calibration with scale_pos_weight parameter",
+      "Apply sklearn's CalibratedClassifierCV with isotonic regression",
+      "Implement custom Platt scaling with holdout validation",
+      "Use quantile regression forests instead of standard gradient boosting"
+    ],
+    "answer": "Apply sklearn's CalibratedClassifierCV with isotonic regression",
+    "explanation": "Isotonic regression via CalibratedClassifierCV is non-parametric and can correct any monotonic distortion in probability estimates, making it more flexible than Platt scaling, particularly for gradient boosting models which often produce well-ranked but not well-calibrated probabilities."
+  },
+  {
+    "id": 3,
+    "category": "ML Modeling",
+    "question": "Which approach correctly implements proper nested cross-validation for model selection and evaluation?",
+    "options": [
+      "GridSearchCV inside a for loop of train_test_split iterations",
+      "Nested loops of KFold.split(), with inner loop for hyperparameter tuning",
+      "Pipeline with GridSearchCV followed by cross_val_score",
+      "Custom implementation with an outer cross-validation and inner RandomizedSearchCV"
+    ],
+    "answer": "Nested loops of KFold.split(), with inner loop for hyperparameter tuning",
+    "explanation": "Proper nested cross-validation requires an outer loop for performance estimation and an inner loop for hyperparameter tuning, completely separating the data used for model selection from the data used for model evaluation, avoiding optimistic bias."
+  },
+  {
+    "id": 4,
+    "category": "ML Modeling",
+    "question": "What's the most memory-efficient way to implement incremental learning for large datasets with scikit-learn?",
+    "options": [
+      "Use SGDClassifier with partial_fit on data chunks",
+      "Use MiniBatchKMeans for unsupervised feature extraction followed by classification",
+      "Implement dask-ml for distributed model training",
+      "Use HistGradientBoostingClassifier with max_bins parameter tuning"
+    ],
+    "answer": "Use SGDClassifier with partial_fit on data chunks",
+    "explanation": "SGDClassifier with partial_fit allows true incremental learning, processing data in chunks without storing the entire dataset in memory, updating model parameters with each batch and converging to the same solution as batch processing would with sufficient iterations."
+  },
+  {
+    "id": 5,
+    "category": "ML Modeling",
+    "question": "When dealing with competing risks in survival analysis, which implementation correctly handles the problem?",
+    "options": [
+      "Cox Proportional Hazards model with stratification by risk type",
+      "Kaplan-Meier estimator with censoring of competing events",
+      "Fine-Gray subdistribution hazard model from pysurvival",
+      "Random Survival Forests with cause-specific cumulative incidence function"
+    ],
+    "answer": "Fine-Gray subdistribution hazard model from pysurvival",
+    "explanation": "The Fine-Gray model explicitly accounts for competing risks by modeling the subdistribution hazard, allowing for valid inference about the probability of an event in the presence of competing events, unlike standard Cox models or Kaplan-Meier which can produce biased estimates under competing risks."
+  },
+  {
+    "id": 6,
+    "category": "ML Modeling",
+    "question": "What's the most statistically sound approach to implement monotonic constraints in gradient boosting?",
+    "options": [
+      "Post-processing model predictions to enforce monotonicity",
+      "Using XGBoost's monotone_constraints parameter",
+      "Transforming features with isotonic regression before modeling",
+      "Implementing a custom callback for LightGBM that penalizes non-monotonic splits"
+    ],
+    "answer": "Using XGBoost's monotone_constraints parameter",
+    "explanation": "XGBoost's native monotone_constraints parameter enforces monotonicity during tree building by constraining only monotonic splits, resulting in a fully monotonic model without sacrificing performance—unlike post-processing which can degrade model accuracy or pre-processing which doesn't guarantee model monotonicity."
+  },
+  {
+    "id": 7,
+    "category": "ML Modeling",
+    "question": "Which approach correctly implements a custom kernel for SVM in scikit-learn?",
+    "options": [
+      "Subclass sklearn.svm.SVC and override the _compute_kernel method",
+      "Define a function that takes two arrays and returns a kernel matrix",
+      "Use sklearn.metrics.pairwise.pairwise_kernels with a custom metric",
+      "Define a custom kernel using sklearn.gaussian_process.kernels.Kernel"
+    ],
+    "answer": "Define a function that takes two arrays and returns a kernel matrix",
+    "explanation": "For custom kernels in scikit-learn SVMs, one must define a function K(X, Y) that calculates the kernel matrix between arrays X and Y, then pass this function as the 'kernel' parameter to SVC. This approach allows full flexibility in kernel design while maintaining compatibility with scikit-learn's implementation."
+  },
+  {
+    "id": 8,
+    "category": "ML Modeling",
+    "question": "What's the most rigorous approach to handle feature selection with highly correlated features in a regression context?",
+    "options": [
+      "Sequential feature selection with tolerance for multicollinearity",
+      "Recursive feature elimination with cross-validation (RFECV)",
+      "Elastic Net regularization with randomized hyperparameter search",
+      "Use variance inflation factor (VIF) with backward elimination"
+    ],
+    "answer": "Elastic Net regularization with randomized hyperparameter search",
+    "explanation": "Elastic Net combines L1 and L2 penalties, effectively handling correlated features by either selecting one from a correlated group (via L1) or assigning similar coefficients to correlated features (via L2), with the optimal balance determined through randomized hyperparameter search across different alpha and l1_ratio values."
+  },
+  {
+    "id": 9,
+    "category": "ML Modeling",
+    "question": "Which implementation correctly handles ordinal encoding for machine learning while preserving the ordinal nature of features?",
+    "options": [
+      "sklearn.preprocessing.OrdinalEncoder",
+      "Custom encoding using pd.Categorical with ordered=True",
+      "sklearn.preprocessing.PolynomialFeatures with degree=1",
+      "Target-guided ordinal encoding based on response variable"
+    ],
+    "answer": "Custom encoding using pd.Categorical with ordered=True",
+    "explanation": "Using pandas Categorical with ordered=True preserves the ordinal relationship and allows for appropriate distance calculations between categories, which is essential for models that consider feature relationships (unlike OrdinalEncoder which assigns arbitrary numeric values without preserving distances)."
+  },
+  {
+    "id": 10,
+    "category": "ML Modeling",
+    "question": "What's the most effective way to implement a time-based split for cross-validation in time series forecasting?",
+    "options": [
+      "Use sklearn's TimeSeriesSplit with appropriate gap",
+      "Implement a sliding window validation with fixed lookback period",
+      "Use BlockingTimeSeriesSplit from sktime with custom test window growth",
+      "Define a custom cross-validator with expanding window and purging"
+    ],
+    "answer": "Define a custom cross-validator with expanding window and purging",
+    "explanation": "A custom cross-validator with expanding windows (increasing training set) and purging (gap between train and test to prevent leakage) most accurately simulates real-world forecasting scenarios while handling temporal dependencies and avoiding lookahead bias."
+  },
+  {
+    "id": 11,
+    "category": "ML Modeling",
+    "question": "Which approach correctly implements an interpretable model for binary classification with uncertainty quantification?",
+    "options": [
+      "Random Forest with prediction intervals based on quantiles of tree predictions",
+      "Gradient Boosting with NGBoost for natural gradient boosting",
+      "Bayesian Logistic Regression with MCMC sampling for posterior distribution",
+      "Bootstrapped ensemble of decision trees with variance estimation"
+    ],
+    "answer": "Bayesian Logistic Regression with MCMC sampling for posterior distribution",
+    "explanation": "Bayesian Logistic Regression provides both interpretability (coefficients have clear meanings) and principled uncertainty quantification through the posterior distribution of parameters, capturing both aleatoric and epistemic uncertainty while maintaining model transparency."
+  },
+  {
+    "id": 12,
+    "category": "ML Modeling",
+    "question": "What's the most robust approach to handling class imbalance in a multi-class classification problem?",
+    "options": [
+      "Use class_weight='balanced' in sklearn classifiers",
+      "Apply SMOTE for oversampling minority classes",
+      "Implement a cost-sensitive learning approach with custom loss function",
+      "Use ensemble methods with resampling strategies specific to each classifier"
+    ],
+    "answer": "Use ensemble methods with resampling strategies specific to each classifier",
+    "explanation": "Ensemble methods with class-specific resampling strategies (e.g., EasyEnsemble or SMOTEBoost) combine the diversity of multiple classifiers with targeted handling of class imbalance, outperforming both global resampling and simple class weighting, especially for multi-class problems with varying degrees of imbalance."
+  },
+  {
+    "id": 13,
+    "category": "ML Modeling",
+    "question": "Which technique is most appropriate for detecting and quantifying the importance of interaction effects in a Random Forest model?",
+    "options": [
+      "Use feature_importances_ attribute and partial dependence plots",
+      "Implement H-statistic from Friedman and Popescu",
+      "Extract and analyze individual decision paths from trees",
+      "Use permutation importance with pairwise feature shuffling"
+    ],
+    "answer": "Implement H-statistic from Friedman and Popescu",
+    "explanation": "The H-statistic specifically quantifies interaction strength between features by comparing the variation in predictions when features are varied together versus independently, providing a statistical measure of interactions that can't be captured by standard importance metrics or partial dependence alone."
+  },
+  {
+    "id": 14,
+    "category": "ML Modeling",
+    "question": "What's the correct approach to implement a custom scoring function for sklearn's RandomizedSearchCV that accounts for both predictive performance and model complexity?",
+    "options": [
+      "Use make_scorer with a function that combines multiple metrics",
+      "Implement a custom Scorer class with a custom __call__ method",
+      "Use multiple evaluation metrics with refit parameter specifying the primary metric",
+      "Create a pipeline with a custom transformer that adds a penalty term based on complexity"
+    ],
+    "answer": "Use make_scorer with a function that combines multiple metrics",
+    "explanation": "make_scorer allows creating a custom scoring function that can combine predictive performance (e.g., AUC) with penalties for model complexity (e.g., number of features or model parameters), providing a single metric for optimization that balances performance and parsimony."
+  },
+  {
+    "id": 15,
+    "category": "ML Modeling",
+    "question": "Which is the most statistically rigorous approach to implement feature selection for a regression problem with heteroscedastic errors?",
+    "options": [
+      "Use sklearn's SelectFromModel with LassoCV",
+      "Implement weighted LASSO with weight inversely proportional to error variance",
+      "Apply robust feature selection using Huber regression",
+      "Implement stability selection with bootstrapped samples"
+    ],
+    "answer": "Implement weighted LASSO with weight inversely proportional to error variance",
+    "explanation": "Weighted LASSO that downweights observations with high error variance accounts for heteroscedasticity in the selection process, ensuring that features aren't selected or rejected due to non-constant error variance, resulting in more reliable feature selection."
+  },
+  {
+    "id": 16,
+    "category": "ML Modeling",
+    "question": "What's the most effective way to implement an interpretable yet powerful model for regression with potentially non-linear effects?",
+    "options": [
+      "Use a Random Forest with post-hoc SHAP explanations",
+      "Implement Generalized Additive Models (GAMs) with shape constraints",
+      "Use Explainable Boosting Machines (EBMs) from InterpretML",
+      "Linear model with carefully engineered non-linear features"
+    ],
+    "answer": "Use Explainable Boosting Machines (EBMs) from InterpretML",
+    "explanation": "EBMs combine the interpretability of GAMs with the predictive power of boosting, learning feature functions and pairwise interactions in an additive structure while remaining highly interpretable, offering better performance than standard GAMs while maintaining transparency."
+  },
+  {
+    "id": 17,
+    "category": "ML Modeling",
+    "question": "Which approach correctly implements quantile regression forests for prediction intervals?",
+    "options": [
+      "Use sklearn's RandomForestRegressor with bootstrap=True and calculate empirical quantiles of tree predictions",
+      "Use the forestci package to compute jackknife-based prediction intervals",
+      "Use GradientBoostingRegressor with loss='quantile' and train separate models for each quantile",
+      "Implement a custom version of RandomForestRegressor that stores all leaf node samples"
+    ],
+    "answer": "Implement a custom version of RandomForestRegressor that stores all leaf node samples",
+    "explanation": "Quantile regression forests require storing the empirical distribution of training samples in each leaf node (not just their mean), requiring a custom implementation that extends standard random forests to compute conditional quantiles from these stored distributions."
+  },
+  {
+    "id": 18,
+    "category": "ML Modeling",
+    "question": "What's the most rigorous approach to handle outliers in the target variable for regression problems?",
+    "options": [
+      "Winsorize the target variable at specific quantiles",
+      "Use Huber or Quantile regression with robust loss functions",
+      "Remove observations with Cook's distance > 4/n",
+      "Apply a power transform to the target before modeling"
+    ],
+    "answer": "Use Huber or Quantile regression with robust loss functions",
+    "explanation": "Robust regression methods like Huber or Quantile regression use loss functions that inherently reduce the influence of outliers during model training, addressing the issue without removing potentially valuable data points or distorting the target distribution through transformations."
+  },
+  {
+    "id": 19,
+    "category": "ML Modeling",
+    "question": "Which implementation correctly addresses the curse of dimensionality in nearest neighbor models?",
+    "options": [
+      "Use KNeighborsClassifier with algorithm='kd_tree'",
+      "Apply dimensionality reduction like PCA before KNN",
+      "Use approximate nearest neighbors with Annoy or FAISS",
+      "Implement distance metric learning with NCA or LMNN"
+    ],
+    "answer": "Implement distance metric learning with NCA or LMNN",
+    "explanation": "Distance metric learning adaptively learns a transformation of the feature space that emphasizes discriminative dimensions, effectively addressing the curse of dimensionality by creating a more semantically meaningful distance metric, unlike fixed trees or general dimensionality reduction."
+  },
+  {
+    "id": 20,
+    "category": "ML Modeling",
+    "question": "What's the most efficient way to implement early stopping in a gradient boosting model to prevent overfitting?",
+    "options": [
+      "Set max_depth and n_estimators conservatively based on cross-validation",
+      "Use early_stopping_rounds with a validation set in XGBoost/LightGBM",
+      "Implement a custom callback function that monitors training metrics",
+      "Use cross-validation to find optimal number of boosting rounds then retrain"
+    ],
+    "answer": "Use early_stopping_rounds with a validation set in XGBoost/LightGBM",
+    "explanation": "Using early_stopping_rounds with a separate validation set stops training when performance on the validation set stops improving for a specified number of rounds, efficiently determining the optimal number of trees in a single training run without requiring multiple cross-validation runs."
+  },
+  {
+    "id": 21,
+    "category": "ML Modeling",
+    "question": "Which approach correctly implements a counterfactual explanation method for a black-box classifier?",
+    "options": [
+      "Use LIME to generate local explanations around the instance",
+      "Implement DiCE (Diverse Counterfactual Explanations) to generate multiple feasible counterfactuals",
+      "Apply SHAP values to identify feature importance for the prediction",
+      "Use a surrogate explainable model to approximate the black-box decision boundary"
+    ],
+    "answer": "Implement DiCE (Diverse Counterfactual Explanations) to generate multiple feasible counterfactuals",
+    "explanation": "DiCE specifically generates diverse counterfactual explanations that show how an instance's features would need to change to receive a different classification, addressing the 'what-if' question directly rather than just explaining the current prediction."
+  },
+  {
+    "id": 22,
+    "category": "ML Modeling",
+    "question": "What's the most effective approach to implement online learning for a regression task with concept drift?",
+    "options": [
+      "Use SGDRegressor with warm_start=True and smaller alpha as more data arrives",
+      "Implement a sliding window approach that retrains on recent data periodically",
+      "Use incremental learning with drift detection algorithms to trigger model updates",
+      "Maintain an ensemble of models trained on different time windows"
+    ],
+    "answer": "Use incremental learning with drift detection algorithms to trigger model updates",
+    "explanation": "Combining incremental learning with explicit drift detection (e.g., ADWIN, DDM) allows the model to adapt continuously to new data while only performing major updates when the data distribution actually changes, balancing computational efficiency with adaptation to concept drift."
+  },
+  {
+    "id": 23,
+    "category": "ML Modeling",
+    "question": "Which method is most appropriate for tuning hyperparameters when training time is extremely limited?",
+    "options": [
+      "Use model-based optimization with Gaussian Processes",
+      "Implement multi-fidelity optimization with Hyperband",
+      "Apply Optuna with pruning functionality",
+      "Use meta-learning from similar tasks to warm-start optimization"
+    ],
+    "answer": "Implement multi-fidelity optimization with Hyperband",
+    "explanation": "Hyperband uses a bandit-based approach to allocate resources efficiently, quickly discarding poor configurations and allocating more compute to promising ones, making it particularly effective when training time is limited and early performance is indicative of final performance."
+  },
+  {
+    "id": 24,
+    "category": "ML Modeling",
+    "question": "What's the most statistically sound approach to implement feature selection for time series forecasting?",
+    "options": [
+      "Apply recursive feature elimination with time series cross-validation",
+      "Use LASSO regression with temporal blocking of folds",
+      "Implement feature importance from tree-based models with purged cross-validation",
+      "Use filter methods based on mutual information with time-lagged target variable"
+    ],
+    "answer": "Implement feature importance from tree-based models with purged cross-validation",
+    "explanation": "Tree-based feature importance combined with purged cross-validation (which leaves gaps between train and test sets) correctly handles temporal dependence in the data, preventing information leakage while identifying features that have genuine predictive power for future time points."
+  },
+  {
+    "id": 25,
+    "category": "ML Modeling",
+    "question": "Which approach correctly addresses Simpson's paradox in a predictive modeling context?",
+    "options": [
+      "Include interaction terms between potentially confounding variables",
+      "Use causal graphical models to identify proper conditioning sets",
+      "Apply hierarchical/multilevel modeling to account for grouping",
+      "Use propensity score matching before building predictive models"
+    ],
+    "answer": "Use causal graphical models to identify proper conditioning sets",
+    "explanation": "Causal graphical models (e.g., DAGs) allow identifying which variables should or should not be conditioned on to avoid Simpson's paradox, ensuring that the model captures the true causal relationship rather than spurious associations that reverse with conditioning."
+  },
+  {
+    "id": 26,
+    "category": "ML Modeling",
+    "question": "What's the most efficient way to implement hyperparameter tuning for an ensemble of diverse model types?",
+    "options": [
+      "Use separate GridSearchCV for each model type and combine best models",
+      "Implement nested hyperparameter optimization with DEAP genetic algorithm",
+      "Use FLAML for automated and efficient hyperparameter tuning",
+      "Apply multi-objective Bayesian optimization to balance diversity and performance"
+    ],
+    "answer": "Apply multi-objective Bayesian optimization to balance diversity and performance",
+    "explanation": "Multi-objective Bayesian optimization can simultaneously optimize for both individual model performance and ensemble diversity, finding an optimal set of hyperparameters for each model type while ensuring the ensemble as a whole performs well through complementary strengths."
+  },
+  {
+    "id": 27,
+    "category": "ML Modeling",
+    "question": "Which technique is most appropriate for detecting and visualizing non-linear relationships in supervised learning?",
+    "options": [
+      "Partial dependence plots with contour plots for interactions",
+      "Accumulated Local Effects (ALE) plots with bootstrap confidence intervals",
+      "SHAP interaction values with dependency plots",
+      "Individual Conditional Expectation (ICE) plots with centered PDP"
+    ],
+    "answer": "Individual Conditional Expectation (ICE) plots with centered PDP",
+    "explanation": "ICE plots show how predictions change for individual instances across the range of a feature, while centering them helps visualize heterogeneous effects that would be masked by averaging in standard partial dependence plots, making them ideal for detecting complex non-linear relationships."
+  },
+  {
+    "id": 28,
+    "category": "ML Modeling",
+    "question": "What's the most rigorous approach to quantify uncertainty in predictions from a gradient boosting model?",
+    "options": [
+      "Use quantile regression with multiple target quantiles",
+      "Implement Monte Carlo dropout in gradient boosting",
+      "Apply jackknife resampling to estimate prediction variance",
+      "Use Lower Upper Bound Estimation (LUBE) with pinball loss"
+    ],
+    "answer": "Use quantile regression with multiple target quantiles",
+    "explanation": "Training multiple gradient boosting models with quantile loss functions at different quantiles (e.g., 5%, 50%, 95%) directly models the conditional distribution of the target variable, providing a rigorous non-parametric approach to uncertainty quantification that captures heteroscedasticity."
+  },
+  {
+    "id": 29,
+    "category": "ML Modeling",
+    "question": "What's the most appropriate technique for automated feature engineering in time series forecasting?",
+    "options": [
+      "Use tsfresh with appropriate feature filtering based on p-values",
+      "Implement custom feature extractors with domain-specific transformations",
+      "Apply featuretools with time-aware aggregation primitives",
+      "Use automatic feature engineering with symbolic transformations and genetic programming"
+    ],
+    "answer": "Use tsfresh with appropriate feature filtering based on p-values",
+    "explanation": "tsfresh automatically extracts and selects relevant time series features (over 700 features) while controlling for multiple hypothesis testing, specifically designed for time series data unlike general feature engineering tools, making it ideal for time series forecasting tasks."
+  },
+  {
+    "id": 30,
+    "category": "ML Modeling",
+    "question": "Which approach correctly implements proper evaluation metrics for a multi-class imbalanced classification problem?",
+    "options": [
+      "Use macro-averaged precision, recall, and F1 score",
+      "Implement balanced accuracy and Cohen's kappa statistic",
+      "Use ROC AUC with one-vs-rest approach and weighted averaging",
+      "Apply precision-recall curves with prevalence-corrected metrics"
+    ],
+    "answer": "Apply precision-recall curves with prevalence-corrected metrics",
+    "explanation": "For imbalanced multi-class problems, precision-recall curves with prevalence correction (e.g., weighted by actual class frequencies) provide more informative evaluation than accuracy or ROC-based metrics, focusing on relevant performance for minority classes while accounting for class distribution."
+  }
+]
