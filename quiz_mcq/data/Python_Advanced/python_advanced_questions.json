@@ -101,7 +101,7 @@
         ],
         "answer": "Defines a method that takes no self or cls argument",
         "explanation": "`@staticmethod` defines a method that does not receive an implicit first argument.",
-        "answer_long_md": ["/data/Python_Advanced/qn_07_answer_long_01.md"],
+        "answer_long_md": ["./data/Python_Advanced/qn_07_answer_long_01.md"],
         "answer_long_html": []
     },
     {
