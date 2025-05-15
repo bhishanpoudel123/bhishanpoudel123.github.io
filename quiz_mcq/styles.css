@@ -8,7 +8,9 @@ body {
     background-color: #f9f9f9;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #2c3e50;
     margin-top: 0;
 }
@@ -39,7 +41,7 @@ h1, h2, h3 {
     display: none;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header Styles */
@@ -95,7 +97,7 @@ button:disabled {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
@@ -119,7 +121,7 @@ button:disabled {
     margin: 15px 0;
     border-radius: 8px;
     background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Options Styling */
@@ -148,7 +150,7 @@ button:disabled {
     padding: 20px;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Quiz Navigation Controls */
@@ -309,4 +311,20 @@ button:disabled {
     button {
         width: 100%;
     }
+}
+
+.long-answer-md,
+.long-answer-html {
+    margin-top: 1em;
+    padding: 1em;
+    border-left: 4px solid #ccc;
+    background: #f9f9f9;
+}
+
+.long-answer-md pre code,
+.long-answer-html pre code {
+    background: #f0f0f0;
+    padding: 0.5em;
+    display: block;
+    overflow-x: auto;
 }

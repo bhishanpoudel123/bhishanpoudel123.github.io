@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "category": "Pandas",
+    "question": "Which method efficiently applies a function along an axis of a DataFrame?",
+    "options": [
+      "df.map(func)",
+      "df.apply(func, axis=0)",
+      "df.transform(func)",
+      "df.aggregate(func)"
+    ],
+    "answer": "df.apply(func, axis=0)",
+    "explanation": "The apply() method allows applying a function along an axis (rows or columns) of a DataFrame."
+  },
+  {
+    "id": 2,
+    "category": "Pandas",
+    "question": "What's the correct way to merge two DataFrames on multiple columns?",
+    "options": [
+      "pd.merge(df1, df2, on=['col1', 'col2'])",
+      "pd.join(df1, df2, keys=['col1', 'col2'])",
+      "df1.merge(df2, how='inner', left_on=['col1', 'col2'], right_on=['col1', 'col2'])",
+      "Both A and C"
+    ],
+    "answer": "Both A and C",
+    "explanation": "Both pd.merge() and DataFrame.merge() methods can merge on multiple columns specified as lists."
+  },
+  {
+    "id": 3,
+    "category": "Pandas",
+    "question": "How do you handle missing values in a DataFrame column?",
+    "options": [
+      "df['column'].fillna(0)",
+      "df['column'].dropna()",
+      "df['column'].replace(np.nan, 0)",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "All listed methods can handle missing values: fillna() replaces NaNs, dropna() removes rows with NaNs, and replace() can substitute NaNs with specified values."
+  },
+  {
+    "id": 4,
+    "category": "Pandas",
+    "question": "What does the method `groupby().agg()` allow you to do?",
+    "options": [
+      "Group data and apply a single aggregation function",
+      "Group data and apply different aggregation functions to different columns",
+      "Group data and apply multiple aggregation functions to the same column",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "The agg() method is versatile and can apply single or multiple functions to grouped data, either to all columns or selectively."
+  },
+  {
+    "id": 5,
+    "category": "Pandas",
+    "question": "Which of the following transforms a DataFrame to a long format?",
+    "options": [
+      "df.stack()",
+      "df.melt()",
+      "pd.wide_to_long(df)",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "stack(), melt(), and wide_to_long() all convert data from wide format to long format, albeit with different approaches and parameters."
+  },
+  {
+    "id": 6,
+    "category": "Pandas",
+    "question": "How can you efficiently select rows where a column value meets a complex condition?",
+    "options": [
+      "df.loc[df['column'] > 5 & df['column'] < 10]",
+      "df.loc[(df['column'] > 5) & (df['column'] < 10)]",
+      "df.query('column > 5 and column < 10')",
+      "Both B and C"
+    ],
+    "answer": "Both B and C",
+    "explanation": "Both loc with boolean indexing (with proper parentheses) and query() method can filter data based on complex conditions."
+  },
+  {
+    "id": 7,
+    "category": "Pandas",
+    "question": "What's the most efficient way to calculate a rolling 7-day average of a time series?",
+    "options": [
+      "df['rolling_avg'] = df['value'].rolling(window=7).mean()",
+      "df['rolling_avg'] = df['value'].resample('7D').mean()",
+      "df['rolling_avg'] = df.groupby(pd.Grouper(freq='7D'))['value'].transform('mean')",
+      "df['rolling_avg'] = pd.rolling_mean(df['value'], window=7)"
+    ],
+    "answer": "df['rolling_avg'] = df['value'].rolling(window=7).mean()",
+    "explanation": "The rolling() method with a window of 7 followed by mean() calculates a rolling average over a 7-period window."
+  },
+  {
+    "id": 8,
+    "category": "Pandas",
+    "question": "How do you perform a pivot operation in pandas?",
+    "options": [
+      "df.pivot(index='A', columns='B', values='C')",
+      "pd.pivot_table(df, index='A', columns='B', values='C')",
+      "df.pivot_table(index='A', columns='B', values='C')",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "All three methods can perform pivot operations, with pivot_table being more flexible as it can aggregate duplicate entries."
+  },
+  {
+    "id": 9,
+    "category": "Pandas",
+    "question": "Which method can reshape a DataFrame by stacking column labels to rows?",
+    "options": [
+      "df.unstack()",
+      "df.pivot()",
+      "df.stack()",
+      "df.melt()"
+    ],
+    "answer": "df.stack()",
+    "explanation": "stack() method pivots the columns of a DataFrame to become the innermost index level, creating a Series with a MultiIndex."
+  },
+  {
+    "id": 10,
+    "category": "Pandas",
+    "question": "How do you efficiently concatenate many DataFrames with identical columns?",
+    "options": [
+      "pd.join([df1, df2, df3])",
+      "pd.merge([df1, df2, df3])",
+      "pd.concat([df1, df2, df3])",
+      "df1.append([df2, df3])"
+    ],
+    "answer": "pd.concat([df1, df2, df3])",
+    "explanation": "pd.concat() is designed to efficiently concatenate pandas objects along a particular axis with optional set logic."
+  },
+  {
+    "id": 11,
+    "category": "Pandas",
+    "question": "What's the correct way to create a DatetimeIndex from a column containing date strings?",
+    "options": [
+      "pd.to_datetime(df['date_col'])",
+      "df.set_index(pd.to_datetime(df['date_col']))",
+      "df.set_index('date_col', inplace=True); df.index = pd.to_datetime(df.index)",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "All methods will correctly convert date strings to datetime objects, with different approaches to setting them as the index."
+  },
+  {
+    "id": 12,
+    "category": "Pandas",
+    "question": "Which method performs a cross-tabulation of two factors?",
+    "options": [
+      "pd.crosstab(df['A'], df['B'])",
+      "df.pivot_table(index='A', columns='B', aggfunc='count')",
+      "df.groupby(['A', 'B']).size().unstack()",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "All methods can create cross-tabulations, though crosstab() is specifically designed for this purpose."
+  },
+  {
+    "id": 13,
+    "category": "Pandas",
+    "question": "How do you calculate cumulative statistics in pandas?",
+    "options": [
+      "df.cumsum(), df.cumprod(), df.cummax(), df.cummin()",
+      "df.rolling().sum(), df.rolling().prod(), df.rolling().max(), df.rolling().min()",
+      "df.expanding().sum(), df.expanding().prod(), df.expanding().max(), df.expanding().min()",
+      "df.aggregate(['sum', 'prod', 'max', 'min'])"
+    ],
+    "answer": "df.cumsum(), df.cumprod(), df.cummax(), df.cummin()",
+    "explanation": "The cum- methods (cumsum, cumprod, cummax, cummin) calculate cumulative statistics along an axis."
+  },
+  {
+    "id": 14,
+    "category": "Pandas",
+    "question": "Which approach efficiently calculates the difference between consecutive rows in a DataFrame?",
+    "options": [
+      "df - df.shift(1)",
+      "df.diff()",
+      "df.rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])",
+      "Both A and B"
+    ],
+    "answer": "Both A and B",
+    "explanation": "Both subtracting a shifted DataFrame and using diff() calculate element-wise differences between consecutive rows."
+  },
+  {
+    "id": 15,
+    "category": "Pandas",
+    "question": "How do you create a MultiIndex DataFrame from scratch?",
+    "options": [
+      "pd.DataFrame(data, index=pd.MultiIndex.from_tuples([('A',1), ('A',2), ('B',1), ('B',2)]))",
+      "pd.DataFrame(data, index=pd.MultiIndex.from_product([['A', 'B'], [1, 2]]))",
+      "pd.DataFrame(data, index=pd.MultiIndex.from_arrays([['A', 'A', 'B', 'B'], [1, 2, 1, 2]]))",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "All three methods create equivalent MultiIndex objects using different approaches: from_tuples, from_product, and from_arrays."
+  },
+  {
+    "id": 16,
+    "category": "Pandas",
+    "question": "Which method is most appropriate for performing complex string operations on DataFrame columns?",
+    "options": [
+      "df['col'].apply(lambda x: x.upper())",
+      "df['col'].str.upper()",
+      "df['col'].map(str.upper)",
+      "All of the above work, but B is most efficient"
+    ],
+    "answer": "All of the above work, but B is most efficient",
+    "explanation": "While all methods can transform strings, the .str accessor provides vectorized string functions that are generally more efficient than apply() or map()."
+  },
+  {
+    "id": 17,
+    "category": "Pandas",
+    "question": "What's the best way to compute percentiles for grouped data?",
+    "options": [
+      "df.groupby('group').quantile([0.25, 0.5, 0.75])",
+      "df.groupby('group').agg(lambda x: np.percentile(x, [25, 50, 75]))",
+      "df.groupby('group').describe(percentiles=[0.25, 0.5, 0.75])",
+      "Both A and C"
+    ],
+    "answer": "Both A and C",
+    "explanation": "Both quantile() and describe() can compute percentiles for grouped data, with describe() providing additional statistics. For option B, While this approach uses the right function (numpy's percentile), there's an issue with how it's implemented in the context of pandas GroupBy. This would likely raise errors because the lambda function returns arrays rather than scalars, which is problematic for the standard aggregation pipeline."
+  },
+  {
+    "id": 18,
+    "category": "Pandas",
+    "question": "How do you efficiently implement a custom aggregation function that requires the entire group?",
+    "options": [
+      "df.groupby('group').agg(custom_func)",
+      "df.groupby('group').apply(custom_func)",
+      "df.groupby('group').transform(custom_func)",
+      "df.groupby('group').aggregate(custom_func)"
+    ],
+    "answer": "df.groupby('group').apply(custom_func)",
+    "explanation": "apply() is designed for operations that need the entire group as a DataFrame, whereas agg() is better for operations that can be vectorized."
+  },
+  {
+    "id": 19,
+    "category": "Pandas",
+    "question": "What's the most memory-efficient way to read a large CSV file with pandas?",
+    "options": [
+      "pd.read_csv('file.csv', nrows=1000)",
+      "pd.read_csv('file.csv', chunksize=1000)",
+      "pd.read_csv('file.csv', usecols=['needed_col1', 'needed_col2'])",
+      "pd.read_csv('file.csv', dtype={'col1': 'category', 'col2': 'int8'})"
+    ],
+    "answer": "pd.read_csv('file.csv', dtype={'col1': 'category', 'col2': 'int8'})",
+    "explanation": "Specifying appropriate dtypes, especially using 'category' for string columns with repeated values, significantly reduces memory usage."
+  },
+  {
+    "id": 20,
+    "category": "Pandas",
+    "question": "Which method is correct for resampling time series data to monthly frequency?",
+    "options": [
+      "df.resample('M').mean()",
+      "df.groupby(pd.Grouper(freq='M')).mean()",
+      "df.asfreq('M')",
+      "Both A and B"
+    ],
+    "answer": "Both A and B",
+    "explanation": "Both resample() and groupby() with Grouper can aggregate time series data to monthly frequency, though asfreq() only changes frequency without aggregation."
+  },
+  {
+    "id": 21,
+    "category": "Pandas",
+    "question": "How do you efficiently identify and remove duplicate rows in a DataFrame?",
+    "options": [
+      "df[~df.duplicated()]",
+      "df.drop_duplicates()",
+      "df.loc[~df.index.duplicated()]",
+      "Both A and B"
+    ],
+    "answer": "Both A and B",
+    "explanation": "Both df[~df.duplicated()] and df.drop_duplicates() remove duplicate rows, with the latter being more readable and offering more options."
+  },
+  {
+    "id": 22,
+    "category": "Pandas",
+    "question": "Which method is most efficient for applying a custom function to a DataFrame that returns a scalar?",
+    "options": [
+      "df.pipe(custom_func)",
+      "df.transform(custom_func)",
+      "df.apply(custom_func)",
+      "custom_func(df)"
+    ],
+    "answer": "df.pipe(custom_func)",
+    "explanation": "pipe() is designed for functions that take and return a DataFrame, creating readable method chains when applying multiple functions."
+  },
+  {
+    "id": 23,
+    "category": "Pandas",
+    "question": "How do you sample data from a DataFrame with weights?",
+    "options": [
+      "df.sample(n=5, weights='probability_column')",
+      "df.sample(frac=0.1, weights=df['probability_column'])",
+      "df.sample(n=5, weights=df['probability_column']/df['probability_column'].sum())",
+      "Both B and C"
+    ],
+    "answer": "Both B and C",
+    "explanation": "Both approaches correctly sample with weights, though weights don't need to be normalized as pandas normalizes them internally."
+  },
+  {
+    "id": 24,
+    "category": "Pandas",
+    "question": "What's the correct way to use the pd.cut() function for binning continuous data?",
+    "options": [
+      "pd.cut(df['age'], bins=[0, 18, 35, 60, 100], labels=['Child', 'Young', 'Middle', 'Senior'])",
+      "pd.cut(df['age'], bins=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])",
+      "pd.qcut(df['age'], q=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])",
+      "All of the above are valid uses"
+    ],
+    "answer": "All of the above are valid uses",
+    "explanation": "All approaches are valid: using explicit bin edges, equal-width bins (cut), or equal-frequency bins (qcut)."
+  },
+  {
+    "id": 25,
+    "category": "Pandas",
+    "question": "How do you efficiently perform a custom window operation in pandas?",
+    "options": [
+      "df.rolling(window=3).apply(custom_func, raw=True)",
+      "df.rolling(window=3).apply(custom_func)",
+      "df.apply(lambda x: [custom_func(x[i:i+3]) for i in range(len(x)-2)])",
+      "Both A and B"
+    ],
+    "answer": "Both A and B",
+    "explanation": "Both approaches work for custom window operations, but using raw=True can be more efficient for numerical operations by passing a NumPy array instead of a Series."
+  },
+  {
+    "id": 26,
+    "category": "Pandas",
+    "question": "Which approach can create a lagged feature in a time series DataFrame?",
+    "options": [
+      "df['lagged'] = df['value'].shift(1)",
+      "df['lagged'] = df['value'].shift(-1)",
+      "df['lagged'] = df['value'].rolling(window=2).apply(lambda x: x.iloc[0])",
+      "Both A and B"
+    ],
+    "answer": "Both A and B",
+    "explanation": "shift(1) creates a lag (past values), while shift(-1) creates a lead (future values), both useful for time series analysis."
+  },
+  {
+    "id": 27,
+    "category": "Pandas",
+    "question": "What's the best way to explode a DataFrame column containing lists into multiple rows?",
+    "options": [
+      "pd.DataFrame([[i, x] for i, y in df['list_col'].iteritems() for x in y])",
+      "df.explode('list_col')",
+      "df.assign(list_col=df['list_col']).explode('list_col')",
+      "Both B and C"
+    ],
+    "answer": "Both B and C",
+    "explanation": "explode() transforms each element of a list-like column into a row, with the original index duplicated as needed."
+  },
+  {
+    "id": 28,
+    "category": "Pandas",
+    "question": "How do you efficiently compute a weighted mean in pandas?",
+    "options": [
+      "(df['value'] * df['weight']).sum() / df['weight'].sum()",
+      "df['value'].mean(weights=df['weight'])",
+      "np.average(df['value'], weights=df['weight'])",
+      "Both A and C"
+    ],
+    "answer": "Both A and C",
+    "explanation": "Both manually computing weighted mean and using np.average() work efficiently, though pandas Series doesn't have a weights parameter for mean()."
+  },
+  {
+    "id": 29,
+    "category": "Pandas",
+    "question": "Which method correctly identifies the top-k values in each group?",
+    "options": [
+      "df.groupby('group')['value'].nlargest(k)",
+      "df.groupby('group').apply(lambda x: x.nlargest(k, 'value'))",
+      "df.sort_values('value', ascending=False).groupby('group').head(k)",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "All three methods can get the top-k values within each group, with different syntax but similar results."
+  },
+  {
+    "id": 30,
+    "category": "Pandas",
+    "question": "What's the best way to add a new column based on a categorical mapping of an existing column?",
+    "options": [
+      "df['category'] = df['value'].map({'low': 1, 'medium': 2, 'high': 3})",
+      "df['category'] = df['value'].replace({'low': 1, 'medium': 2, 'high': 3})",
+      "df['category'] = pd.Categorical(df['value']).map({'low': 1, 'medium': 2, 'high': 3})",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "explanation": "All methods can map values to new ones, though map() is generally preferred for dictionary-based mappings."
+  }
+]

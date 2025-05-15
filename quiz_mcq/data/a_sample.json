@@ -1,28 +1,32 @@
 [
-  {
-    "id": 1,
-    "category": "Pandas",
-    "question": "Which method efficiently applies a function along an axis of a DataFrame?",
-    "options": [
-      "df.map(func)",
-      "df.apply(func, axis=0)",
-      "df.transform(func)",
-      "df.aggregate(func)"
-    ],
-    "answer": "df.apply(func, axis=0)",
-    "explanation": "The apply() method allows applying a function along an axis (rows or columns) of a DataFrame."
-  },
-  {
-    "id": 2,
-    "category": "Pandas",
-    "question": "What's the best way to add a new column based on a categorical mapping of an existing column?",
-    "options": [
-      "df['category'] = df['value'].map({'low': 1, 'medium': 2, 'high': 3})",
-      "df['category'] = df['value'].replace({'low': 1, 'medium': 2, 'high': 3})",
-      "df['category'] = pd.Categorical(df['value']).map({'low': 1, 'medium': 2, 'high': 3})",
-      "All of the above"
-    ],
-    "answer": "All of the above",
-    "explanation": "All methods can map values to new ones, though map() is generally preferred for dictionary-based mappings."
-  }
+    {
+        "id": 1,
+        "category": "Pandas",
+        "question": "Which method efficiently applies a function along an axis of a DataFrame?",
+        "options": [
+            "df.map(func)",
+            "df.apply(func, axis=0)",
+            "df.transform(func)",
+            "df.aggregate(func)"
+        ],
+        "answer": "df.apply(func, axis=0)",
+        "explanation": "The apply() method allows applying a function along an axis (rows or columns) of a DataFrame.",
+        "answer_long_md": [],
+        "answer_long_html": []
+    },
+    {
+        "id": 2,
+        "category": "Pandas",
+        "question": "What's the best way to add a new column based on a categorical mapping of an existing column?",
+        "options": [
+            "df['category'] = df['value'].map({'low': 1, 'medium': 2, 'high': 3})",
+            "df['category'] = df['value'].replace({'low': 1, 'medium': 2, 'high': 3})",
+            "df['category'] = pd.Categorical(df['value']).map({'low': 1, 'medium': 2, 'high': 3})",
+            "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "All methods can map values to new ones, though map() is generally preferred for dictionary-based mappings.",
+        "answer_long_md": [],
+        "answer_long_html": []
+    }
 ]

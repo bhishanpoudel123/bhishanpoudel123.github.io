@@ -1,0 +1,648 @@
+[
+  {
+    "id": 1,
+    "category": "IQ",
+    "question": "The cost of one paper is 15 cents. How much will 40 papers cost?",
+    "options": [
+      "$6.00",
+      "$2.60",
+      "$4.00",
+      "$40.00"
+    ],
+    "answer": "$6.00",
+    "explanation": "Basic multiplication or unit price calculation."
+  },
+  {
+    "id": 2,
+    "category": "IQ",
+    "question": "In a party, 10 men shake hands with each other and they get to shake everyones hand once. How many total handshakes are there?",
+    "options": [
+      "50",
+      "45",
+      "100",
+      "40"
+    ],
+    "answer": "45",
+    "explanation": "Use n(n-1)/2 formula for handshakes."
+  },
+  {
+    "id": 3,
+    "category": "IQ",
+    "question": "Pick out the number with the smallest value.",
+    "options": [
+      "002",
+      "007",
+      "0.80",
+      "0.33"
+    ],
+    "answer": "0.33",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 4,
+    "category": "IQ",
+    "question": "Jim makes 8.50 an hour and 3 extra for cleaning a store. If he worked 36 hours and cleaned 17 stores. How much money did he make?",
+    "options": [
+      "$300",
+      "$320",
+      "$357",
+      "$440"
+    ],
+    "answer": "$357",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 5,
+    "category": "IQ",
+    "question": "Paper pins cost 21 cents a pack. How much will 4 packs cost?",
+    "options": [
+      "$0.7",
+      "$0.5",
+      "$0.84",
+      "$0.64"
+    ],
+    "answer": "$0.84",
+    "explanation": "Basic multiplication or unit price calculation."
+  },
+  {
+    "id": 6,
+    "category": "IQ",
+    "question": "A pad costs 33 cents. How much will 5 pads cost?",
+    "options": [
+      "$1.65",
+      "$2.28",
+      "$1.10",
+      "$1.45"
+    ],
+    "answer": "$1.65",
+    "explanation": "Basic multiplication or unit price calculation."
+  },
+  {
+    "id": 7,
+    "category": "IQ",
+    "question": "Which of these objects has the largest diameter?",
+    "options": [
+      "Moon",
+      "Cricket Bat",
+      "Tennis Ball",
+      "Sun"
+    ],
+    "answer": "Sun",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 8,
+    "category": "IQ",
+    "question": "Identify the next number in the series.\n24, 12, 6, 3, _____",
+    "options": [
+      "12",
+      "6",
+      "1.3",
+      "1.5"
+    ],
+    "answer": "1.5",
+    "explanation": "Half each number to get the next number in the series."
+  },
+  {
+    "id": 9,
+    "category": "IQ",
+    "question": "Urge and deter have _____ meanings?",
+    "options": [
+      "contradictory",
+      "similar",
+      "unrelated"
+    ],
+    "answer": "contradictory",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 10,
+    "category": "IQ",
+    "question": "Arrange these words to form a sentence. The sentence you arranged, is it true or false?\n\ntriangle sides a has three",
+    "options": [
+      "True",
+      "Correct answer not available.",
+      "False"
+    ],
+    "answer": "True",
+    "explanation": "A triangle has three sides."
+  },
+  {
+    "id": 11,
+    "category": "IQ",
+    "question": "Which word doesnt belong in this set of words?",
+    "options": [
+      "surgeon",
+      "mason",
+      "economist",
+      "barrister"
+    ],
+    "answer": "mason",
+    "explanation": "A mason is a skilled worker who builds or works with stone, brick, or concrete. The other three are professions that require a degree or specialized training. A barrister is a lawyer who specializes in court cases, an economist studies the economy, and a surgeon is a medical doctor who performs surgery."
+  },
+  {
+    "id": 12,
+    "category": "IQ",
+    "question": "Calculate:  -43 + 9",
+    "options": [
+      "-34",
+      "-32",
+      "32",
+      "34"
+    ],
+    "answer": "-34",
+    "explanation": "-43+10 would be -33, so -43+9 is -34."
+  },
+  {
+    "id": 13,
+    "category": "IQ",
+    "question": "The cost of one egg is 15 cents. How much will 4 eggs cost?",
+    "options": [
+      "$0.60",
+      "$0.40",
+      "$0.65",
+      "$0.50"
+    ],
+    "answer": "$0.60",
+    "explanation": "Basic multiplication or unit price calculation."
+  },
+  {
+    "id": 14,
+    "category": "IQ",
+    "question": "Subservient is the opposite of?",
+    "options": [
+      "angry",
+      "imperious",
+      "selfish",
+      "calm"
+    ],
+    "answer": "imperious",
+    "explanation": "Find the antonym."
+  },
+  {
+    "id": 15,
+    "category": "IQ",
+    "question": "The volume of a rectangular box is 100 cubic inches. If the minimum dimension of any given side is 1 inch, which of the alternatives is its greatest possible length?",
+    "options": [
+      "90 inches",
+      "80 inches",
+      "100 inches",
+      "110 inches"
+    ],
+    "answer": "100 inches",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 16,
+    "category": "IQ",
+    "question": "What is the square root of 8?",
+    "options": [
+      "16",
+      "4.66",
+      "2.82",
+      "3.56"
+    ],
+    "answer": "2.82",
+    "explanation": "Square root is the number that gives the original number when multiplied by itself."
+  },
+  {
+    "id": 17,
+    "category": "IQ",
+    "question": "What do you get when you divide 7.95 by 1.5?",
+    "options": [
+      "5.5",
+      "5.12",
+      "5.9",
+      "5.3"
+    ],
+    "answer": "5.3",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 18,
+    "category": "IQ",
+    "question": "Jack and John have 56 marbles together. John has 6x more marbles than Jack. How many marbles does Jack have?",
+    "options": [
+      "10",
+      "50",
+      "45",
+      "8"
+    ],
+    "answer": "8",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 19,
+    "category": "IQ",
+    "question": "Which digit represents the tenths space in 10,987.36?",
+    "options": [
+      "3",
+      "8",
+      "6",
+      "7"
+    ],
+    "answer": "3",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 20,
+    "category": "IQ",
+    "question": "How many pairs are duplicates?\n987878; 987788\n124555; 123555\n6845; 6845\n45641; 45641\n9898547; -9898745",
+    "options": [
+      "4",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "2",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 21,
+    "category": "IQ",
+    "question": "How many bananas will you find in a dozen?",
+    "options": [
+      "11",
+      "10",
+      "14",
+      "12"
+    ],
+    "answer": "12",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 22,
+    "category": "IQ",
+    "question": "Identify the next number in the series?\n5, 15, 10, 13, 15, 11, _____",
+    "options": [
+      "9",
+      "16",
+      "20",
+      "17"
+    ],
+    "answer": "20",
+    "explanation": "The odd positions are increasing by 5 and the even positions are decreasing by 2."
+  },
+  {
+    "id": 23,
+    "category": "IQ",
+    "question": "How many days are there in three years?",
+    "options": [
+      "1,090",
+      "1,105",
+      "1,095",
+      "1,085"
+    ],
+    "answer": "1,095",
+    "explanation": "365 days in a year, so 3 years = 3 * 365 = 1,095 days."
+  },
+  {
+    "id": 24,
+    "category": "IQ",
+    "question": "Adam is selling yarn for $.04/foot. How many feet can you buy from him for $0.52?",
+    "options": [
+      "13 feet",
+      "12 feet",
+      "50 feet",
+      "10 feet"
+    ],
+    "answer": "13 feet",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 25,
+    "category": "IQ",
+    "question": "Suppose the first 2 statements are true. Is the third one true/false or not certain?\n1) Jack greeted Jill.\n2) Jill greeted Joe.\n3) Jack didnt greet Joe.",
+    "options": [
+      "True",
+      "Uncertain",
+      "False",
+      "unrelated"
+    ],
+    "answer": "Uncertain",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 26,
+    "category": "IQ",
+    "question": "Transubstantiate and convert have _____ meanings.",
+    "options": [
+      "similar",
+      "opposite",
+      "neither similar nor opposite"
+    ],
+    "answer": "similar",
+    "explanation": "Transubstantiate means to change the substance of something, while convert means to change something into a different form or use. Both words imply a transformation."
+  },
+  {
+    "id": 27,
+    "category": "IQ",
+    "question": "What number should come next?\n8, 4, 2, 1, 1/2, 1/4, _____",
+    "options": [
+      "1/16",
+      "1/12",
+      "1/8",
+      "1/6"
+    ],
+    "answer": "1/8",
+    "explanation": "Each next number are half of the previous number."
+  },
+  {
+    "id": 28,
+    "category": "IQ",
+    "question": "There are 14 more potatoes than onions in a basket of 36 potatoes and onions. How many potatoes are there in the basket?",
+    "options": [
+      "11",
+      "28",
+      "13",
+      "25"
+    ],
+    "answer": "25",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 29,
+    "category": "IQ",
+    "question": "Martin got a 25% salary raise. If his previous salary was $1,200, how much will it be after implementing the raise?",
+    "options": [
+      "$1,500",
+      "$1,550",
+      "$1,450",
+      "$1,350"
+    ],
+    "answer": "$1,500",
+    "explanation": "Convert the percentage to decimal by dividing by 100."
+  },
+  {
+    "id": 30,
+    "category": "IQ",
+    "question": "Ferguson has 8 hats, 6 shirts and 4 pairs of pants. How many days can he dress up without repeating the same combination?",
+    "options": [
+      "12 days",
+      "18 days",
+      "192 days",
+      "180 days"
+    ],
+    "answer": "192 days",
+    "explanation": "We need to multiply the number of hats, shirts and pants to get the total combinations. 8 * 6 * 4 = 192."
+  },
+  {
+    "id": 31,
+    "category": "IQ",
+    "question": "Content and Satisfied have ______ meanings?",
+    "options": [
+      "opposite",
+      "similar",
+      "unrelated",
+      "neither similar nor opposite"
+    ],
+    "answer": "similar",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 32,
+    "category": "IQ",
+    "question": "Identify the next number in the series:\n1, 1, 2, 3, 5, 8, _____",
+    "options": [
+      "10",
+      "20",
+      "9",
+      "13"
+    ],
+    "answer": "13",
+    "explanation": "This is fibonacci series. The next number is the sum of the last two numbers."
+  },
+  {
+    "id": 33,
+    "category": "IQ",
+    "question": "Calculate:  -70 + 35",
+    "options": [
+      "25",
+      "-25",
+      "35",
+      "-35"
+    ],
+    "answer": "-35",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 34,
+    "category": "IQ",
+    "question": "61% converted to decimal notation is:",
+    "options": [
+      "6.01",
+      "6.1",
+      "0.61",
+      "61"
+    ],
+    "answer": "0.61",
+    "explanation": "Convert the percentage to decimal by dividing by 100."
+  },
+  {
+    "id": 35,
+    "category": "IQ",
+    "question": "Which number has the smallest value?",
+    "options": [
+      "2",
+      "20",
+      "0.2",
+      "0.02"
+    ],
+    "answer": "0.02",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 36,
+    "category": "IQ",
+    "question": "Adjoin and sever have _____ meaning?",
+    "options": [
+      "opposite",
+      "similar",
+      "unrelated",
+      "neither similar nor opposite"
+    ],
+    "answer": "opposite",
+    "explanation": "Adjoin means to connect or attach, while sever means to cut off or separate. They are opposite in meaning."
+  },
+  {
+    "id": 37,
+    "category": "IQ",
+    "question": "October is the ____ month of the year",
+    "options": [
+      "9th",
+      "8th",
+      "11th",
+      "10th"
+    ],
+    "answer": "10th",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 38,
+    "category": "IQ",
+    "question": "Identify next number in the series.\n9, 3, 1, 1/3, _____",
+    "options": [
+      "1/13",
+      "1/6",
+      "1/9",
+      "1/10"
+    ],
+    "answer": "1/9",
+    "explanation": "Each next number is one third of the previous number."
+  },
+  {
+    "id": 39,
+    "category": "IQ",
+    "question": "Reduce 75/100 to the simplest form?",
+    "options": [
+      "3/4",
+      "2/4",
+      "5/6",
+      "6/7"
+    ],
+    "answer": "3/4",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 40,
+    "category": "IQ",
+    "question": "An automotive shop owner bought some tools for $5,500. He sold those for $7,300 with a profit of $50 per tool. How many tools did he sell?",
+    "options": [
+      "60",
+      "20",
+      "75",
+      "36"
+    ],
+    "answer": "36",
+    "explanation": "7300 - 5500 = 1800 profit. 1800/50 = 36 tools sold."
+  },
+  {
+    "id": 41,
+    "category": "IQ",
+    "question": "Partner and Join have _____ meanings.",
+    "options": [
+      "contradictory",
+      "opposite",
+      "unrelated",
+      "similar"
+    ],
+    "answer": "similar",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 42,
+    "category": "IQ",
+    "question": "If a person is half a century old. How old is he?",
+    "options": [
+      "75",
+      "50",
+      "25",
+      "100"
+    ],
+    "answer": "50",
+    "explanation": "Century means 100 years. Half a century means 50 years."
+  },
+  {
+    "id": 43,
+    "category": "IQ",
+    "question": "What do you get when you round of 907.457 to the nearest tens place?",
+    "options": [
+      "908",
+      "907",
+      "907.5",
+      "910"
+    ],
+    "answer": "910",
+    "explanation": "Nearest tens place means rounding to the nearest 10. 907.457 rounds to 910."
+  },
+  {
+    "id": 44,
+    "category": "IQ",
+    "question": "(8 ÷ 4) x (9 ÷ 3) = ?",
+    "options": [
+      "10",
+      "6",
+      "12",
+      "15"
+    ],
+    "answer": "6",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 45,
+    "category": "IQ",
+    "question": "What is the relation betweed Credence and Credit?",
+    "options": [
+      "unrelated",
+      "similar",
+      "opposite",
+      "contradictory"
+    ],
+    "answer": "similar",
+    "explanation": "Credence means belief or trust, while credit refers to the ability to obtain goods or services before payment. They are related in the context of trust and belief."
+  },
+  {
+    "id": 46,
+    "category": "IQ",
+    "question": "In a week, Rose spent $28.49 on lunch. What was the average cost per day?",
+    "options": [
+      "$4.7",
+      "$4.07",
+      "$3.97",
+      "$3.87"
+    ],
+    "answer": "$4.07",
+    "explanation": "Basic multiplication or unit price calculation."
+  },
+  {
+    "id": 47,
+    "category": "IQ",
+    "question": "The opposite of punctual is?",
+    "options": [
+      "tardy",
+      "conscious",
+      "rigorous",
+      "meticulous"
+    ],
+    "answer": "tardy",
+    "explanation": "tardy means late or delayed, which is the opposite of punctual. Whereas conscious means aware, rigorous means strict or demanding, and meticulous means careful and precise."
+  },
+  {
+    "id": 48,
+    "category": "IQ",
+    "question": "Reduce and Produce have ____ meaning?",
+    "options": [
+      "neither similar nor opposite",
+      "similar",
+      "opposite"
+    ],
+    "answer": "opposite",
+    "explanation": "Apply logic or perform basic arithmetic to solve."
+  },
+  {
+    "id": 49,
+    "category": "IQ",
+    "question": "Rule out the odd word from the set of words.",
+    "options": [
+      "drought",
+      "budget",
+      "debt",
+      "credit"
+    ],
+    "answer": "drought",
+    "explanation": "drought is a prolonged dry period, while the others are related to finance. Budget refers to a plan for spending money, debt refers to money owed, and credit refers to the ability to borrow money."
+  },
+  {
+    "id": 50,
+    "category": "IQ",
+    "question": "Which three words have the same meaning?\nA. Information\nB. Indoctrinate\nC. Brainwash\nD. Convince\nE. Class",
+    "options": [
+      "CDE",
+      "ABD",
+      "ACD",
+      "BCD"
+    ],
+    "answer": "BCD",
+    "explanation": "Find the synonym."
+  }
+]

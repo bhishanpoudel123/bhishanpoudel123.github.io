@@ -1,0 +1,652 @@
+[
+  {
+    "id": 1,
+    "category": "SQL General",
+    "question": "Which SQL statement is used to extract data from a database?",
+    "options": [
+      "GET",
+      "SELECT",
+      "OPEN",
+      "EXTRACT"
+    ],
+    "answer": "SELECT",
+    "explanation": "The SELECT statement is used to extract data from a database table."
+  },
+  {
+    "id": 2,
+    "category": "SQL General",
+    "question": "Which SQL clause is used to filter records?",
+    "options": [
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING"
+    ],
+    "answer": "WHERE",
+    "explanation": "The WHERE clause is used to filter records based on specific conditions."
+  },
+  {
+    "id": 3,
+    "category": "SQL General",
+    "question": "What does the COUNT() function do in SQL?",
+    "options": [
+      "Counts rows with NULLs",
+      "Counts only numeric values",
+      "Counts non-NULL rows",
+      "Counts unique values"
+    ],
+    "answer": "Counts non-NULL rows",
+    "explanation": "COUNT() returns the number of non-NULL values in a specified column."
+  },
+  {
+    "id": 4,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to sort the result-set?",
+    "options": [
+      "SORT BY",
+      "ORDER BY",
+      "GROUP BY",
+      "ARRANGE BY"
+    ],
+    "answer": "ORDER BY",
+    "explanation": "ORDER BY is used to sort the results of a SELECT query."
+  },
+  {
+    "id": 5,
+    "category": "SQL General",
+    "question": "Which command is used to remove all records from a table in SQL without deleting the table?",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "DROP",
+      "TRUNCATE"
+    ],
+    "answer": "TRUNCATE",
+    "explanation": "TRUNCATE removes all records from a table but retains the table structure."
+  },
+  {
+    "id": 6,
+    "category": "SQL General",
+    "question": "Which SQL clause is used with aggregate functions to group result-set by one or more columns?",
+    "options": [
+      "GROUP BY",
+      "ORDER BY",
+      "WHERE",
+      "HAVING"
+    ],
+    "answer": "GROUP BY",
+    "explanation": "GROUP BY groups rows that have the same values into summary rows."
+  },
+  {
+    "id": 7,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to retrieve only distinct values?",
+    "options": [
+      "UNIQUE",
+      "ONLY",
+      "DISTINCT",
+      "SEPARATE"
+    ],
+    "answer": "DISTINCT",
+    "explanation": "DISTINCT is used to return only different (distinct) values."
+  },
+  {
+    "id": 8,
+    "category": "SQL General",
+    "question": "Which of the following is a DDL command?",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "CREATE"
+    ],
+    "answer": "CREATE",
+    "explanation": "CREATE is a DDL (Data Definition Language) command used to create a new table or database."
+  },
+  {
+    "id": 9,
+    "category": "SQL General",
+    "question": "What does the SQL INNER JOIN keyword do?",
+    "options": [
+      "Returns rows when there is a match in both tables",
+      "Returns all rows from the left table",
+      "Returns all rows from the right table",
+      "Combines all rows from both tables"
+    ],
+    "answer": "Returns rows when there is a match in both tables",
+    "explanation": "INNER JOIN selects records that have matching values in both tables."
+  },
+  {
+    "id": 10,
+    "category": "SQL General",
+    "question": "What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?",
+    "options": [
+      "It will throw an error",
+      "It selects employees with empty strings",
+      "It selects employees with NULL department",
+      "It selects all employees"
+    ],
+    "answer": "It selects employees with NULL department",
+    "explanation": "IS NULL checks for columns that contain NULL values."
+  },
+  {
+    "id": 11,
+    "category": "SQL General",
+    "question": "Which SQL statement is used to extract data from a database?",
+    "options": [
+      "GET",
+      "SELECT",
+      "OPEN",
+      "EXTRACT"
+    ],
+    "answer": "SELECT",
+    "explanation": "The SELECT statement is used to extract data from a database table."
+  },
+  {
+    "id": 12,
+    "category": "SQL General",
+    "question": "Which SQL clause is used to filter records?",
+    "options": [
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING"
+    ],
+    "answer": "WHERE",
+    "explanation": "The WHERE clause is used to filter records based on specific conditions."
+  },
+  {
+    "id": 13,
+    "category": "SQL General",
+    "question": "What does the COUNT() function do in SQL?",
+    "options": [
+      "Counts rows with NULLs",
+      "Counts only numeric values",
+      "Counts non-NULL rows",
+      "Counts unique values"
+    ],
+    "answer": "Counts non-NULL rows",
+    "explanation": "COUNT() returns the number of non-NULL values in a specified column."
+  },
+  {
+    "id": 14,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to sort the result-set?",
+    "options": [
+      "SORT BY",
+      "ORDER BY",
+      "GROUP BY",
+      "ARRANGE BY"
+    ],
+    "answer": "ORDER BY",
+    "explanation": "ORDER BY is used to sort the results of a SELECT query."
+  },
+  {
+    "id": 15,
+    "category": "SQL General",
+    "question": "Which command is used to remove all records from a table in SQL without deleting the table?",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "DROP",
+      "TRUNCATE"
+    ],
+    "answer": "TRUNCATE",
+    "explanation": "TRUNCATE removes all records from a table but retains the table structure."
+  },
+  {
+    "id": 16,
+    "category": "SQL General",
+    "question": "Which SQL clause is used with aggregate functions to group result-set by one or more columns?",
+    "options": [
+      "GROUP BY",
+      "ORDER BY",
+      "WHERE",
+      "HAVING"
+    ],
+    "answer": "GROUP BY",
+    "explanation": "GROUP BY groups rows that have the same values into summary rows."
+  },
+  {
+    "id": 17,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to retrieve only distinct values?",
+    "options": [
+      "UNIQUE",
+      "ONLY",
+      "DISTINCT",
+      "SEPARATE"
+    ],
+    "answer": "DISTINCT",
+    "explanation": "DISTINCT is used to return only different (distinct) values."
+  },
+  {
+    "id": 18,
+    "category": "SQL General",
+    "question": "Which of the following is a DDL command?",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "CREATE"
+    ],
+    "answer": "CREATE",
+    "explanation": "CREATE is a DDL (Data Definition Language) command used to create a new table or database."
+  },
+  {
+    "id": 19,
+    "category": "SQL General",
+    "question": "What does the SQL INNER JOIN keyword do?",
+    "options": [
+      "Returns rows when there is a match in both tables",
+      "Returns all rows from the left table",
+      "Returns all rows from the right table",
+      "Combines all rows from both tables"
+    ],
+    "answer": "Returns rows when there is a match in both tables",
+    "explanation": "INNER JOIN selects records that have matching values in both tables."
+  },
+  {
+    "id": 20,
+    "category": "SQL General",
+    "question": "What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?",
+    "options": [
+      "It will throw an error",
+      "It selects employees with empty strings",
+      "It selects employees with NULL department",
+      "It selects all employees"
+    ],
+    "answer": "It selects employees with NULL department",
+    "explanation": "IS NULL checks for columns that contain NULL values."
+  },
+  {
+    "id": 21,
+    "category": "SQL General",
+    "question": "Which SQL statement is used to extract data from a database?",
+    "options": [
+      "GET",
+      "SELECT",
+      "OPEN",
+      "EXTRACT"
+    ],
+    "answer": "SELECT",
+    "explanation": "The SELECT statement is used to extract data from a database table."
+  },
+  {
+    "id": 22,
+    "category": "SQL General",
+    "question": "Which SQL clause is used to filter records?",
+    "options": [
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING"
+    ],
+    "answer": "WHERE",
+    "explanation": "The WHERE clause is used to filter records based on specific conditions."
+  },
+  {
+    "id": 23,
+    "category": "SQL General",
+    "question": "What does the COUNT() function do in SQL?",
+    "options": [
+      "Counts rows with NULLs",
+      "Counts only numeric values",
+      "Counts non-NULL rows",
+      "Counts unique values"
+    ],
+    "answer": "Counts non-NULL rows",
+    "explanation": "COUNT() returns the number of non-NULL values in a specified column."
+  },
+  {
+    "id": 24,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to sort the result-set?",
+    "options": [
+      "SORT BY",
+      "ORDER BY",
+      "GROUP BY",
+      "ARRANGE BY"
+    ],
+    "answer": "ORDER BY",
+    "explanation": "ORDER BY is used to sort the results of a SELECT query."
+  },
+  {
+    "id": 25,
+    "category": "SQL General",
+    "question": "Which command is used to remove all records from a table in SQL without deleting the table?",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "DROP",
+      "TRUNCATE"
+    ],
+    "answer": "TRUNCATE",
+    "explanation": "TRUNCATE removes all records from a table but retains the table structure."
+  },
+  {
+    "id": 26,
+    "category": "SQL General",
+    "question": "Which SQL clause is used with aggregate functions to group result-set by one or more columns?",
+    "options": [
+      "GROUP BY",
+      "ORDER BY",
+      "WHERE",
+      "HAVING"
+    ],
+    "answer": "GROUP BY",
+    "explanation": "GROUP BY groups rows that have the same values into summary rows."
+  },
+  {
+    "id": 27,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to retrieve only distinct values?",
+    "options": [
+      "UNIQUE",
+      "ONLY",
+      "DISTINCT",
+      "SEPARATE"
+    ],
+    "answer": "DISTINCT",
+    "explanation": "DISTINCT is used to return only different (distinct) values."
+  },
+  {
+    "id": 28,
+    "category": "SQL General",
+    "question": "Which of the following is a DDL command?",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "CREATE"
+    ],
+    "answer": "CREATE",
+    "explanation": "CREATE is a DDL (Data Definition Language) command used to create a new table or database."
+  },
+  {
+    "id": 29,
+    "category": "SQL General",
+    "question": "What does the SQL INNER JOIN keyword do?",
+    "options": [
+      "Returns rows when there is a match in both tables",
+      "Returns all rows from the left table",
+      "Returns all rows from the right table",
+      "Combines all rows from both tables"
+    ],
+    "answer": "Returns rows when there is a match in both tables",
+    "explanation": "INNER JOIN selects records that have matching values in both tables."
+  },
+  {
+    "id": 30,
+    "category": "SQL General",
+    "question": "What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?",
+    "options": [
+      "It will throw an error",
+      "It selects employees with empty strings",
+      "It selects employees with NULL department",
+      "It selects all employees"
+    ],
+    "answer": "It selects employees with NULL department",
+    "explanation": "IS NULL checks for columns that contain NULL values."
+  },
+  {
+    "id": 31,
+    "category": "SQL General",
+    "question": "Which SQL statement is used to extract data from a database?",
+    "options": [
+      "GET",
+      "SELECT",
+      "OPEN",
+      "EXTRACT"
+    ],
+    "answer": "SELECT",
+    "explanation": "The SELECT statement is used to extract data from a database table."
+  },
+  {
+    "id": 32,
+    "category": "SQL General",
+    "question": "Which SQL clause is used to filter records?",
+    "options": [
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING"
+    ],
+    "answer": "WHERE",
+    "explanation": "The WHERE clause is used to filter records based on specific conditions."
+  },
+  {
+    "id": 33,
+    "category": "SQL General",
+    "question": "What does the COUNT() function do in SQL?",
+    "options": [
+      "Counts rows with NULLs",
+      "Counts only numeric values",
+      "Counts non-NULL rows",
+      "Counts unique values"
+    ],
+    "answer": "Counts non-NULL rows",
+    "explanation": "COUNT() returns the number of non-NULL values in a specified column."
+  },
+  {
+    "id": 34,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to sort the result-set?",
+    "options": [
+      "SORT BY",
+      "ORDER BY",
+      "GROUP BY",
+      "ARRANGE BY"
+    ],
+    "answer": "ORDER BY",
+    "explanation": "ORDER BY is used to sort the results of a SELECT query."
+  },
+  {
+    "id": 35,
+    "category": "SQL General",
+    "question": "Which command is used to remove all records from a table in SQL without deleting the table?",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "DROP",
+      "TRUNCATE"
+    ],
+    "answer": "TRUNCATE",
+    "explanation": "TRUNCATE removes all records from a table but retains the table structure."
+  },
+  {
+    "id": 36,
+    "category": "SQL General",
+    "question": "Which SQL clause is used with aggregate functions to group result-set by one or more columns?",
+    "options": [
+      "GROUP BY",
+      "ORDER BY",
+      "WHERE",
+      "HAVING"
+    ],
+    "answer": "GROUP BY",
+    "explanation": "GROUP BY groups rows that have the same values into summary rows."
+  },
+  {
+    "id": 37,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to retrieve only distinct values?",
+    "options": [
+      "UNIQUE",
+      "ONLY",
+      "DISTINCT",
+      "SEPARATE"
+    ],
+    "answer": "DISTINCT",
+    "explanation": "DISTINCT is used to return only different (distinct) values."
+  },
+  {
+    "id": 38,
+    "category": "SQL General",
+    "question": "Which of the following is a DDL command?",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "CREATE"
+    ],
+    "answer": "CREATE",
+    "explanation": "CREATE is a DDL (Data Definition Language) command used to create a new table or database."
+  },
+  {
+    "id": 39,
+    "category": "SQL General",
+    "question": "What does the SQL INNER JOIN keyword do?",
+    "options": [
+      "Returns rows when there is a match in both tables",
+      "Returns all rows from the left table",
+      "Returns all rows from the right table",
+      "Combines all rows from both tables"
+    ],
+    "answer": "Returns rows when there is a match in both tables",
+    "explanation": "INNER JOIN selects records that have matching values in both tables."
+  },
+  {
+    "id": 40,
+    "category": "SQL General",
+    "question": "What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?",
+    "options": [
+      "It will throw an error",
+      "It selects employees with empty strings",
+      "It selects employees with NULL department",
+      "It selects all employees"
+    ],
+    "answer": "It selects employees with NULL department",
+    "explanation": "IS NULL checks for columns that contain NULL values."
+  },
+  {
+    "id": 41,
+    "category": "SQL General",
+    "question": "Which SQL statement is used to extract data from a database?",
+    "options": [
+      "GET",
+      "SELECT",
+      "OPEN",
+      "EXTRACT"
+    ],
+    "answer": "SELECT",
+    "explanation": "The SELECT statement is used to extract data from a database table."
+  },
+  {
+    "id": 42,
+    "category": "SQL General",
+    "question": "Which SQL clause is used to filter records?",
+    "options": [
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING"
+    ],
+    "answer": "WHERE",
+    "explanation": "The WHERE clause is used to filter records based on specific conditions."
+  },
+  {
+    "id": 43,
+    "category": "SQL General",
+    "question": "What does the COUNT() function do in SQL?",
+    "options": [
+      "Counts rows with NULLs",
+      "Counts only numeric values",
+      "Counts non-NULL rows",
+      "Counts unique values"
+    ],
+    "answer": "Counts non-NULL rows",
+    "explanation": "COUNT() returns the number of non-NULL values in a specified column."
+  },
+  {
+    "id": 44,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to sort the result-set?",
+    "options": [
+      "SORT BY",
+      "ORDER BY",
+      "GROUP BY",
+      "ARRANGE BY"
+    ],
+    "answer": "ORDER BY",
+    "explanation": "ORDER BY is used to sort the results of a SELECT query."
+  },
+  {
+    "id": 45,
+    "category": "SQL General",
+    "question": "Which command is used to remove all records from a table in SQL without deleting the table?",
+    "options": [
+      "DELETE",
+      "REMOVE",
+      "DROP",
+      "TRUNCATE"
+    ],
+    "answer": "TRUNCATE",
+    "explanation": "TRUNCATE removes all records from a table but retains the table structure."
+  },
+  {
+    "id": 46,
+    "category": "SQL General",
+    "question": "Which SQL clause is used with aggregate functions to group result-set by one or more columns?",
+    "options": [
+      "GROUP BY",
+      "ORDER BY",
+      "WHERE",
+      "HAVING"
+    ],
+    "answer": "GROUP BY",
+    "explanation": "GROUP BY groups rows that have the same values into summary rows."
+  },
+  {
+    "id": 47,
+    "category": "SQL General",
+    "question": "Which SQL keyword is used to retrieve only distinct values?",
+    "options": [
+      "UNIQUE",
+      "ONLY",
+      "DISTINCT",
+      "SEPARATE"
+    ],
+    "answer": "DISTINCT",
+    "explanation": "DISTINCT is used to return only different (distinct) values."
+  },
+  {
+    "id": 48,
+    "category": "SQL General",
+    "question": "Which of the following is a DDL command?",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "CREATE"
+    ],
+    "answer": "CREATE",
+    "explanation": "CREATE is a DDL (Data Definition Language) command used to create a new table or database."
+  },
+  {
+    "id": 49,
+    "category": "SQL General",
+    "question": "What does the SQL INNER JOIN keyword do?",
+    "options": [
+      "Returns rows when there is a match in both tables",
+      "Returns all rows from the left table",
+      "Returns all rows from the right table",
+      "Combines all rows from both tables"
+    ],
+    "answer": "Returns rows when there is a match in both tables",
+    "explanation": "INNER JOIN selects records that have matching values in both tables."
+  },
+  {
+    "id": 50,
+    "category": "SQL General",
+    "question": "What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?",
+    "options": [
+      "It will throw an error",
+      "It selects employees with empty strings",
+      "It selects employees with NULL department",
+      "It selects all employees"
+    ],
+    "answer": "It selects employees with NULL department",
+    "explanation": "IS NULL checks for columns that contain NULL values."
+  }
+]
