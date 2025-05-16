@@ -1,3 +1,14 @@
+# Instruction
+- To edit any topic, edit the json file for the given topic. e.g. `data/Data_Analysis/data_analysis_questions.json`.
+- Only one json is parsed for the given topic, but that json can have many questions along with given markdown and html paths.
+- In learning section, the topic can have multiple html files to learn from.
+- Once, the files are changed, do following:
+  + if a question in topic json is changed, no need to do anything.
+  + if a new markdown or html is added for the question in topic, no need to change.
+  + if a new html is added for the learning material, we need to create new index_html.json file.
+  + if a new topic is added, we need to create new index.json and index_html.json.
+  + for a given topic, from the json we can create learning material html using `create_topic_html.py`.
+
 # Run web app locally
 ```bash
 python -m http.server 8000
