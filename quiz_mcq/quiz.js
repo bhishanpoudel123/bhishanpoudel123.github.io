@@ -1,3 +1,6 @@
+const isGitHubPages = window.location.host.includes('github.io');
+const basePath = isGitHubPages ? '/quiz_mcq' : ''; // Replace 'quiz_mcq' with your repo name
+
 // Quiz State Management
 const quizState = {
 	questions: [],
@@ -318,38 +321,56 @@ function filterQuestions() {
 }
 
 async function loadTopicContent() {
-	const selectedCategory = dom.categorySelector.value;
-	if (!selectedCategory || selectedCategory === 'All') {
-		alert('Please select a specific topic category first');
-		return;
-	}
+    try {
+        const selectedCategory = dom.categorySelector.value;
+        if (!selectedCategory || selectedCategory === 'All') {
+            alert('Please select a specific topic category first');
+            return;
+        }
 
-	const htmlFiles = quizState.htmlIndex[selectedCategory] || [];
-	if (htmlFiles.length === 0) {
-		alert('No learning materials available for this topic');
-		return;
-	}
+        const htmlFiles = quizState.htmlIndex[selectedCategory] || [];
+        if (htmlFiles.length === 0) {
+            alert('No learning materials available for this topic');
+            return;
+        }
 
-	// Update HTML selector
-	dom.htmlSelector.innerHTML = htmlFiles.map(file =>
-		`<option value="${file}">${file.replace('.html', '')}</option>`
-	).join('');
+        // Update HTML selector
+        dom.htmlSelector.innerHTML = htmlFiles.map(file =>
+            `<option value="${file}">${file.replace('.html', '')}</option>`
+        ).join('');
 
-	dom.htmlSelector.style.display = htmlFiles.length > 1 ? 'inline-block' : 'none';
-	const defaultFile = htmlFiles.find(f => f === `${selectedCategory.toLowerCase().replace(/ /g, '_')}.html`) || htmlFiles[0];
-	dom.htmlSelector.value = defaultFile;
+        dom.htmlSelector.style.display = htmlFiles.length > 1 ? 'inline-block' : 'none';
+        const defaultFile = htmlFiles.find(f => f === `${selectedCategory.toLowerCase().replace(/ /g, '_')}.html`) || htmlFiles[0];
+        dom.htmlSelector.value = defaultFile;
 
-	// Load content
-	const categoryFolder = selectedCategory.replace(/\s+/g, '_');
-	const topicPath = `data/${categoryFolder}/${defaultFile}`;
-	dom.topicIframe.src = topicPath;
+        // Load content
+        const categoryFolder = selectedCategory.replace(/\s+/g, '_');
+        const topicPath = `${basePath}/data/${categoryFolder}/${defaultFile}`;
+        console.log('Attempting to load:', topicPath); // Debug log
+        
+        // Test if the file exists first
+        try {
+            const testResponse = await fetch(topicPath);
+            if (!testResponse.ok) {
+                throw new Error(`File not found: ${topicPath}`);
+            }
+            dom.topicIframe.src = topicPath;
+        } catch (err) {
+            console.error('Error loading topic:', err);
+            alert(`Failed to load topic: ${err.message}`);
+            return;
+        }
 
-	// Show/hide sections
-	dom.quizContainer.style.display = 'none';
-	dom.scoreSection.style.display = 'none';
-	dom.topicContainer.style.display = 'block';
+        // Show/hide sections
+        dom.quizContainer.style.display = 'none';
+        dom.scoreSection.style.display = 'none';
+        dom.topicContainer.style.display = 'block';
 
-	if (quizState.sidebarVisible) toggleSidebar();
+        if (quizState.sidebarVisible) toggleSidebar();
+    } catch (err) {
+        console.error('Error in loadTopicContent:', err);
+        alert('An error occurred while loading the topic');
+    }
 }
 
 // Function to go back to quiz from topic view
