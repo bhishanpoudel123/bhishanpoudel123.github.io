@@ -5,89 +5,77 @@
     "question": "What technique would you use to handle high-dimensional sparse data when performing PCA?",
     "options": [
       "Standard PCA with normalization",
-      "Truncated SVD (also known as LSA)",
-      "Kernel PCA with RBF kernel",
-      "Factor Analysis"
+      "`Truncated SVD` (also known as LSA)",
+      "`Kernel PCA` with RBF kernel",
+      "`Factor Analysis`"
     ],
-    "answer": "Truncated SVD (also known as LSA)",
-    "explanation": "Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Truncated SVD` (also known as LSA)",
+    "explanation": "Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets."
   },
   {
     "id": 2,
     "category": "Data Analysis",
     "question": "What's the most efficient way to perform grouped sampling with replacement in pandas, ensuring each group maintains its original size?",
     "options": [
-      "df.groupby('group').apply(lambda x: x.sample(n=len(x), replace=True))",
-      "pd.concat([df[df['group']==g].sample(n=sum(df['group']==g), replace=True) for g in df['group'].unique()])",
-      "df.set_index('group').sample(frac=1, replace=True).reset_index()",
-      "df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])"
+      "`df.groupby('group').apply(lambda x: x.sample(n=len(x), replace=True))`",
+      "`pd.concat([df[df['group']==g].sample(n=sum(df['group']==g), replace=True) for g in df['group'].unique()])`",
+      "`df.set_index('group').sample(frac=1, replace=True).reset_index()`",
+      "`df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])`"
     ],
-    "answer": "df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])",
-    "explanation": "This approach uses numpy's efficient random sampling directly on indices, avoiding the overhead of pandas' sample function while maintaining group sizes and allowing replacement.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])`",
+    "explanation": "This approach uses numpy's efficient random sampling directly on indices, avoiding the overhead of pandas' sample function while maintaining group sizes and allowing replacement."
   },
   {
     "id": 3,
     "category": "Data Analysis",
     "question": "When implementing stratified k-fold cross-validation for a multi-label classification problem, which approach is most statistically sound?",
     "options": [
-      "Use sklearn's StratifiedKFold with the most common label for each instance",
+      "Use sklearn's `StratifiedKFold` with the most common label for each instance",
       "Create an iterative partitioning algorithm that balances all label combinations across folds",
-      "Use sklearn's MultilabelStratifiedKFold from the iterative-stratification package",
+      "Use sklearn's `MultilabelStratifiedKFold` from the iterative-stratification package",
       "Convert to a multi-class problem using label powerset and then apply standard stratification"
     ],
-    "answer": "Use sklearn's MultilabelStratifiedKFold from the iterative-stratification package",
-    "explanation": "MultilabelStratifiedKFold implements iterative stratification, which preserves the distribution of all labels across folds, addressing the key challenge in multi-label stratification that normal StratifiedKFold cannot handle.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "Use sklearn's `MultilabelStratifiedKFold` from the iterative-stratification package",
+    "explanation": "MultilabelStratifiedKFold implements iterative stratification, which preserves the distribution of all labels across folds, addressing the key challenge in multi-label stratification that normal StratifiedKFold cannot handle."
   },
   {
     "id": 4,
     "category": "Data Analysis",
     "question": "Which approach correctly calculates the Wasserstein distance (Earth Mover's Distance) between two empirical distributions in Python?",
     "options": [
-      "scipy.stats.wasserstein_distance(x, y)",
-      "numpy.linalg.norm(np.sort(x) - np.sort(y), ord=1)",
-      "scipy.spatial.distance.cdist(x.reshape(-1,1), y.reshape(-1,1), metric='euclidean').min(axis=1).sum()",
-      "sklearn.metrics.pairwise_distances(x.reshape(-1,1), y.reshape(-1,1), metric='manhattan').min(axis=1).mean()"
+      "`scipy.stats.wasserstein_distance(x, y)`",
+      "`numpy.linalg.norm(np.sort(x) - np.sort(y), ord=1)`",
+      "`scipy.spatial.distance.cdist(x.reshape(-1,1), y.reshape(-1,1), metric='euclidean').min(axis=1).sum()`",
+      "`sklearn.metrics.pairwise_distances(x.reshape(-1,1), y.reshape(-1,1), metric='manhattan').min(axis=1).mean()`"
     ],
-    "answer": "scipy.stats.wasserstein_distance(x, y)",
-    "explanation": "scipy.stats.wasserstein_distance correctly implements the 1D Wasserstein distance between empirical distributions, which measures the minimum 'work' required to transform one distribution into another.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`scipy.stats.wasserstein_distance(x, y)`",
+    "explanation": "`scipy.stats.wasserstein_distance` correctly implements the 1D Wasserstein distance between empirical distributions, which measures the minimum 'work' required to transform one distribution into another."
   },
   {
     "id": 5,
     "category": "Data Analysis",
     "question": "What's the most computationally efficient way to find the k-nearest neighbors for each point in a large dataset using scikit-learn?",
     "options": [
-      "sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='brute').fit(X).kneighbors(X)",
-      "sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='kd_tree').fit(X).kneighbors(X)",
-      "sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='ball_tree').fit(X).kneighbors(X)",
+      "`sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='brute').fit(X).kneighbors(X)`",
+      "`sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='kd_tree').fit(X).kneighbors(X)`",
+      "`sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='ball_tree').fit(X).kneighbors(X)`",
       "Depends on data dimensionality, size, and structure"
     ],
     "answer": "Depends on data dimensionality, size, and structure",
-    "explanation": "The most efficient algorithm depends on the dataset characteristics: brute force works well for small datasets and high dimensions, kd_tree excels in low dimensions (â‰¤20), and ball_tree performs better in higher dimensions or with non-Euclidean metrics.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "The most efficient algorithm depends on the dataset characteristics: brute force works well for small datasets and high dimensions, kd_tree excels in low dimensions (<20), and ball_tree performs better in higher dimensions or with non-Euclidean metrics."
   },
   {
     "id": 6,
     "category": "Data Analysis",
     "question": "When dealing with millions of rows of time series data with irregular timestamps, which method is most efficient for resampling to regular intervals with proper handling of missing values?",
     "options": [
-      "df.set_index('timestamp').asfreq('1H').interpolate(method='time')",
-      "df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')",
-      "df.set_index('timestamp').resample('1H').mean().interpolate(method='time')",
-      "df.groupby(pd.Grouper(key='timestamp', freq='1H')).apply(lambda x: x.mean() if not x.empty else pd.Series(np.nan, index=df.columns))"
+      "`df.set_index('timestamp').asfreq('1H').interpolate(method='time')`",
+      "`df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')`",
+      "`df.set_index('timestamp').resample('1H').mean().interpolate(method='time')`",
+      "`df.groupby(pd.Grouper(key='timestamp', freq='1H')).apply(lambda x: x.mean() if not x.empty else pd.Series(np.nan, index=df.columns))`"
     ],
-    "answer": "df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')",
-    "explanation": "This approach correctly converts irregular timestamps to a regular frequency with .resample('1H').asfreq(), then intelligently fills missing values using time-based interpolation which respects the actual timing of observations.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')`",
+    "explanation": "This approach correctly converts irregular timestamps to a regular frequency with .resample('1H').asfreq(), then intelligently fills missing values using time-based interpolation which respects the actual timing of observations."
   },
   {
     "id": 7,
@@ -96,13 +84,11 @@
     "options": [
       "Pearson correlation matrix with hierarchical clustering",
       "Distance correlation matrix with MDS visualization",
-      "MINE statistics (Maximal Information-based Nonparametric Exploration)",
+      "`MINE` statistics (Maximal Information-based Nonparametric Exploration)",
       "Random Forest feature importance with partial dependence plots"
     ],
-    "answer": "MINE statistics (Maximal Information-based Nonparametric Exploration)",
-    "explanation": "MINE statistics, particularly the Maximal Information Coefficient (MIC), detect both linear and non-linear associations without assuming a specific functional form, outperforming traditional correlation measures for complex relationships.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`MINE` statistics (Maximal Information-based Nonparametric Exploration)",
+    "explanation": "MINE statistics, particularly the Maximal Information Coefficient (MIC), detect both linear and non-linear associations without assuming a specific functional form, outperforming traditional correlation measures for complex relationships."
   },
   {
     "id": 8,
@@ -112,57 +98,49 @@
       "Oversampling minority classes using SMOTE",
       "Undersampling majority classes using NearMiss",
       "Cost-sensitive learning with class weights inversely proportional to frequencies",
-      "Ensemble of balanced subsets with META learning"
+      "Ensemble of balanced subsets with `META` learning"
     ],
-    "answer": "Ensemble of balanced subsets with META learning",
-    "explanation": "META (Minority Ethnicity and Threshold Adjustment) learning with ensembling addresses severe multiclass imbalance by training multiple models on balanced subsets and combining them, avoiding information loss from undersampling while preventing the artificial patterns that can be introduced by synthetic oversampling.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "Ensemble of balanced subsets with `META` learning",
+    "explanation": "META (Minority Ethnicity and Threshold Adjustment) learning with ensembling addresses severe multiclass imbalance by training multiple models on balanced subsets and combining them, avoiding information loss from undersampling while preventing the artificial patterns that can be introduced by synthetic oversampling."
   },
   {
     "id": 9,
     "category": "Data Analysis",
     "question": "What's the correct approach to implement a memory-efficient pipeline for one-hot encoding categorical variables with high cardinality in pandas?",
     "options": [
-      "pd.get_dummies(df, sparse=True)",
-      "pd.Categorical(df['col']).codes in combination with sklearn's OneHotEncoder(sparse=True)",
-      "Use pd.factorize() on all categorical columns followed by scipy's sparse matrices",
-      "Convert to category dtype then use df['col'].cat.codes with sklearn's OneHotEncoder(sparse=True)"
+      "`pd.get_dummies(df, sparse=True)`",
+      "`pd.Categorical(df['col']).codes` in combination with sklearn's `OneHotEncoder(sparse=True)`",
+      "Use `pd.factorize()` on all categorical columns followed by scipy's sparse matrices",
+      "Convert to category dtype then use `df['col'].cat.codes` with sklearn's `OneHotEncoder(sparse=True)`"
     ],
-    "answer": "Convert to category dtype then use df['col'].cat.codes with sklearn's OneHotEncoder(sparse=True)",
-    "explanation": "Converting to pandas' memory-efficient category dtype first, then using cat.codes with a sparse OneHotEncoder creates a memory-efficient pipeline that preserves category labels and works well with scikit-learn while minimizing memory usage.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "Convert to category dtype then use `df['col'].cat.codes` with sklearn's `OneHotEncoder(sparse=True)`",
+    "explanation": "Converting to pandas' memory-efficient category dtype first, then using cat.codes with a sparse OneHotEncoder creates a memory-efficient pipeline that preserves category labels and works well with scikit-learn while minimizing memory usage."
   },
   {
     "id": 10,
     "category": "Data Analysis",
     "question": "Which approach correctly implements a multi-output Gradient Boosting Regressor for simultaneously predicting multiple continuous targets with different scales?",
     "options": [
-      "MultiOutputRegressor(GradientBoostingRegressor())",
-      "GradientBoostingRegressor with multioutput='raw_values'",
-      "RegressorChain(GradientBoostingRegressor()) with StandardScaler for each target",
-      "Separate scaled GradientBoostingRegressor for each target in a Pipeline"
+      "`MultiOutputRegressor(GradientBoostingRegressor())`",
+      "`GradientBoostingRegressor` with `multioutput='raw_values'`",
+      "`RegressorChain(GradientBoostingRegressor())` with StandardScaler for each target",
+      "Separate scaled `GradientBoostingRegressor` for each target in a Pipeline"
     ],
-    "answer": "MultiOutputRegressor(GradientBoostingRegressor())",
-    "explanation": "MultiOutputRegressor fits a separate GradientBoostingRegressor for each target, allowing each model to optimize independently, which is crucial when targets have different scales and relationships with features.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`MultiOutputRegressor(GradientBoostingRegressor())`",
+    "explanation": "MultiOutputRegressor fits a separate GradientBoostingRegressor for each target, allowing each model to optimize independently, which is crucial when targets have different scales and relationships with features."
   },
   {
     "id": 11,
     "category": "Data Analysis",
     "question": "When performing anomaly detection in a multivariate time series, which technique is most appropriate for detecting contextual anomalies?",
     "options": [
-      "Isolation Forest with sliding windows",
-      "One-class SVM on feature vectors",
-      "LSTM Autoencoder with reconstruction error thresholding",
-      "ARIMA with Mahalanobis distance on residuals"
+      "`Isolation Forest` with sliding windows",
+      "`One-class SVM` on feature vectors",
+      "`LSTM Autoencoder` with reconstruction error thresholding",
+      "`ARIMA` with Mahalanobis distance on residuals"
     ],
-    "answer": "LSTM Autoencoder with reconstruction error thresholding",
-    "explanation": "LSTM Autoencoders can capture complex temporal dependencies in multivariate time series data, making them ideal for detecting contextual anomalies where data points are abnormal specifically in their context rather than globally.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`LSTM Autoencoder` with reconstruction error thresholding",
+    "explanation": "LSTM Autoencoders can capture complex temporal dependencies in multivariate time series data, making them ideal for detecting contextual anomalies where data points are abnormal specifically in their context rather than globally."
   },
   {
     "id": 12,
@@ -175,24 +153,20 @@
       "Difference-in-differences with parallel trends validation"
     ],
     "answer": "Causal graphical models with do-calculus",
-    "explanation": "Causal graphical models using do-calculus provide a comprehensive mathematical framework for identifying causal effects from observational data, allowing researchers to formally express causal assumptions and determine whether causal quantities are identifiable from available data.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "Causal graphical models using do-calculus provide a comprehensive mathematical framework for identifying causal effects from observational data, allowing researchers to formally express causal assumptions and determine whether causal quantities are identifiable from available data."
   },
   {
     "id": 13,
     "category": "Data Analysis",
     "question": "Which technique is most appropriate for efficiently clustering a dataset with millions of data points and hundreds of features?",
     "options": [
-      "Mini-batch K-means with dimensionality reduction",
-      "HDBSCAN with feature selection",
-      "Birch (Balanced Iterative Reducing and Clustering using Hierarchies)",
-      "Spectral clustering with NystrÃ¶m approximation"
+      "`Mini-batch K-means` with dimensionality reduction",
+      "`HDBSCAN` with feature selection",
+      "`Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)",
+      "`Spectral clustering` with Nyström approximation"
     ],
-    "answer": "Birch (Balanced Iterative Reducing and Clustering using Hierarchies)",
-    "explanation": "Birch is specifically designed for very large datasets as it builds a tree structure in a single pass through the data, has linear time complexity, limited memory requirements, and can handle outliers effectively, making it ideal for clustering massive high-dimensional datasets.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)",
+    "explanation": "Birch is specifically designed for very large datasets as it builds a tree structure in a single pass through the data, has linear time complexity, limited memory requirements, and can handle outliers effectively, making it ideal for clustering massive high-dimensional datasets."
   },
   {
     "id": 14,
@@ -205,39 +179,33 @@
       "Variational Bayesian inference with automatic relevance determination"
     ],
     "answer": "Variational Bayesian inference with automatic relevance determination",
-    "explanation": "Variational Bayesian inference with automatic relevance determination (implemented in sklearn as GaussianMixture(n_components=n, weight_concentration_prior_type='dirichlet_process')) can automatically prune unnecessary components, effectively determining the optimal number without requiring multiple model fits and comparisons.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "Variational Bayesian inference with automatic relevance determination (implemented in sklearn as GaussianMixture(n_components=n, weight_concentration_prior_type='dirichlet_process')) can automatically prune unnecessary components, effectively determining the optimal number without requiring multiple model fits and comparisons."
   },
   {
     "id": 15,
     "category": "Data Analysis",
     "question": "What's the correct approach to implement a custom scoring function for model evaluation in scikit-learn that handles class imbalance better than accuracy?",
     "options": [
-      "sklearn.metrics.make_scorer(custom_metric, greater_is_better=True)",
-      "sklearn.metrics.make_scorer(custom_metric, needs_proba=True, greater_is_better=True)",
+      "`sklearn.metrics.make_scorer(custom_metric, greater_is_better=True)`",
+      "`sklearn.metrics.make_scorer(custom_metric, needs_proba=True, greater_is_better=True)`",
       "Create a scorer class that implements __call__(self, estimator, X, y) and gets_score() methods",
       "A and B are both correct depending on the custom_metric function"
     ],
     "answer": "A and B are both correct depending on the custom_metric function",
-    "explanation": "make_scorer() is the correct approach, but the parameters depend on the specific metric: needs_proba=True for metrics requiring probability estimates (like AUC), and needs_threshold=True for metrics requiring decision thresholds; the appropriate configuration varies based on the specific imbalance-handling metric.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "make_scorer() is the correct approach, but the parameters depend on the specific metric: needs_proba=True for metrics requiring probability estimates (like AUC), and needs_threshold=True for metrics requiring decision thresholds; the appropriate configuration varies based on the specific imbalance-handling metric."
   },
   {
     "id": 16,
     "category": "Data Analysis",
     "question": "Which approach correctly implements a memory-efficient data pipeline for processing and analyzing a dataset too large to fit in memory?",
     "options": [
-      "Use pandas with low_memory=True and chunksize parameter",
-      "Implement dask.dataframe with lazy evaluation and out-of-core computation",
+      "Use pandas with `low_memory=True` and `chunksize` parameter",
+      "Implement `dask.dataframe` with lazy evaluation and out-of-core computation",
       "Use pandas-on-spark (formerly Koalas) with distributed processing",
-      "Implement vaex for memory-mapping and out-of-core dataframes"
+      "Implement `vaex` for memory-mapping and out-of-core dataframes"
     ],
-    "answer": "Implement dask.dataframe with lazy evaluation and out-of-core computation",
-    "explanation": "dask.dataframe provides a pandas-like API with lazy evaluation, parallel execution, and out-of-core computation, allowing for scalable data processing beyond available RAM while maintaining familiar pandas operations and requiring minimal code changes.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "Implement `dask.dataframe` with lazy evaluation and out-of-core computation",
+    "explanation": "dask.dataframe provides a pandas-like API with lazy evaluation, parallel execution, and out-of-core computation, allowing for scalable data processing beyond available RAM while maintaining familiar pandas operations and requiring minimal code changes."
   },
   {
     "id": 17,
@@ -250,24 +218,20 @@
       "Hyperband with successive halving"
     ],
     "answer": "Bayesian optimization with Gaussian processes",
-    "explanation": "Bayesian optimization with Gaussian processes builds a probabilistic model of the objective function to intelligently select the most promising hyperparameter configurations based on previous evaluations, making it more efficient than random or grid search for exploring high-dimensional parameter spaces.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "Bayesian optimization with Gaussian processes builds a probabilistic model of the objective function to intelligently select the most promising hyperparameter configurations based on previous evaluations, making it more efficient than random or grid search for exploring high-dimensional parameter spaces."
   },
   {
     "id": 18,
     "category": "Data Analysis",
-    "question": "What's the most appropriate method for detecting and quantifying heteroscedasticity in a regression model?",
+    "question": "What's the most statistically sound approach to handle heteroscedasticity in a regression model?",
     "options": [
       "Visual inspection of residuals vs. fitted values plot",
-      "Breusch-Pagan test for constant variance",
-      "White's test for homoscedasticity",
+      "`Breusch-Pagan` test for constant variance",
+      "`White's test` for homoscedasticity",
       "Both B and C, with different null hypotheses"
     ],
     "answer": "Both B and C, with different null hypotheses",
-    "explanation": "Both tests detect heteroscedasticity but with different assumptions: Breusch-Pagan assumes that heteroscedasticity is a linear function of the independent variables, while White's test is more general and doesn't make this assumption, making them complementary approaches.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "Both tests detect heteroscedasticity but with different assumptions: Breusch-Pagan assumes that heteroscedasticity is a linear function of the independent variables, while White's test is more general and doesn't make this assumption, making them complementary approaches."
   },
   {
     "id": 19,
@@ -280,9 +244,7 @@
       "Reconciliation approach: forecast at all levels independently then reconcile with constraints"
     ],
     "answer": "Reconciliation approach: forecast at all levels independently then reconcile with constraints",
-    "explanation": "The reconciliation approach (optimal combination) generates forecasts at all levels independently, then applies a mathematical reconciliation procedure that minimizes revisions while ensuring hierarchical consistency, typically outperforming both bottom-up and top-down approaches.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "The reconciliation approach (optimal combination) generates forecasts at all levels independently, then applies a mathematical reconciliation procedure that minimizes revisions while ensuring hierarchical consistency, typically outperforming both bottom-up and top-down approaches."
   },
   {
     "id": 20,
@@ -291,13 +253,11 @@
     "options": [
       "K-means clustering on the adjacency matrix",
       "Spectral clustering with normalized Laplacian",
-      "Louvain algorithm for community detection",
+      "`Louvain` algorithm for community detection",
       "DBSCAN on node2vec embeddings"
     ],
-    "answer": "Louvain algorithm for community detection",
-    "explanation": "The Louvain algorithm specifically optimizes modularity to detect communities in networks, automatically finding the appropriate number of communities and handling multi-scale resolution, making it ideal for complex networks with hierarchical community structures.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Louvain` algorithm for community detection",
+    "explanation": "The Louvain algorithm specifically optimizes modularity to detect communities in networks, automatically finding the appropriate number of communities and handling multi-scale resolution, making it ideal for complex networks with hierarchical community structures."
   },
   {
     "id": 21,
@@ -310,24 +270,20 @@
       "Deploy a champion-challenger framework with continuous evaluation"
     ],
     "answer": "Implement drift detection algorithms with adaptive learning techniques",
-    "explanation": "This approach combines statistical drift detection (e.g., ADWIN, DDM, or KSWIN) with adaptive learning methods that can continuously update models or model weights as new patterns emerge, allowing for immediate adaptation to changing data distributions.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "This approach combines statistical drift detection (e.g., ADWIN, DDM, or KSWIN) with adaptive learning methods that can continuously update models or model weights as new patterns emerge, allowing for immediate adaptation to changing data distributions."
   },
   {
     "id": 22,
     "category": "Data Analysis",
     "question": "Which method is most appropriate for interpretable anomaly detection in high-dimensional data?",
     "options": [
-      "Isolation Forest with LIME explanations",
+      "`Isolation Forest` with LIME explanations",
       "Autoencoders with attention mechanisms",
-      "SHAP values on One-Class SVM predictions",
+      "SHAP values on `One-Class SVM` predictions",
       "Supervised anomaly detection with feature importance"
     ],
-    "answer": "Isolation Forest with LIME explanations",
-    "explanation": "Isolation Forest efficiently detects anomalies in high dimensions by isolating observations, while LIME provides local interpretable explanations for each anomaly, showing which features contributed most to its identification, making the detection both efficient and explainable.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Isolation Forest` with LIME explanations",
+    "explanation": "Isolation Forest efficiently detects anomalies in high dimensions by isolating observations, while LIME provides local interpretable explanations for each anomaly, showing which features contributed most to its identification, making the detection both efficient and explainable."
   },
   {
     "id": 23,
@@ -335,29 +291,25 @@
     "question": "When implementing a multi-armed bandit algorithm for real-time optimization, which approach balances exploration and exploitation most effectively?",
     "options": [
       "Epsilon-greedy with annealing schedule",
-      "Upper Confidence Bound (UCB) algorithm",
-      "Thompson Sampling with prior distribution updates",
+      "`Upper Confidence Bound` (UCB) algorithm",
+      "`Thompson Sampling` with prior distribution updates",
       "Contextual bandits with linear payoffs"
     ],
-    "answer": "Thompson Sampling with prior distribution updates",
-    "explanation": "Thompson Sampling with Bayesian updates to prior distributions maintains explicit uncertainty estimates and naturally balances exploration/exploitation, with theoretical guarantees of optimality and empirically better performance than UCB and epsilon-greedy methods in many applications.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Thompson Sampling` with prior distribution updates",
+    "explanation": "Thompson Sampling with Bayesian updates to prior distributions maintains explicit uncertainty estimates and naturally balances exploration/exploitation, with theoretical guarantees of optimality and empirically better performance than UCB and epsilon-greedy methods in many applications."
   },
   {
     "id": 24,
     "category": "Data Analysis",
     "question": "What's the most efficient technique for calculating pairwise distances between all points in a very large dataset?",
     "options": [
-      "numpy.linalg.norm with broadcasting",
-      "scipy.spatial.distance.pdist with squareform",
-      "sklearn.metrics.pairwise_distances with n_jobs=-1",
-      "Custom numba-accelerated function with parallel processing"
+      "`numpy.linalg.norm` with broadcasting",
+      "`scipy.spatial.distance.pdist` with `squareform`",
+      "`sklearn.metrics.pairwise_distances` with `n_jobs=-1`",
+      "Custom `numba`-accelerated function with parallel processing"
     ],
-    "answer": "scipy.spatial.distance.pdist with squareform",
-    "explanation": "pdist computes distances using an optimized implementation that avoids redundant calculations (since distance matrices are symmetric), and squareform can convert to a square matrix if needed; this approach is significantly more memory-efficient than computing the full distance matrix directly.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`scipy.spatial.distance.pdist` with `squareform`",
+    "explanation": "pdist computes distances using an optimized implementation that avoids redundant calculations (since distance matrices are symmetric), and squareform can convert to a square matrix if needed; this approach is significantly more memory-efficient than computing the full distance matrix directly."
   },
   {
     "id": 25,
@@ -365,14 +317,12 @@
     "question": "Which method is most appropriate for detecting and handling multivariate outliers in high-dimensional data?",
     "options": [
       "Z-scores on each dimension independently",
-      "Mahalanobis distance with robust covariance estimation",
-      "Local Outlier Factor with appropriate neighborhood size",
-      "Isolation Forest with random projection"
+      "`Mahalanobis distance` with robust covariance estimation",
+      "`Local Outlier Factor` with appropriate neighborhood size",
+      "`Isolation Forest` with random projection"
     ],
-    "answer": "Mahalanobis distance with robust covariance estimation",
-    "explanation": "Mahalanobis distance accounts for the covariance structure of the data, and using robust covariance estimation (e.g., Minimum Covariance Determinant) prevents outliers from influencing the distance metric itself, making it ideal for identifying multivariate outliers.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Mahalanobis distance` with robust covariance estimation",
+    "explanation": "Mahalanobis distance accounts for the covariance structure of the data, and using robust covariance estimation (e.g., Minimum Covariance Determinant) prevents outliers from influencing the distance metric itself, making it ideal for identifying multivariate outliers."
   },
   {
     "id": 26,
@@ -380,29 +330,25 @@
     "question": "What's the most appropriate technique for feature selection when dealing with multicollinearity in a regression context?",
     "options": [
       "Forward stepwise selection with VIF thresholding",
-      "Elastic Net regularization with cross-validation",
+      "`Elastic Net` regularization with cross-validation",
       "Principal Component Regression (PCR)",
       "Recursive Feature Elimination with stability selection"
     ],
-    "answer": "Elastic Net regularization with cross-validation",
-    "explanation": "Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validationâ€”making it more effective than methods that either eliminate or transform features.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Elastic Net` regularization with cross-validation",
+    "explanation": "Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validation—making it more effective than methods that either eliminate or transform features."
   },
   {
     "id": 27,
     "category": "Data Analysis",
     "question": "Which approach correctly implements online learning for a classification task with a non-stationary data distribution?",
     "options": [
-      "SGDClassifier with partial_fit and appropriate class_weight adjustments",
-      "River's HoeffdingTreeClassifier with drift detection",
+      "`SGDClassifier` with `partial_fit` and appropriate `class_weight` adjustments",
+      "`River's HoeffdingTreeClassifier` with drift detection",
       "Custom implementation using incremental learning and time-based feature weighting",
       "Ensemble of incremental learners with dynamic weighting based on recent performance"
     ],
     "answer": "Ensemble of incremental learners with dynamic weighting based on recent performance",
-    "explanation": "This ensemble approach maintains multiple incremental models updated with new data, dynamically adjusting their weights based on recent performance, allowing the system to adapt to concept drift by giving more influence to models that perform well on recent data.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "This ensemble approach maintains multiple incremental models updated with new data, dynamically adjusting their weights based on recent performance, allowing the system to adapt to concept drift by giving more influence to models that perform well on recent data."
   },
   {
     "id": 28,
@@ -415,9 +361,7 @@
       "Inverse probability weighting with doubly robust estimation"
     ],
     "answer": "Joint modeling of missingness and outcomes",
-    "explanation": "Joint modeling directly incorporates the missingness mechanism into the analysis model, allowing for valid inference under non-random missingness (MNAR) scenarios by explicitly modeling the relationship between the missing data process and the outcomes of interest.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "explanation": "Joint modeling directly incorporates the missingness mechanism into the analysis model, allowing for valid inference under non-random missingness (MNAR) scenarios by explicitly modeling the relationship between the missing data process and the outcomes of interest."
   },
   {
     "id": 29,
@@ -425,28 +369,24 @@
     "question": "Which technique is most appropriate for analyzing complex interactions between variables in a predictive modeling context?",
     "options": [
       "Generalized Additive Models with tensor product smooths",
-      "Random Forest with partial dependence plots and ICE curves",
-      "Neural networks with feature crossing and attention mechanisms",
-      "Gradient Boosting with SHAP interaction values"
+      "`Random Forest` with partial dependence plots and ICE curves",
+      "`Neural networks` with feature crossing and attention mechanisms",
+      "`Gradient Boosting` with SHAP interaction values"
     ],
-    "answer": "Gradient Boosting with SHAP interaction values",
-    "explanation": "Gradient Boosting effectively captures complex non-linear relationships, while SHAP interaction values specifically quantify how much of the prediction is attributable to interactions between features, providing a rigorous statistical framework for analyzing and visualizing interactions.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Gradient Boosting` with SHAP interaction values",
+    "explanation": "Gradient Boosting effectively captures complex non-linear relationships, while SHAP interaction values specifically quantify how much of the prediction is attributable to interactions between features, providing a rigorous statistical framework for analyzing and visualizing interactions."
   },
   {
     "id": 30,
     "category": "Data Analysis",
     "question": "What's the most statistically sound approach to perform feature selection for a regression task with potential non-linear relationships?",
     "options": [
-      "Mutual information-based selection with permutation testing",
-      "LASSO regression with stability selection",
-      "Random Forest with Boruta algorithm",
-      "Generalized Additive Models with significance testing of smooth terms"
+      "`Mutual information`-based selection with permutation testing",
+      "`LASSO` regression with stability selection",
+      "`Random Forest` with Boruta algorithm",
+      "`Generalized Additive Models` with significance testing of smooth terms"
     ],
-    "answer": "Mutual information-based selection with permutation testing",
-    "explanation": "Mutual information captures both linear and non-linear dependencies between variables without assuming functional form, while permutation testing provides a statistically rigorous way to assess the significance of these dependencies, controlling for multiple testing issues.",
-    "answer_long_md": [],
-    "answer_long_html": []
+    "answer": "`Mutual information`-based selection with permutation testing",
+    "explanation": "Mutual information captures both linear and non-linear dependencies between variables without assuming functional form, while permutation testing provides a statistically rigorous way to assess the significance of these dependencies, controlling for multiple testing issues."
   }
 ]
