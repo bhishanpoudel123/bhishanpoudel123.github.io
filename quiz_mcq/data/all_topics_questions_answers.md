@@ -23,67 +23,67 @@
 
 ### Qn 01: What technique would you use to handle high-dimensional sparse data when performing PCA?
 
-**Answer:** Truncated SVD (also known as LSA)
+**Answer:** `Truncated SVD` (also known as LSA)
 
 **Explanation:** Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.
 
 ### Qn 02: What's the most efficient way to perform grouped sampling with replacement in pandas, ensuring each group maintains its original size?
 
-**Answer:** df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])
+**Answer:** `df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])`
 
 **Explanation:** This approach uses numpy's efficient random sampling directly on indices, avoiding the overhead of pandas' sample function while maintaining group sizes and allowing replacement.
 
 ### Qn 03: When implementing stratified k-fold cross-validation for a multi-label classification problem, which approach is most statistically sound?
 
-**Answer:** Use sklearn's MultilabelStratifiedKFold from the iterative-stratification package
+**Answer:** Use sklearn's `MultilabelStratifiedKFold` from the iterative-stratification package
 
 **Explanation:** MultilabelStratifiedKFold implements iterative stratification, which preserves the distribution of all labels across folds, addressing the key challenge in multi-label stratification that normal StratifiedKFold cannot handle.
 
 ### Qn 04: Which approach correctly calculates the Wasserstein distance (Earth Mover's Distance) between two empirical distributions in Python?
 
-**Answer:** scipy.stats.wasserstein_distance(x, y)
+**Answer:** `scipy.stats.wasserstein_distance(x, y)`
 
-**Explanation:** scipy.stats.wasserstein_distance correctly implements the 1D Wasserstein distance between empirical distributions, which measures the minimum 'work' required to transform one distribution into another.
+**Explanation:** `scipy.stats.wasserstein_distance` correctly implements the 1D Wasserstein distance between empirical distributions, which measures the minimum 'work' required to transform one distribution into another.
 
 ### Qn 05: What's the most computationally efficient way to find the k-nearest neighbors for each point in a large dataset using scikit-learn?
 
 **Answer:** Depends on data dimensionality, size, and structure
 
-**Explanation:** The most efficient algorithm depends on the dataset characteristics: brute force works well for small datasets and high dimensions, kd_tree excels in low dimensions (â‰¤20), and ball_tree performs better in higher dimensions or with non-Euclidean metrics.
+**Explanation:** The most efficient algorithm depends on the dataset characteristics: brute force works well for small datasets and high dimensions, kd_tree excels in low dimensions (<20), and ball_tree performs better in higher dimensions or with non-Euclidean metrics.
 
 ### Qn 06: When dealing with millions of rows of time series data with irregular timestamps, which method is most efficient for resampling to regular intervals with proper handling of missing values?
 
-**Answer:** df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')
+**Answer:** `df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')`
 
 **Explanation:** This approach correctly converts irregular timestamps to a regular frequency with .resample('1H').asfreq(), then intelligently fills missing values using time-based interpolation which respects the actual timing of observations.
 
 ### Qn 07: Which technique is most appropriate for identifying non-linear relationships between variables in a high-dimensional dataset?
 
-**Answer:** MINE statistics (Maximal Information-based Nonparametric Exploration)
+**Answer:** `MINE` statistics (Maximal Information-based Nonparametric Exploration)
 
 **Explanation:** MINE statistics, particularly the Maximal Information Coefficient (MIC), detect both linear and non-linear associations without assuming a specific functional form, outperforming traditional correlation measures for complex relationships.
 
 ### Qn 08: What's the most statistically sound approach to handle imbalanced multiclass classification with severe class imbalance?
 
-**Answer:** Ensemble of balanced subsets with META learning
+**Answer:** Ensemble of balanced subsets with `META` learning
 
 **Explanation:** META (Minority Ethnicity and Threshold Adjustment) learning with ensembling addresses severe multiclass imbalance by training multiple models on balanced subsets and combining them, avoiding information loss from undersampling while preventing the artificial patterns that can be introduced by synthetic oversampling.
 
 ### Qn 09: What's the correct approach to implement a memory-efficient pipeline for one-hot encoding categorical variables with high cardinality in pandas?
 
-**Answer:** Convert to category dtype then use df['col'].cat.codes with sklearn's OneHotEncoder(sparse=True)
+**Answer:** Convert to category dtype then use `df['col'].cat.codes` with sklearn's `OneHotEncoder(sparse=True)`
 
 **Explanation:** Converting to pandas' memory-efficient category dtype first, then using cat.codes with a sparse OneHotEncoder creates a memory-efficient pipeline that preserves category labels and works well with scikit-learn while minimizing memory usage.
 
 ### Qn 10: Which approach correctly implements a multi-output Gradient Boosting Regressor for simultaneously predicting multiple continuous targets with different scales?
 
-**Answer:** MultiOutputRegressor(GradientBoostingRegressor())
+**Answer:** `MultiOutputRegressor(GradientBoostingRegressor())`
 
 **Explanation:** MultiOutputRegressor fits a separate GradientBoostingRegressor for each target, allowing each model to optimize independently, which is crucial when targets have different scales and relationships with features.
 
 ### Qn 11: When performing anomaly detection in a multivariate time series, which technique is most appropriate for detecting contextual anomalies?
 
-**Answer:** LSTM Autoencoder with reconstruction error thresholding
+**Answer:** `LSTM Autoencoder` with reconstruction error thresholding
 
 **Explanation:** LSTM Autoencoders can capture complex temporal dependencies in multivariate time series data, making them ideal for detecting contextual anomalies where data points are abnormal specifically in their context rather than globally.
 
@@ -95,7 +95,7 @@
 
 ### Qn 13: Which technique is most appropriate for efficiently clustering a dataset with millions of data points and hundreds of features?
 
-**Answer:** Birch (Balanced Iterative Reducing and Clustering using Hierarchies)
+**Answer:** `Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)
 
 **Explanation:** Birch is specifically designed for very large datasets as it builds a tree structure in a single pass through the data, has linear time complexity, limited memory requirements, and can handle outliers effectively, making it ideal for clustering massive high-dimensional datasets.
 
@@ -113,7 +113,7 @@
 
 ### Qn 16: Which approach correctly implements a memory-efficient data pipeline for processing and analyzing a dataset too large to fit in memory?
 
-**Answer:** Implement dask.dataframe with lazy evaluation and out-of-core computation
+**Answer:** Implement `dask.dataframe` with lazy evaluation and out-of-core computation
 
 **Explanation:** dask.dataframe provides a pandas-like API with lazy evaluation, parallel execution, and out-of-core computation, allowing for scalable data processing beyond available RAM while maintaining familiar pandas operations and requiring minimal code changes.
 
@@ -123,7 +123,7 @@
 
 **Explanation:** Bayesian optimization with Gaussian processes builds a probabilistic model of the objective function to intelligently select the most promising hyperparameter configurations based on previous evaluations, making it more efficient than random or grid search for exploring high-dimensional parameter spaces.
 
-### Qn 18: What's the most appropriate method for detecting and quantifying heteroscedasticity in a regression model?
+### Qn 18: What's the most statistically sound approach to handle heteroscedasticity in a regression model?
 
 **Answer:** Both B and C, with different null hypotheses
 
@@ -137,7 +137,7 @@
 
 ### Qn 20: What technique is most appropriate for analyzing complex network data with community structures?
 
-**Answer:** Louvain algorithm for community detection
+**Answer:** `Louvain` algorithm for community detection
 
 **Explanation:** The Louvain algorithm specifically optimizes modularity to detect communities in networks, automatically finding the appropriate number of communities and handling multi-scale resolution, making it ideal for complex networks with hierarchical community structures.
 
@@ -149,33 +149,33 @@
 
 ### Qn 22: Which method is most appropriate for interpretable anomaly detection in high-dimensional data?
 
-**Answer:** Isolation Forest with LIME explanations
+**Answer:** `Isolation Forest` with LIME explanations
 
 **Explanation:** Isolation Forest efficiently detects anomalies in high dimensions by isolating observations, while LIME provides local interpretable explanations for each anomaly, showing which features contributed most to its identification, making the detection both efficient and explainable.
 
 ### Qn 23: When implementing a multi-armed bandit algorithm for real-time optimization, which approach balances exploration and exploitation most effectively?
 
-**Answer:** Thompson Sampling with prior distribution updates
+**Answer:** `Thompson Sampling` with prior distribution updates
 
 **Explanation:** Thompson Sampling with Bayesian updates to prior distributions maintains explicit uncertainty estimates and naturally balances exploration/exploitation, with theoretical guarantees of optimality and empirically better performance than UCB and epsilon-greedy methods in many applications.
 
 ### Qn 24: What's the most efficient technique for calculating pairwise distances between all points in a very large dataset?
 
-**Answer:** scipy.spatial.distance.pdist with squareform
+**Answer:** `scipy.spatial.distance.pdist` with `squareform`
 
 **Explanation:** pdist computes distances using an optimized implementation that avoids redundant calculations (since distance matrices are symmetric), and squareform can convert to a square matrix if needed; this approach is significantly more memory-efficient than computing the full distance matrix directly.
 
 ### Qn 25: Which method is most appropriate for detecting and handling multivariate outliers in high-dimensional data?
 
-**Answer:** Mahalanobis distance with robust covariance estimation
+**Answer:** `Mahalanobis distance` with robust covariance estimation
 
 **Explanation:** Mahalanobis distance accounts for the covariance structure of the data, and using robust covariance estimation (e.g., Minimum Covariance Determinant) prevents outliers from influencing the distance metric itself, making it ideal for identifying multivariate outliers.
 
 ### Qn 26: What's the most appropriate technique for feature selection when dealing with multicollinearity in a regression context?
 
-**Answer:** Elastic Net regularization with cross-validation
+**Answer:** `Elastic Net` regularization with cross-validation
 
-**Explanation:** Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validationâ€”making it more effective than methods that either eliminate or transform features.
+**Explanation:** Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validation—making it more effective than methods that either eliminate or transform features.
 
 ### Qn 27: Which approach correctly implements online learning for a classification task with a non-stationary data distribution?
 
@@ -191,13 +191,13 @@
 
 ### Qn 29: Which technique is most appropriate for analyzing complex interactions between variables in a predictive modeling context?
 
-**Answer:** Gradient Boosting with SHAP interaction values
+**Answer:** `Gradient Boosting` with SHAP interaction values
 
 **Explanation:** Gradient Boosting effectively captures complex non-linear relationships, while SHAP interaction values specifically quantify how much of the prediction is attributable to interactions between features, providing a rigorous statistical framework for analyzing and visualizing interactions.
 
 ### Qn 30: What's the most statistically sound approach to perform feature selection for a regression task with potential non-linear relationships?
 
-**Answer:** Mutual information-based selection with permutation testing
+**Answer:** `Mutual information`-based selection with permutation testing
 
 **Explanation:** Mutual information captures both linear and non-linear dependencies between variables without assuming functional form, while permutation testing provides a statistically rigorous way to assess the significance of these dependencies, controlling for multiple testing issues.
 

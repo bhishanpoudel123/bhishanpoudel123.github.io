@@ -41,7 +41,7 @@
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Truncated SVD (also known as LSA)
+`Truncated SVD` (also known as LSA)
 
 
 **Explanation:** Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.
@@ -53,7 +53,7 @@ Truncated SVD (also known as LSA)
 <p><details>
 <summary>Click to reveal answer</summary>
 
-df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])
+`df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])`
 
 
 **Explanation:** This approach uses numpy's efficient random sampling directly on indices, avoiding the overhead of pandas' sample function while maintaining group sizes and allowing replacement.
@@ -65,7 +65,7 @@ df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x),
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Use sklearn's MultilabelStratifiedKFold from the iterative-stratification package
+Use sklearn's `MultilabelStratifiedKFold` from the iterative-stratification package
 
 
 **Explanation:** MultilabelStratifiedKFold implements iterative stratification, which preserves the distribution of all labels across folds, addressing the key challenge in multi-label stratification that normal StratifiedKFold cannot handle.
@@ -77,10 +77,10 @@ Use sklearn's MultilabelStratifiedKFold from the iterative-stratification packag
 <p><details>
 <summary>Click to reveal answer</summary>
 
-scipy.stats.wasserstein_distance(x, y)
+`scipy.stats.wasserstein_distance(x, y)`
 
 
-**Explanation:** scipy.stats.wasserstein_distance correctly implements the 1D Wasserstein distance between empirical distributions, which measures the minimum 'work' required to transform one distribution into another.
+**Explanation:** `scipy.stats.wasserstein_distance` correctly implements the 1D Wasserstein distance between empirical distributions, which measures the minimum 'work' required to transform one distribution into another.
 
 </details></p>
 
@@ -92,7 +92,7 @@ scipy.stats.wasserstein_distance(x, y)
 Depends on data dimensionality, size, and structure
 
 
-**Explanation:** The most efficient algorithm depends on the dataset characteristics: brute force works well for small datasets and high dimensions, kd_tree excels in low dimensions (â‰¤20), and ball_tree performs better in higher dimensions or with non-Euclidean metrics.
+**Explanation:** The most efficient algorithm depends on the dataset characteristics: brute force works well for small datasets and high dimensions, kd_tree excels in low dimensions (<20), and ball_tree performs better in higher dimensions or with non-Euclidean metrics.
 
 </details></p>
 
@@ -101,7 +101,7 @@ Depends on data dimensionality, size, and structure
 <p><details>
 <summary>Click to reveal answer</summary>
 
-df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')
+`df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')`
 
 
 **Explanation:** This approach correctly converts irregular timestamps to a regular frequency with .resample('1H').asfreq(), then intelligently fills missing values using time-based interpolation which respects the actual timing of observations.
@@ -113,7 +113,7 @@ df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')
 <p><details>
 <summary>Click to reveal answer</summary>
 
-MINE statistics (Maximal Information-based Nonparametric Exploration)
+`MINE` statistics (Maximal Information-based Nonparametric Exploration)
 
 
 **Explanation:** MINE statistics, particularly the Maximal Information Coefficient (MIC), detect both linear and non-linear associations without assuming a specific functional form, outperforming traditional correlation measures for complex relationships.
@@ -125,7 +125,7 @@ MINE statistics (Maximal Information-based Nonparametric Exploration)
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Ensemble of balanced subsets with META learning
+Ensemble of balanced subsets with `META` learning
 
 
 **Explanation:** META (Minority Ethnicity and Threshold Adjustment) learning with ensembling addresses severe multiclass imbalance by training multiple models on balanced subsets and combining them, avoiding information loss from undersampling while preventing the artificial patterns that can be introduced by synthetic oversampling.
@@ -137,7 +137,7 @@ Ensemble of balanced subsets with META learning
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Convert to category dtype then use df['col'].cat.codes with sklearn's OneHotEncoder(sparse=True)
+Convert to category dtype then use `df['col'].cat.codes` with sklearn's `OneHotEncoder(sparse=True)`
 
 
 **Explanation:** Converting to pandas' memory-efficient category dtype first, then using cat.codes with a sparse OneHotEncoder creates a memory-efficient pipeline that preserves category labels and works well with scikit-learn while minimizing memory usage.
@@ -149,7 +149,7 @@ Convert to category dtype then use df['col'].cat.codes with sklearn's OneHotEnco
 <p><details>
 <summary>Click to reveal answer</summary>
 
-MultiOutputRegressor(GradientBoostingRegressor())
+`MultiOutputRegressor(GradientBoostingRegressor())`
 
 
 **Explanation:** MultiOutputRegressor fits a separate GradientBoostingRegressor for each target, allowing each model to optimize independently, which is crucial when targets have different scales and relationships with features.
@@ -161,7 +161,7 @@ MultiOutputRegressor(GradientBoostingRegressor())
 <p><details>
 <summary>Click to reveal answer</summary>
 
-LSTM Autoencoder with reconstruction error thresholding
+`LSTM Autoencoder` with reconstruction error thresholding
 
 
 **Explanation:** LSTM Autoencoders can capture complex temporal dependencies in multivariate time series data, making them ideal for detecting contextual anomalies where data points are abnormal specifically in their context rather than globally.
@@ -185,7 +185,7 @@ Causal graphical models with do-calculus
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Birch (Balanced Iterative Reducing and Clustering using Hierarchies)
+`Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)
 
 
 **Explanation:** Birch is specifically designed for very large datasets as it builds a tree structure in a single pass through the data, has linear time complexity, limited memory requirements, and can handle outliers effectively, making it ideal for clustering massive high-dimensional datasets.
@@ -221,7 +221,7 @@ A and B are both correct depending on the custom_metric function
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Implement dask.dataframe with lazy evaluation and out-of-core computation
+Implement `dask.dataframe` with lazy evaluation and out-of-core computation
 
 
 **Explanation:** dask.dataframe provides a pandas-like API with lazy evaluation, parallel execution, and out-of-core computation, allowing for scalable data processing beyond available RAM while maintaining familiar pandas operations and requiring minimal code changes.
@@ -240,7 +240,7 @@ Bayesian optimization with Gaussian processes
 
 </details></p>
 
-### Qn 18: What's the most appropriate method for detecting and quantifying heteroscedasticity in a regression model?
+### Qn 18: What's the most statistically sound approach to handle heteroscedasticity in a regression model?
 
 <p><details>
 <summary>Click to reveal answer</summary>
@@ -269,7 +269,7 @@ Reconciliation approach: forecast at all levels independently then reconcile wit
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Louvain algorithm for community detection
+`Louvain` algorithm for community detection
 
 
 **Explanation:** The Louvain algorithm specifically optimizes modularity to detect communities in networks, automatically finding the appropriate number of communities and handling multi-scale resolution, making it ideal for complex networks with hierarchical community structures.
@@ -293,7 +293,7 @@ Implement drift detection algorithms with adaptive learning techniques
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Isolation Forest with LIME explanations
+`Isolation Forest` with LIME explanations
 
 
 **Explanation:** Isolation Forest efficiently detects anomalies in high dimensions by isolating observations, while LIME provides local interpretable explanations for each anomaly, showing which features contributed most to its identification, making the detection both efficient and explainable.
@@ -305,7 +305,7 @@ Isolation Forest with LIME explanations
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Thompson Sampling with prior distribution updates
+`Thompson Sampling` with prior distribution updates
 
 
 **Explanation:** Thompson Sampling with Bayesian updates to prior distributions maintains explicit uncertainty estimates and naturally balances exploration/exploitation, with theoretical guarantees of optimality and empirically better performance than UCB and epsilon-greedy methods in many applications.
@@ -317,7 +317,7 @@ Thompson Sampling with prior distribution updates
 <p><details>
 <summary>Click to reveal answer</summary>
 
-scipy.spatial.distance.pdist with squareform
+`scipy.spatial.distance.pdist` with `squareform`
 
 
 **Explanation:** pdist computes distances using an optimized implementation that avoids redundant calculations (since distance matrices are symmetric), and squareform can convert to a square matrix if needed; this approach is significantly more memory-efficient than computing the full distance matrix directly.
@@ -329,7 +329,7 @@ scipy.spatial.distance.pdist with squareform
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Mahalanobis distance with robust covariance estimation
+`Mahalanobis distance` with robust covariance estimation
 
 
 **Explanation:** Mahalanobis distance accounts for the covariance structure of the data, and using robust covariance estimation (e.g., Minimum Covariance Determinant) prevents outliers from influencing the distance metric itself, making it ideal for identifying multivariate outliers.
@@ -341,10 +341,10 @@ Mahalanobis distance with robust covariance estimation
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Elastic Net regularization with cross-validation
+`Elastic Net` regularization with cross-validation
 
 
-**Explanation:** Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validationâ€”making it more effective than methods that either eliminate or transform features.
+**Explanation:** Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validation—making it more effective than methods that either eliminate or transform features.
 
 </details></p>
 
@@ -377,7 +377,7 @@ Joint modeling of missingness and outcomes
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Gradient Boosting with SHAP interaction values
+`Gradient Boosting` with SHAP interaction values
 
 
 **Explanation:** Gradient Boosting effectively captures complex non-linear relationships, while SHAP interaction values specifically quantify how much of the prediction is attributable to interactions between features, providing a rigorous statistical framework for analyzing and visualizing interactions.
@@ -389,7 +389,7 @@ Gradient Boosting with SHAP interaction values
 <p><details>
 <summary>Click to reveal answer</summary>
 
-Mutual information-based selection with permutation testing
+`Mutual information`-based selection with permutation testing
 
 
 **Explanation:** Mutual information captures both linear and non-linear dependencies between variables without assuming functional form, while permutation testing provides a statistically rigorous way to assess the significance of these dependencies, controlling for multiple testing issues.
