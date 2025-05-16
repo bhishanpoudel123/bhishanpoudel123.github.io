@@ -328,3 +328,386 @@ button:disabled {
     display: block;
     overflow-x: auto;
 }
+
+/* Add these styles to your existing CSS file */
+
+/* Learn Topic Button Styling */
+#learn-topic {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #2a9d8f;
+    color: white;
+}
+
+#learn-topic:hover {
+    background-color: #264653;
+}
+
+/* Topic Container Styling */
+#topic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-button-container {
+    margin-bottom: 20px;
+}
+
+#back-to-quiz {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#back-to-quiz:hover {
+    background-color: #e63946;
+}
+
+/* Topic Content Styling */
+#topic-content {
+    line-height: 1.6;
+}
+
+#topic-content h1,
+#topic-content h2,
+#topic-content h3 {
+    color: #264653;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#topic-content p {
+    margin: 1em 0;
+}
+
+#topic-content pre,
+#topic-content code {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
+#topic-content pre {
+    padding: 16px;
+    overflow: auto;
+    margin: 1em 0;
+    line-height: 1.45;
+}
+
+#topic-content img {
+    max-width: 100%;
+    display: block;
+    margin: 1em auto;
+}
+
+#topic-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+#topic-content th,
+#topic-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#topic-content th {
+    background-color: #f2f2f2;
+}
+
+#topic-content tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Body and Container Layout with Sidebar Toggle */
+body {
+    transition: margin-left 0.3s;
+}
+
+body.sidebar-hidden {
+    margin-left: 0;
+}
+
+.main-content {
+    transition: margin-left 0.3s, width 0.3s;
+    margin-left: 250px;
+    /* Same as sidebar width */
+}
+
+body.sidebar-hidden .main-content {
+    margin-left: 50px;
+    /* Space for toggle button */
+    width: calc(100% - 50px);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+    transition: transform 0.3s;
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+/* Toggle Sidebar Button */
+.toggle-sidebar-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 200;
+    background-color: #264653;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: left 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body.sidebar-hidden .toggle-sidebar-btn {
+    left: 10px;
+}
+
+.toggle-sidebar-btn:hover {
+    background-color: #2a9d8f;
+}
+
+/* Learn Topic Button Styling */
+#learn-topic {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #2a9d8f;
+    color: white;
+}
+
+#learn-topic:hover {
+    background-color: #264653;
+}
+
+/* Topic Container Styling */
+#topic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.sidebar-hidden #topic-container {
+    max-width: 1400px;
+    /* Wider when sidebar is hidden */
+}
+
+.back-button-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#back-to-quiz {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#back-to-quiz:hover {
+    background-color: #e63946;
+}
+
+/* Topic Content Styling */
+#topic-content {
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+#topic-content h1,
+#topic-content h2,
+#topic-content h3 {
+    color: #264653;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#topic-content p {
+    margin: 1em 0;
+}
+
+#topic-content pre,
+#topic-content code {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
+#topic-content pre {
+    padding: 16px;
+    overflow: auto;
+    margin: 1em 0;
+    line-height: 1.45;
+}
+
+#topic-content img {
+    max-width: 100%;
+    display: block;
+    margin: 1em auto;
+}
+
+#topic-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+#topic-content th,
+#topic-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#topic-content th {
+    background-color: #f2f2f2;
+}
+
+#topic-content tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    body.sidebar-hidden .main-content {
+        margin-left: 40px;
+    }
+}
+
+/* styles.css */
+.html-selector {
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.learn-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.learn-section {
+    margin: 20px 0;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#contentFrame {
+    width: 100%;
+    height: 500px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topic-selector {
+    margin: 20px 0;
+}
+
+.topic-selector select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #007bff;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .learn-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .html-selector {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #contentFrame {
+        height: 300px;
+    }
+}
+
+/* Add these styles */
+.learn-topic-section {
+    position: relative;
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.html-selector {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: white;
+    flex-grow: 1;
+}
+
+#topic-iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .learn-topic-section {
+        flex-direction: column;
+    }
+
+    .html-selector {
+        width: 100%;
+        margin-left: 0;
+    }
+}

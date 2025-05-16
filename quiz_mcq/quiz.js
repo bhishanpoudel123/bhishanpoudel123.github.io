@@ -13,9 +13,11 @@ const quizState = {
 	endTime: null,
 	quizStarted: false,
 	indexMap: {},
+	htmlIndex: {},
 	markedInstance: marked.marked.setOptions({
 		highlight: (code, lang) => hljs.highlightAuto(code).value
-	})
+	}),
+	sidebarVisible: true // Track sidebar visibility state
 };
 
 // DOM Elements
@@ -40,7 +42,17 @@ const dom = {
 	endBtn: document.getElementById('end-quiz'),
 	scoreSection: document.getElementById('score-section'),
 	jumpButton: document.getElementById('jump-button'),
-	startQuizBtn: document.getElementById('start-quiz')
+	startQuizBtn: document.getElementById('start-quiz'),
+	// Learn the Topic elements
+	learnTopicBtn: document.getElementById('learn-topic'),
+	topicContainer: document.getElementById('topic-container'),
+	topicContent: document.getElementById('topic-content'),
+	backToQuizBtn: document.getElementById('back-to-quiz'),
+	// Sidebar toggle elements
+	toggleSidebarBtn: document.getElementById('toggle-sidebar'),
+	sidebar: document.querySelector('.sidebar'),
+	htmlSelector: document.getElementById('html-selector'),
+	topicIframe: document.getElementById('topic-iframe')
 };
 
 // Initialize Quiz
@@ -53,14 +65,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Load index.json and fetch questions
 async function loadIndexJson() {
 	try {
-		const response = await fetch('data/index.json');
-		if (!response.ok) throw new Error('Failed to fetch index.json');
-		const data = await response.json();
-		quizState.indexMap = data.files;
-		await loadAllQuestions(data.files);
+		const [indexRes, htmlIndexRes] = await Promise.all([
+			fetch('data/index.json'),
+			fetch('data/index_html.json')
+		]);
+
+		if (!indexRes.ok || !htmlIndexRes.ok) throw new Error('Failed to load indexes');
+
+		const indexData = await indexRes.json();
+		quizState.indexMap = indexData.files;
+		quizState.htmlIndex = await htmlIndexRes.json();
+
+		await loadAllQuestions(indexData.files);
 	} catch (err) {
-		console.error('Error loading index.json:', err);
-		dom.questionText.innerHTML = `<div class="error">Error loading index.json</div>`;
+		console.error('Error loading indexes:', err);
+		dom.questionText.innerHTML = `<div class="error">Error loading index files</div>`;
 	}
 }
 
@@ -148,6 +167,7 @@ function resetQuiz() {
 	filterQuestions();
 	dom.scoreSection.style.display = 'none';
 	dom.quizContainer.style.display = 'block';
+	dom.topicContainer.style.display = 'none';
 }
 
 function endQuiz() {
@@ -191,6 +211,7 @@ function endQuiz() {
 	`;
 
 	dom.quizContainer.style.display = 'none';
+	dom.topicContainer.style.display = 'none';
 	dom.scoreSection.innerHTML = summaryHTML;
 	dom.scoreSection.style.display = 'block';
 	document.getElementById('restart-btn')?.addEventListener('click', resetQuiz);
@@ -296,6 +317,69 @@ function filterQuestions() {
 	showQuestion();
 }
 
+async function loadTopicContent() {
+	const selectedCategory = dom.categorySelector.value;
+	if (!selectedCategory || selectedCategory === 'All') {
+		alert('Please select a specific topic category first');
+		return;
+	}
+
+	const htmlFiles = quizState.htmlIndex[selectedCategory] || [];
+	if (htmlFiles.length === 0) {
+		alert('No learning materials available for this topic');
+		return;
+	}
+
+	// Update HTML selector
+	dom.htmlSelector.innerHTML = htmlFiles.map(file =>
+		`<option value="${file}">${file.replace('.html', '')}</option>`
+	).join('');
+
+	dom.htmlSelector.style.display = htmlFiles.length > 1 ? 'inline-block' : 'none';
+	const defaultFile = htmlFiles.find(f => f === `${selectedCategory.toLowerCase().replace(/ /g, '_')}.html`) || htmlFiles[0];
+	dom.htmlSelector.value = defaultFile;
+
+	// Load content
+	const categoryFolder = selectedCategory.replace(/\s+/g, '_');
+	const topicPath = `data/${categoryFolder}/${defaultFile}`;
+	dom.topicIframe.src = topicPath;
+
+	// Show/hide sections
+	dom.quizContainer.style.display = 'none';
+	dom.scoreSection.style.display = 'none';
+	dom.topicContainer.style.display = 'block';
+
+	if (quizState.sidebarVisible) toggleSidebar();
+}
+
+// Function to go back to quiz from topic view
+function backToQuiz() {
+	dom.topicContainer.style.display = 'none';
+	dom.quizContainer.style.display = 'block';
+	dom.htmlSelector.style.display = 'none';
+	dom.htmlSelector.innerHTML = '<option value="">Select Material</option>';
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Toggle sidebar visibility
+function toggleSidebar() {
+	quizState.sidebarVisible = !quizState.sidebarVisible;
+
+	if (quizState.sidebarVisible) {
+		// Show sidebar
+		dom.sidebar.classList.remove('hidden');
+		document.body.classList.remove('sidebar-hidden');
+		dom.toggleSidebarBtn.innerHTML = '☰';
+		dom.toggleSidebarBtn.title = 'Hide Sidebar';
+	} else {
+		// Hide sidebar
+		dom.sidebar.classList.add('hidden');
+		document.body.classList.add('sidebar-hidden');
+		dom.toggleSidebarBtn.innerHTML = '☰';
+		dom.toggleSidebarBtn.title = 'Show Sidebar';
+	}
+}
+
 // Event Listeners
 function setupEventListeners() {
 	dom.categorySelector.addEventListener('change', filterQuestions);
@@ -328,4 +412,20 @@ function setupEventListeners() {
 	dom.questionJump.addEventListener('keypress', e => {
 		if (e.key === 'Enter') jumpToQuestion(Number(dom.questionJump.value));
 	});
+
+	// Learn topic feature event listeners
+	dom.learnTopicBtn.addEventListener('click', loadTopicContent);
+	dom.backToQuizBtn.addEventListener('click', backToQuiz);
+
+	// Sidebar toggle event listener
+	dom.toggleSidebarBtn.addEventListener('click', toggleSidebar);
+
+	// Add event listener for HTML selector
+	dom.htmlSelector.addEventListener('change', function () {
+		const selectedCategory = dom.categorySelector.value;
+		const categoryFolder = selectedCategory.replace(/\s+/g, '_');
+		const file = this.value;
+		dom.topicIframe.src = `data/${categoryFolder}/${file}`;
+	});
+
 }

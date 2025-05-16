@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,9 @@
 </head>
 
 <body>
+    <!-- Toggle Sidebar Button -->
+    <button id="toggle-sidebar" class="toggle-sidebar-btn">☰</button>
+
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-header">
@@ -19,6 +23,13 @@
             <select id="category-selector" class="styled-select">
                 <option value="All">All Categories</option>
             </select>
+            <!-- Learn Topic Section -->
+            <div class="learn-topic-section">
+                <button id="learn-topic" class="control-btn">📚 Learn the Topic</button>
+                <select id="html-selector" class="html-selector" style="display: none;">
+                    <option value="">Select Material</option>
+                </select>
+            </div>
         </div>
 
         <!-- Timer Section -->
@@ -49,8 +60,10 @@
         </div>
     </div>
 
+    </div>
+
     <!-- Main Quiz Content -->
-    <div id="quiz-container">
+    <div id="quiz-container" class="main-content">
         <header>
             <h1>Technical Interview Practice</h1>
             <p class="subtitle">Test your knowledge with interactive questions</p>
@@ -79,13 +92,19 @@
         </div>
     </div>
 
-    <!-- Score Section - MOVED OUTSIDE quiz-container -->
-    <div id="score-section" style="display:none;"></div>
+    <!-- Score Section -->
+    <div id="score-section" class="main-content" style="display:none;"></div>
 
-    <!-- Scripts -->
+    <!-- Topic Learning Section -->
+    <div id="topic-container" class="main-content" style="display:none;">
+        <div class="back-button-container">
+            <button id="back-to-quiz" class="control-btn">← Back to Quiz</button>
+        </div>
+        <iframe id="topic-iframe" src="" style="width:100%; height:80vh; border:none;"></iframe>
+    </div>
+
     <script src="quiz.js"></script>
     <script>
-        // Initialize syntax highlighting
         hljs.configure({
             languages: ['python', 'sql', 'bash'],
             ignoreUnescapedHTML: true
