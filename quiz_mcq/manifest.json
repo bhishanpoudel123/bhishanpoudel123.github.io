@@ -1,0 +1,19 @@
+{
+	"name": "Technical Interview Quiz",
+	"short_name": "TechQuiz",
+	"start_url": "/quiz_mcq/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#007bff",
+	"description": "Interactive technical interview preparation quiz app",
+	"icons": [
+		{
+			"src": "icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"icon_generated_by": "https://www.freepik.com/",
+	"related_applications": [],
+	"prefer_related_applications": false
+}
