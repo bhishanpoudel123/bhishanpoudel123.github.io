@@ -1,0 +1,48 @@
+{
+  "Data Analysis": [
+    "data_analysis.html"
+  ],
+  "Data Cleaning": [
+    "data_cleaning.html"
+  ],
+  "Data Science": [
+    "data_science.html"
+  ],
+  "Data Visualization": [
+    "data_visualization.html"
+  ],
+  "IQ": [
+    "iq.html"
+  ],
+  "Machine Learning": [
+    "machine_learning.html"
+  ],
+  "Modelling": [
+    "modelling.html"
+  ],
+  "Pandas": [
+    "pandas.html"
+  ],
+  "Probability": [
+    "probability.html"
+  ],
+  "Python Advanced": [
+    "python_advanced.html",
+    "python_general.html"
+  ],
+  "Python General": [
+    "python_general.html"
+  ],
+  "SQL General": [
+    "sql_general.html"
+  ],
+  "SQL Sqlite": [
+    "sql_sqlite.html"
+  ],
+  "Statistics": [
+    "statistics.html"
+  ],
+  "Timeseries": [
+    "timeseries.html"
+  ]
+}

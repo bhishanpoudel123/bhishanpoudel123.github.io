@@ -1,0 +1,66 @@
+<html>
+<head><title>Python Advanced</title></head>
+<body>
+<h1>Python Advanced</h1>
+<h2>Qn 01: What is the time complexity of inserting an element at the beginning of a Python list?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> O(n)
+<br><strong>Explanation:</strong> Inserting at the beginning of a Python list requires shifting all elements, hence O(n).
+</div>
+
+<h2>Qn 02: Which of the following is the most memory-efficient way to handle large numerical data arrays in Python?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> NumPy arrays
+<br><strong>Explanation:</strong> NumPy arrays are memory efficient and optimized for numerical operations.
+</div>
+
+<h2>Qn 03: Which Python library provides decorators and context managers to handle retries with exponential backoff?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> tenacity
+<br><strong>Explanation:</strong> Tenacity provides powerful retry strategies including exponential backoff.
+</div>
+
+<h2>Qn 04: What is a key difference between multiprocessing and threading in Python?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> Processes can utilize multiple CPUs
+<br><strong>Explanation:</strong> Due to the GIL, threads are limited; multiprocessing uses separate memory space and cores.
+</div>
+
+<h2>Qn 05: What is the purpose of Python's `__slots__` declaration?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> Reduce memory usage by preventing dynamic attribute creation
+<br><strong>Explanation:</strong> `__slots__` limits attribute assignment and avoids `__dict__` overhead.
+</div>
+
+<h2>Qn 06: What will `functools.lru_cache` do?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> Cache function output to speed up subsequent calls
+<br><strong>Explanation:</strong> `lru_cache` stores results of expensive function calls for reuse.
+</div>
+
+<h2>Qn 07: What does the `@staticmethod` decorator do in Python?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> Defines a method that takes no self or cls argument
+<br><strong>Explanation:</strong> `@staticmethod` defines a method that does not receive an implicit first argument.
+</div>
+
+<h2>Qn 08: How can you profile memory usage in a Python function?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> Using tracemalloc
+<br><strong>Explanation:</strong> `tracemalloc` tracks memory allocations in Python.
+</div>
+
+<h2>Qn 09: Which built-in function returns the identity of an object?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> id()
+<br><strong>Explanation:</strong> `id()` returns the identity (memory address) of an object.
+</div>
+
+<h2>Qn 10: What happens when you use the `is` operator between two equal strings in Python?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> It compares object identity
+<br><strong>Explanation:</strong> `is` checks whether two variables point to the same object, not if their values are equal.
+</div>
+
+</body>
+</html>

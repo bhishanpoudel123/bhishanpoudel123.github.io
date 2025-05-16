@@ -1,0 +1,66 @@
+<html>
+<head><title>SQL Sqlite</title></head>
+<body>
+<h1>SQL Sqlite</h1>
+<h2>Qn 01: What is the purpose of the `WITHOUT ROWID` clause in SQLite?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> To create a table without the implicit ROWID column
+<br><strong>Explanation:</strong> `WITHOUT ROWID` creates a table without the implicit `ROWID`, useful for certain optimizations.
+</div>
+
+<h2>Qn 02: Which function would you use in SQLite to get the current timestamp?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> CURRENT_TIMESTAMP
+<br><strong>Explanation:</strong> `CURRENT_TIMESTAMP` returns the current date and time in SQLite.
+</div>
+
+<h2>Qn 03: What is the default data type of a column in SQLite if not specified?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> NONE
+<br><strong>Explanation:</strong> If no type is specified, SQLite assigns it an affinity of NONE.
+</div>
+
+<h2>Qn 04: How are boolean values stored in SQLite?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> As 1 and 0 integers
+<br><strong>Explanation:</strong> SQLite does not have a separate BOOLEAN type; it uses integers 1 (true) and 0 (false).
+</div>
+
+<h2>Qn 05: Which of the following is true about SQLite's `VACUUM` command?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> It compacts the database file
+<br><strong>Explanation:</strong> `VACUUM` rebuilds the database file to defragment it and reduce its size.
+</div>
+
+<h2>Qn 06: Which SQLite command lists all tables in the database?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> SELECT * FROM sqlite_master WHERE type='table'
+<br><strong>Explanation:</strong> SQLite uses the `sqlite_master` table to store metadata about the database, including table names.
+</div>
+
+<h2>Qn 07: Which SQLite command allows you to see the schema of a table?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> .schema
+<br><strong>Explanation:</strong> `.schema` is a command in the SQLite shell that shows the schema for tables.
+</div>
+
+<h2>Qn 08: How does SQLite handle foreign key constraints by default?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> They are off by default and must be enabled
+<br><strong>Explanation:</strong> SQLite supports foreign keys, but enforcement must be enabled with `PRAGMA foreign_keys = ON`.
+</div>
+
+<h2>Qn 09: How does SQLite implement AUTOINCREMENT?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> Using INTEGER PRIMARY KEY
+<br><strong>Explanation:</strong> SQLite uses `INTEGER PRIMARY KEY AUTOINCREMENT` to create an auto-incrementing ID.
+</div>
+
+<h2>Qn 10: What pragma statement turns on write-ahead logging in SQLite?</h2>
+<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
+<strong>Answer:</strong> PRAGMA journal_mode = WAL
+<br><strong>Explanation:</strong> `PRAGMA journal_mode = WAL` enables write-ahead logging in SQLite.
+</div>
+
+</body>
+</html>
