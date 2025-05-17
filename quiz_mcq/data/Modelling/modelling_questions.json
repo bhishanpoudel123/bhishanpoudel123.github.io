@@ -12,7 +12,7 @@
         "answer": "Manually implement out-of-fold predictions for each base learner",
         "explanation": "Manually generating out-of-fold predictions ensures the meta-learner only sees predictions made on data that base models weren't trained on, fully preventing leakage while utilizing all data. This approach is more flexible than StackingClassifier and can incorporate diverse base models while maintaining proper validation boundaries.",
         "answer_long_md": [
-            "data/Modelling/qn_01_long_answer_01.md"
+            "data/Modelling/qn_01_answer_long_01.md"
         ]
     },
     {
@@ -28,7 +28,7 @@
         "answer": "Apply sklearn's CalibratedClassifierCV with isotonic regression",
         "explanation": "Isotonic regression via CalibratedClassifierCV is non-parametric and can correct any monotonic distortion in probability estimates, making it more flexible than Platt scaling, particularly for gradient boosting models which often produce well-ranked but not well-calibrated probabilities.",
         "answer_long_md": [
-            "data/Modelling/qn_02_long_answer_01.md"
+            "data/Modelling/qn_02_answer_long_01.md"
         ]
     },
     {
@@ -44,7 +44,7 @@
         "answer": "Nested loops of KFold.split(), with inner loop for hyperparameter tuning",
         "explanation": "Proper nested cross-validation requires an outer loop for performance estimation and an inner loop for hyperparameter tuning, completely separating the data used for model selection from the data used for model evaluation, avoiding optimistic bias.",
         "answer_long_md": [
-            "data/Modelling/qn_03_long_answer_01.md"
+            "data/Modelling/qn_03_answer_long_01.md"
         ]
     },
     {
@@ -60,7 +60,7 @@
         "answer": "Use SGDClassifier with partial_fit on data chunks",
         "explanation": "SGDClassifier with partial_fit allows true incremental learning, processing data in chunks without storing the entire dataset in memory, updating model parameters with each batch and converging to the same solution as batch processing would with sufficient iterations.",
         "answer_long_md": [
-            "data/Modelling/qn_04_long_answer_01.md"
+            "data/Modelling/qn_04_answer_long_01.md"
         ]
     },
     {
@@ -76,7 +76,7 @@
         "answer": "Fine-Gray subdistribution hazard model from pysurvival",
         "explanation": "The Fine-Gray model explicitly accounts for competing risks by modeling the subdistribution hazard, allowing for valid inference about the probability of an event in the presence of competing events, unlike standard Cox models or Kaplan-Meier which can produce biased estimates under competing risks.",
         "answer_long_md": [
-            "data/Modelling/qn_05_long_answer_01.md"
+            "data/Modelling/qn_05_answer_long_01.md"
         ]
     },
     {
@@ -92,7 +92,7 @@
         "answer": "Using XGBoost's monotone_constraints parameter",
         "explanation": "XGBoost's native monotone_constraints parameter enforces monotonicity during tree building by constraining only monotonic splits, resulting in a fully monotonic model without sacrificing performance\u2014unlike post-processing which can degrade model accuracy or pre-processing which doesn't guarantee model monotonicity.",
         "answer_long_md": [
-            "data/Modelling/qn_06_long_answer_01.md"
+            "data/Modelling/qn_06_answer_long_01.md"
         ]
     },
     {
@@ -108,7 +108,7 @@
         "answer": "Define a function that takes two arrays and returns a kernel matrix",
         "explanation": "For custom kernels in scikit-learn SVMs, one must define a function K(X, Y) that calculates the kernel matrix between arrays X and Y, then pass this function as the 'kernel' parameter to SVC. This approach allows full flexibility in kernel design while maintaining compatibility with scikit-learn's implementation.",
         "answer_long_md": [
-            "data/Modelling/qn_07_long_answer_01.md"
+            "data/Modelling/qn_07_answer_long_01.md"
         ]
     },
     {
@@ -124,7 +124,7 @@
         "answer": "Elastic Net regularization with randomized hyperparameter search",
         "explanation": "Elastic Net combines L1 and L2 penalties, effectively handling correlated features by either selecting one from a correlated group (via L1) or assigning similar coefficients to correlated features (via L2), with the optimal balance determined through randomized hyperparameter search across different alpha and l1_ratio values.",
         "answer_long_md": [
-            "data/Modelling/qn_08_long_answer_01.md"
+            "data/Modelling/qn_08_answer_long_01.md"
         ]
     },
     {
@@ -140,7 +140,7 @@
         "answer": "Custom encoding using pd.Categorical with ordered=True",
         "explanation": "Using pandas Categorical with ordered=True preserves the ordinal relationship and allows for appropriate distance calculations between categories, which is essential for models that consider feature relationships (unlike OrdinalEncoder which assigns arbitrary numeric values without preserving distances).",
         "answer_long_md": [
-            "data/Modelling/qn_09_long_answer_01.md"
+            "data/Modelling/qn_09_answer_long_01.md"
         ]
     },
     {
@@ -156,7 +156,7 @@
         "answer": "Define a custom cross-validator with expanding window and purging",
         "explanation": "A custom cross-validator with expanding windows (increasing training set) and purging (gap between train and test to prevent leakage) most accurately simulates real-world forecasting scenarios while handling temporal dependencies and avoiding lookahead bias.",
         "answer_long_md": [
-            "data/Modelling/qn_10_long_answer_01.md"
+            "data/Modelling/qn_10_answer_long_01.md"
         ]
     },
     {
@@ -172,7 +172,7 @@
         "answer": "Bayesian Logistic Regression with MCMC sampling for posterior distribution",
         "explanation": "Bayesian Logistic Regression provides both interpretability (coefficients have clear meanings) and principled uncertainty quantification through the posterior distribution of parameters, capturing both aleatoric and epistemic uncertainty while maintaining model transparency.",
         "answer_long_md": [
-            "data/Modelling/qn_11_long_answer_01.md"
+            "data/Modelling/qn_11_answer_long_01.md"
         ]
     },
     {
@@ -188,7 +188,7 @@
         "answer": "Use ensemble methods with resampling strategies specific to each classifier",
         "explanation": "Ensemble methods with class-specific resampling strategies (e.g., EasyEnsemble or SMOTEBoost) combine the diversity of multiple classifiers with targeted handling of class imbalance, outperforming both global resampling and simple class weighting, especially for multi-class problems with varying degrees of imbalance.",
         "answer_long_md": [
-            "data/Modelling/qn_12_long_answer_01.md"
+            "data/Modelling/qn_12_answer_long_01.md"
         ]
     },
     {
@@ -204,7 +204,7 @@
         "answer": "Implement H-statistic from Friedman and Popescu",
         "explanation": "The H-statistic specifically quantifies interaction strength between features by comparing the variation in predictions when features are varied together versus independently, providing a statistical measure of interactions that can't be captured by standard importance metrics or partial dependence alone.",
         "answer_long_md": [
-            "data/Modelling/qn_13_long_answer_01.md"
+            "data/Modelling/qn_13_answer_long_01.md"
         ]
     },
     {
@@ -220,7 +220,7 @@
         "answer": "Use make_scorer with a function that combines multiple metrics",
         "explanation": "make_scorer allows creating a custom scoring function that can combine predictive performance (e.g., AUC) with penalties for model complexity (e.g., number of features or model parameters), providing a single metric for optimization that balances performance and parsimony.",
         "answer_long_md": [
-            "data/Modelling/qn_14_long_answer_01.md"
+            "data/Modelling/qn_14_answer_long_01.md"
         ]
     },
     {
@@ -236,7 +236,7 @@
         "answer": "Implement weighted LASSO with weight inversely proportional to error variance",
         "explanation": "Weighted LASSO that downweights observations with high error variance accounts for heteroscedasticity in the selection process, ensuring that features aren't selected or rejected due to non-constant error variance, resulting in more reliable feature selection.",
         "answer_long_md": [
-            "data/Modelling/qn_15_long_answer_01.md"
+            "data/Modelling/qn_15_answer_long_01.md"
         ]
     },
     {
@@ -252,7 +252,7 @@
         "answer": "Use Explainable Boosting Machines (EBMs) from InterpretML",
         "explanation": "EBMs combine the interpretability of GAMs with the predictive power of boosting, learning feature functions and pairwise interactions in an additive structure while remaining highly interpretable, offering better performance than standard GAMs while maintaining transparency.",
         "answer_long_md": [
-            "data/Modelling/qn_16_long_answer_01.md"
+            "data/Modelling/qn_16_answer_long_01.md"
         ]
     },
     {
@@ -268,7 +268,7 @@
         "answer": "Implement a custom version of RandomForestRegressor that stores all leaf node samples",
         "explanation": "Quantile regression forests require storing the empirical distribution of training samples in each leaf node (not just their mean), requiring a custom implementation that extends standard random forests to compute conditional quantiles from these stored distributions.",
         "answer_long_md": [
-            "data/Modelling/qn_17_long_answer_01.md"
+            "data/Modelling/qn_17_answer_long_01.md"
         ]
     },
     {
@@ -284,7 +284,7 @@
         "answer": "Use Huber or Quantile regression with robust loss functions",
         "explanation": "Robust regression methods like Huber or Quantile regression use loss functions that inherently reduce the influence of outliers during model training, addressing the issue without removing potentially valuable data points or distorting the target distribution through transformations.",
         "answer_long_md": [
-            "data/Modelling/qn_18_long_answer_01.md"
+            "data/Modelling/qn_18_answer_long_01.md"
         ]
     },
     {
@@ -300,7 +300,7 @@
         "answer": "Implement distance metric learning with NCA or LMNN",
         "explanation": "Distance metric learning adaptively learns a transformation of the feature space that emphasizes discriminative dimensions, effectively addressing the curse of dimensionality by creating a more semantically meaningful distance metric, unlike fixed trees or general dimensionality reduction.",
         "answer_long_md": [
-            "data/Modelling/qn_19_long_answer_01.md"
+            "data/Modelling/qn_19_answer_long_01.md"
         ]
     },
     {
@@ -316,7 +316,7 @@
         "answer": "Use early_stopping_rounds with a validation set in XGBoost/LightGBM",
         "explanation": "Using early_stopping_rounds with a separate validation set stops training when performance on the validation set stops improving for a specified number of rounds, efficiently determining the optimal number of trees in a single training run without requiring multiple cross-validation runs.",
         "answer_long_md": [
-            "data/Modelling/qn_20_long_answer_01.md"
+            "data/Modelling/qn_20_answer_long_01.md"
         ]
     },
     {
@@ -332,7 +332,7 @@
         "answer": "Implement DiCE (Diverse Counterfactual Explanations) to generate multiple feasible counterfactuals",
         "explanation": "DiCE specifically generates diverse counterfactual explanations that show how an instance's features would need to change to receive a different classification, addressing the 'what-if' question directly rather than just explaining the current prediction.",
         "answer_long_md": [
-            "data/Modelling/qn_21_long_answer_01.md"
+            "data/Modelling/qn_21_answer_long_01.md"
         ]
     },
     {
@@ -348,7 +348,7 @@
         "answer": "Use incremental learning with drift detection algorithms to trigger model updates",
         "explanation": "Combining incremental learning with explicit drift detection (e.g., ADWIN, DDM) allows the model to adapt continuously to new data while only performing major updates when the data distribution actually changes, balancing computational efficiency with adaptation to concept drift.",
         "answer_long_md": [
-            "data/Modelling/qn_22_long_answer_01.md"
+            "data/Modelling/qn_22_answer_long_01.md"
         ]
     },
     {
@@ -364,7 +364,7 @@
         "answer": "Implement multi-fidelity optimization with Hyperband",
         "explanation": "Hyperband uses a bandit-based approach to allocate resources efficiently, quickly discarding poor configurations and allocating more compute to promising ones, making it particularly effective when training time is limited and early performance is indicative of final performance.",
         "answer_long_md": [
-            "data/Modelling/qn_23_long_answer_01.md"
+            "data/Modelling/qn_23_answer_long_01.md"
         ]
     },
     {
@@ -380,7 +380,7 @@
         "answer": "Implement feature importance from tree-based models with purged cross-validation",
         "explanation": "Tree-based feature importance combined with purged cross-validation (which leaves gaps between train and test sets) correctly handles temporal dependence in the data, preventing information leakage while identifying features that have genuine predictive power for future time points.",
         "answer_long_md": [
-            "data/Modelling/qn_24_long_answer_01.md"
+            "data/Modelling/qn_24_answer_long_01.md"
         ]
     },
     {
@@ -396,7 +396,7 @@
         "answer": "Use causal graphical models to identify proper conditioning sets",
         "explanation": "Causal graphical models (e.g., DAGs) allow identifying which variables should or should not be conditioned on to avoid Simpson's paradox, ensuring that the model captures the true causal relationship rather than spurious associations that reverse with conditioning.",
         "answer_long_md": [
-            "data/Modelling/qn_25_long_answer_01.md"
+            "data/Modelling/qn_25_answer_long_01.md"
         ]
     },
     {
@@ -412,7 +412,7 @@
         "answer": "Apply multi-objective Bayesian optimization to balance diversity and performance",
         "explanation": "Multi-objective Bayesian optimization can simultaneously optimize for both individual model performance and ensemble diversity, finding an optimal set of hyperparameters for each model type while ensuring the ensemble as a whole performs well through complementary strengths.",
         "answer_long_md": [
-            "data/Modelling/qn_26_long_answer_01.md"
+            "data/Modelling/qn_26_answer_long_01.md"
         ]
     },
     {
@@ -428,7 +428,7 @@
         "answer": "Individual Conditional Expectation (ICE) plots with centered PDP",
         "explanation": "ICE plots show how predictions change for individual instances across the range of a feature, while centering them helps visualize heterogeneous effects that would be masked by averaging in standard partial dependence plots, making them ideal for detecting complex non-linear relationships.",
         "answer_long_md": [
-            "data/Modelling/qn_27_long_answer_01.md"
+            "data/Modelling/qn_27_answer_long_01.md"
         ]
     },
     {
@@ -444,7 +444,7 @@
         "answer": "Use quantile regression with multiple target quantiles",
         "explanation": "Training multiple gradient boosting models with quantile loss functions at different quantiles (e.g., 5%, 50%, 95%) directly models the conditional distribution of the target variable, providing a rigorous non-parametric approach to uncertainty quantification that captures heteroscedasticity.",
         "answer_long_md": [
-            "data/Modelling/qn_28_long_answer_01.md"
+            "data/Modelling/qn_28_answer_long_01.md"
         ]
     },
     {
@@ -460,7 +460,7 @@
         "answer": "Use tsfresh with appropriate feature filtering based on p-values",
         "explanation": "tsfresh automatically extracts and selects relevant time series features (over 700 features) while controlling for multiple hypothesis testing, specifically designed for time series data unlike general feature engineering tools, making it ideal for time series forecasting tasks.",
         "answer_long_md": [
-            "data/Modelling/qn_29_long_answer_01.md"
+            "data/Modelling/qn_29_answer_long_01.md"
         ]
     },
     {
@@ -476,7 +476,7 @@
         "answer": "Apply precision-recall curves with prevalence-corrected metrics",
         "explanation": "For imbalanced multi-class problems, precision-recall curves with prevalence correction (e.g., weighted by actual class frequencies) provide more informative evaluation than accuracy or ROC-based metrics, focusing on relevant performance for minority classes while accounting for class distribution.",
         "answer_long_md": [
-            "data/Modelling/qn_30_long_answer_01.md"
+            "data/Modelling/qn_30_answer_long_01.md"
         ]
     }
 ]
