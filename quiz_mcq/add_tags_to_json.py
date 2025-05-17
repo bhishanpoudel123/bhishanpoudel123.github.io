@@ -12,7 +12,7 @@ with open(fname, 'r') as file:
 # Update each question with the answer markdown path
 for question in questions:
     question_id = question["id"]
-    question["answer_long_md"] = [f"data/{topic}/qn_{question_id:02}_long_answer_01.md"]
+    question["answer_long_md"] = [f"data/{topic}/qn_{question_id:02}_answer_long_01.md"]
 
 # Save the modified data to a new JSON file
 with open(ofile, 'w') as file:
