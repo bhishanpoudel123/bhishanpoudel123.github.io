@@ -19,6 +19,7 @@
 What is the purpose of the `WITHOUT ROWID` clause in SQLite?
 
 **Options**  
+
 1. To create a view without row numbers  
 2. To disable rowid for performance reasons  
 3. To create a table without the implicit ROWID column  
@@ -33,7 +34,6 @@ To create a table without the implicit ROWID column
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -41,6 +41,7 @@ To create a table without the implicit ROWID column
 Which function would you use in SQLite to get the current timestamp?
 
 **Options**  
+
 1. NOW()  
 2. CURRENT_TIMESTAMP  
 3. GETDATE()  
@@ -54,7 +55,6 @@ CURRENT_TIMESTAMP
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -62,6 +62,7 @@ CURRENT_TIMESTAMP
 What is the default data type of a column in SQLite if not specified?
 
 **Options**  
+
 1. TEXT  
 2. NUMERIC  
 3. ANY  
@@ -75,7 +76,6 @@ If no type is specified, SQLite assigns it an affinity of NONE.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -83,6 +83,7 @@ If no type is specified, SQLite assigns it an affinity of NONE.
 How are boolean values stored in SQLite?
 
 **Options**  
+
 1. As TRUE/FALSE literals  
 2. As 1 and 0 integers  
 3. As BIT type  
@@ -97,7 +98,6 @@ SQLite does not have a separate BOOLEAN type; it uses integers 1 (true) and 0
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -105,6 +105,7 @@ SQLite does not have a separate BOOLEAN type; it uses integers 1 (true) and 0
 Which of the following is true about SQLite's `VACUUM` command?
 
 **Options**  
+
 1. It deletes rows with NULL values  
 2. It compacts the database file  
 3. It removes duplicate records  
@@ -118,7 +119,6 @@ It compacts the database file
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q06"></a> Qn 06
 
@@ -126,6 +126,7 @@ It compacts the database file
 Which SQLite command lists all tables in the database?
 
 **Options**  
+
 1. SHOW TABLES  
 2. SELECT * FROM sqlite_master WHERE type='table'  
 3. .list tables  
@@ -140,7 +141,6 @@ SQLite uses the `sqlite_master` table to store metadata about the database,
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q07"></a> Qn 07
 
@@ -148,6 +148,7 @@ SQLite uses the `sqlite_master` table to store metadata about the database,
 Which SQLite command allows you to see the schema of a table?
 
 **Options**  
+
 1. PRAGMA schema  
 2. SHOW TABLE  
 3. DESCRIBE  
@@ -161,7 +162,6 @@ Which SQLite command allows you to see the schema of a table?
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q08"></a> Qn 08
 
@@ -169,6 +169,7 @@ Which SQLite command allows you to see the schema of a table?
 How does SQLite handle foreign key constraints by default?
 
 **Options**  
+
 1. They are enforced automatically  
 2. They must be manually triggered  
 3. They are off by default and must be enabled  
@@ -183,7 +184,6 @@ SQLite supports foreign keys, but enforcement must be enabled with `PRAGMA
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q09"></a> Qn 09
 
@@ -191,6 +191,7 @@ SQLite supports foreign keys, but enforcement must be enabled with `PRAGMA
 How does SQLite implement AUTOINCREMENT?
 
 **Options**  
+
 1. Using INTEGER PRIMARY KEY  
 2. Using IDENTITY  
 3. Using SERIAL  
@@ -205,7 +206,6 @@ SQLite uses `INTEGER PRIMARY KEY AUTOINCREMENT` to create an auto-incrementing
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q10"></a> Qn 10
 
@@ -213,6 +213,7 @@ SQLite uses `INTEGER PRIMARY KEY AUTOINCREMENT` to create an auto-incrementing
 What pragma statement turns on write-ahead logging in SQLite?
 
 **Options**  
+
 1. PRAGMA enable_wal = ON  
 2. PRAGMA journal_mode = WAL  
 3. PRAGMA log_mode = ON  
@@ -227,8 +228,7 @@ PRAGMA journal_mode = WAL
 [↑ Go to TOC](#toc)
 
 
-
 ---
 
-*Automatically generated from [sql_sqlite_questions.json](sql_sqlite_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [sql_sqlite_questions.json](sql_sqlite_questions.json)*
+*Updated: 2025-05-18 13:57*

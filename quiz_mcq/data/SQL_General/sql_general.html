@@ -1,66 +1,180 @@
-<html>
-<head><title>SQL General</title></head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL_General Quiz</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <body>
-<h1>SQL General</h1>
-<h2>Qn 01: Which SQL statement is used to extract data from a database?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> SELECT
-<br><strong>Explanation:</strong> The SELECT statement is used to extract data from a database table.
-</div>
-
-<h2>Qn 02: Which SQL clause is used to filter records?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> WHERE
-<br><strong>Explanation:</strong> The WHERE clause is used to filter records based on specific conditions.
-</div>
-
-<h2>Qn 03: What does the COUNT() function do in SQL?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Counts non-NULL rows
-<br><strong>Explanation:</strong> COUNT() returns the number of non-NULL values in a specified column.
-</div>
-
-<h2>Qn 04: Which SQL keyword is used to sort the result-set?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> ORDER BY
-<br><strong>Explanation:</strong> ORDER BY is used to sort the results of a SELECT query.
-</div>
-
-<h2>Qn 05: Which command is used to remove all records from a table in SQL without deleting the table?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> TRUNCATE
-<br><strong>Explanation:</strong> TRUNCATE removes all records from a table but retains the table structure.
-</div>
-
-<h2>Qn 06: Which SQL clause is used with aggregate functions to group result-set by one or more columns?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> GROUP BY
-<br><strong>Explanation:</strong> GROUP BY groups rows that have the same values into summary rows.
-</div>
-
-<h2>Qn 07: Which SQL keyword is used to retrieve only distinct values?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> DISTINCT
-<br><strong>Explanation:</strong> DISTINCT is used to return only different (distinct) values.
-</div>
-
-<h2>Qn 08: Which of the following is a DDL command?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> CREATE
-<br><strong>Explanation:</strong> CREATE is a DDL (Data Definition Language) command used to create a new table or database.
-</div>
-
-<h2>Qn 09: What does the SQL INNER JOIN keyword do?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Returns rows when there is a match in both tables
-<br><strong>Explanation:</strong> INNER JOIN selects records that have matching values in both tables.
-</div>
-
-<h2>Qn 10: What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> It selects employees with NULL department
-<br><strong>Explanation:</strong> IS NULL checks for columns that contain NULL values.
-</div>
-
+    <div class="container">
+        <h1>SQL_General Quiz</h1>
+        <div class="quiz-container">
+    
+            <div class="question" id="q1">
+                <h3>Question 1: Which SQL statement is used to extract data from a database?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q1" id="q1o0" value="0"><label for="q1o0">GET</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o1" value="1"><label for="q1o1">SELECT</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o2" value="2"><label for="q1o2">OPEN</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o3" value="3"><label for="q1o3">EXTRACT</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> SELECT</p>
+                    <p><strong>Explanation:</strong> The SELECT statement is used to extract data from a database table.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q2">
+                <h3>Question 2: Which SQL clause is used to filter records?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q2" id="q2o0" value="0"><label for="q2o0">WHERE</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o1" value="1"><label for="q2o1">GROUP BY</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o2" value="2"><label for="q2o2">ORDER BY</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o3" value="3"><label for="q2o3">HAVING</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> WHERE</p>
+                    <p><strong>Explanation:</strong> The WHERE clause is used to filter records based on specific conditions.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q3">
+                <h3>Question 3: What does the COUNT() function do in SQL?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q3" id="q3o0" value="0"><label for="q3o0">Counts rows with NULLs</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o1" value="1"><label for="q3o1">Counts only numeric values</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o2" value="2"><label for="q3o2">Counts non-NULL rows</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o3" value="3"><label for="q3o3">Counts unique values</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Counts non-NULL rows</p>
+                    <p><strong>Explanation:</strong> COUNT() returns the number of non-NULL values in a specified column.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q4">
+                <h3>Question 4: Which SQL keyword is used to sort the result-set?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q4" id="q4o0" value="0"><label for="q4o0">SORT BY</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o1" value="1"><label for="q4o1">ORDER BY</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o2" value="2"><label for="q4o2">GROUP BY</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o3" value="3"><label for="q4o3">ARRANGE BY</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> ORDER BY</p>
+                    <p><strong>Explanation:</strong> ORDER BY is used to sort the results of a SELECT query.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q5">
+                <h3>Question 5: Which command is used to remove all records from a table in SQL without deleting the table?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q5" id="q5o0" value="0"><label for="q5o0">DELETE</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o1" value="1"><label for="q5o1">REMOVE</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o2" value="2"><label for="q5o2">DROP</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o3" value="3"><label for="q5o3">TRUNCATE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> TRUNCATE</p>
+                    <p><strong>Explanation:</strong> TRUNCATE removes all records from a table but retains the table structure.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q6">
+                <h3>Question 6: Which SQL clause is used with aggregate functions to group result-set by one or more columns?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q6" id="q6o0" value="0"><label for="q6o0">GROUP BY</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o1" value="1"><label for="q6o1">ORDER BY</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o2" value="2"><label for="q6o2">WHERE</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o3" value="3"><label for="q6o3">HAVING</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> GROUP BY</p>
+                    <p><strong>Explanation:</strong> GROUP BY groups rows that have the same values into summary rows.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q7">
+                <h3>Question 7: Which SQL keyword is used to retrieve only distinct values?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q7" id="q7o0" value="0"><label for="q7o0">UNIQUE</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o1" value="1"><label for="q7o1">ONLY</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o2" value="2"><label for="q7o2">DISTINCT</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o3" value="3"><label for="q7o3">SEPARATE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> DISTINCT</p>
+                    <p><strong>Explanation:</strong> DISTINCT is used to return only different (distinct) values.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q8">
+                <h3>Question 8: Which of the following is a DDL command?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q8" id="q8o0" value="0"><label for="q8o0">INSERT</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o1" value="1"><label for="q8o1">UPDATE</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o2" value="2"><label for="q8o2">DELETE</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o3" value="3"><label for="q8o3">CREATE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> CREATE</p>
+                    <p><strong>Explanation:</strong> CREATE is a DDL (Data Definition Language) command used to create a new table or database.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q9">
+                <h3>Question 9: What does the SQL INNER JOIN keyword do?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q9" id="q9o0" value="0"><label for="q9o0">Returns rows when there is a match in both tables</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o1" value="1"><label for="q9o1">Returns all rows from the left table</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o2" value="2"><label for="q9o2">Returns all rows from the right table</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o3" value="3"><label for="q9o3">Combines all rows from both tables</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Returns rows when there is a match in both tables</p>
+                    <p><strong>Explanation:</strong> INNER JOIN selects records that have matching values in both tables.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q10">
+                <h3>Question 10: What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q10" id="q10o0" value="0"><label for="q10o0">It will throw an error</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o1" value="1"><label for="q10o1">It selects employees with empty strings</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o2" value="2"><label for="q10o2">It selects employees with NULL department</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o3" value="3"><label for="q10o3">It selects all employees</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> It selects employees with NULL department</p>
+                    <p><strong>Explanation:</strong> IS NULL checks for columns that contain NULL values.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+        </div>
+    </div>
+    <script src="../quiz.js"></script>
 </body>
 </html>
+    

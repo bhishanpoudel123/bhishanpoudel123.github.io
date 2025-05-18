@@ -42,6 +42,7 @@
 In a room of 30 people, what is the probability that at least two people share the same birthday (assuming 365 days in a year and birthdays are uniformly distributed)?
 
 **Options**  
+
 1. Less than 50%  
 2. About 70%  
 3. Greater than 90%  
@@ -60,7 +61,6 @@ This is the famous birthday paradox. The probability is computed as 1 minus the
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -68,6 +68,7 @@ This is the famous birthday paradox. The probability is computed as 1 minus the
 A biased coin has a 60% chance of landing heads. If you flip this coin 5 times, what is the probability of getting exactly 3 heads?
 
 **Options**  
+
 1. 0.23040  
 2. 0.25920  
 3. 0.30720  
@@ -84,7 +85,6 @@ We use the binomial probability formula: P(X=k) = C(n,k) × p^k × (1-p)^(n-k),
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -92,6 +92,7 @@ We use the binomial probability formula: P(X=k) = C(n,k) × p^k × (1-p)^(n-k),
 In a standard deck of 52 cards, what is the probability of drawing a royal flush (A, K, Q, J, 10 of the same suit) in a 5-card poker hand?
 
 **Options**  
+
 1. 1/649,740  
 2. 1/30,940  
 3. 4/2,598,960  
@@ -107,7 +108,6 @@ There are C(52,5) = 2,598,960 possible 5-card hands from a standard deck. There
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -115,6 +115,7 @@ There are C(52,5) = 2,598,960 possible 5-card hands from a standard deck. There
 A standard six-sided die is rolled 3 times. What is the probability that the sum of the three rolls equals 10?
 
 **Options**  
+
 1. 1/9  
 2. 1/6  
 3. 1/8  
@@ -131,7 +132,6 @@ When rolling 3 dice, there are 6^3 = 216 possible outcomes. To get a sum of 10,
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -139,6 +139,7 @@ When rolling 3 dice, there are 6^3 = 216 possible outcomes. To get a sum of 10,
 A bag contains 5 red marbles and 7 blue marbles. If 3 marbles are drawn without replacement, what is the probability that exactly 2 of them are red?
 
 **Options**  
+
 1. 35/132  
 2. 21/44  
 3. 15/44  
@@ -154,7 +155,6 @@ Total ways to select 3 marbles from 12 is C(12,3) = 220. Ways to select 2 red
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q06"></a> Qn 06
 
@@ -162,6 +162,7 @@ Total ways to select 3 marbles from 12 is C(12,3) = 220. Ways to select 2 red
 In a Bayesian analysis, a disease has a 1% prevalence in a population. A test for the disease has 95% sensitivity (true positive rate) and 90% specificity (true negative rate). If a person tests positive, what is the probability they actually have the disease?
 
 **Options**  
+
 1. Around 8.7%  
 2. Around 50%  
 3. Around 95%  
@@ -179,7 +180,6 @@ Using Bayes' theorem: P(Disease|Positive) = [P(Positive|Disease) × P(Disease)] 
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q07"></a> Qn 07
 
@@ -187,6 +187,7 @@ Using Bayes' theorem: P(Disease|Positive) = [P(Positive|Disease) × P(Disease)] 
 You roll a fair 6-sided die repeatedly until you get a 6. What is the expected number of rolls needed?
 
 **Options**  
+
 1. 3  
 2. 6  
 3. 5  
@@ -202,7 +203,6 @@ This is a geometric distribution with probability of success p = 1/6. The
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q08"></a> Qn 08
 
@@ -210,6 +210,7 @@ This is a geometric distribution with probability of success p = 1/6. The
 In a group of 5 people, what is the probability that at least 2 people have the same zodiac sign (assuming zodiac signs are uniformly distributed across 12 possible signs)?
 
 **Options**  
+
 1. 0.55  
 2. 0.67  
 3. 0.82  
@@ -225,7 +226,6 @@ The probability that all 5 people have different zodiac signs is (12/12) ×
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q09"></a> Qn 09
 
@@ -233,6 +233,7 @@ The probability that all 5 people have different zodiac signs is (12/12) ×
 A data scientist applies a machine learning model to classify emails as spam or not spam. The model has 98% accuracy on legitimate emails and 95% accuracy on spam emails. If 20% of all incoming emails are spam, what is the probability that an email classified as spam by the model is actually spam?
 
 **Options**  
+
 1. 0.72  
 2. 0.83  
 3. 0.95  
@@ -250,7 +251,6 @@ Using Bayes' theorem: P(Spam|Classified as Spam) = [P(Classified as Spam|Spam) �
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q10"></a> Qn 10
 
@@ -258,6 +258,7 @@ Using Bayes' theorem: P(Spam|Classified as Spam) = [P(Classified as Spam|Spam) �
 Four cards are randomly selected from a standard 52-card deck. What is the probability of getting exactly 2 aces?
 
 **Options**  
+
 1. 0.0264  
 2. 0.0399  
 3. 0.0426  
@@ -274,7 +275,6 @@ Total number of ways to select 4 cards from 52 is C(52,4) = 270,725. Ways to
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q11"></a> Qn 11
 
@@ -282,6 +282,7 @@ Total number of ways to select 4 cards from 52 is C(52,4) = 270,725. Ways to
 In a standard normal distribution, what is the probability that a randomly selected observation falls between -1.96 and 1.96?
 
 **Options**  
+
 1. 0.90  
 2. 0.95  
 3. 0.99  
@@ -297,7 +298,6 @@ In a standard normal distribution, the area between z-scores of -1.96 and 1.96
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q12"></a> Qn 12
 
@@ -305,6 +305,7 @@ In a standard normal distribution, the area between z-scores of -1.96 and 1.96
 A manufacturing process has a 3% defect rate. If 50 items are randomly selected, what is the probability that at most 2 are defective?
 
 **Options**  
+
 1. 0.4769  
 2. 0.5231  
 3. 0.6063  
@@ -321,7 +322,6 @@ This follows a binomial distribution with n=50 and p=0.03. P(X ≤ 2) = P(X=0) +
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q13"></a> Qn 13
 
@@ -329,6 +329,7 @@ This follows a binomial distribution with n=50 and p=0.03. P(X ≤ 2) = P(X=0) +
 In the Monty Hall problem, you're on a game show with three doors. Behind one door is a car; behind the others are goats. You pick a door. The host, who knows what's behind each door, opens one of the other doors to reveal a goat. He then offers you the chance to switch your choice to the remaining unopened door. What is the probability of winning the car if you switch?
 
 **Options**  
+
 1. 1/3  
 2. 1/2  
 3. 2/3  
@@ -347,7 +348,6 @@ Initially, you have a 1/3 probability of choosing the car and a 2/3 probability
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q14"></a> Qn 14
 
@@ -355,6 +355,7 @@ Initially, you have a 1/3 probability of choosing the car and a 2/3 probability
 A researcher is testing a new drug. In reality, the drug has no effect, but the researcher will conclude it works if the p-value is less than 0.05. What is the probability that the researcher incorrectly concludes the drug works?
 
 **Options**  
+
 1. 0.05  
 2. 0.95  
 3. 0.5  
@@ -372,7 +373,6 @@ The p-value is the probability of obtaining results at least as extreme as the
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q15"></a> Qn 15
 
@@ -380,6 +380,7 @@ The p-value is the probability of obtaining results at least as extreme as the
 A database has 1,000,000 records, and a data scientist estimates that 50 records are corrupted. If the data scientist randomly samples 100 records for manual inspection, what is the probability of finding at least one corrupted record?
 
 **Options**  
+
 1. 0.0050  
 2. 0.0500  
 3. 0.4988  
@@ -396,7 +397,6 @@ The probability of selecting a corrupted record is 50/1,000,000 = 0.00005. The
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q16"></a> Qn 16
 
@@ -404,6 +404,7 @@ The probability of selecting a corrupted record is 50/1,000,000 = 0.00005. The
 In a certain city, 60% of days are sunny, 30% are cloudy, and 10% are rainy. The probability of a traffic jam is 0.1 on sunny days, 0.3 on cloudy days, and 0.5 on rainy days. If there is a traffic jam today, what is the probability that it is a sunny day?
 
 **Options**  
+
 1. 0.33  
 2. 0.40  
 3. 0.60  
@@ -420,7 +421,6 @@ Using Bayes' theorem: P(Sunny|Traffic Jam) = [P(Traffic Jam|Sunny) × P(Sunny)] 
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q17"></a> Qn 17
 
@@ -428,6 +428,7 @@ Using Bayes' theorem: P(Sunny|Traffic Jam) = [P(Traffic Jam|Sunny) × P(Sunny)] 
 Five fair six-sided dice are rolled. What is the probability that all five dice show different numbers?
 
 **Options**  
+
 1. 0.0926  
 2. 0.1543  
 3. 0.3240  
@@ -444,7 +445,6 @@ Total number of possible outcomes when rolling 5 dice is 6^5 = 7,776. For all
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q18"></a> Qn 18
 
@@ -452,6 +452,7 @@ Total number of possible outcomes when rolling 5 dice is 6^5 = 7,776. For all
 A data center has 5 servers, each with a 1% probability of failing in a given day, independently of the others. What is the probability that at least one server fails today?
 
 **Options**  
+
 1. 0.01  
 2. 0.05  
 3. 0.0490  
@@ -467,7 +468,6 @@ The probability that a specific server doesn't fail is 0.99. The probability
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q19"></a> Qn 19
 
@@ -475,6 +475,7 @@ The probability that a specific server doesn't fail is 0.99. The probability
 In a random sample of 20 people, what is the probability that at least 2 people were born in the same month of the year (assuming uniform distribution of birth months)?
 
 **Options**  
+
 1. 0.8545  
 2. 0.8667  
 3. 0.9139  
@@ -492,7 +493,6 @@ The probability that all 20 people were born in different months is 0 since
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q20"></a> Qn 20
 
@@ -500,6 +500,7 @@ The probability that all 20 people were born in different months is 0 since
 A biased coin has an unknown probability p of landing heads. After 10 flips, you observe 7 heads. Using a uniform prior distribution for p, what is the expected value of p according to Bayesian analysis?
 
 **Options**  
+
 1. 0.583  
 2. 0.7  
 3. 0.636  
@@ -516,7 +517,6 @@ With a uniform prior distribution (Beta(1,1)) and 7 heads out of 10 flips, the
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q21"></a> Qn 21
 
@@ -524,6 +524,7 @@ With a uniform prior distribution (Beta(1,1)) and 7 heads out of 10 flips, the
 In a multiple-choice test with 5 questions, each question has 4 options with exactly one correct answer. If a student guesses randomly on all questions, what is the probability of getting at least 3 questions correct?
 
 **Options**  
+
 1. 0.0146  
 2. 0.0330  
 3. 0.0537  
@@ -541,7 +542,6 @@ The probability of getting a single question correct by random guessing is 1/4 =
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q22"></a> Qn 22
 
@@ -549,6 +549,7 @@ The probability of getting a single question correct by random guessing is 1/4 =
 In a hypergeometric distribution scenario, a shipment of 100 electronic components contains 8 defective parts. If 10 components are randomly selected without replacement for inspection, what is the probability of finding exactly 1 defective component?
 
 **Options**  
+
 1. 0.3307  
 2. 0.3816  
 3. 0.4211  
@@ -564,7 +565,6 @@ Using the hypergeometric probability mass function: P(X=1) = [C(8,1) × C(92,9)]
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q23"></a> Qn 23
 
@@ -572,6 +572,7 @@ Using the hypergeometric probability mass function: P(X=1) = [C(8,1) × C(92,9)]
 A fair six-sided die is rolled 10 times. What is the probability of getting exactly 2 sixes?
 
 **Options**  
+
 1. 0.2222  
 2. 0.2907  
 3. 0.3025  
@@ -587,7 +588,6 @@ This follows a binomial distribution with n=10 and p=1/6. P(X=2) = C(10,2) ×
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q24"></a> Qn 24
 
@@ -595,6 +595,7 @@ This follows a binomial distribution with n=10 and p=1/6. P(X=2) = C(10,2) ×
 In a large city, 45% of residents prefer public transportation, 35% prefer driving, and 20% prefer cycling. If three residents are randomly selected, what is the probability that at least one of them prefers cycling?
 
 **Options**  
+
 1. 0.488  
 2. 0.512  
 3. 0.728  
@@ -611,7 +612,6 @@ The probability that a selected resident does not prefer cycling is 1 - 0.2 =
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q25"></a> Qn 25
 
@@ -619,6 +619,7 @@ The probability that a selected resident does not prefer cycling is 1 - 0.2 =
 A genetics researcher is studying a trait that is determined by two alleles. The dominant allele A occurs with probability 0.7 and the recessive allele a with probability 0.3. Assuming Hardy-Weinberg equilibrium, what is the probability of a randomly selected individual having the genotype Aa?
 
 **Options**  
+
 1. 0.21  
 2. 0.30  
 3. 0.42  
@@ -634,7 +635,6 @@ Under Hardy-Weinberg equilibrium, the probability of genotype Aa is 2pq, where p
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q26"></a> Qn 26
 
@@ -642,6 +642,7 @@ Under Hardy-Weinberg equilibrium, the probability of genotype Aa is 2pq, where p
 In a Poisson process where events occur at an average rate of 3 per hour, what is the probability that exactly 2 events occur in a 1-hour period?
 
 **Options**  
+
 1. 0.149  
 2. 0.224  
 3. 0.324  
@@ -657,7 +658,6 @@ For a Poisson distribution with parameter λ=3, the probability mass function
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q27"></a> Qn 27
 
@@ -665,6 +665,7 @@ For a Poisson distribution with parameter λ=3, the probability mass function
 A data scientist is analyzing user engagement on a website. If the probability distribution of the number of pages viewed by a visitor follows a geometric distribution with p=0.2, what is the probability that a visitor views exactly 5 pages before leaving the site?
 
 **Options**  
+
 1. 0.082  
 2. 0.131  
 3. 0.164  
@@ -680,7 +681,6 @@ For a geometric distribution with parameter p=0.2, the probability mass function
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q28"></a> Qn 28
 
@@ -688,6 +688,7 @@ For a geometric distribution with parameter p=0.2, the probability mass function
 A medical test for a disease has sensitivity (true positive rate) of 90% and specificity (true negative rate) of 95%. In a population where 2% of people have the disease, what is the positive predictive value (probability that a person with a positive test result actually has the disease)?
 
 **Options**  
+
 1. 0.15  
 2. 0.27  
 3. 0.38  
@@ -705,7 +706,6 @@ Using Bayes' theorem: PPV = P(Disease|Positive test) = [P(Positive test|Disease)
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q29"></a> Qn 29
 
@@ -713,6 +713,7 @@ Using Bayes' theorem: PPV = P(Disease|Positive test) = [P(Positive test|Disease)
 In a lottery where 5 numbers are drawn from 1 to 49 without replacement, what is the probability of matching exactly 3 numbers on a single ticket?
 
 **Options**  
+
 1. 0.012  
 2. 0.015  
 3. 0.018  
@@ -730,7 +731,6 @@ Total number of possible 5-number combinations is C(49,5) = 1,906,884. Ways to
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q30"></a> Qn 30
 
@@ -738,6 +738,7 @@ Total number of possible 5-number combinations is C(49,5) = 1,906,884. Ways to
 In a random sample from a normal distribution with mean 100 and standard deviation 15, what is the probability that a single observation exceeds 125?
 
 **Options**  
+
 1. 0.0478  
 2. 0.0548  
 3. 0.0668  
@@ -752,7 +753,6 @@ Standardizing, z = (125 - 100)/15 = 1.67. The probability P(X > 125) = P(Z >
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q31"></a> Qn 31
 
@@ -760,6 +760,7 @@ Standardizing, z = (125 - 100)/15 = 1.67. The probability P(X > 125) = P(Z >
 In a randomized controlled trial, patients are randomly assigned to either treatment or control groups with equal probability. If 10 patients are enrolled, what is the probability that exactly 5 are assigned to the treatment group?
 
 **Options**  
+
 1. 0.176  
 2. 0.246  
 3. 0.252  
@@ -774,7 +775,6 @@ This follows a binomial distribution with n=10 and p=0.5. P(X=5) = C(10,5) ×
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q32"></a> Qn 32
 
@@ -782,6 +782,7 @@ This follows a binomial distribution with n=10 and p=0.5. P(X=5) = C(10,5) ×
 A data scientist runs 20 independent A/B tests, each with a 5% false positive rate (Type I error). What is the probability of observing at least one false positive result across all tests if none of the tested hypotheses are actually true?
 
 **Options**  
+
 1. 0.05  
 2. 0.64  
 3. 0.95  
@@ -798,7 +799,6 @@ The probability of not observing a false positive in a single test is 1 - 0.05 =
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q33"></a> Qn 33
 
@@ -806,6 +806,7 @@ The probability of not observing a false positive in a single test is 1 - 0.05 =
 Two fair six-sided dice are rolled. Given that the sum of the dice is greater than 7, what is the probability that at least one die shows a 6?
 
 **Options**  
+
 1. 5/12  
 2. 6/12  
 3. 7/12  
@@ -824,8 +825,7 @@ The possible outcomes for sum > 7 are: (2,6), (3,5), (3,6), (4,4), (4,5), (4,6),
 [↑ Go to TOC](#toc)
 
 
-
 ---
 
-*Automatically generated from [probability_questions.json](probability_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [probability_questions.json](probability_questions.json)*
+*Updated: 2025-05-18 13:57*

@@ -1,66 +1,180 @@
-<html>
-<head><title>SQL Sqlite</title></head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL_Sqlite Quiz</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <body>
-<h1>SQL Sqlite</h1>
-<h2>Qn 01: What is the purpose of the `WITHOUT ROWID` clause in SQLite?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To create a table without the implicit ROWID column
-<br><strong>Explanation:</strong> `WITHOUT ROWID` creates a table without the implicit `ROWID`, useful for certain optimizations.
-</div>
-
-<h2>Qn 02: Which function would you use in SQLite to get the current timestamp?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> CURRENT_TIMESTAMP
-<br><strong>Explanation:</strong> `CURRENT_TIMESTAMP` returns the current date and time in SQLite.
-</div>
-
-<h2>Qn 03: What is the default data type of a column in SQLite if not specified?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> NONE
-<br><strong>Explanation:</strong> If no type is specified, SQLite assigns it an affinity of NONE.
-</div>
-
-<h2>Qn 04: How are boolean values stored in SQLite?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> As 1 and 0 integers
-<br><strong>Explanation:</strong> SQLite does not have a separate BOOLEAN type; it uses integers 1 (true) and 0 (false).
-</div>
-
-<h2>Qn 05: Which of the following is true about SQLite's `VACUUM` command?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> It compacts the database file
-<br><strong>Explanation:</strong> `VACUUM` rebuilds the database file to defragment it and reduce its size.
-</div>
-
-<h2>Qn 06: Which SQLite command lists all tables in the database?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> SELECT * FROM sqlite_master WHERE type='table'
-<br><strong>Explanation:</strong> SQLite uses the `sqlite_master` table to store metadata about the database, including table names.
-</div>
-
-<h2>Qn 07: Which SQLite command allows you to see the schema of a table?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> .schema
-<br><strong>Explanation:</strong> `.schema` is a command in the SQLite shell that shows the schema for tables.
-</div>
-
-<h2>Qn 08: How does SQLite handle foreign key constraints by default?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> They are off by default and must be enabled
-<br><strong>Explanation:</strong> SQLite supports foreign keys, but enforcement must be enabled with `PRAGMA foreign_keys = ON`.
-</div>
-
-<h2>Qn 09: How does SQLite implement AUTOINCREMENT?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Using INTEGER PRIMARY KEY
-<br><strong>Explanation:</strong> SQLite uses `INTEGER PRIMARY KEY AUTOINCREMENT` to create an auto-incrementing ID.
-</div>
-
-<h2>Qn 10: What pragma statement turns on write-ahead logging in SQLite?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> PRAGMA journal_mode = WAL
-<br><strong>Explanation:</strong> `PRAGMA journal_mode = WAL` enables write-ahead logging in SQLite.
-</div>
-
+    <div class="container">
+        <h1>SQL_Sqlite Quiz</h1>
+        <div class="quiz-container">
+    
+            <div class="question" id="q1">
+                <h3>Question 1: What is the purpose of the `WITHOUT ROWID` clause in SQLite?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q1" id="q1o0" value="0"><label for="q1o0">To create a view without row numbers</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o1" value="1"><label for="q1o1">To disable rowid for performance reasons</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o2" value="2"><label for="q1o2">To create a table without the implicit ROWID column</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o3" value="3"><label for="q1o3">To avoid storing duplicate rows</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To create a table without the implicit ROWID column</p>
+                    <p><strong>Explanation:</strong> `WITHOUT ROWID` creates a table without the implicit `ROWID`, useful for certain optimizations.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q2">
+                <h3>Question 2: Which function would you use in SQLite to get the current timestamp?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q2" id="q2o0" value="0"><label for="q2o0">NOW()</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o1" value="1"><label for="q2o1">CURRENT_TIMESTAMP</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o2" value="2"><label for="q2o2">GETDATE()</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o3" value="3"><label for="q2o3">SYSDATE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> CURRENT_TIMESTAMP</p>
+                    <p><strong>Explanation:</strong> `CURRENT_TIMESTAMP` returns the current date and time in SQLite.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q3">
+                <h3>Question 3: What is the default data type of a column in SQLite if not specified?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q3" id="q3o0" value="0"><label for="q3o0">TEXT</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o1" value="1"><label for="q3o1">NUMERIC</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o2" value="2"><label for="q3o2">ANY</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o3" value="3"><label for="q3o3">NONE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> NONE</p>
+                    <p><strong>Explanation:</strong> If no type is specified, SQLite assigns it an affinity of NONE.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q4">
+                <h3>Question 4: How are boolean values stored in SQLite?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q4" id="q4o0" value="0"><label for="q4o0">As TRUE/FALSE literals</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o1" value="1"><label for="q4o1">As 1 and 0 integers</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o2" value="2"><label for="q4o2">As BIT type</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o3" value="3"><label for="q4o3">As TEXT 'true'/'false'</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> As 1 and 0 integers</p>
+                    <p><strong>Explanation:</strong> SQLite does not have a separate BOOLEAN type; it uses integers 1 (true) and 0 (false).</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q5">
+                <h3>Question 5: Which of the following is true about SQLite's `VACUUM` command?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q5" id="q5o0" value="0"><label for="q5o0">It deletes rows with NULL values</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o1" value="1"><label for="q5o1">It compacts the database file</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o2" value="2"><label for="q5o2">It removes duplicate records</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o3" value="3"><label for="q5o3">It optimizes table indexes</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> It compacts the database file</p>
+                    <p><strong>Explanation:</strong> `VACUUM` rebuilds the database file to defragment it and reduce its size.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q6">
+                <h3>Question 6: Which SQLite command lists all tables in the database?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q6" id="q6o0" value="0"><label for="q6o0">SHOW TABLES</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o1" value="1"><label for="q6o1">SELECT * FROM sqlite_master WHERE type='table'</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o2" value="2"><label for="q6o2">.list tables</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o3" value="3"><label for="q6o3">DESCRIBE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> SELECT * FROM sqlite_master WHERE type='table'</p>
+                    <p><strong>Explanation:</strong> SQLite uses the `sqlite_master` table to store metadata about the database, including table names.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q7">
+                <h3>Question 7: Which SQLite command allows you to see the schema of a table?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q7" id="q7o0" value="0"><label for="q7o0">PRAGMA schema</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o1" value="1"><label for="q7o1">SHOW TABLE</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o2" value="2"><label for="q7o2">DESCRIBE</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o3" value="3"><label for="q7o3">.schema</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> .schema</p>
+                    <p><strong>Explanation:</strong> `.schema` is a command in the SQLite shell that shows the schema for tables.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q8">
+                <h3>Question 8: How does SQLite handle foreign key constraints by default?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q8" id="q8o0" value="0"><label for="q8o0">They are enforced automatically</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o1" value="1"><label for="q8o1">They must be manually triggered</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o2" value="2"><label for="q8o2">They are off by default and must be enabled</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o3" value="3"><label for="q8o3">They are not supported in SQLite</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> They are off by default and must be enabled</p>
+                    <p><strong>Explanation:</strong> SQLite supports foreign keys, but enforcement must be enabled with `PRAGMA foreign_keys = ON`.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q9">
+                <h3>Question 9: How does SQLite implement AUTOINCREMENT?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q9" id="q9o0" value="0"><label for="q9o0">Using INTEGER PRIMARY KEY</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o1" value="1"><label for="q9o1">Using IDENTITY</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o2" value="2"><label for="q9o2">Using SERIAL</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o3" value="3"><label for="q9o3">Using a sequence object</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Using INTEGER PRIMARY KEY</p>
+                    <p><strong>Explanation:</strong> SQLite uses `INTEGER PRIMARY KEY AUTOINCREMENT` to create an auto-incrementing ID.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q10">
+                <h3>Question 10: What pragma statement turns on write-ahead logging in SQLite?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q10" id="q10o0" value="0"><label for="q10o0">PRAGMA enable_wal = ON</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o1" value="1"><label for="q10o1">PRAGMA journal_mode = WAL</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o2" value="2"><label for="q10o2">PRAGMA log_mode = ON</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o3" value="3"><label for="q10o3">PRAGMA write_ahead = TRUE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> PRAGMA journal_mode = WAL</p>
+                    <p><strong>Explanation:</strong> `PRAGMA journal_mode = WAL` enables write-ahead logging in SQLite.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+        </div>
+    </div>
+    <script src="../quiz.js"></script>
 </body>
 </html>
+    

@@ -1,20 +1,20 @@
 {
   "files": {
-    "Data Analysis": "data_analysis_questions.json",
-    "Data Cleaning": "data_cleaning_questions.json",
-    "Data Science": "data_science_questions.json",
-    "Data Visualization": "data_visualization_questions.json",
-    "IQ": "iq_questions.json",
-    "Machine Learning": "machine_learning_questions.json",
-    "Modelling": "modelling_questions.json",
-    "Pandas": "pandas_questions.json",
-    "Probability": "probability_questions.json",
-    "Python Advanced": "python_advanced_questions.json",
-    "Python General": "python_general_questions.json",
     "SQL General": "sql_general_questions.json",
     "SQL Sqlite": "sql_sqlite_questions.json",
+    "Data Visualization": "data_visualization_questions.json",
+    "IQ": "iq_questions.json",
+    "Timeseries": "timeseries_questions.json",
+    "Python General": "python_general_questions.json",
+    "Pandas": "pandas_questions.json",
+    "Machine Learning": "machine_learning_questions.json",
+    "Data Analysis": "data_analysis_questions.json",
+    "Modelling": "modelling_questions.json",
     "Statistics": "statistics_questions.json",
-    "Timeseries": "timeseries_questions.json"
+    "Python Advanced": "python_advanced_questions.json",
+    "Data Science": "data_science_questions.json",
+    "Probability": "probability_questions.json",
+    "Data Cleaning": "data_cleaning_questions.json"
   },
   "generated_by": "create_index_json.py"
 }

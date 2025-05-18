@@ -79,6 +79,7 @@ E. Class](#q50)
 The cost of one paper is 15 cents. How much will 40 papers cost?
 
 **Options**  
+
 1. $6.00  
 2. $2.60  
 3. $4.00  
@@ -92,7 +93,6 @@ Basic multiplication or unit price calculation.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -100,6 +100,7 @@ Basic multiplication or unit price calculation.
 In a party, 10 men shake hands with each other and they get to shake everyones hand once. How many total handshakes are there?
 
 **Options**  
+
 1. 50  
 2. 45  
 3. 100  
@@ -113,7 +114,6 @@ Use n(n-1)/2 formula for handshakes.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -121,6 +121,7 @@ Use n(n-1)/2 formula for handshakes.
 Pick out the number with the smallest value.
 
 **Options**  
+
 1. 002  
 2. 007  
 3. 0.80  
@@ -134,7 +135,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -142,6 +142,7 @@ Apply logic or perform basic arithmetic to solve.
 Jim makes 8.50 an hour and 3 extra for cleaning a store. If he worked 36 hours and cleaned 17 stores. How much money did he make?
 
 **Options**  
+
 1. $300  
 2. $320  
 3. $357  
@@ -155,7 +156,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -163,6 +163,7 @@ Apply logic or perform basic arithmetic to solve.
 Paper pins cost 21 cents a pack. How much will 4 packs cost?
 
 **Options**  
+
 1. $0.7  
 2. $0.5  
 3. $0.84  
@@ -176,7 +177,6 @@ Basic multiplication or unit price calculation.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q06"></a> Qn 06
 
@@ -184,6 +184,7 @@ Basic multiplication or unit price calculation.
 A pad costs 33 cents. How much will 5 pads cost?
 
 **Options**  
+
 1. $1.65  
 2. $2.28  
 3. $1.10  
@@ -197,7 +198,6 @@ Basic multiplication or unit price calculation.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q07"></a> Qn 07
 
@@ -205,6 +205,7 @@ Basic multiplication or unit price calculation.
 Which of these objects has the largest diameter?
 
 **Options**  
+
 1. Moon  
 2. Cricket Bat  
 3. Tennis Ball  
@@ -218,7 +219,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q08"></a> Qn 08
 
@@ -227,6 +227,7 @@ Identify the next number in the series.
 24, 12, 6, 3, _____
 
 **Options**  
+
 1. 12  
 2. 6  
 3. 1.3  
@@ -240,7 +241,6 @@ Half each number to get the next number in the series.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q09"></a> Qn 09
 
@@ -248,6 +248,7 @@ Half each number to get the next number in the series.
 Urge and deter have _____ meanings?
 
 **Options**  
+
 1. contradictory  
 2. similar  
 3. unrelated  
@@ -260,7 +261,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q10"></a> Qn 10
 
@@ -270,6 +270,7 @@ Arrange these words to form a sentence. The sentence you arranged, is it true or
 triangle sides a has three
 
 **Options**  
+
 1. True  
 2. Correct answer not available.  
 3. False  
@@ -282,7 +283,6 @@ A triangle has three sides.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q11"></a> Qn 11
 
@@ -290,6 +290,7 @@ A triangle has three sides.
 Which word doesnt belong in this set of words?
 
 **Options**  
+
 1. surgeon  
 2. mason  
 3. economist  
@@ -306,7 +307,6 @@ A mason is a skilled worker who builds or works with stone, brick, or concrete.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q12"></a> Qn 12
 
@@ -314,6 +314,7 @@ A mason is a skilled worker who builds or works with stone, brick, or concrete.
 Calculate:  -43 + 9
 
 **Options**  
+
 1. -34  
 2. -32  
 3. 32  
@@ -327,7 +328,6 @@ Calculate:  -43 + 9
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q13"></a> Qn 13
 
@@ -335,6 +335,7 @@ Calculate:  -43 + 9
 The cost of one egg is 15 cents. How much will 4 eggs cost?
 
 **Options**  
+
 1. $0.60  
 2. $0.40  
 3. $0.65  
@@ -348,7 +349,6 @@ Basic multiplication or unit price calculation.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q14"></a> Qn 14
 
@@ -356,6 +356,7 @@ Basic multiplication or unit price calculation.
 Subservient is the opposite of?
 
 **Options**  
+
 1. angry  
 2. imperious  
 3. selfish  
@@ -369,7 +370,6 @@ Find the antonym.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q15"></a> Qn 15
 
@@ -377,6 +377,7 @@ Find the antonym.
 The volume of a rectangular box is 100 cubic inches. If the minimum dimension of any given side is 1 inch, which of the alternatives is its greatest possible length?
 
 **Options**  
+
 1. 90 inches  
 2. 80 inches  
 3. 100 inches  
@@ -390,7 +391,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q16"></a> Qn 16
 
@@ -398,6 +398,7 @@ Apply logic or perform basic arithmetic to solve.
 What is the square root of 8?
 
 **Options**  
+
 1. 16  
 2. 4.66  
 3. 2.82  
@@ -412,7 +413,6 @@ Square root is the number that gives the original number when multiplied by
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q17"></a> Qn 17
 
@@ -420,6 +420,7 @@ Square root is the number that gives the original number when multiplied by
 What do you get when you divide 7.95 by 1.5?
 
 **Options**  
+
 1. 5.5  
 2. 5.12  
 3. 5.9  
@@ -433,7 +434,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q18"></a> Qn 18
 
@@ -441,6 +441,7 @@ Apply logic or perform basic arithmetic to solve.
 Jack and John have 56 marbles together. John has 6x more marbles than Jack. How many marbles does Jack have?
 
 **Options**  
+
 1. 10  
 2. 50  
 3. 45  
@@ -454,7 +455,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q19"></a> Qn 19
 
@@ -462,6 +462,7 @@ Apply logic or perform basic arithmetic to solve.
 Which digit represents the tenths space in 10,987.36?
 
 **Options**  
+
 1. 3  
 2. 8  
 3. 6  
@@ -475,7 +476,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q20"></a> Qn 20
 
@@ -488,6 +488,7 @@ How many pairs are duplicates?
 9898547; -9898745
 
 **Options**  
+
 1. 4  
 2. 1  
 3. 2  
@@ -501,7 +502,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q21"></a> Qn 21
 
@@ -509,6 +509,7 @@ Apply logic or perform basic arithmetic to solve.
 How many bananas will you find in a dozen?
 
 **Options**  
+
 1. 11  
 2. 10  
 3. 14  
@@ -522,7 +523,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q22"></a> Qn 22
 
@@ -531,6 +531,7 @@ Identify the next number in the series?
 5, 15, 10, 13, 15, 11, _____
 
 **Options**  
+
 1. 9  
 2. 16  
 3. 20  
@@ -545,7 +546,6 @@ The odd positions are increasing by 5 and the even positions are decreasing by
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q23"></a> Qn 23
 
@@ -553,6 +553,7 @@ The odd positions are increasing by 5 and the even positions are decreasing by
 How many days are there in three years?
 
 **Options**  
+
 1. 1,090  
 2. 1,105  
 3. 1,095  
@@ -566,7 +567,6 @@ How many days are there in three years?
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q24"></a> Qn 24
 
@@ -574,6 +574,7 @@ How many days are there in three years?
 Adam is selling yarn for $.04/foot. How many feet can you buy from him for $0.52?
 
 **Options**  
+
 1. 13 feet  
 2. 12 feet  
 3. 50 feet  
@@ -587,7 +588,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q25"></a> Qn 25
 
@@ -598,6 +598,7 @@ Suppose the first 2 statements are true. Is the third one true/false or not cert
 3) Jack didnt greet Joe.
 
 **Options**  
+
 1. True  
 2. Uncertain  
 3. False  
@@ -611,7 +612,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q26"></a> Qn 26
 
@@ -619,6 +619,7 @@ Apply logic or perform basic arithmetic to solve.
 Transubstantiate and convert have _____ meanings.
 
 **Options**  
+
 1. similar  
 2. opposite  
 3. neither similar nor opposite  
@@ -633,7 +634,6 @@ Transubstantiate means to change the substance of something, while convert means
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q27"></a> Qn 27
 
@@ -642,6 +642,7 @@ What number should come next?
 8, 4, 2, 1, 1/2, 1/4, _____
 
 **Options**  
+
 1. 1/16  
 2. 1/12  
 3. 1/8  
@@ -655,7 +656,6 @@ Each next number are half of the previous number.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q28"></a> Qn 28
 
@@ -663,6 +663,7 @@ Each next number are half of the previous number.
 There are 14 more potatoes than onions in a basket of 36 potatoes and onions. How many potatoes are there in the basket?
 
 **Options**  
+
 1. 11  
 2. 28  
 3. 13  
@@ -676,7 +677,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q29"></a> Qn 29
 
@@ -684,6 +684,7 @@ Apply logic or perform basic arithmetic to solve.
 Martin got a 25% salary raise. If his previous salary was $1,200, how much will it be after implementing the raise?
 
 **Options**  
+
 1. $1,500  
 2. $1,550  
 3. $1,450  
@@ -697,7 +698,6 @@ Convert the percentage to decimal by dividing by 100.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q30"></a> Qn 30
 
@@ -705,6 +705,7 @@ Convert the percentage to decimal by dividing by 100.
 Ferguson has 8 hats, 6 shirts and 4 pairs of pants. How many days can he dress up without repeating the same combination?
 
 **Options**  
+
 1. 12 days  
 2. 18 days  
 3. 192 days  
@@ -719,7 +720,6 @@ We need to multiply the number of hats, shirts and pants to get the total
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q31"></a> Qn 31
 
@@ -727,6 +727,7 @@ We need to multiply the number of hats, shirts and pants to get the total
 Content and Satisfied have ______ meanings?
 
 **Options**  
+
 1. opposite  
 2. similar  
 3. unrelated  
@@ -740,7 +741,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q32"></a> Qn 32
 
@@ -749,6 +749,7 @@ Identify the next number in the series:
 1, 1, 2, 3, 5, 8, _____
 
 **Options**  
+
 1. 10  
 2. 20  
 3. 9  
@@ -762,7 +763,6 @@ This is fibonacci series. The next number is the sum of the last two numbers.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q33"></a> Qn 33
 
@@ -770,6 +770,7 @@ This is fibonacci series. The next number is the sum of the last two numbers.
 Calculate:  -70 + 35
 
 **Options**  
+
 1. 25  
 2. -25  
 3. 35  
@@ -783,7 +784,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q34"></a> Qn 34
 
@@ -791,6 +791,7 @@ Apply logic or perform basic arithmetic to solve.
 61% converted to decimal notation is:
 
 **Options**  
+
 1. 6.01  
 2. 6.1  
 3. 0.61  
@@ -804,7 +805,6 @@ Convert the percentage to decimal by dividing by 100.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q35"></a> Qn 35
 
@@ -812,6 +812,7 @@ Convert the percentage to decimal by dividing by 100.
 Which number has the smallest value?
 
 **Options**  
+
 1. 2  
 2. 20  
 3. 0.2  
@@ -825,7 +826,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q36"></a> Qn 36
 
@@ -833,6 +833,7 @@ Apply logic or perform basic arithmetic to solve.
 Adjoin and sever have _____ meaning?
 
 **Options**  
+
 1. opposite  
 2. similar  
 3. unrelated  
@@ -847,7 +848,6 @@ Adjoin means to connect or attach, while sever means to cut off or separate.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q37"></a> Qn 37
 
@@ -855,6 +855,7 @@ Adjoin means to connect or attach, while sever means to cut off or separate.
 October is the ____ month of the year
 
 **Options**  
+
 1. 9th  
 2. 8th  
 3. 11th  
@@ -868,7 +869,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q38"></a> Qn 38
 
@@ -877,6 +877,7 @@ Identify next number in the series.
 9, 3, 1, 1/3, _____
 
 **Options**  
+
 1. 1/13  
 2. 1/6  
 3. 1/9  
@@ -890,7 +891,6 @@ Each next number is one third of the previous number.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q39"></a> Qn 39
 
@@ -898,6 +898,7 @@ Each next number is one third of the previous number.
 Reduce 75/100 to the simplest form?
 
 **Options**  
+
 1. 3/4  
 2. 2/4  
 3. 5/6  
@@ -911,7 +912,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q40"></a> Qn 40
 
@@ -919,6 +919,7 @@ Apply logic or perform basic arithmetic to solve.
 An automotive shop owner bought some tools for $5,500. He sold those for $7,300 with a profit of $50 per tool. How many tools did he sell?
 
 **Options**  
+
 1. 60  
 2. 20  
 3. 75  
@@ -932,7 +933,6 @@ An automotive shop owner bought some tools for $5,500. He sold those for $7,300 
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q41"></a> Qn 41
 
@@ -940,6 +940,7 @@ An automotive shop owner bought some tools for $5,500. He sold those for $7,300 
 Partner and Join have _____ meanings.
 
 **Options**  
+
 1. contradictory  
 2. opposite  
 3. unrelated  
@@ -953,7 +954,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q42"></a> Qn 42
 
@@ -961,6 +961,7 @@ Apply logic or perform basic arithmetic to solve.
 If a person is half a century old. How old is he?
 
 **Options**  
+
 1. 75  
 2. 50  
 3. 25  
@@ -974,7 +975,6 @@ Century means 100 years. Half a century means 50 years.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q43"></a> Qn 43
 
@@ -982,6 +982,7 @@ Century means 100 years. Half a century means 50 years.
 What do you get when you round of 907.457 to the nearest tens place?
 
 **Options**  
+
 1. 908  
 2. 907  
 3. 907.5  
@@ -995,7 +996,6 @@ Nearest tens place means rounding to the nearest 10. 907.457 rounds to 910.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q44"></a> Qn 44
 
@@ -1003,6 +1003,7 @@ Nearest tens place means rounding to the nearest 10. 907.457 rounds to 910.
 (8 ÷ 4) x (9 ÷ 3) = ?
 
 **Options**  
+
 1. 10  
 2. 6  
 3. 12  
@@ -1016,7 +1017,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q45"></a> Qn 45
 
@@ -1024,6 +1024,7 @@ Apply logic or perform basic arithmetic to solve.
 What is the relation betweed Credence and Credit?
 
 **Options**  
+
 1. unrelated  
 2. similar  
 3. opposite  
@@ -1039,7 +1040,6 @@ Credence means belief or trust, while credit refers to the ability to obtain
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q46"></a> Qn 46
 
@@ -1047,6 +1047,7 @@ Credence means belief or trust, while credit refers to the ability to obtain
 In a week, Rose spent $28.49 on lunch. What was the average cost per day?
 
 **Options**  
+
 1. $4.7  
 2. $4.07  
 3. $3.97  
@@ -1060,7 +1061,6 @@ Basic multiplication or unit price calculation.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q47"></a> Qn 47
 
@@ -1068,6 +1068,7 @@ Basic multiplication or unit price calculation.
 The opposite of punctual is?
 
 **Options**  
+
 1. tardy  
 2. conscious  
 3. rigorous  
@@ -1083,7 +1084,6 @@ tardy means late or delayed, which is the opposite of punctual. Whereas
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q48"></a> Qn 48
 
@@ -1091,6 +1091,7 @@ tardy means late or delayed, which is the opposite of punctual. Whereas
 Reduce and Produce have ____ meaning?
 
 **Options**  
+
 1. neither similar nor opposite  
 2. similar  
 3. opposite  
@@ -1103,7 +1104,6 @@ Apply logic or perform basic arithmetic to solve.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q49"></a> Qn 49
 
@@ -1111,6 +1111,7 @@ Apply logic or perform basic arithmetic to solve.
 Rule out the odd word from the set of words.
 
 **Options**  
+
 1. drought  
 2. budget  
 3. debt  
@@ -1126,7 +1127,6 @@ drought is a prolonged dry period, while the others are related to finance.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q50"></a> Qn 50
 
@@ -1139,6 +1139,7 @@ D. Convince
 E. Class
 
 **Options**  
+
 1. CDE  
 2. ABD  
 3. ACD  
@@ -1153,8 +1154,7 @@ Find the synonym.
 [↑ Go to TOC](#toc)
 
 
-
 ---
 
-*Automatically generated from [iq_questions.json](iq_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [iq_questions.json](iq_questions.json)*
+*Updated: 2025-05-18 13:57*

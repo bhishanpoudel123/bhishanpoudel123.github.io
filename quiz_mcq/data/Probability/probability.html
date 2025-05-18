@@ -1,204 +1,548 @@
-<html>
-<head><title>Probability</title></head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability Quiz</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <body>
-<h1>Probability</h1>
-<h2>Qn 01: In a room of 30 people, what is the probability that at least two people share the same birthday (assuming 365 days in a year and birthdays are uniformly distributed)?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Greater than 90%
-<br><strong>Explanation:</strong> This is the famous birthday paradox. The probability is computed as 1 minus the probability that all birthdays are different. For 30 people, P(at least one shared birthday) = 1 - (365/365 × 364/365 × 363/365 × ... × 336/365) ≈ 0.706, which is approximately 70.6%. While this is closest to 'About 70%', the exact calculation gives 70.6%, not 'Greater than 90%'. The probability exceeds 90% when there are 41 or more people in the room.
-</div>
-
-<h2>Qn 02: A biased coin has a 60% chance of landing heads. If you flip this coin 5 times, what is the probability of getting exactly 3 heads?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.34560
-<br><strong>Explanation:</strong> We use the binomial probability formula: P(X=k) = C(n,k) × p^k × (1-p)^(n-k), where n=5, k=3, p=0.6. C(5,3) = 10 possible ways to arrange 3 heads in 5 flips. So P(X=3) = 10 × (0.6)^3 × (0.4)^2 = 10 × 0.216 × 0.16 = 0.3456 or 34.56%.
-</div>
-
-<h2>Qn 03: In a standard deck of 52 cards, what is the probability of drawing a royal flush (A, K, Q, J, 10 of the same suit) in a 5-card poker hand?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 4/2,598,960
-<br><strong>Explanation:</strong> There are C(52,5) = 2,598,960 possible 5-card hands from a standard deck. There are exactly 4 possible royal flushes (one for each suit). Therefore, the probability is 4/2,598,960 = 1/649,740 or approximately 0.00000154.
-</div>
-
-<h2>Qn 04: A standard six-sided die is rolled 3 times. What is the probability that the sum of the three rolls equals 10?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 1/8
-<br><strong>Explanation:</strong> When rolling 3 dice, there are 6^3 = 216 possible outcomes. To get a sum of 10, we can have combinations like (1,3,6), (2,2,6), etc. Counting all such combinations gives us 27 favorable outcomes. Therefore, the probability is 27/216 = 1/8.
-</div>
-
-<h2>Qn 05: A bag contains 5 red marbles and 7 blue marbles. If 3 marbles are drawn without replacement, what is the probability that exactly 2 of them are red?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 35/132
-<br><strong>Explanation:</strong> Total ways to select 3 marbles from 12 is C(12,3) = 220. Ways to select 2 red marbles from 5 red and 1 blue marble from 7 blue is C(5,2) × C(7,1) = 10 × 7 = 70. Therefore probability = 70/220 = 7/22 = 35/110 = 7/22.
-</div>
-
-<h2>Qn 06: In a Bayesian analysis, a disease has a 1% prevalence in a population. A test for the disease has 95% sensitivity (true positive rate) and 90% specificity (true negative rate). If a person tests positive, what is the probability they actually have the disease?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Around 8.7%
-<br><strong>Explanation:</strong> Using Bayes' theorem: P(Disease|Positive) = [P(Positive|Disease) × P(Disease)] / P(Positive). P(Positive) = P(Positive|Disease) × P(Disease) + P(Positive|No Disease) × P(No Disease) = 0.95 × 0.01 + 0.10 × 0.99 = 0.0095 + 0.099 = 0.1085. Therefore, P(Disease|Positive) = (0.95 × 0.01) / 0.1085 ≈ 0.0095/0.1085 ≈ 0.0876 or about 8.7%.
-</div>
-
-<h2>Qn 07: You roll a fair 6-sided die repeatedly until you get a 6. What is the expected number of rolls needed?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 6
-<br><strong>Explanation:</strong> This is a geometric distribution with probability of success p = 1/6. The expected value of a geometric distribution is 1/p. So the expected number of rolls needed is 1/(1/6) = 6.
-</div>
-
-<h2>Qn 08: In a group of 5 people, what is the probability that at least 2 people have the same zodiac sign (assuming zodiac signs are uniformly distributed across 12 possible signs)?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.96
-<br><strong>Explanation:</strong> The probability that all 5 people have different zodiac signs is (12/12) × (11/12) × (10/12) × (9/12) × (8/12) = 0.0397. Therefore, the probability that at least 2 people share a zodiac sign is 1 - 0.0397 = 0.9603 ≈ 0.96 or 96%.
-</div>
-
-<h2>Qn 09: A data scientist applies a machine learning model to classify emails as spam or not spam. The model has 98% accuracy on legitimate emails and 95% accuracy on spam emails. If 20% of all incoming emails are spam, what is the probability that an email classified as spam by the model is actually spam?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.83
-<br><strong>Explanation:</strong> Using Bayes' theorem: P(Spam|Classified as Spam) = [P(Classified as Spam|Spam) × P(Spam)] / P(Classified as Spam). P(Classified as Spam) = P(Classified as Spam|Spam) × P(Spam) + P(Classified as Spam|Not Spam) × P(Not Spam) = 0.95 × 0.2 + 0.02 × 0.8 = 0.19 + 0.016 = 0.206. Therefore, P(Spam|Classified as Spam) = (0.95 × 0.2) / 0.206 = 0.19/0.206 ≈ 0.83 or 83%.
-</div>
-
-<h2>Qn 10: Four cards are randomly selected from a standard 52-card deck. What is the probability of getting exactly 2 aces?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.0399
-<br><strong>Explanation:</strong> Total number of ways to select 4 cards from 52 is C(52,4) = 270,725. Ways to select exactly 2 aces from 4 aces is C(4,2) = 6. Ways to select the other 2 cards from the non-ace cards is C(48,2) = 1,128. So favorable outcomes = 6 × 1,128 = 6,768. Probability = 6,768/270,725 ≈ 0.0399 or about 4%.
-</div>
-
-<h2>Qn 11: In a standard normal distribution, what is the probability that a randomly selected observation falls between -1.96 and 1.96?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.95
-<br><strong>Explanation:</strong> In a standard normal distribution, the area between z-scores of -1.96 and 1.96 corresponds to 95% of the distribution. This is a fundamental value in statistics, often used for 95% confidence intervals.
-</div>
-
-<h2>Qn 12: A manufacturing process has a 3% defect rate. If 50 items are randomly selected, what is the probability that at most 2 are defective?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.6063
-<br><strong>Explanation:</strong> This follows a binomial distribution with n=50 and p=0.03. P(X ≤ 2) = P(X=0) + P(X=1) + P(X=2) = C(50,0) × (0.03)^0 × (0.97)^50 + C(50,1) × (0.03)^1 × (0.97)^49 + C(50,2) × (0.03)^2 × (0.97)^48 ≈ 0.2231 + 0.3453 + 0.2379 = 0.6063 or about 60.63%.
-</div>
-
-<h2>Qn 13: In the Monty Hall problem, you're on a game show with three doors. Behind one door is a car; behind the others are goats. You pick a door. The host, who knows what's behind each door, opens one of the other doors to reveal a goat. He then offers you the chance to switch your choice to the remaining unopened door. What is the probability of winning the car if you switch?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 2/3
-<br><strong>Explanation:</strong> Initially, you have a 1/3 probability of choosing the car and a 2/3 probability of choosing a goat. If you initially chose the car (probability 1/3), switching will always make you lose. If you initially chose a goat (probability 2/3), the host will reveal the other goat, and switching will always make you win. Therefore, the probability of winning by switching is 2/3.
-</div>
-
-<h2>Qn 14: A researcher is testing a new drug. In reality, the drug has no effect, but the researcher will conclude it works if the p-value is less than 0.05. What is the probability that the researcher incorrectly concludes the drug works?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.05
-<br><strong>Explanation:</strong> The p-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is true. Here, the null hypothesis is that the drug has no effect (which is actually true). By definition, the probability of getting a p-value below 0.05 when the null hypothesis is true (Type I error) is 0.05 or 5%.
-</div>
-
-<h2>Qn 15: A database has 1,000,000 records, and a data scientist estimates that 50 records are corrupted. If the data scientist randomly samples 100 records for manual inspection, what is the probability of finding at least one corrupted record?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.4988
-<br><strong>Explanation:</strong> The probability of selecting a corrupted record is 50/1,000,000 = 0.00005. The probability of not finding any corrupted records in 100 samples is (1 - 0.00005)^100 ≈ 0.9950. Therefore, the probability of finding at least one corrupted record is 1 - 0.9950 = 0.0050 or 0.5%.
-</div>
-
-<h2>Qn 16: In a certain city, 60% of days are sunny, 30% are cloudy, and 10% are rainy. The probability of a traffic jam is 0.1 on sunny days, 0.3 on cloudy days, and 0.5 on rainy days. If there is a traffic jam today, what is the probability that it is a sunny day?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.33
-<br><strong>Explanation:</strong> Using Bayes' theorem: P(Sunny|Traffic Jam) = [P(Traffic Jam|Sunny) × P(Sunny)] / P(Traffic Jam). P(Traffic Jam) = 0.1 × 0.6 + 0.3 × 0.3 + 0.5 × 0.1 = 0.06 + 0.09 + 0.05 = 0.2. Therefore, P(Sunny|Traffic Jam) = (0.1 × 0.6) / 0.2 = 0.06/0.2 = 0.3 or 30%.
-</div>
-
-<h2>Qn 17: Five fair six-sided dice are rolled. What is the probability that all five dice show different numbers?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.0926
-<br><strong>Explanation:</strong> Total number of possible outcomes when rolling 5 dice is 6^5 = 7,776. For all dice to show different numbers, we can arrange 5 different numbers from the set {1,2,3,4,5,6} in 6!/1! = 720 ways. Therefore, the probability is 720/7,776 = 0.0926 or about 9.26%.
-</div>
-
-<h2>Qn 18: A data center has 5 servers, each with a 1% probability of failing in a given day, independently of the others. What is the probability that at least one server fails today?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.0490
-<br><strong>Explanation:</strong> The probability that a specific server doesn't fail is 0.99. The probability that all servers don't fail is (0.99)^5 ≈ 0.9510. Therefore, the probability that at least one server fails is 1 - 0.9510 = 0.0490 or about 4.9%.
-</div>
-
-<h2>Qn 19: In a random sample of 20 people, what is the probability that at least 2 people were born in the same month of the year (assuming uniform distribution of birth months)?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.9139
-<br><strong>Explanation:</strong> The probability that all 20 people were born in different months is 0 since there are only 12 months. The probability that no two people share the same birth month in a sample of 12 or fewer is calculated using the birthday problem formula for 12 months: 1 - P(no matching months) = 1 - (12!/12^n × (12-n)!) for n=12. For n>12, the probability of at least one match is 1.
-</div>
-
-<h2>Qn 20: A biased coin has an unknown probability p of landing heads. After 10 flips, you observe 7 heads. Using a uniform prior distribution for p, what is the expected value of p according to Bayesian analysis?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.636
-<br><strong>Explanation:</strong> With a uniform prior distribution (Beta(1,1)) and 7 heads out of 10 flips, the posterior distribution is Beta(1+7, 1+3) = Beta(8, 4). The expected value of a Beta(α, β) distribution is α/(α+β). So the expected value of p is 8/(8+4) = 8/12 = 2/3 ≈ 0.667, which is closest to 0.636.
-</div>
-
-<h2>Qn 21: In a multiple-choice test with 5 questions, each question has 4 options with exactly one correct answer. If a student guesses randomly on all questions, what is the probability of getting at least 3 questions correct?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.0537
-<br><strong>Explanation:</strong> The probability of getting a single question correct by random guessing is 1/4 = 0.25. Using the binomial distribution with n=5 and p=0.25: P(X ≥ 3) = P(X=3) + P(X=4) + P(X=5) = C(5,3) × (0.25)^3 × (0.75)^2 + C(5,4) × (0.25)^4 × (0.75)^1 + C(5,5) × (0.25)^5 × (0.75)^0 ≈ 0.0439 + 0.0073 + 0.0010 = 0.0522 or about 5.22%.
-</div>
-
-<h2>Qn 22: In a hypergeometric distribution scenario, a shipment of 100 electronic components contains 8 defective parts. If 10 components are randomly selected without replacement for inspection, what is the probability of finding exactly 1 defective component?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.3816
-<br><strong>Explanation:</strong> Using the hypergeometric probability mass function: P(X=1) = [C(8,1) × C(92,9)] / C(100,10) = [8 × 1,742,281,695] / 17,310,309,728 = 13,938,253,560 / 17,310,309,728 ≈ 0.3816 or about 38.16%.
-</div>
-
-<h2>Qn 23: A fair six-sided die is rolled 10 times. What is the probability of getting exactly 2 sixes?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.2907
-<br><strong>Explanation:</strong> This follows a binomial distribution with n=10 and p=1/6. P(X=2) = C(10,2) × (1/6)^2 × (5/6)^8 = 45 × (1/36) × (1,679,616/1,679,616) = 45/36 × 0.2323 ≈ 1.25 × 0.2323 = 0.2904 or about 29.04%.
-</div>
-
-<h2>Qn 24: In a large city, 45% of residents prefer public transportation, 35% prefer driving, and 20% prefer cycling. If three residents are randomly selected, what is the probability that at least one of them prefers cycling?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.488
-<br><strong>Explanation:</strong> The probability that a selected resident does not prefer cycling is 1 - 0.2 = 0.8. The probability that none of the three selected residents prefers cycling is (0.8)^3 = 0.512. Therefore, the probability that at least one prefers cycling is 1 - 0.512 = 0.488 or 48.8%.
-</div>
-
-<h2>Qn 25: A genetics researcher is studying a trait that is determined by two alleles. The dominant allele A occurs with probability 0.7 and the recessive allele a with probability 0.3. Assuming Hardy-Weinberg equilibrium, what is the probability of a randomly selected individual having the genotype Aa?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.42
-<br><strong>Explanation:</strong> Under Hardy-Weinberg equilibrium, the probability of genotype Aa is 2pq, where p is the probability of allele A and q is the probability of allele a. So P(Aa) = 2 × 0.7 × 0.3 = 0.42 or 42%.
-</div>
-
-<h2>Qn 26: In a Poisson process where events occur at an average rate of 3 per hour, what is the probability that exactly 2 events occur in a 1-hour period?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.224
-<br><strong>Explanation:</strong> For a Poisson distribution with parameter λ=3, the probability mass function gives P(X=2) = e^(-λ) × λ^2 / 2! = e^(-3) × 3^2 / 2 = e^(-3) × 9 / 2 = 0.0498 × 4.5 ≈ 0.224 or about 22.4%.
-</div>
-
-<h2>Qn 27: A data scientist is analyzing user engagement on a website. If the probability distribution of the number of pages viewed by a visitor follows a geometric distribution with p=0.2, what is the probability that a visitor views exactly 5 pages before leaving the site?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.082
-<br><strong>Explanation:</strong> For a geometric distribution with parameter p=0.2, the probability mass function gives P(X=5) = p(1-p)^(k-1) = 0.2 × (0.8)^4 = 0.2 × 0.4096 = 0.08192 ≈ 0.082 or about 8.2%.
-</div>
-
-<h2>Qn 28: A medical test for a disease has sensitivity (true positive rate) of 90% and specificity (true negative rate) of 95%. In a population where 2% of people have the disease, what is the positive predictive value (probability that a person with a positive test result actually has the disease)?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.27
-<br><strong>Explanation:</strong> Using Bayes' theorem: PPV = P(Disease|Positive test) = [P(Positive test|Disease) × P(Disease)] / P(Positive test). P(Positive test) = P(Positive test|Disease) × P(Disease) + P(Positive test|No Disease) × P(No Disease) = 0.9 × 0.02 + 0.05 × 0.98 = 0.018 + 0.049 = 0.067. Therefore, PPV = (0.9 × 0.02) / 0.067 = 0.018/0.067 ≈ 0.27 or 27%.
-</div>
-
-<h2>Qn 29: In a lottery where 5 numbers are drawn from 1 to 49 without replacement, what is the probability of matching exactly 3 numbers on a single ticket?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.015
-<br><strong>Explanation:</strong> Total number of possible 5-number combinations is C(49,5) = 1,906,884. Ways to match exactly 3 numbers out of 5: You must match 3 of the winning numbers [C(5,3) = 10] and 2 of the non-winning numbers [C(44,2) = 946]. So favorable outcomes = 10 × 946 = 9,460. Probability = 9,460/1,906,884 ≈ 0.00496 or about 0.5%.
-</div>
-
-<h2>Qn 30: In a random sample from a normal distribution with mean 100 and standard deviation 15, what is the probability that a single observation exceeds 125?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.0478
-<br><strong>Explanation:</strong> Standardizing, z = (125 - 100)/15 = 1.67. The probability P(X > 125) = P(Z > 1.67) ≈ 0.0475 or about 4.75%, which is closest to 0.0478.
-</div>
-
-<h2>Qn 31: In a randomized controlled trial, patients are randomly assigned to either treatment or control groups with equal probability. If 10 patients are enrolled, what is the probability that exactly 5 are assigned to the treatment group?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.246
-<br><strong>Explanation:</strong> This follows a binomial distribution with n=10 and p=0.5. P(X=5) = C(10,5) × (0.5)^5 × (0.5)^5 = 252 × (0.5)^10 = 252/1024 = 0.2461 or about 24.6%.
-</div>
-
-<h2>Qn 32: A data scientist runs 20 independent A/B tests, each with a 5% false positive rate (Type I error). What is the probability of observing at least one false positive result across all tests if none of the tested hypotheses are actually true?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 0.64
-<br><strong>Explanation:</strong> The probability of not observing a false positive in a single test is 1 - 0.05 = 0.95. The probability of not observing any false positives in 20 independent tests is (0.95)^20 ≈ 0.358. Therefore, the probability of observing at least one false positive is 1 - 0.358 = 0.642 or about 64.2%.
-</div>
-
-<h2>Qn 33: Two fair six-sided dice are rolled. Given that the sum of the dice is greater than 7, what is the probability that at least one die shows a 6?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 7/12
-<br><strong>Explanation:</strong> The possible outcomes for sum > 7 are: (2,6), (3,5), (3,6), (4,4), (4,5), (4,6), (5,3), (5,4), (5,5), (5,6), (6,2), (6,3), (6,4), (6,5), (6,6) - a total of 15 outcomes. Of these, 11 outcomes include at least one 6: (2,6), (3,6), (4,6), (5,6), (6,2), (6,3), (6,4), (6,5), (6,6). Therefore, the probability is 11/15 = 11/15 or about 73.3%.
-</div>
-
+    <div class="container">
+        <h1>Probability Quiz</h1>
+        <div class="quiz-container">
+    
+            <div class="question" id="q1">
+                <h3>Question 1: In a room of 30 people, what is the probability that at least two people share the same birthday (assuming 365 days in a year and birthdays are uniformly distributed)?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q1" id="q1o0" value="0"><label for="q1o0">Less than 50%</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o1" value="1"><label for="q1o1">About 70%</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o2" value="2"><label for="q1o2">Greater than 90%</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o3" value="3"><label for="q1o3">Exactly 50%</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Greater than 90%</p>
+                    <p><strong>Explanation:</strong> This is the famous birthday paradox. The probability is computed as 1 minus the probability that all birthdays are different. For 30 people, P(at least one shared birthday) = 1 - (365/365 × 364/365 × 363/365 × ... × 336/365) ≈ 0.706, which is approximately 70.6%. While this is closest to 'About 70%', the exact calculation gives 70.6%, not 'Greater than 90%'. The probability exceeds 90% when there are 41 or more people in the room.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q2">
+                <h3>Question 2: A biased coin has a 60% chance of landing heads. If you flip this coin 5 times, what is the probability of getting exactly 3 heads?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q2" id="q2o0" value="0"><label for="q2o0">0.23040</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o1" value="1"><label for="q2o1">0.25920</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o2" value="2"><label for="q2o2">0.30720</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o3" value="3"><label for="q2o3">0.34560</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.34560</p>
+                    <p><strong>Explanation:</strong> We use the binomial probability formula: P(X=k) = C(n,k) × p^k × (1-p)^(n-k), where n=5, k=3, p=0.6. C(5,3) = 10 possible ways to arrange 3 heads in 5 flips. So P(X=3) = 10 × (0.6)^3 × (0.4)^2 = 10 × 0.216 × 0.16 = 0.3456 or 34.56%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q3">
+                <h3>Question 3: In a standard deck of 52 cards, what is the probability of drawing a royal flush (A, K, Q, J, 10 of the same suit) in a 5-card poker hand?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q3" id="q3o0" value="0"><label for="q3o0">1/649,740</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o1" value="1"><label for="q3o1">1/30,940</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o2" value="2"><label for="q3o2">4/2,598,960</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o3" value="3"><label for="q3o3">1/2,598,960</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 4/2,598,960</p>
+                    <p><strong>Explanation:</strong> There are C(52,5) = 2,598,960 possible 5-card hands from a standard deck. There are exactly 4 possible royal flushes (one for each suit). Therefore, the probability is 4/2,598,960 = 1/649,740 or approximately 0.00000154.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q4">
+                <h3>Question 4: A standard six-sided die is rolled 3 times. What is the probability that the sum of the three rolls equals 10?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q4" id="q4o0" value="0"><label for="q4o0">1/9</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o1" value="1"><label for="q4o1">1/6</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o2" value="2"><label for="q4o2">1/8</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o3" value="3"><label for="q4o3">1/12</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 1/8</p>
+                    <p><strong>Explanation:</strong> When rolling 3 dice, there are 6^3 = 216 possible outcomes. To get a sum of 10, we can have combinations like (1,3,6), (2,2,6), etc. Counting all such combinations gives us 27 favorable outcomes. Therefore, the probability is 27/216 = 1/8.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q5">
+                <h3>Question 5: A bag contains 5 red marbles and 7 blue marbles. If 3 marbles are drawn without replacement, what is the probability that exactly 2 of them are red?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q5" id="q5o0" value="0"><label for="q5o0">35/132</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o1" value="1"><label for="q5o1">21/44</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o2" value="2"><label for="q5o2">15/44</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o3" value="3"><label for="q5o3">35/144</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 35/132</p>
+                    <p><strong>Explanation:</strong> Total ways to select 3 marbles from 12 is C(12,3) = 220. Ways to select 2 red marbles from 5 red and 1 blue marble from 7 blue is C(5,2) × C(7,1) = 10 × 7 = 70. Therefore probability = 70/220 = 7/22 = 35/110 = 7/22.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q6">
+                <h3>Question 6: In a Bayesian analysis, a disease has a 1% prevalence in a population. A test for the disease has 95% sensitivity (true positive rate) and 90% specificity (true negative rate). If a person tests positive, what is the probability they actually have the disease?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q6" id="q6o0" value="0"><label for="q6o0">Around 8.7%</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o1" value="1"><label for="q6o1">Around 50%</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o2" value="2"><label for="q6o2">Around 95%</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o3" value="3"><label for="q6o3">Around 1%</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Around 8.7%</p>
+                    <p><strong>Explanation:</strong> Using Bayes' theorem: P(Disease|Positive) = [P(Positive|Disease) × P(Disease)] / P(Positive). P(Positive) = P(Positive|Disease) × P(Disease) + P(Positive|No Disease) × P(No Disease) = 0.95 × 0.01 + 0.10 × 0.99 = 0.0095 + 0.099 = 0.1085. Therefore, P(Disease|Positive) = (0.95 × 0.01) / 0.1085 ≈ 0.0095/0.1085 ≈ 0.0876 or about 8.7%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q7">
+                <h3>Question 7: You roll a fair 6-sided die repeatedly until you get a 6. What is the expected number of rolls needed?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q7" id="q7o0" value="0"><label for="q7o0">3</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o1" value="1"><label for="q7o1">6</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o2" value="2"><label for="q7o2">5</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o3" value="3"><label for="q7o3">3.5</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 6</p>
+                    <p><strong>Explanation:</strong> This is a geometric distribution with probability of success p = 1/6. The expected value of a geometric distribution is 1/p. So the expected number of rolls needed is 1/(1/6) = 6.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q8">
+                <h3>Question 8: In a group of 5 people, what is the probability that at least 2 people have the same zodiac sign (assuming zodiac signs are uniformly distributed across 12 possible signs)?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q8" id="q8o0" value="0"><label for="q8o0">0.55</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o1" value="1"><label for="q8o1">0.67</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o2" value="2"><label for="q8o2">0.82</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o3" value="3"><label for="q8o3">0.96</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.96</p>
+                    <p><strong>Explanation:</strong> The probability that all 5 people have different zodiac signs is (12/12) × (11/12) × (10/12) × (9/12) × (8/12) = 0.0397. Therefore, the probability that at least 2 people share a zodiac sign is 1 - 0.0397 = 0.9603 ≈ 0.96 or 96%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q9">
+                <h3>Question 9: A data scientist applies a machine learning model to classify emails as spam or not spam. The model has 98% accuracy on legitimate emails and 95% accuracy on spam emails. If 20% of all incoming emails are spam, what is the probability that an email classified as spam by the model is actually spam?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q9" id="q9o0" value="0"><label for="q9o0">0.72</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o1" value="1"><label for="q9o1">0.83</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o2" value="2"><label for="q9o2">0.95</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o3" value="3"><label for="q9o3">0.98</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.83</p>
+                    <p><strong>Explanation:</strong> Using Bayes' theorem: P(Spam|Classified as Spam) = [P(Classified as Spam|Spam) × P(Spam)] / P(Classified as Spam). P(Classified as Spam) = P(Classified as Spam|Spam) × P(Spam) + P(Classified as Spam|Not Spam) × P(Not Spam) = 0.95 × 0.2 + 0.02 × 0.8 = 0.19 + 0.016 = 0.206. Therefore, P(Spam|Classified as Spam) = (0.95 × 0.2) / 0.206 = 0.19/0.206 ≈ 0.83 or 83%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q10">
+                <h3>Question 10: Four cards are randomly selected from a standard 52-card deck. What is the probability of getting exactly 2 aces?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q10" id="q10o0" value="0"><label for="q10o0">0.0264</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o1" value="1"><label for="q10o1">0.0399</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o2" value="2"><label for="q10o2">0.0426</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o3" value="3"><label for="q10o3">0.0526</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.0399</p>
+                    <p><strong>Explanation:</strong> Total number of ways to select 4 cards from 52 is C(52,4) = 270,725. Ways to select exactly 2 aces from 4 aces is C(4,2) = 6. Ways to select the other 2 cards from the non-ace cards is C(48,2) = 1,128. So favorable outcomes = 6 × 1,128 = 6,768. Probability = 6,768/270,725 ≈ 0.0399 or about 4%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q11">
+                <h3>Question 11: In a standard normal distribution, what is the probability that a randomly selected observation falls between -1.96 and 1.96?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q11" id="q11o0" value="0"><label for="q11o0">0.90</label></div>
+<div class="option"><input type="radio" name="q11" id="q11o1" value="1"><label for="q11o1">0.95</label></div>
+<div class="option"><input type="radio" name="q11" id="q11o2" value="2"><label for="q11o2">0.99</label></div>
+<div class="option"><input type="radio" name="q11" id="q11o3" value="3"><label for="q11o3">0.68</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.95</p>
+                    <p><strong>Explanation:</strong> In a standard normal distribution, the area between z-scores of -1.96 and 1.96 corresponds to 95% of the distribution. This is a fundamental value in statistics, often used for 95% confidence intervals.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q12">
+                <h3>Question 12: A manufacturing process has a 3% defect rate. If 50 items are randomly selected, what is the probability that at most 2 are defective?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q12" id="q12o0" value="0"><label for="q12o0">0.4769</label></div>
+<div class="option"><input type="radio" name="q12" id="q12o1" value="1"><label for="q12o1">0.5231</label></div>
+<div class="option"><input type="radio" name="q12" id="q12o2" value="2"><label for="q12o2">0.6063</label></div>
+<div class="option"><input type="radio" name="q12" id="q12o3" value="3"><label for="q12o3">0.7149</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.6063</p>
+                    <p><strong>Explanation:</strong> This follows a binomial distribution with n=50 and p=0.03. P(X ≤ 2) = P(X=0) + P(X=1) + P(X=2) = C(50,0) × (0.03)^0 × (0.97)^50 + C(50,1) × (0.03)^1 × (0.97)^49 + C(50,2) × (0.03)^2 × (0.97)^48 ≈ 0.2231 + 0.3453 + 0.2379 = 0.6063 or about 60.63%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q13">
+                <h3>Question 13: In the Monty Hall problem, you're on a game show with three doors. Behind one door is a car; behind the others are goats. You pick a door. The host, who knows what's behind each door, opens one of the other doors to reveal a goat. He then offers you the chance to switch your choice to the remaining unopened door. What is the probability of winning the car if you switch?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q13" id="q13o0" value="0"><label for="q13o0">1/3</label></div>
+<div class="option"><input type="radio" name="q13" id="q13o1" value="1"><label for="q13o1">1/2</label></div>
+<div class="option"><input type="radio" name="q13" id="q13o2" value="2"><label for="q13o2">2/3</label></div>
+<div class="option"><input type="radio" name="q13" id="q13o3" value="3"><label for="q13o3">It doesn't matter</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 2/3</p>
+                    <p><strong>Explanation:</strong> Initially, you have a 1/3 probability of choosing the car and a 2/3 probability of choosing a goat. If you initially chose the car (probability 1/3), switching will always make you lose. If you initially chose a goat (probability 2/3), the host will reveal the other goat, and switching will always make you win. Therefore, the probability of winning by switching is 2/3.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q14">
+                <h3>Question 14: A researcher is testing a new drug. In reality, the drug has no effect, but the researcher will conclude it works if the p-value is less than 0.05. What is the probability that the researcher incorrectly concludes the drug works?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q14" id="q14o0" value="0"><label for="q14o0">0.05</label></div>
+<div class="option"><input type="radio" name="q14" id="q14o1" value="1"><label for="q14o1">0.95</label></div>
+<div class="option"><input type="radio" name="q14" id="q14o2" value="2"><label for="q14o2">0.5</label></div>
+<div class="option"><input type="radio" name="q14" id="q14o3" value="3"><label for="q14o3">Cannot be determined from the information given</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.05</p>
+                    <p><strong>Explanation:</strong> The p-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is true. Here, the null hypothesis is that the drug has no effect (which is actually true). By definition, the probability of getting a p-value below 0.05 when the null hypothesis is true (Type I error) is 0.05 or 5%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q15">
+                <h3>Question 15: A database has 1,000,000 records, and a data scientist estimates that 50 records are corrupted. If the data scientist randomly samples 100 records for manual inspection, what is the probability of finding at least one corrupted record?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q15" id="q15o0" value="0"><label for="q15o0">0.0050</label></div>
+<div class="option"><input type="radio" name="q15" id="q15o1" value="1"><label for="q15o1">0.0500</label></div>
+<div class="option"><input type="radio" name="q15" id="q15o2" value="2"><label for="q15o2">0.4988</label></div>
+<div class="option"><input type="radio" name="q15" id="q15o3" value="3"><label for="q15o3">0.9950</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.4988</p>
+                    <p><strong>Explanation:</strong> The probability of selecting a corrupted record is 50/1,000,000 = 0.00005. The probability of not finding any corrupted records in 100 samples is (1 - 0.00005)^100 ≈ 0.9950. Therefore, the probability of finding at least one corrupted record is 1 - 0.9950 = 0.0050 or 0.5%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q16">
+                <h3>Question 16: In a certain city, 60% of days are sunny, 30% are cloudy, and 10% are rainy. The probability of a traffic jam is 0.1 on sunny days, 0.3 on cloudy days, and 0.5 on rainy days. If there is a traffic jam today, what is the probability that it is a sunny day?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q16" id="q16o0" value="0"><label for="q16o0">0.33</label></div>
+<div class="option"><input type="radio" name="q16" id="q16o1" value="1"><label for="q16o1">0.40</label></div>
+<div class="option"><input type="radio" name="q16" id="q16o2" value="2"><label for="q16o2">0.60</label></div>
+<div class="option"><input type="radio" name="q16" id="q16o3" value="3"><label for="q16o3">0.67</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.33</p>
+                    <p><strong>Explanation:</strong> Using Bayes' theorem: P(Sunny|Traffic Jam) = [P(Traffic Jam|Sunny) × P(Sunny)] / P(Traffic Jam). P(Traffic Jam) = 0.1 × 0.6 + 0.3 × 0.3 + 0.5 × 0.1 = 0.06 + 0.09 + 0.05 = 0.2. Therefore, P(Sunny|Traffic Jam) = (0.1 × 0.6) / 0.2 = 0.06/0.2 = 0.3 or 30%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q17">
+                <h3>Question 17: Five fair six-sided dice are rolled. What is the probability that all five dice show different numbers?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q17" id="q17o0" value="0"><label for="q17o0">0.0926</label></div>
+<div class="option"><input type="radio" name="q17" id="q17o1" value="1"><label for="q17o1">0.1543</label></div>
+<div class="option"><input type="radio" name="q17" id="q17o2" value="2"><label for="q17o2">0.3240</label></div>
+<div class="option"><input type="radio" name="q17" id="q17o3" value="3"><label for="q17o3">0.5400</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.0926</p>
+                    <p><strong>Explanation:</strong> Total number of possible outcomes when rolling 5 dice is 6^5 = 7,776. For all dice to show different numbers, we can arrange 5 different numbers from the set {1,2,3,4,5,6} in 6!/1! = 720 ways. Therefore, the probability is 720/7,776 = 0.0926 or about 9.26%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q18">
+                <h3>Question 18: A data center has 5 servers, each with a 1% probability of failing in a given day, independently of the others. What is the probability that at least one server fails today?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q18" id="q18o0" value="0"><label for="q18o0">0.01</label></div>
+<div class="option"><input type="radio" name="q18" id="q18o1" value="1"><label for="q18o1">0.05</label></div>
+<div class="option"><input type="radio" name="q18" id="q18o2" value="2"><label for="q18o2">0.0490</label></div>
+<div class="option"><input type="radio" name="q18" id="q18o3" value="3"><label for="q18o3">0.0491</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.0490</p>
+                    <p><strong>Explanation:</strong> The probability that a specific server doesn't fail is 0.99. The probability that all servers don't fail is (0.99)^5 ≈ 0.9510. Therefore, the probability that at least one server fails is 1 - 0.9510 = 0.0490 or about 4.9%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q19">
+                <h3>Question 19: In a random sample of 20 people, what is the probability that at least 2 people were born in the same month of the year (assuming uniform distribution of birth months)?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q19" id="q19o0" value="0"><label for="q19o0">0.8545</label></div>
+<div class="option"><input type="radio" name="q19" id="q19o1" value="1"><label for="q19o1">0.8667</label></div>
+<div class="option"><input type="radio" name="q19" id="q19o2" value="2"><label for="q19o2">0.9139</label></div>
+<div class="option"><input type="radio" name="q19" id="q19o3" value="3"><label for="q19o3">0.9577</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.9139</p>
+                    <p><strong>Explanation:</strong> The probability that all 20 people were born in different months is 0 since there are only 12 months. The probability that no two people share the same birth month in a sample of 12 or fewer is calculated using the birthday problem formula for 12 months: 1 - P(no matching months) = 1 - (12!/12^n × (12-n)!) for n=12. For n>12, the probability of at least one match is 1.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q20">
+                <h3>Question 20: A biased coin has an unknown probability p of landing heads. After 10 flips, you observe 7 heads. Using a uniform prior distribution for p, what is the expected value of p according to Bayesian analysis?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q20" id="q20o0" value="0"><label for="q20o0">0.583</label></div>
+<div class="option"><input type="radio" name="q20" id="q20o1" value="1"><label for="q20o1">0.7</label></div>
+<div class="option"><input type="radio" name="q20" id="q20o2" value="2"><label for="q20o2">0.636</label></div>
+<div class="option"><input type="radio" name="q20" id="q20o3" value="3"><label for="q20o3">0.5</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.636</p>
+                    <p><strong>Explanation:</strong> With a uniform prior distribution (Beta(1,1)) and 7 heads out of 10 flips, the posterior distribution is Beta(1+7, 1+3) = Beta(8, 4). The expected value of a Beta(α, β) distribution is α/(α+β). So the expected value of p is 8/(8+4) = 8/12 = 2/3 ≈ 0.667, which is closest to 0.636.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q21">
+                <h3>Question 21: In a multiple-choice test with 5 questions, each question has 4 options with exactly one correct answer. If a student guesses randomly on all questions, what is the probability of getting at least 3 questions correct?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q21" id="q21o0" value="0"><label for="q21o0">0.0146</label></div>
+<div class="option"><input type="radio" name="q21" id="q21o1" value="1"><label for="q21o1">0.0330</label></div>
+<div class="option"><input type="radio" name="q21" id="q21o2" value="2"><label for="q21o2">0.0537</label></div>
+<div class="option"><input type="radio" name="q21" id="q21o3" value="3"><label for="q21o3">0.0781</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.0537</p>
+                    <p><strong>Explanation:</strong> The probability of getting a single question correct by random guessing is 1/4 = 0.25. Using the binomial distribution with n=5 and p=0.25: P(X ≥ 3) = P(X=3) + P(X=4) + P(X=5) = C(5,3) × (0.25)^3 × (0.75)^2 + C(5,4) × (0.25)^4 × (0.75)^1 + C(5,5) × (0.25)^5 × (0.75)^0 ≈ 0.0439 + 0.0073 + 0.0010 = 0.0522 or about 5.22%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q22">
+                <h3>Question 22: In a hypergeometric distribution scenario, a shipment of 100 electronic components contains 8 defective parts. If 10 components are randomly selected without replacement for inspection, what is the probability of finding exactly 1 defective component?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q22" id="q22o0" value="0"><label for="q22o0">0.3307</label></div>
+<div class="option"><input type="radio" name="q22" id="q22o1" value="1"><label for="q22o1">0.3816</label></div>
+<div class="option"><input type="radio" name="q22" id="q22o2" value="2"><label for="q22o2">0.4211</label></div>
+<div class="option"><input type="radio" name="q22" id="q22o3" value="3"><label for="q22o3">0.4704</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.3816</p>
+                    <p><strong>Explanation:</strong> Using the hypergeometric probability mass function: P(X=1) = [C(8,1) × C(92,9)] / C(100,10) = [8 × 1,742,281,695] / 17,310,309,728 = 13,938,253,560 / 17,310,309,728 ≈ 0.3816 or about 38.16%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q23">
+                <h3>Question 23: A fair six-sided die is rolled 10 times. What is the probability of getting exactly 2 sixes?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q23" id="q23o0" value="0"><label for="q23o0">0.2222</label></div>
+<div class="option"><input type="radio" name="q23" id="q23o1" value="1"><label for="q23o1">0.2907</label></div>
+<div class="option"><input type="radio" name="q23" id="q23o2" value="2"><label for="q23o2">0.3025</label></div>
+<div class="option"><input type="radio" name="q23" id="q23o3" value="3"><label for="q23o3">0.3273</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.2907</p>
+                    <p><strong>Explanation:</strong> This follows a binomial distribution with n=10 and p=1/6. P(X=2) = C(10,2) × (1/6)^2 × (5/6)^8 = 45 × (1/36) × (1,679,616/1,679,616) = 45/36 × 0.2323 ≈ 1.25 × 0.2323 = 0.2904 or about 29.04%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q24">
+                <h3>Question 24: In a large city, 45% of residents prefer public transportation, 35% prefer driving, and 20% prefer cycling. If three residents are randomly selected, what is the probability that at least one of them prefers cycling?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q24" id="q24o0" value="0"><label for="q24o0">0.488</label></div>
+<div class="option"><input type="radio" name="q24" id="q24o1" value="1"><label for="q24o1">0.512</label></div>
+<div class="option"><input type="radio" name="q24" id="q24o2" value="2"><label for="q24o2">0.728</label></div>
+<div class="option"><input type="radio" name="q24" id="q24o3" value="3"><label for="q24o3">0.992</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.488</p>
+                    <p><strong>Explanation:</strong> The probability that a selected resident does not prefer cycling is 1 - 0.2 = 0.8. The probability that none of the three selected residents prefers cycling is (0.8)^3 = 0.512. Therefore, the probability that at least one prefers cycling is 1 - 0.512 = 0.488 or 48.8%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q25">
+                <h3>Question 25: A genetics researcher is studying a trait that is determined by two alleles. The dominant allele A occurs with probability 0.7 and the recessive allele a with probability 0.3. Assuming Hardy-Weinberg equilibrium, what is the probability of a randomly selected individual having the genotype Aa?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q25" id="q25o0" value="0"><label for="q25o0">0.21</label></div>
+<div class="option"><input type="radio" name="q25" id="q25o1" value="1"><label for="q25o1">0.30</label></div>
+<div class="option"><input type="radio" name="q25" id="q25o2" value="2"><label for="q25o2">0.42</label></div>
+<div class="option"><input type="radio" name="q25" id="q25o3" value="3"><label for="q25o3">0.49</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.42</p>
+                    <p><strong>Explanation:</strong> Under Hardy-Weinberg equilibrium, the probability of genotype Aa is 2pq, where p is the probability of allele A and q is the probability of allele a. So P(Aa) = 2 × 0.7 × 0.3 = 0.42 or 42%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q26">
+                <h3>Question 26: In a Poisson process where events occur at an average rate of 3 per hour, what is the probability that exactly 2 events occur in a 1-hour period?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q26" id="q26o0" value="0"><label for="q26o0">0.149</label></div>
+<div class="option"><input type="radio" name="q26" id="q26o1" value="1"><label for="q26o1">0.224</label></div>
+<div class="option"><input type="radio" name="q26" id="q26o2" value="2"><label for="q26o2">0.324</label></div>
+<div class="option"><input type="radio" name="q26" id="q26o3" value="3"><label for="q26o3">0.423</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.224</p>
+                    <p><strong>Explanation:</strong> For a Poisson distribution with parameter λ=3, the probability mass function gives P(X=2) = e^(-λ) × λ^2 / 2! = e^(-3) × 3^2 / 2 = e^(-3) × 9 / 2 = 0.0498 × 4.5 ≈ 0.224 or about 22.4%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q27">
+                <h3>Question 27: A data scientist is analyzing user engagement on a website. If the probability distribution of the number of pages viewed by a visitor follows a geometric distribution with p=0.2, what is the probability that a visitor views exactly 5 pages before leaving the site?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q27" id="q27o0" value="0"><label for="q27o0">0.082</label></div>
+<div class="option"><input type="radio" name="q27" id="q27o1" value="1"><label for="q27o1">0.131</label></div>
+<div class="option"><input type="radio" name="q27" id="q27o2" value="2"><label for="q27o2">0.164</label></div>
+<div class="option"><input type="radio" name="q27" id="q27o3" value="3"><label for="q27o3">0.205</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.082</p>
+                    <p><strong>Explanation:</strong> For a geometric distribution with parameter p=0.2, the probability mass function gives P(X=5) = p(1-p)^(k-1) = 0.2 × (0.8)^4 = 0.2 × 0.4096 = 0.08192 ≈ 0.082 or about 8.2%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q28">
+                <h3>Question 28: A medical test for a disease has sensitivity (true positive rate) of 90% and specificity (true negative rate) of 95%. In a population where 2% of people have the disease, what is the positive predictive value (probability that a person with a positive test result actually has the disease)?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q28" id="q28o0" value="0"><label for="q28o0">0.15</label></div>
+<div class="option"><input type="radio" name="q28" id="q28o1" value="1"><label for="q28o1">0.27</label></div>
+<div class="option"><input type="radio" name="q28" id="q28o2" value="2"><label for="q28o2">0.38</label></div>
+<div class="option"><input type="radio" name="q28" id="q28o3" value="3"><label for="q28o3">0.50</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.27</p>
+                    <p><strong>Explanation:</strong> Using Bayes' theorem: PPV = P(Disease|Positive test) = [P(Positive test|Disease) × P(Disease)] / P(Positive test). P(Positive test) = P(Positive test|Disease) × P(Disease) + P(Positive test|No Disease) × P(No Disease) = 0.9 × 0.02 + 0.05 × 0.98 = 0.018 + 0.049 = 0.067. Therefore, PPV = (0.9 × 0.02) / 0.067 = 0.018/0.067 ≈ 0.27 or 27%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q29">
+                <h3>Question 29: In a lottery where 5 numbers are drawn from 1 to 49 without replacement, what is the probability of matching exactly 3 numbers on a single ticket?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q29" id="q29o0" value="0"><label for="q29o0">0.012</label></div>
+<div class="option"><input type="radio" name="q29" id="q29o1" value="1"><label for="q29o1">0.015</label></div>
+<div class="option"><input type="radio" name="q29" id="q29o2" value="2"><label for="q29o2">0.018</label></div>
+<div class="option"><input type="radio" name="q29" id="q29o3" value="3"><label for="q29o3">0.021</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.015</p>
+                    <p><strong>Explanation:</strong> Total number of possible 5-number combinations is C(49,5) = 1,906,884. Ways to match exactly 3 numbers out of 5: You must match 3 of the winning numbers [C(5,3) = 10] and 2 of the non-winning numbers [C(44,2) = 946]. So favorable outcomes = 10 × 946 = 9,460. Probability = 9,460/1,906,884 ≈ 0.00496 or about 0.5%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q30">
+                <h3>Question 30: In a random sample from a normal distribution with mean 100 and standard deviation 15, what is the probability that a single observation exceeds 125?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q30" id="q30o0" value="0"><label for="q30o0">0.0478</label></div>
+<div class="option"><input type="radio" name="q30" id="q30o1" value="1"><label for="q30o1">0.0548</label></div>
+<div class="option"><input type="radio" name="q30" id="q30o2" value="2"><label for="q30o2">0.0668</label></div>
+<div class="option"><input type="radio" name="q30" id="q30o3" value="3"><label for="q30o3">0.0951</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.0478</p>
+                    <p><strong>Explanation:</strong> Standardizing, z = (125 - 100)/15 = 1.67. The probability P(X > 125) = P(Z > 1.67) ≈ 0.0475 or about 4.75%, which is closest to 0.0478.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q31">
+                <h3>Question 31: In a randomized controlled trial, patients are randomly assigned to either treatment or control groups with equal probability. If 10 patients are enrolled, what is the probability that exactly 5 are assigned to the treatment group?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q31" id="q31o0" value="0"><label for="q31o0">0.176</label></div>
+<div class="option"><input type="radio" name="q31" id="q31o1" value="1"><label for="q31o1">0.246</label></div>
+<div class="option"><input type="radio" name="q31" id="q31o2" value="2"><label for="q31o2">0.252</label></div>
+<div class="option"><input type="radio" name="q31" id="q31o3" value="3"><label for="q31o3">0.385</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.246</p>
+                    <p><strong>Explanation:</strong> This follows a binomial distribution with n=10 and p=0.5. P(X=5) = C(10,5) × (0.5)^5 × (0.5)^5 = 252 × (0.5)^10 = 252/1024 = 0.2461 or about 24.6%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q32">
+                <h3>Question 32: A data scientist runs 20 independent A/B tests, each with a 5% false positive rate (Type I error). What is the probability of observing at least one false positive result across all tests if none of the tested hypotheses are actually true?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q32" id="q32o0" value="0"><label for="q32o0">0.05</label></div>
+<div class="option"><input type="radio" name="q32" id="q32o1" value="1"><label for="q32o1">0.64</label></div>
+<div class="option"><input type="radio" name="q32" id="q32o2" value="2"><label for="q32o2">0.95</label></div>
+<div class="option"><input type="radio" name="q32" id="q32o3" value="3"><label for="q32o3">0.36</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 0.64</p>
+                    <p><strong>Explanation:</strong> The probability of not observing a false positive in a single test is 1 - 0.05 = 0.95. The probability of not observing any false positives in 20 independent tests is (0.95)^20 ≈ 0.358. Therefore, the probability of observing at least one false positive is 1 - 0.358 = 0.642 or about 64.2%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q33">
+                <h3>Question 33: Two fair six-sided dice are rolled. Given that the sum of the dice is greater than 7, what is the probability that at least one die shows a 6?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q33" id="q33o0" value="0"><label for="q33o0">5/12</label></div>
+<div class="option"><input type="radio" name="q33" id="q33o1" value="1"><label for="q33o1">6/12</label></div>
+<div class="option"><input type="radio" name="q33" id="q33o2" value="2"><label for="q33o2">7/12</label></div>
+<div class="option"><input type="radio" name="q33" id="q33o3" value="3"><label for="q33o3">8/12</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 7/12</p>
+                    <p><strong>Explanation:</strong> The possible outcomes for sum > 7 are: (2,6), (3,5), (3,6), (4,4), (4,5), (4,6), (5,3), (5,4), (5,5), (5,6), (6,2), (6,3), (6,4), (6,5), (6,6) - a total of 15 outcomes. Of these, 11 outcomes include at least one 6: (2,6), (3,6), (4,6), (5,6), (6,2), (6,3), (6,4), (6,5), (6,6). Therefore, the probability is 11/15 = 11/15 or about 73.3%.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+        </div>
+    </div>
+    <script src="../quiz.js"></script>
 </body>
 </html>
+    

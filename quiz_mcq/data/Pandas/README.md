@@ -39,6 +39,7 @@
 Which method efficiently applies a function along an axis of a DataFrame?
 
 **Options**  
+
 1. df.map(func)  
 2. df.apply(func, axis=0)  
 3. df.transform(func)  
@@ -53,7 +54,6 @@ The apply() method allows applying a function along an axis (rows or columns) of
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -61,6 +61,7 @@ The apply() method allows applying a function along an axis (rows or columns) of
 What's the correct way to merge two DataFrames on multiple columns?
 
 **Options**  
+
 1. pd.merge(df1, df2, on=['col1', 'col2'])  
 2. pd.join(df1, df2, keys=['col1', 'col2'])  
 3. df1.merge(df2, how='inner', left_on=['col1', 'col2'], right_on=['col1', 'col2'])  
@@ -75,7 +76,6 @@ Both pd.merge() and DataFrame.merge() methods can merge on multiple columns
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -83,6 +83,7 @@ Both pd.merge() and DataFrame.merge() methods can merge on multiple columns
 How do you handle missing values in a DataFrame column?
 
 **Options**  
+
 1. df['column'].fillna(0)  
 2. df['column'].dropna()  
 3. df['column'].replace(np.nan, 0)  
@@ -98,7 +99,6 @@ All listed methods can handle missing values: fillna() replaces NaNs, dropna()
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -106,6 +106,7 @@ All listed methods can handle missing values: fillna() replaces NaNs, dropna()
 What does the method `groupby().agg()` allow you to do?
 
 **Options**  
+
 1. Group data and apply a single aggregation function  
 2. Group data and apply different aggregation functions to different columns  
 3. Group data and apply multiple aggregation functions to the same column  
@@ -120,7 +121,6 @@ The agg() method is versatile and can apply single or multiple functions to
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -128,6 +128,7 @@ The agg() method is versatile and can apply single or multiple functions to
 Which of the following transforms a DataFrame to a long format?
 
 **Options**  
+
 1. df.stack()  
 2. df.melt()  
 3. pd.wide_to_long(df)  
@@ -142,7 +143,6 @@ stack(), melt(), and wide_to_long() all convert data from wide format to long
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q06"></a> Qn 06
 
@@ -150,6 +150,7 @@ stack(), melt(), and wide_to_long() all convert data from wide format to long
 How can you efficiently select rows where a column value meets a complex condition?
 
 **Options**  
+
 1. df.loc[df['column'] > 5 & df['column'] < 10]  
 2. df.loc[(df['column'] > 5) & (df['column'] < 10)]  
 3. df.query('column > 5 and column < 10')  
@@ -164,7 +165,6 @@ Both loc with boolean indexing (with proper parentheses) and query() method can
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q07"></a> Qn 07
 
@@ -172,6 +172,7 @@ Both loc with boolean indexing (with proper parentheses) and query() method can
 What's the most efficient way to calculate a rolling 7-day average of a time series?
 
 **Options**  
+
 1. df['rolling_avg'] = df['value'].rolling(window=7).mean()  
 2. df['rolling_avg'] = df['value'].resample('7D').mean()  
 3. df['rolling_avg'] = df.groupby(pd.Grouper(freq='7D'))['value'].transform('mean')  
@@ -186,7 +187,6 @@ The rolling() method with a window of 7 followed by mean() calculates a rolling
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q08"></a> Qn 08
 
@@ -194,6 +194,7 @@ The rolling() method with a window of 7 followed by mean() calculates a rolling
 How do you perform a pivot operation in pandas?
 
 **Options**  
+
 1. df.pivot(index='A', columns='B', values='C')  
 2. pd.pivot_table(df, index='A', columns='B', values='C')  
 3. df.pivot_table(index='A', columns='B', values='C')  
@@ -208,7 +209,6 @@ All three methods can perform pivot operations, with pivot_table being more
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q09"></a> Qn 09
 
@@ -216,6 +216,7 @@ All three methods can perform pivot operations, with pivot_table being more
 Which method can reshape a DataFrame by stacking column labels to rows?
 
 **Options**  
+
 1. df.unstack()  
 2. df.pivot()  
 3. df.stack()  
@@ -230,7 +231,6 @@ stack() method pivots the columns of a DataFrame to become the innermost index
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q10"></a> Qn 10
 
@@ -238,6 +238,7 @@ stack() method pivots the columns of a DataFrame to become the innermost index
 How do you efficiently concatenate many DataFrames with identical columns?
 
 **Options**  
+
 1. pd.join([df1, df2, df3])  
 2. pd.merge([df1, df2, df3])  
 3. pd.concat([df1, df2, df3])  
@@ -252,7 +253,6 @@ pd.concat() is designed to efficiently concatenate pandas objects along a
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q11"></a> Qn 11
 
@@ -260,6 +260,7 @@ pd.concat() is designed to efficiently concatenate pandas objects along a
 What's the correct way to create a DatetimeIndex from a column containing date strings?
 
 **Options**  
+
 1. pd.to_datetime(df['date_col'])  
 2. df.set_index(pd.to_datetime(df['date_col']))  
 3. df.set_index('date_col', inplace=True); df.index = pd.to_datetime(df.index)  
@@ -274,7 +275,6 @@ All methods will correctly convert date strings to datetime objects, with
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q12"></a> Qn 12
 
@@ -282,6 +282,7 @@ All methods will correctly convert date strings to datetime objects, with
 Which method performs a cross-tabulation of two factors?
 
 **Options**  
+
 1. pd.crosstab(df['A'], df['B'])  
 2. df.pivot_table(index='A', columns='B', aggfunc='count')  
 3. df.groupby(['A', 'B']).size().unstack()  
@@ -296,7 +297,6 @@ All methods can create cross-tabulations, though crosstab() is specifically
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q13"></a> Qn 13
 
@@ -304,6 +304,7 @@ All methods can create cross-tabulations, though crosstab() is specifically
 How do you calculate cumulative statistics in pandas?
 
 **Options**  
+
 1. df.cumsum(), df.cumprod(), df.cummax(), df.cummin()  
 2. df.rolling().sum(), df.rolling().prod(), df.rolling().max(), df.rolling().min()  
 3. df.expanding().sum(), df.expanding().prod(), df.expanding().max(), df.expanding().min()  
@@ -318,7 +319,6 @@ The cum- methods (cumsum, cumprod, cummax, cummin) calculate cumulative
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q14"></a> Qn 14
 
@@ -326,6 +326,7 @@ The cum- methods (cumsum, cumprod, cummax, cummin) calculate cumulative
 Which approach efficiently calculates the difference between consecutive rows in a DataFrame?
 
 **Options**  
+
 1. df - df.shift(1)  
 2. df.diff()  
 3. df.rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])  
@@ -340,7 +341,6 @@ Both subtracting a shifted DataFrame and using diff() calculate element-wise
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q15"></a> Qn 15
 
@@ -348,6 +348,7 @@ Both subtracting a shifted DataFrame and using diff() calculate element-wise
 How do you create a MultiIndex DataFrame from scratch?
 
 **Options**  
+
 1. pd.DataFrame(data, index=pd.MultiIndex.from_tuples([('A',1), ('A',2), ('B',1), ('B',2)]))  
 2. pd.DataFrame(data, index=pd.MultiIndex.from_product([['A', 'B'], [1, 2]]))  
 3. pd.DataFrame(data, index=pd.MultiIndex.from_arrays([['A', 'A', 'B', 'B'], [1, 2, 1, 2]]))  
@@ -362,7 +363,6 @@ All three methods create equivalent MultiIndex objects using different
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q16"></a> Qn 16
 
@@ -370,6 +370,7 @@ All three methods create equivalent MultiIndex objects using different
 Which method is most appropriate for performing complex string operations on DataFrame columns?
 
 **Options**  
+
 1. df['col'].apply(lambda x: x.upper())  
 2. df['col'].str.upper()  
 3. df['col'].map(str.upper)  
@@ -384,7 +385,6 @@ While all methods can transform strings, the .str accessor provides vectorized
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q17"></a> Qn 17
 
@@ -392,6 +392,7 @@ While all methods can transform strings, the .str accessor provides vectorized
 What's the best way to compute percentiles for grouped data?
 
 **Options**  
+
 1. df.groupby('group').quantile([0.25, 0.5, 0.75])  
 2. df.groupby('group').agg(lambda x: np.percentile(x, [25, 50, 75]))  
 3. df.groupby('group').describe(percentiles=[0.25, 0.5, 0.75])  
@@ -410,7 +411,6 @@ Both quantile() and describe() can compute percentiles for grouped data, with
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q18"></a> Qn 18
 
@@ -418,6 +418,7 @@ Both quantile() and describe() can compute percentiles for grouped data, with
 How do you efficiently implement a custom aggregation function that requires the entire group?
 
 **Options**  
+
 1. df.groupby('group').agg(custom_func)  
 2. df.groupby('group').apply(custom_func)  
 3. df.groupby('group').transform(custom_func)  
@@ -432,7 +433,6 @@ apply() is designed for operations that need the entire group as a DataFrame,
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q19"></a> Qn 19
 
@@ -440,6 +440,7 @@ apply() is designed for operations that need the entire group as a DataFrame,
 What's the most memory-efficient way to read a large CSV file with pandas?
 
 **Options**  
+
 1. pd.read_csv('file.csv', nrows=1000)  
 2. pd.read_csv('file.csv', chunksize=1000)  
 3. pd.read_csv('file.csv', usecols=['needed_col1', 'needed_col2'])  
@@ -454,7 +455,6 @@ Specifying appropriate dtypes, especially using 'category' for string columns
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q20"></a> Qn 20
 
@@ -462,6 +462,7 @@ Specifying appropriate dtypes, especially using 'category' for string columns
 Which method is correct for resampling time series data to monthly frequency?
 
 **Options**  
+
 1. df.resample('M').mean()  
 2. df.groupby(pd.Grouper(freq='M')).mean()  
 3. df.asfreq('M')  
@@ -476,7 +477,6 @@ Both resample() and groupby() with Grouper can aggregate time series data to
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q21"></a> Qn 21
 
@@ -484,6 +484,7 @@ Both resample() and groupby() with Grouper can aggregate time series data to
 How do you efficiently identify and remove duplicate rows in a DataFrame?
 
 **Options**  
+
 1. df[~df.duplicated()]  
 2. df.drop_duplicates()  
 3. df.loc[~df.index.duplicated()]  
@@ -498,7 +499,6 @@ Both df[~df.duplicated()] and df.drop_duplicates() remove duplicate rows, with
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q22"></a> Qn 22
 
@@ -506,6 +506,7 @@ Both df[~df.duplicated()] and df.drop_duplicates() remove duplicate rows, with
 Which method is most efficient for applying a custom function to a DataFrame that returns a scalar?
 
 **Options**  
+
 1. df.pipe(custom_func)  
 2. df.transform(custom_func)  
 3. df.apply(custom_func)  
@@ -520,7 +521,6 @@ pipe() is designed for functions that take and return a DataFrame, creating
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q23"></a> Qn 23
 
@@ -528,6 +528,7 @@ pipe() is designed for functions that take and return a DataFrame, creating
 How do you sample data from a DataFrame with weights?
 
 **Options**  
+
 1. df.sample(n=5, weights='probability_column')  
 2. df.sample(frac=0.1, weights=df['probability_column'])  
 3. df.sample(n=5, weights=df['probability_column']/df['probability_column'].sum())  
@@ -542,7 +543,6 @@ Both approaches correctly sample with weights, though weights don't need to be
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q24"></a> Qn 24
 
@@ -550,6 +550,7 @@ Both approaches correctly sample with weights, though weights don't need to be
 What's the correct way to use the pd.cut() function for binning continuous data?
 
 **Options**  
+
 1. pd.cut(df['age'], bins=[0, 18, 35, 60, 100], labels=['Child', 'Young', 'Middle', 'Senior'])  
 2. pd.cut(df['age'], bins=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])  
 3. pd.qcut(df['age'], q=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])  
@@ -564,7 +565,6 @@ All approaches are valid: using explicit bin edges, equal-width bins (cut), or
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q25"></a> Qn 25
 
@@ -572,6 +572,7 @@ All approaches are valid: using explicit bin edges, equal-width bins (cut), or
 How do you efficiently perform a custom window operation in pandas?
 
 **Options**  
+
 1. df.rolling(window=3).apply(custom_func, raw=True)  
 2. df.rolling(window=3).apply(custom_func)  
 3. df.apply(lambda x: [custom_func(x[i:i+3]) for i in range(len(x)-2)])  
@@ -587,7 +588,6 @@ Both approaches work for custom window operations, but using raw=True can be
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q26"></a> Qn 26
 
@@ -595,6 +595,7 @@ Both approaches work for custom window operations, but using raw=True can be
 Which approach can create a lagged feature in a time series DataFrame?
 
 **Options**  
+
 1. df['lagged'] = df['value'].shift(1)  
 2. df['lagged'] = df['value'].shift(-1)  
 3. df['lagged'] = df['value'].rolling(window=2).apply(lambda x: x.iloc[0])  
@@ -609,7 +610,6 @@ shift(1) creates a lag (past values), while shift(-1) creates a lead (future
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q27"></a> Qn 27
 
@@ -617,6 +617,7 @@ shift(1) creates a lag (past values), while shift(-1) creates a lead (future
 What's the best way to explode a DataFrame column containing lists into multiple rows?
 
 **Options**  
+
 1. pd.DataFrame([[i, x] for i, y in df['list_col'].iteritems() for x in y])  
 2. df.explode('list_col')  
 3. df.assign(list_col=df['list_col']).explode('list_col')  
@@ -631,7 +632,6 @@ explode() transforms each element of a list-like column into a row, with the
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q28"></a> Qn 28
 
@@ -639,6 +639,7 @@ explode() transforms each element of a list-like column into a row, with the
 How do you efficiently compute a weighted mean in pandas?
 
 **Options**  
+
 1. (df['value'] * df['weight']).sum() / df['weight'].sum()  
 2. df['value'].mean(weights=df['weight'])  
 3. np.average(df['value'], weights=df['weight'])  
@@ -653,7 +654,6 @@ Both manually computing weighted mean and using np.average() work efficiently,
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q29"></a> Qn 29
 
@@ -661,6 +661,7 @@ Both manually computing weighted mean and using np.average() work efficiently,
 Which method correctly identifies the top-k values in each group?
 
 **Options**  
+
 1. df.groupby('group')['value'].nlargest(k)  
 2. df.groupby('group').apply(lambda x: x.nlargest(k, 'value'))  
 3. df.sort_values('value', ascending=False).groupby('group').head(k)  
@@ -675,7 +676,6 @@ All three methods can get the top-k values within each group, with different
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q30"></a> Qn 30
 
@@ -683,6 +683,7 @@ All three methods can get the top-k values within each group, with different
 What's the best way to add a new column based on a categorical mapping of an existing column?
 
 **Options**  
+
 1. df['category'] = df['value'].map({'low': 1, 'medium': 2, 'high': 3})  
 2. df['category'] = df['value'].replace({'low': 1, 'medium': 2, 'high': 3})  
 3. df['category'] = pd.Categorical(df['value']).map({'low': 1, 'medium': 2, 'high': 3})  
@@ -698,8 +699,7 @@ All methods can map values to new ones, though map() is generally preferred for
 [↑ Go to TOC](#toc)
 
 
-
 ---
 
-*Automatically generated from [pandas_questions.json](pandas_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [pandas_questions.json](pandas_questions.json)*
+*Updated: 2025-05-18 13:57*

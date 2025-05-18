@@ -36,6 +36,7 @@
 What does the 'AR' component in ARIMA represent, and how does it capture patterns in time series data?
 
 **Options**  
+
 1. Autoregressive - using past values to predict future values  
 2. Auto Recursive - using recursive algorithms for prediction  
 3. Autonomously Restrictive - restricting variables autonomously  
@@ -55,7 +56,6 @@ The 'AR' in ARIMA stands for Autoregressive, which means the model uses past
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -63,6 +63,7 @@ The 'AR' in ARIMA stands for Autoregressive, which means the model uses past
 What does the 'I' component in ARIMA represent, and why is it necessary?
 
 **Options**  
+
 1. Integrated - differencing to achieve stationarity  
 2. Interpolated - filling in missing values  
 3. Independent - ensuring variables are independent  
@@ -83,7 +84,6 @@ The 'I' in ARIMA stands for Integrated, which refers to differencing the time
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -91,6 +91,7 @@ The 'I' in ARIMA stands for Integrated, which refers to differencing the time
 What does the 'MA' component in ARIMA represent, and how does it differ from AR?
 
 **Options**  
+
 1. Moving Average - using past forecast errors in the model  
 2. Mean Adjustment - adjusting the mean over time  
 3. Maximum Amplitude - capturing amplitude changes  
@@ -110,7 +111,6 @@ The 'MA' in ARIMA stands for Moving Average, which incorporates past forecast
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -118,6 +118,7 @@ The 'MA' in ARIMA stands for Moving Average, which incorporates past forecast
 How do you interpret the parameters p, d, and q in ARIMA(p,d,q)?
 
 **Options**  
+
 1. p = AR order, d = differencing order, q = MA order  
 2. p = prediction horizon, d = data points, q = quality metric  
 3. p = precision factor, d = decay rate, q = quantile value  
@@ -139,7 +140,6 @@ In ARIMA(p,d,q), p represents the order of the autoregressive (AR) component,
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -147,6 +147,7 @@ In ARIMA(p,d,q), p represents the order of the autoregressive (AR) component,
 What is the key assumption that must be satisfied before applying ARIMA models?
 
 **Options**  
+
 1. The time series must be stationary  
 2. The time series must have missing values imputed  
 3. The time series must follow a normal distribution  
@@ -167,7 +168,6 @@ The fundamental assumption for ARIMA models is that the time series is
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q06"></a> Qn 06
 
@@ -175,6 +175,7 @@ The fundamental assumption for ARIMA models is that the time series is
 How can you determine the appropriate values for p and q in an ARIMA(p,d,q) model?
 
 **Options**  
+
 1. By examining ACF and PACF plots  
 2. By using cross-validation only  
 3. By checking the kurtosis and skewness  
@@ -195,7 +196,6 @@ The appropriate values for p and q in an ARIMA model can be determined by
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q07"></a> Qn 07
 
@@ -203,6 +203,7 @@ The appropriate values for p and q in an ARIMA model can be determined by
 What is the purpose of the Augmented Dickey-Fuller (ADF) test in time series analysis?
 
 **Options**  
+
 1. To test for stationarity  
 2. To calculate forecast accuracy  
 3. To detect seasonality  
@@ -224,7 +225,6 @@ The Augmented Dickey-Fuller (ADF) test is a statistical test used to determine
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q08"></a> Qn 08
 
@@ -232,6 +232,7 @@ The Augmented Dickey-Fuller (ADF) test is a statistical test used to determine
 What is the difference between ACF (Autocorrelation Function) and PACF (Partial Autocorrelation Function)?
 
 **Options**  
+
 1. ACF measures correlation between series and lagged values accounting for intermediate lags, PACF removes indirect correlation effects  
 2. ACF is for AR models only, PACF is for MA models only  
 3. ACF works on raw data, PACF requires differenced data  
@@ -253,7 +254,6 @@ The ACF (Autocorrelation Function) measures the correlation between a time
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q09"></a> Qn 09
 
@@ -261,6 +261,7 @@ The ACF (Autocorrelation Function) measures the correlation between a time
 What additional component does SARIMAX add compared to ARIMA?
 
 **Options**  
+
 1. Seasonal components and exogenous variables  
 2. Square root transformation capabilities  
 3. Sigmoid activation functions  
@@ -284,7 +285,6 @@ SARIMAX (Seasonal AutoRegressive Integrated Moving Average with eXogenous
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q10"></a> Qn 10
 
@@ -292,6 +292,7 @@ SARIMAX (Seasonal AutoRegressive Integrated Moving Average with eXogenous
 How are seasonality parameters represented in a SARIMA model?
 
 **Options**  
+
 1. As (P,D,Q)m where m is the seasonal period  
 2. As a sine wave with amplitude A and period T  
 3. As a separate time series added to the main series  
@@ -314,7 +315,6 @@ In a SARIMA (Seasonal ARIMA) model, seasonality parameters are represented as
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q11"></a> Qn 11
 
@@ -322,6 +322,7 @@ In a SARIMA (Seasonal ARIMA) model, seasonality parameters are represented as
 What does it mean when we say a time series exhibits 'stationarity'?
 
 **Options**  
+
 1. Its statistical properties remain constant over time  
 2. It has no missing values  
 3. It shows strong seasonality  
@@ -343,7 +344,6 @@ A stationary time series has statistical properties that remain constant over
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q12"></a> Qn 12
 
@@ -351,6 +351,7 @@ A stationary time series has statistical properties that remain constant over
 What is the purpose of differencing in time series analysis?
 
 **Options**  
+
 1. To remove trends and achieve stationarity  
 2. To smooth out random fluctuations  
 3. To interpolate missing values  
@@ -372,7 +373,6 @@ Differencing in time series analysis involves computing the differences between
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q13"></a> Qn 13
 
@@ -380,6 +380,7 @@ Differencing in time series analysis involves computing the differences between
 What is seasonal differencing and when should it be applied?
 
 **Options**  
+
 1. Calculating differences between observations separated by the seasonal period, applied when there's seasonal non-stationarity  
 2. Calculating differences between adjacent seasons, applied to remove annual trends  
 3. Finding the mean difference between seasons, applied to normalize seasonal data  
@@ -402,7 +403,6 @@ Seasonal differencing involves calculating differences between observations
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q14"></a> Qn 14
 
@@ -410,6 +410,7 @@ Seasonal differencing involves calculating differences between observations
 What are residuals in the context of ARIMA modeling, and why are they important?
 
 **Options**  
+
 1. The differences between observed and predicted values, important for diagnostic checking  
 2. The remaining trends after differencing, important for model specification  
 3. The seasonal components not captured by the model, important for seasonal adjustment  
@@ -431,7 +432,6 @@ In ARIMA modeling, residuals are the differences between the observed values and
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q15"></a> Qn 15
 
@@ -439,6 +439,7 @@ In ARIMA modeling, residuals are the differences between the observed values and
 What does the Ljung-Box test evaluate in time series analysis?
 
 **Options**  
+
 1. Whether residuals exhibit autocorrelation  
 2. Whether the time series is stationary  
 3. Whether the model has the correct number of parameters  
@@ -461,7 +462,6 @@ The Ljung-Box test is a statistical test used to evaluate whether residuals from
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q16"></a> Qn 16
 
@@ -469,6 +469,7 @@ The Ljung-Box test is a statistical test used to evaluate whether residuals from
 What is the primary difference between ARMA and ARIMA models?
 
 **Options**  
+
 1. ARIMA includes differencing for non-stationary data, while ARMA requires stationary data  
 2. ARIMA works with continuous data, ARMA only works with discrete data  
 3. ARIMA includes exogenous variables, ARMA does not  
@@ -490,7 +491,6 @@ The primary difference between ARMA (AutoRegressive Moving Average) and ARIMA
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q17"></a> Qn 17
 
@@ -498,6 +498,7 @@ The primary difference between ARMA (AutoRegressive Moving Average) and ARIMA
 What is meant by the 'order of integration' in time series analysis?
 
 **Options**  
+
 1. The number of times a series needs to be differenced to achieve stationarity  
 2. The number of times a series needs to be smoothed to remove noise  
 3. The number of observations required for reliable forecasting  
@@ -520,7 +521,6 @@ The 'order of integration' refers to the number of times a time series needs to
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q18"></a> Qn 18
 
@@ -528,6 +528,7 @@ The 'order of integration' refers to the number of times a time series needs to
 What is the purpose of the Box-Jenkins methodology in time series analysis?
 
 **Options**  
+
 1. A systematic approach to identify, estimate, and validate ARIMA models  
 2. A transformation technique to normalize skewed time series data  
 3. A diagnostic test for heteroscedasticity in residuals  
@@ -551,7 +552,6 @@ The Box-Jenkins methodology is a systematic approach to identify, estimate, and
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q19"></a> Qn 19
 
@@ -559,6 +559,7 @@ The Box-Jenkins methodology is a systematic approach to identify, estimate, and
 What information criterion is commonly used to select between different ARIMA models?
 
 **Options**  
+
 1. AIC (Akaike Information Criterion)  
 2. R-squared value  
 3. Mean Absolute Error (MAE)  
@@ -581,7 +582,6 @@ The AIC (Akaike Information Criterion) is commonly used to select between
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q20"></a> Qn 20
 
@@ -589,6 +589,7 @@ The AIC (Akaike Information Criterion) is commonly used to select between
 In the context of ARIMA residual analysis, what should a Q-Q plot ideally show?
 
 **Options**  
+
 1. Points falling approximately along a straight line, indicating normally distributed residuals  
 2. Points forming a horizontal band, indicating homoscedasticity  
 3. Points showing no pattern, indicating randomness  
@@ -611,7 +612,6 @@ In ARIMA residual analysis, a Q-Q (Quantile-Quantile) plot should ideally show
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q21"></a> Qn 21
 
@@ -619,6 +619,7 @@ In ARIMA residual analysis, a Q-Q (Quantile-Quantile) plot should ideally show
 What is the meaning of the 'exogenous variables' in the context of SARIMAX models?
 
 **Options**  
+
 1. External predictor variables that influence the time series but are not influenced by it  
 2. Random error terms that follow an external probability distribution  
 3. Extraordinary observations that are treated as outliers  
@@ -642,7 +643,6 @@ In SARIMAX models, exogenous variables (the 'X' part) are external predictor
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q22"></a> Qn 22
 
@@ -650,6 +650,7 @@ In SARIMAX models, exogenous variables (the 'X' part) are external predictor
 Why might you perform a Box-Cox transformation before applying an ARIMA model?
 
 **Options**  
+
 1. To stabilize variance and make the data more normally distributed  
 2. To remove seasonality from the data  
 3. To reduce the impact of outliers  
@@ -672,7 +673,6 @@ A Box-Cox transformation is often performed before applying an ARIMA model to
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q23"></a> Qn 23
 
@@ -680,6 +680,7 @@ A Box-Cox transformation is often performed before applying an ARIMA model to
 What does it mean when an ARIMA model is said to be 'invertible'?
 
 **Options**  
+
 1. The MA component can be rewritten as an infinite AR process  
 2. The model can be solved for both forecasting and backcasting  
 3. The model parameters can be reversed to get the original time series  
@@ -703,7 +704,6 @@ In time series analysis, when an ARIMA model is said to be 'invertible,' it
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q24"></a> Qn 24
 
@@ -711,6 +711,7 @@ In time series analysis, when an ARIMA model is said to be 'invertible,' it
 What is the difference between strong and weak stationarity in time series?
 
 **Options**  
+
 1. Weak stationarity requires constant mean and variance and time-invariant autocorrelation; strong stationarity requires the entire distribution to be time-invariant  
 2. Strong stationarity applies to long time series, weak stationarity to short time series  
 3. Strong stationarity means no differencing is required, weak stationarity means first differencing is sufficient  
@@ -735,7 +736,6 @@ The distinction between strong (strict) and weak stationarity lies in how much
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q25"></a> Qn 25
 
@@ -743,6 +743,7 @@ The distinction between strong (strict) and weak stationarity lies in how much
 What is the primary purpose of the KPSS test in time series analysis?
 
 **Options**  
+
 1. To test for stationarity with a null hypothesis of stationarity  
 2. To determine the optimal order of differencing  
 3. To test for normality of residuals  
@@ -766,7 +767,6 @@ The KPSS (Kwiatkowski-Phillips-Schmidt-Shin) test is used to test for
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q26"></a> Qn 26
 
@@ -774,6 +774,7 @@ The KPSS (Kwiatkowski-Phillips-Schmidt-Shin) test is used to test for
 What does Facebook Prophet use to model seasonality in time series data?
 
 **Options**  
+
 1. Fourier series for multiple seasonal periods  
 2. ARMA models with seasonal lags  
 3. Exponential smoothing with seasonal components  
@@ -797,7 +798,6 @@ Facebook Prophet uses Fourier series to model seasonality in time series data.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q27"></a> Qn 27
 
@@ -805,6 +805,7 @@ Facebook Prophet uses Fourier series to model seasonality in time series data.
 What are the three main components of a Facebook Prophet model?
 
 **Options**  
+
 1. Trend, seasonality, and holidays/events  
 2. Mean, variance, and autocorrelation  
 3. Intercept, slope, and residuals  
@@ -829,8 +830,7 @@ Facebook Prophet decomposes time series into three main components: trend,
 [↑ Go to TOC](#toc)
 
 
-
 ---
 
-*Automatically generated from [timeseries_questions.json](timeseries_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [timeseries_questions.json](timeseries_questions.json)*
+*Updated: 2025-05-18 13:57*

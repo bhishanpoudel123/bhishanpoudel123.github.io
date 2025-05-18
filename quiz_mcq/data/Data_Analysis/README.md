@@ -39,6 +39,7 @@
 What technique would you use to handle high-dimensional sparse data when performing PCA?
 
 **Options**  
+
 1. Standard PCA with normalization  
 2. `Truncated SVD` (also known as LSA)  
 3. `Kernel PCA` with RBF kernel  
@@ -52,9 +53,11 @@ Truncated SVD is specifically designed for sparse matrices and doesn't center
   the data (which would destroy sparsity), making it more memory-efficient and
   appropriate for high-dimensional sparse datasets.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_01_answer_long_01.md](data/Data_Analysis/qn_01_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -62,6 +65,7 @@ Truncated SVD is specifically designed for sparse matrices and doesn't center
 What's the most efficient way to perform grouped sampling with replacement in pandas, ensuring each group maintains its original size?
 
 **Options**  
+
 1. `df.groupby('group').apply(lambda x: x.sample(n=len(x), replace=True))`  
 2. `pd.concat([df[df['group']==g].sample(n=sum(df['group']==g), replace=True) for g in df['group'].unique()])`  
 3. `df.set_index('group').sample(frac=1, replace=True).reset_index()`  
@@ -75,9 +79,11 @@ This approach uses numpy's efficient random sampling directly on indices,
   avoiding the overhead of pandas' sample function while maintaining group sizes
   and allowing replacement.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_02_answer_long_01.md](data/Data_Analysis/qn_02_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -85,6 +91,7 @@ This approach uses numpy's efficient random sampling directly on indices,
 When implementing stratified k-fold cross-validation for a multi-label classification problem, which approach is most statistically sound?
 
 **Options**  
+
 1. Use sklearn's `StratifiedKFold` with the most common label for each instance  
 2. Create an iterative partitioning algorithm that balances all label combinations across folds  
 3. Use sklearn's `MultilabelStratifiedKFold` from the iterative-stratification package  
@@ -98,9 +105,11 @@ MultilabelStratifiedKFold implements iterative stratification, which preserves
   the distribution of all labels across folds, addressing the key challenge in
   multi-label stratification that normal StratifiedKFold cannot handle.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_03_answer_long_01.md](data/Data_Analysis/qn_03_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -108,6 +117,7 @@ MultilabelStratifiedKFold implements iterative stratification, which preserves
 Which approach correctly calculates the Wasserstein distance (Earth Mover's Distance) between two empirical distributions in Python?
 
 **Options**  
+
 1. `scipy.stats.wasserstein_distance(x, y)`  
 2. `numpy.linalg.norm(np.sort(x) - np.sort(y), ord=1)`  
 3. `scipy.spatial.distance.cdist(x.reshape(-1,1), y.reshape(-1,1), metric='euclidean').min(axis=1).sum()`  
@@ -121,9 +131,11 @@ Which approach correctly calculates the Wasserstein distance (Earth Mover's Dist
   distance between empirical distributions, which measures the minimum 'work'
   required to transform one distribution into another.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_04_answer_long_01.md](data/Data_Analysis/qn_04_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -131,6 +143,7 @@ Which approach correctly calculates the Wasserstein distance (Earth Mover's Dist
 What's the most computationally efficient way to find the k-nearest neighbors for each point in a large dataset using scikit-learn?
 
 **Options**  
+
 1. `sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='brute').fit(X).kneighbors(X)`  
 2. `sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='kd_tree').fit(X).kneighbors(X)`  
 3. `sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='ball_tree').fit(X).kneighbors(X)`  
@@ -145,9 +158,11 @@ The most efficient algorithm depends on the dataset characteristics: brute force
   dimensions (<20), and ball_tree performs better in higher dimensions or with
   non-Euclidean metrics.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_05_answer_long_01.md](data/Data_Analysis/qn_05_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q06"></a> Qn 06
 
@@ -155,6 +170,7 @@ The most efficient algorithm depends on the dataset characteristics: brute force
 When dealing with millions of rows of time series data with irregular timestamps, which method is most efficient for resampling to regular intervals with proper handling of missing values?
 
 **Options**  
+
 1. `df.set_index('timestamp').asfreq('1H').interpolate(method='time')`  
 2. `df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')`  
 3. `df.set_index('timestamp').resample('1H').mean().interpolate(method='time')`  
@@ -168,9 +184,11 @@ This approach correctly converts irregular timestamps to a regular frequency
   with .resample('1H').asfreq(), then intelligently fills missing values using
   time-based interpolation which respects the actual timing of observations.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_06_answer_long_01.md](data/Data_Analysis/qn_06_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q07"></a> Qn 07
 
@@ -178,6 +196,7 @@ This approach correctly converts irregular timestamps to a regular frequency
 Which technique is most appropriate for identifying non-linear relationships between variables in a high-dimensional dataset?
 
 **Options**  
+
 1. Pearson correlation matrix with hierarchical clustering  
 2. Distance correlation matrix with MDS visualization  
 3. `MINE` statistics (Maximal Information-based Nonparametric Exploration)  
@@ -192,9 +211,11 @@ MINE statistics, particularly the Maximal Information Coefficient (MIC), detect
   form, outperforming traditional correlation measures for complex
   relationships.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_07_answer_long_01.md](data/Data_Analysis/qn_07_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q08"></a> Qn 08
 
@@ -202,6 +223,7 @@ MINE statistics, particularly the Maximal Information Coefficient (MIC), detect
 What's the most statistically sound approach to handle imbalanced multiclass classification with severe class imbalance?
 
 **Options**  
+
 1. Oversampling minority classes using SMOTE  
 2. Undersampling majority classes using NearMiss  
 3. Cost-sensitive learning with class weights inversely proportional to frequencies  
@@ -217,9 +239,11 @@ META (Minority Ethnicity and Threshold Adjustment) learning with ensembling
   preventing the artificial patterns that can be introduced by synthetic
   oversampling.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_08_answer_long_01.md](data/Data_Analysis/qn_08_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q09"></a> Qn 09
 
@@ -227,6 +251,7 @@ META (Minority Ethnicity and Threshold Adjustment) learning with ensembling
 What's the correct approach to implement a memory-efficient pipeline for one-hot encoding categorical variables with high cardinality in pandas?
 
 **Options**  
+
 1. `pd.get_dummies(df, sparse=True)`  
 2. `pd.Categorical(df['col']).codes` in combination with sklearn's `OneHotEncoder(sparse=True)`  
 3. Use `pd.factorize()` on all categorical columns followed by scipy's sparse matrices  
@@ -241,9 +266,11 @@ Converting to pandas' memory-efficient category dtype first, then using
   preserves category labels and works well with scikit-learn while minimizing
   memory usage.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_09_answer_long_01.md](data/Data_Analysis/qn_09_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q10"></a> Qn 10
 
@@ -251,6 +278,7 @@ Converting to pandas' memory-efficient category dtype first, then using
 Which approach correctly implements a multi-output Gradient Boosting Regressor for simultaneously predicting multiple continuous targets with different scales?
 
 **Options**  
+
 1. `MultiOutputRegressor(GradientBoostingRegressor())`  
 2. `GradientBoostingRegressor` with `multioutput='raw_values'`  
 3. `RegressorChain(GradientBoostingRegressor())` with StandardScaler for each target  
@@ -264,9 +292,11 @@ MultiOutputRegressor fits a separate GradientBoostingRegressor for each target,
   allowing each model to optimize independently, which is crucial when targets
   have different scales and relationships with features.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_10_answer_long_01.md](data/Data_Analysis/qn_10_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q11"></a> Qn 11
 
@@ -274,6 +304,7 @@ MultiOutputRegressor fits a separate GradientBoostingRegressor for each target,
 When performing anomaly detection in a multivariate time series, which technique is most appropriate for detecting contextual anomalies?
 
 **Options**  
+
 1. `Isolation Forest` with sliding windows  
 2. `One-class SVM` on feature vectors  
 3. `LSTM Autoencoder` with reconstruction error thresholding  
@@ -287,9 +318,11 @@ LSTM Autoencoders can capture complex temporal dependencies in multivariate time
   series data, making them ideal for detecting contextual anomalies where data
   points are abnormal specifically in their context rather than globally.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_11_answer_long_01.md](data/Data_Analysis/qn_11_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q12"></a> Qn 12
 
@@ -297,6 +330,7 @@ LSTM Autoencoders can capture complex temporal dependencies in multivariate time
 What's the most rigorous approach to perform causal inference from observational data when randomized experiments aren't possible?
 
 **Options**  
+
 1. Propensity score matching with sensitivity analysis  
 2. Instrumental variable analysis with validity tests  
 3. Causal graphical models with do-calculus  
@@ -311,9 +345,11 @@ Causal graphical models using do-calculus provide a comprehensive mathematical
   researchers to formally express causal assumptions and determine whether
   causal quantities are identifiable from available data.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_12_answer_long_01.md](data/Data_Analysis/qn_12_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q13"></a> Qn 13
 
@@ -321,10 +357,11 @@ Causal graphical models using do-calculus provide a comprehensive mathematical
 Which technique is most appropriate for efficiently clustering a dataset with millions of data points and hundreds of features?
 
 **Options**  
+
 1. `Mini-batch K-means` with dimensionality reduction  
 2. `HDBSCAN` with feature selection  
 3. `Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)  
-4. `Spectral clustering` with Nyström approximation  
+4. `Spectral clustering` with NystrÃ¶m approximation  
 
 **Answer**  
 `Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)
@@ -335,9 +372,11 @@ Birch is specifically designed for very large datasets as it builds a tree
   limited memory requirements, and can handle outliers effectively, making it
   ideal for clustering massive high-dimensional datasets.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_13_answer_long_01.md](data/Data_Analysis/qn_13_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q14"></a> Qn 14
 
@@ -345,6 +384,7 @@ Birch is specifically designed for very large datasets as it builds a tree
 What's the most rigorous method for selecting the optimal number of components in a Gaussian Mixture Model?
 
 **Options**  
+
 1. Elbow method with distortion scores  
 2. Bayesian Information Criterion (BIC) or Akaike Information Criterion (AIC)  
 3. Cross-validation with log-likelihood scoring  
@@ -360,9 +400,11 @@ Variational Bayesian inference with automatic relevance determination
   unnecessary components, effectively determining the optimal number without
   requiring multiple model fits and comparisons.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_14_answer_long_01.md](data/Data_Analysis/qn_14_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q15"></a> Qn 15
 
@@ -370,6 +412,7 @@ Variational Bayesian inference with automatic relevance determination
 What's the correct approach to implement a custom scoring function for model evaluation in scikit-learn that handles class imbalance better than accuracy?
 
 **Options**  
+
 1. `sklearn.metrics.make_scorer(custom_metric, greater_is_better=True)`  
 2. `sklearn.metrics.make_scorer(custom_metric, needs_proba=True, greater_is_better=True)`  
 3. Create a scorer class that implements __call__(self, estimator, X, y) and gets_score() methods  
@@ -385,9 +428,11 @@ make_scorer() is the correct approach, but the parameters depend on the specific
   appropriate configuration varies based on the specific imbalance-handling
   metric.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_15_answer_long_01.md](data/Data_Analysis/qn_15_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q16"></a> Qn 16
 
@@ -395,6 +440,7 @@ make_scorer() is the correct approach, but the parameters depend on the specific
 Which approach correctly implements a memory-efficient data pipeline for processing and analyzing a dataset too large to fit in memory?
 
 **Options**  
+
 1. Use pandas with `low_memory=True` and `chunksize` parameter  
 2. Implement `dask.dataframe` with lazy evaluation and out-of-core computation  
 3. Use pandas-on-spark (formerly Koalas) with distributed processing  
@@ -409,9 +455,11 @@ dask.dataframe provides a pandas-like API with lazy evaluation, parallel
   beyond available RAM while maintaining familiar pandas operations and
   requiring minimal code changes.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_16_answer_long_01.md](data/Data_Analysis/qn_16_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q17"></a> Qn 17
 
@@ -419,6 +467,7 @@ dask.dataframe provides a pandas-like API with lazy evaluation, parallel
 When performing hyperparameter tuning for a complex model with many parameters, which advanced optimization technique is most efficient?
 
 **Options**  
+
 1. Random search with early stopping  
 2. Genetic algorithms with tournament selection  
 3. Bayesian optimization with Gaussian processes  
@@ -434,9 +483,11 @@ Bayesian optimization with Gaussian processes builds a probabilistic model of
   efficient than random or grid search for exploring high-dimensional parameter
   spaces.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_17_answer_long_01.md](data/Data_Analysis/qn_17_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q18"></a> Qn 18
 
@@ -444,6 +495,7 @@ Bayesian optimization with Gaussian processes builds a probabilistic model of
 What's the most statistically sound approach to handle heteroscedasticity in a regression model?
 
 **Options**  
+
 1. Visual inspection of residuals vs. fitted values plot  
 2. `Breusch-Pagan` test for constant variance  
 3. `White's test` for homoscedasticity  
@@ -458,9 +510,11 @@ Both tests detect heteroscedasticity but with different assumptions: Breusch-
   variables, while White's test is more general and doesn't make this
   assumption, making them complementary approaches.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_18_answer_long_01.md](data/Data_Analysis/qn_18_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q19"></a> Qn 19
 
@@ -468,6 +522,7 @@ Both tests detect heteroscedasticity but with different assumptions: Breusch-
 Which approach correctly implements a hierarchical time series forecasting model that respects aggregation constraints?
 
 **Options**  
+
 1. Bottom-up approach: forecast at lowest level and aggregate upwards  
 2. Top-down approach: forecast at highest level and disaggregate proportionally  
 3. Middle-out approach: forecast at a middle level and propagate in both directions  
@@ -482,9 +537,11 @@ The reconciliation approach (optimal combination) generates forecasts at all
   that minimizes revisions while ensuring hierarchical consistency, typically
   outperforming both bottom-up and top-down approaches.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_19_answer_long_01.md](data/Data_Analysis/qn_19_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q20"></a> Qn 20
 
@@ -492,6 +549,7 @@ The reconciliation approach (optimal combination) generates forecasts at all
 What technique is most appropriate for analyzing complex network data with community structures?
 
 **Options**  
+
 1. K-means clustering on the adjacency matrix  
 2. Spectral clustering with normalized Laplacian  
 3. `Louvain` algorithm for community detection  
@@ -506,9 +564,11 @@ The Louvain algorithm specifically optimizes modularity to detect communities in
   handling multi-scale resolution, making it ideal for complex networks with
   hierarchical community structures.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_20_answer_long_01.md](data/Data_Analysis/qn_20_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q21"></a> Qn 21
 
@@ -516,6 +576,7 @@ The Louvain algorithm specifically optimizes modularity to detect communities in
 What's the most robust approach to handle concept drift in a production machine learning system?
 
 **Options**  
+
 1. Implement automatic model retraining when performance degrades below a threshold  
 2. Use an ensemble of models with different time windows  
 3. Implement drift detection algorithms with adaptive learning techniques  
@@ -530,9 +591,11 @@ This approach combines statistical drift detection (e.g., ADWIN, DDM, or KSWIN)
   weights as new patterns emerge, allowing for immediate adaptation to changing
   data distributions.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_21_answer_long_01.md](data/Data_Analysis/qn_21_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q22"></a> Qn 22
 
@@ -540,6 +603,7 @@ This approach combines statistical drift detection (e.g., ADWIN, DDM, or KSWIN)
 Which method is most appropriate for interpretable anomaly detection in high-dimensional data?
 
 **Options**  
+
 1. `Isolation Forest` with LIME explanations  
 2. Autoencoders with attention mechanisms  
 3. SHAP values on `One-Class SVM` predictions  
@@ -554,9 +618,11 @@ Isolation Forest efficiently detects anomalies in high dimensions by isolating
   anomaly, showing which features contributed most to its identification, making
   the detection both efficient and explainable.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_22_answer_long_01.md](data/Data_Analysis/qn_22_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q23"></a> Qn 23
 
@@ -564,6 +630,7 @@ Isolation Forest efficiently detects anomalies in high dimensions by isolating
 When implementing a multi-armed bandit algorithm for real-time optimization, which approach balances exploration and exploitation most effectively?
 
 **Options**  
+
 1. Epsilon-greedy with annealing schedule  
 2. `Upper Confidence Bound` (UCB) algorithm  
 3. `Thompson Sampling` with prior distribution updates  
@@ -579,9 +646,11 @@ Thompson Sampling with Bayesian updates to prior distributions maintains
   empirically better performance than UCB and epsilon-greedy methods in many
   applications.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_23_answer_long_01.md](data/Data_Analysis/qn_23_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q24"></a> Qn 24
 
@@ -589,6 +658,7 @@ Thompson Sampling with Bayesian updates to prior distributions maintains
 What's the most efficient technique for calculating pairwise distances between all points in a very large dataset?
 
 **Options**  
+
 1. `numpy.linalg.norm` with broadcasting  
 2. `scipy.spatial.distance.pdist` with `squareform`  
 3. `sklearn.metrics.pairwise_distances` with `n_jobs=-1`  
@@ -603,9 +673,11 @@ pdist computes distances using an optimized implementation that avoids redundant
   convert to a square matrix if needed; this approach is significantly more
   memory-efficient than computing the full distance matrix directly.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_24_answer_long_01.md](data/Data_Analysis/qn_24_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q25"></a> Qn 25
 
@@ -613,6 +685,7 @@ pdist computes distances using an optimized implementation that avoids redundant
 Which method is most appropriate for detecting and handling multivariate outliers in high-dimensional data?
 
 **Options**  
+
 1. Z-scores on each dimension independently  
 2. `Mahalanobis distance` with robust covariance estimation  
 3. `Local Outlier Factor` with appropriate neighborhood size  
@@ -627,9 +700,11 @@ Mahalanobis distance accounts for the covariance structure of the data, and
   prevents outliers from influencing the distance metric itself, making it ideal
   for identifying multivariate outliers.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_25_answer_long_01.md](data/Data_Analysis/qn_25_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q26"></a> Qn 26
 
@@ -637,6 +712,7 @@ Mahalanobis distance accounts for the covariance structure of the data, and
 What's the most appropriate technique for feature selection when dealing with multicollinearity in a regression context?
 
 **Options**  
+
 1. Forward stepwise selection with VIF thresholding  
 2. `Elastic Net` regularization with cross-validation  
 3. Principal Component Regression (PCR)  
@@ -648,12 +724,14 @@ What's the most appropriate technique for feature selection when dealing with mu
 **Explanation**  
 Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping
   correlated features while still performing feature selection, with the optimal
-  balance determined through cross-validation—making it more effective than
+  balance determined through cross-validationâ€”making it more effective than
   methods that either eliminate or transform features.
+
+**Detailed Explanation**  
+See detailed documentation: [qn_26_answer_long_01.md](data/Data_Analysis/qn_26_answer_long_01.md)
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q27"></a> Qn 27
 
@@ -661,6 +739,7 @@ Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping
 Which approach correctly implements online learning for a classification task with a non-stationary data distribution?
 
 **Options**  
+
 1. `SGDClassifier` with `partial_fit` and appropriate `class_weight` adjustments  
 2. `River's HoeffdingTreeClassifier` with drift detection  
 3. Custom implementation using incremental learning and time-based feature weighting  
@@ -675,9 +754,11 @@ This ensemble approach maintains multiple incremental models updated with new
   allowing the system to adapt to concept drift by giving more influence to
   models that perform well on recent data.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_27_answer_long_01.md](data/Data_Analysis/qn_27_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q28"></a> Qn 28
 
@@ -685,6 +766,7 @@ This ensemble approach maintains multiple incremental models updated with new
 What's the most rigorous approach to handle missing data in a longitudinal study with potential non-random missingness?
 
 **Options**  
+
 1. Multiple imputation by chained equations (MICE) with auxiliary variables  
 2. Pattern mixture models with sensitivity analysis  
 3. Joint modeling of missingness and outcomes  
@@ -699,9 +781,11 @@ Joint modeling directly incorporates the missingness mechanism into the analysis
   scenarios by explicitly modeling the relationship between the missing data
   process and the outcomes of interest.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_28_answer_long_01.md](data/Data_Analysis/qn_28_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q29"></a> Qn 29
 
@@ -709,6 +793,7 @@ Joint modeling directly incorporates the missingness mechanism into the analysis
 Which technique is most appropriate for analyzing complex interactions between variables in a predictive modeling context?
 
 **Options**  
+
 1. Generalized Additive Models with tensor product smooths  
 2. `Random Forest` with partial dependence plots and ICE curves  
 3. `Neural networks` with feature crossing and attention mechanisms  
@@ -723,9 +808,11 @@ Gradient Boosting effectively captures complex non-linear relationships, while
   attributable to interactions between features, providing a rigorous
   statistical framework for analyzing and visualizing interactions.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_29_answer_long_01.md](data/Data_Analysis/qn_29_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q30"></a> Qn 30
 
@@ -733,6 +820,7 @@ Gradient Boosting effectively captures complex non-linear relationships, while
 What's the most statistically sound approach to perform feature selection for a regression task with potential non-linear relationships?
 
 **Options**  
+
 1. `Mutual information`-based selection with permutation testing  
 2. `LASSO` regression with stability selection  
 3. `Random Forest` with Boruta algorithm  
@@ -747,11 +835,13 @@ Mutual information captures both linear and non-linear dependencies between
   a statistically rigorous way to assess the significance of these dependencies,
   controlling for multiple testing issues.
 
-[↑ Go to TOC](#toc)
+**Detailed Explanation**  
+See detailed documentation: [qn_30_answer_long_01.md](data/Data_Analysis/qn_30_answer_long_01.md)
 
+[↑ Go to TOC](#toc)
 
 
 ---
 
-*Automatically generated from [data_analysis_questions.json](data_analysis_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [data_analysis_questions.json](data_analysis_questions.json)*
+*Updated: 2025-05-18 13:57*

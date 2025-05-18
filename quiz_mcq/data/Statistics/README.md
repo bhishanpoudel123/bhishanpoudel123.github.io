@@ -14,6 +14,7 @@
 What does the p-value represent in hypothesis testing?
 
 **Options**  
+
 1. Probability of null hypothesis being true  
 2. Probability of obtaining test results at least as extreme as the results actually observed  
 3. Probability of alternative hypothesis  
@@ -28,7 +29,6 @@ The p-value quantifies the evidence against the null hypothesis. A small p-value
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -36,6 +36,7 @@ The p-value quantifies the evidence against the null hypothesis. A small p-value
 What is the main difference between population and sample in statistics?
 
 **Options**  
+
 1. Sample is larger than population  
 2. Population is derived from sample  
 3. Sample is a subset of population  
@@ -50,7 +51,6 @@ A population includes all elements from a set of data, while a sample consists
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -58,6 +58,7 @@ A population includes all elements from a set of data, while a sample consists
 What does standard deviation measure?
 
 **Options**  
+
 1. Average  
 2. Spread of data  
 3. Skewness  
@@ -72,7 +73,6 @@ Standard deviation measures the amount of variation or dispersion of a set of
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -80,6 +80,7 @@ Standard deviation measures the amount of variation or dispersion of a set of
 In a normal distribution, what percentage of data lies within one standard deviation of the mean?
 
 **Options**  
+
 1. 50%  
 2. 68%  
 3. 95%  
@@ -94,7 +95,6 @@ In a normal distribution, approximately 68% of the data falls within one
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -102,6 +102,7 @@ In a normal distribution, approximately 68% of the data falls within one
 Which of the following measures of central tendency is not affected by extreme values?
 
 **Options**  
+
 1. Mean  
 2. Median  
 3. Mode  
@@ -117,8 +118,7 @@ Median is the middle value and is not affected by extremely large or small
 [↑ Go to TOC](#toc)
 
 
-
 ---
 
-*Automatically generated from [statistics_questions.json](statistics_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [statistics_questions.json](statistics_questions.json)*
+*Updated: 2025-05-18 13:57*

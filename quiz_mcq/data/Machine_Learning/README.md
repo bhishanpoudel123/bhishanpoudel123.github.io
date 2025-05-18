@@ -14,6 +14,7 @@
 Which algorithm is used for classification problems?
 
 **Options**  
+
 1. Linear Regression  
 2. K-Means  
 3. Logistic Regression  
@@ -27,7 +28,6 @@ Logistic regression is used for binary and multi-class classification problems.
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -35,6 +35,7 @@ Logistic regression is used for binary and multi-class classification problems.
 What is the purpose of the learning rate in gradient descent?
 
 **Options**  
+
 1. To control the number of iterations  
 2. To avoid overfitting  
 3. To control how much the model is adjusted during each update  
@@ -49,7 +50,6 @@ The learning rate determines the step size at each iteration while moving toward
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -57,6 +57,7 @@ The learning rate determines the step size at each iteration while moving toward
 Which technique is used to reduce the dimensionality of data?
 
 **Options**  
+
 1. Gradient Descent  
 2. Regularization  
 3. PCA  
@@ -71,7 +72,6 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -79,6 +79,7 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that
 What is the main goal of unsupervised learning?
 
 **Options**  
+
 1. Predict outcomes based on labeled data  
 2. Optimize a function  
 3. Find hidden patterns or groupings in data  
@@ -93,7 +94,6 @@ Unsupervised learning aims to discover the underlying structure of data without
 
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -101,6 +101,7 @@ Unsupervised learning aims to discover the underlying structure of data without
 What is overfitting in machine learning?
 
 **Options**  
+
 1. When the model performs well on test data but poorly on training data  
 2. When the model performs well on training data but poorly on test data  
 3. When the model performs well on both training and test data  
@@ -116,8 +117,7 @@ Overfitting occurs when a model learns the training data too well, including
 [↑ Go to TOC](#toc)
 
 
-
 ---
 
-*Automatically generated from [machine_learning_questions.json](machine_learning_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [machine_learning_questions.json](machine_learning_questions.json)*
+*Updated: 2025-05-18 13:57*

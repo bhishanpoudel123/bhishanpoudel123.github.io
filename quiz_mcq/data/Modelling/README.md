@@ -39,6 +39,7 @@
 When implementing stacking ensemble with scikit-learn, what's the most rigorous approach to prevent target leakage in the meta-learner?
 
 **Options**  
+
 1. Use StackingClassifier with cv=5  
 2. Manually implement out-of-fold predictions for each base learner  
 3. Train base models on 70% of data and meta-model on remaining 30%  
@@ -54,9 +55,11 @@ Manually generating out-of-fold predictions ensures the meta-learner only sees
   StackingClassifier and can incorporate diverse base models while maintaining
   proper validation boundaries.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_01_answer_long_01.md](data/Modelling/qn_01_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q02"></a> Qn 02
 
@@ -64,6 +67,7 @@ Manually generating out-of-fold predictions ensures the meta-learner only sees
 What's the most effective technique for calibrating probability estimates from a gradient boosting classifier?
 
 **Options**  
+
 1. Use XGBoost's built-in calibration with scale_pos_weight parameter  
 2. Apply sklearn's CalibratedClassifierCV with isotonic regression  
 3. Implement custom Platt scaling with holdout validation  
@@ -78,9 +82,11 @@ Isotonic regression via CalibratedClassifierCV is non-parametric and can correct
   than Platt scaling, particularly for gradient boosting models which often
   produce well-ranked but not well-calibrated probabilities.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_02_answer_long_01.md](data/Modelling/qn_02_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q03"></a> Qn 03
 
@@ -88,6 +94,7 @@ Isotonic regression via CalibratedClassifierCV is non-parametric and can correct
 Which approach correctly implements proper nested cross-validation for model selection and evaluation?
 
 **Options**  
+
 1. GridSearchCV inside a for loop of train_test_split iterations  
 2. Nested loops of KFold.split(), with inner loop for hyperparameter tuning  
 3. Pipeline with GridSearchCV followed by cross_val_score  
@@ -102,9 +109,11 @@ Proper nested cross-validation requires an outer loop for performance estimation
   used for model selection from the data used for model evaluation, avoiding
   optimistic bias.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_03_answer_long_01.md](data/Modelling/qn_03_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q04"></a> Qn 04
 
@@ -112,6 +121,7 @@ Proper nested cross-validation requires an outer loop for performance estimation
 What's the most memory-efficient way to implement incremental learning for large datasets with scikit-learn?
 
 **Options**  
+
 1. Use SGDClassifier with partial_fit on data chunks  
 2. Use MiniBatchKMeans for unsupervised feature extraction followed by classification  
 3. Implement dask-ml for distributed model training  
@@ -126,9 +136,11 @@ SGDClassifier with partial_fit allows true incremental learning, processing data
   parameters with each batch and converging to the same solution as batch
   processing would with sufficient iterations.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_04_answer_long_01.md](data/Modelling/qn_04_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q05"></a> Qn 05
 
@@ -136,6 +148,7 @@ SGDClassifier with partial_fit allows true incremental learning, processing data
 When dealing with competing risks in survival analysis, which implementation correctly handles the problem?
 
 **Options**  
+
 1. Cox Proportional Hazards model with stratification by risk type  
 2. Kaplan-Meier estimator with censoring of competing events  
 3. Fine-Gray subdistribution hazard model from pysurvival  
@@ -150,9 +163,11 @@ The Fine-Gray model explicitly accounts for competing risks by modeling the
   an event in the presence of competing events, unlike standard Cox models or
   Kaplan-Meier which can produce biased estimates under competing risks.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_05_answer_long_01.md](data/Modelling/qn_05_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q06"></a> Qn 06
 
@@ -160,6 +175,7 @@ The Fine-Gray model explicitly accounts for competing risks by modeling the
 What's the most statistically sound approach to implement monotonic constraints in gradient boosting?
 
 **Options**  
+
 1. Post-processing model predictions to enforce monotonicity  
 2. Using XGBoost's monotone_constraints parameter  
 3. Transforming features with isotonic regression before modeling  
@@ -175,9 +191,11 @@ XGBoost's native monotone_constraints parameter enforces monotonicity during
   can degrade model accuracy or pre-processing which doesn't guarantee model
   monotonicity.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_06_answer_long_01.md](data/Modelling/qn_06_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q07"></a> Qn 07
 
@@ -185,6 +203,7 @@ XGBoost's native monotone_constraints parameter enforces monotonicity during
 Which approach correctly implements a custom kernel for SVM in scikit-learn?
 
 **Options**  
+
 1. Subclass sklearn.svm.SVC and override the _compute_kernel method  
 2. Define a function that takes two arrays and returns a kernel matrix  
 3. Use sklearn.metrics.pairwise.pairwise_kernels with a custom metric  
@@ -200,9 +219,11 @@ For custom kernels in scikit-learn SVMs, one must define a function K(X, Y) that
   kernel design while maintaining compatibility with scikit-learn's
   implementation.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_07_answer_long_01.md](data/Modelling/qn_07_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q08"></a> Qn 08
 
@@ -210,6 +231,7 @@ For custom kernels in scikit-learn SVMs, one must define a function K(X, Y) that
 What's the most rigorous approach to handle feature selection with highly correlated features in a regression context?
 
 **Options**  
+
 1. Sequential feature selection with tolerance for multicollinearity  
 2. Recursive feature elimination with cross-validation (RFECV)  
 3. Elastic Net regularization with randomized hyperparameter search  
@@ -225,9 +247,11 @@ Elastic Net combines L1 and L2 penalties, effectively handling correlated
   determined through randomized hyperparameter search across different alpha and
   l1_ratio values.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_08_answer_long_01.md](data/Modelling/qn_08_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q09"></a> Qn 09
 
@@ -235,6 +259,7 @@ Elastic Net combines L1 and L2 penalties, effectively handling correlated
 Which implementation correctly handles ordinal encoding for machine learning while preserving the ordinal nature of features?
 
 **Options**  
+
 1. sklearn.preprocessing.OrdinalEncoder  
 2. Custom encoding using pd.Categorical with ordered=True  
 3. sklearn.preprocessing.PolynomialFeatures with degree=1  
@@ -250,9 +275,11 @@ Using pandas Categorical with ordered=True preserves the ordinal relationship
   OrdinalEncoder which assigns arbitrary numeric values without preserving
   distances).
 
+**Detailed Explanation**  
+See detailed documentation: [qn_09_answer_long_01.md](data/Modelling/qn_09_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q10"></a> Qn 10
 
@@ -260,6 +287,7 @@ Using pandas Categorical with ordered=True preserves the ordinal relationship
 What's the most effective way to implement a time-based split for cross-validation in time series forecasting?
 
 **Options**  
+
 1. Use sklearn's TimeSeriesSplit with appropriate gap  
 2. Implement a sliding window validation with fixed lookback period  
 3. Use BlockingTimeSeriesSplit from sktime with custom test window growth  
@@ -274,9 +302,11 @@ A custom cross-validator with expanding windows (increasing training set) and
   simulates real-world forecasting scenarios while handling temporal
   dependencies and avoiding lookahead bias.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_10_answer_long_01.md](data/Modelling/qn_10_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q11"></a> Qn 11
 
@@ -284,6 +314,7 @@ A custom cross-validator with expanding windows (increasing training set) and
 Which approach correctly implements an interpretable model for binary classification with uncertainty quantification?
 
 **Options**  
+
 1. Random Forest with prediction intervals based on quantiles of tree predictions  
 2. Gradient Boosting with NGBoost for natural gradient boosting  
 3. Bayesian Logistic Regression with MCMC sampling for posterior distribution  
@@ -298,9 +329,11 @@ Bayesian Logistic Regression provides both interpretability (coefficients have
   posterior distribution of parameters, capturing both aleatoric and epistemic
   uncertainty while maintaining model transparency.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_11_answer_long_01.md](data/Modelling/qn_11_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q12"></a> Qn 12
 
@@ -308,6 +341,7 @@ Bayesian Logistic Regression provides both interpretability (coefficients have
 What's the most robust approach to handling class imbalance in a multi-class classification problem?
 
 **Options**  
+
 1. Use class_weight='balanced' in sklearn classifiers  
 2. Apply SMOTE for oversampling minority classes  
 3. Implement a cost-sensitive learning approach with custom loss function  
@@ -323,9 +357,11 @@ Ensemble methods with class-specific resampling strategies (e.g., EasyEnsemble
   class weighting, especially for multi-class problems with varying degrees of
   imbalance.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_12_answer_long_01.md](data/Modelling/qn_12_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q13"></a> Qn 13
 
@@ -333,6 +369,7 @@ Ensemble methods with class-specific resampling strategies (e.g., EasyEnsemble
 Which technique is most appropriate for detecting and quantifying the importance of interaction effects in a Random Forest model?
 
 **Options**  
+
 1. Use feature_importances_ attribute and partial dependence plots  
 2. Implement H-statistic from Friedman and Popescu  
 3. Extract and analyze individual decision paths from trees  
@@ -347,9 +384,11 @@ The H-statistic specifically quantifies interaction strength between features by
   versus independently, providing a statistical measure of interactions that
   can't be captured by standard importance metrics or partial dependence alone.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_13_answer_long_01.md](data/Modelling/qn_13_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q14"></a> Qn 14
 
@@ -357,6 +396,7 @@ The H-statistic specifically quantifies interaction strength between features by
 What's the correct approach to implement a custom scoring function for sklearn's RandomizedSearchCV that accounts for both predictive performance and model complexity?
 
 **Options**  
+
 1. Use make_scorer with a function that combines multiple metrics  
 2. Implement a custom Scorer class with a custom __call__ method  
 3. Use multiple evaluation metrics with refit parameter specifying the primary metric  
@@ -371,9 +411,11 @@ make_scorer allows creating a custom scoring function that can combine
   number of features or model parameters), providing a single metric for
   optimization that balances performance and parsimony.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_14_answer_long_01.md](data/Modelling/qn_14_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q15"></a> Qn 15
 
@@ -381,6 +423,7 @@ make_scorer allows creating a custom scoring function that can combine
 Which is the most statistically rigorous approach to implement feature selection for a regression problem with heteroscedastic errors?
 
 **Options**  
+
 1. Use sklearn's SelectFromModel with LassoCV  
 2. Implement weighted LASSO with weight inversely proportional to error variance  
 3. Apply robust feature selection using Huber regression  
@@ -395,9 +438,11 @@ Weighted LASSO that downweights observations with high error variance accounts
   selected or rejected due to non-constant error variance, resulting in more
   reliable feature selection.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_15_answer_long_01.md](data/Modelling/qn_15_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q16"></a> Qn 16
 
@@ -405,6 +450,7 @@ Weighted LASSO that downweights observations with high error variance accounts
 What's the most effective way to implement an interpretable yet powerful model for regression with potentially non-linear effects?
 
 **Options**  
+
 1. Use a Random Forest with post-hoc SHAP explanations  
 2. Implement Generalized Additive Models (GAMs) with shape constraints  
 3. Use Explainable Boosting Machines (EBMs) from InterpretML  
@@ -419,9 +465,11 @@ EBMs combine the interpretability of GAMs with the predictive power of boosting,
   while remaining highly interpretable, offering better performance than
   standard GAMs while maintaining transparency.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_16_answer_long_01.md](data/Modelling/qn_16_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q17"></a> Qn 17
 
@@ -429,6 +477,7 @@ EBMs combine the interpretability of GAMs with the predictive power of boosting,
 Which approach correctly implements quantile regression forests for prediction intervals?
 
 **Options**  
+
 1. Use sklearn's RandomForestRegressor with bootstrap=True and calculate empirical quantiles of tree predictions  
 2. Use the forestci package to compute jackknife-based prediction intervals  
 3. Use GradientBoostingRegressor with loss='quantile' and train separate models for each quantile  
@@ -443,9 +492,11 @@ Quantile regression forests require storing the empirical distribution of
   implementation that extends standard random forests to compute conditional
   quantiles from these stored distributions.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_17_answer_long_01.md](data/Modelling/qn_17_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q18"></a> Qn 18
 
@@ -453,6 +504,7 @@ Quantile regression forests require storing the empirical distribution of
 What's the most rigorous approach to handle outliers in the target variable for regression problems?
 
 **Options**  
+
 1. Winsorize the target variable at specific quantiles  
 2. Use Huber or Quantile regression with robust loss functions  
 3. Remove observations with Cook's distance > 4/n  
@@ -467,9 +519,11 @@ Robust regression methods like Huber or Quantile regression use loss functions
   addressing the issue without removing potentially valuable data points or
   distorting the target distribution through transformations.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_18_answer_long_01.md](data/Modelling/qn_18_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q19"></a> Qn 19
 
@@ -477,6 +531,7 @@ Robust regression methods like Huber or Quantile regression use loss functions
 Which implementation correctly addresses the curse of dimensionality in nearest neighbor models?
 
 **Options**  
+
 1. Use KNeighborsClassifier with algorithm='kd_tree'  
 2. Apply dimensionality reduction like PCA before KNN  
 3. Use approximate nearest neighbors with Annoy or FAISS  
@@ -491,9 +546,11 @@ Distance metric learning adaptively learns a transformation of the feature space
   dimensionality by creating a more semantically meaningful distance metric,
   unlike fixed trees or general dimensionality reduction.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_19_answer_long_01.md](data/Modelling/qn_19_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q20"></a> Qn 20
 
@@ -501,6 +558,7 @@ Distance metric learning adaptively learns a transformation of the feature space
 What's the most efficient way to implement early stopping in a gradient boosting model to prevent overfitting?
 
 **Options**  
+
 1. Set max_depth and n_estimators conservatively based on cross-validation  
 2. Use early_stopping_rounds with a validation set in XGBoost/LightGBM  
 3. Implement a custom callback function that monitors training metrics  
@@ -515,9 +573,11 @@ Using early_stopping_rounds with a separate validation set stops training when
   rounds, efficiently determining the optimal number of trees in a single
   training run without requiring multiple cross-validation runs.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_20_answer_long_01.md](data/Modelling/qn_20_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q21"></a> Qn 21
 
@@ -525,6 +585,7 @@ Using early_stopping_rounds with a separate validation set stops training when
 Which approach correctly implements a counterfactual explanation method for a black-box classifier?
 
 **Options**  
+
 1. Use LIME to generate local explanations around the instance  
 2. Implement DiCE (Diverse Counterfactual Explanations) to generate multiple feasible counterfactuals  
 3. Apply SHAP values to identify feature importance for the prediction  
@@ -539,9 +600,11 @@ DiCE specifically generates diverse counterfactual explanations that show how an
   classification, addressing the 'what-if' question directly rather than just
   explaining the current prediction.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_21_answer_long_01.md](data/Modelling/qn_21_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q22"></a> Qn 22
 
@@ -549,6 +612,7 @@ DiCE specifically generates diverse counterfactual explanations that show how an
 What's the most effective approach to implement online learning for a regression task with concept drift?
 
 **Options**  
+
 1. Use SGDRegressor with warm_start=True and smaller alpha as more data arrives  
 2. Implement a sliding window approach that retrains on recent data periodically  
 3. Use incremental learning with drift detection algorithms to trigger model updates  
@@ -563,9 +627,11 @@ Combining incremental learning with explicit drift detection (e.g., ADWIN, DDM)
   updates when the data distribution actually changes, balancing computational
   efficiency with adaptation to concept drift.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_22_answer_long_01.md](data/Modelling/qn_22_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q23"></a> Qn 23
 
@@ -573,6 +639,7 @@ Combining incremental learning with explicit drift detection (e.g., ADWIN, DDM)
 Which method is most appropriate for tuning hyperparameters when training time is extremely limited?
 
 **Options**  
+
 1. Use model-based optimization with Gaussian Processes  
 2. Implement multi-fidelity optimization with Hyperband  
 3. Apply Optuna with pruning functionality  
@@ -587,9 +654,11 @@ Hyperband uses a bandit-based approach to allocate resources efficiently,
   promising ones, making it particularly effective when training time is limited
   and early performance is indicative of final performance.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_23_answer_long_01.md](data/Modelling/qn_23_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q24"></a> Qn 24
 
@@ -597,6 +666,7 @@ Hyperband uses a bandit-based approach to allocate resources efficiently,
 What's the most statistically sound approach to implement feature selection for time series forecasting?
 
 **Options**  
+
 1. Apply recursive feature elimination with time series cross-validation  
 2. Use LASSO regression with temporal blocking of folds  
 3. Implement feature importance from tree-based models with purged cross-validation  
@@ -611,9 +681,11 @@ Tree-based feature importance combined with purged cross-validation (which
   in the data, preventing information leakage while identifying features that
   have genuine predictive power for future time points.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_24_answer_long_01.md](data/Modelling/qn_24_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q25"></a> Qn 25
 
@@ -621,6 +693,7 @@ Tree-based feature importance combined with purged cross-validation (which
 Which approach correctly addresses Simpson's paradox in a predictive modeling context?
 
 **Options**  
+
 1. Include interaction terms between potentially confounding variables  
 2. Use causal graphical models to identify proper conditioning sets  
 3. Apply hierarchical/multilevel modeling to account for grouping  
@@ -635,9 +708,11 @@ Causal graphical models (e.g., DAGs) allow identifying which variables should or
   model captures the true causal relationship rather than spurious associations
   that reverse with conditioning.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_25_answer_long_01.md](data/Modelling/qn_25_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q26"></a> Qn 26
 
@@ -645,6 +720,7 @@ Causal graphical models (e.g., DAGs) allow identifying which variables should or
 What's the most efficient way to implement hyperparameter tuning for an ensemble of diverse model types?
 
 **Options**  
+
 1. Use separate GridSearchCV for each model type and combine best models  
 2. Implement nested hyperparameter optimization with DEAP genetic algorithm  
 3. Use FLAML for automated and efficient hyperparameter tuning  
@@ -659,9 +735,11 @@ Multi-objective Bayesian optimization can simultaneously optimize for both
   hyperparameters for each model type while ensuring the ensemble as a whole
   performs well through complementary strengths.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_26_answer_long_01.md](data/Modelling/qn_26_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q27"></a> Qn 27
 
@@ -669,6 +747,7 @@ Multi-objective Bayesian optimization can simultaneously optimize for both
 Which technique is most appropriate for detecting and visualizing non-linear relationships in supervised learning?
 
 **Options**  
+
 1. Partial dependence plots with contour plots for interactions  
 2. Accumulated Local Effects (ALE) plots with bootstrap confidence intervals  
 3. SHAP interaction values with dependency plots  
@@ -683,9 +762,11 @@ ICE plots show how predictions change for individual instances across the range
   would be masked by averaging in standard partial dependence plots, making them
   ideal for detecting complex non-linear relationships.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_27_answer_long_01.md](data/Modelling/qn_27_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q28"></a> Qn 28
 
@@ -693,6 +774,7 @@ ICE plots show how predictions change for individual instances across the range
 What's the most rigorous approach to quantify uncertainty in predictions from a gradient boosting model?
 
 **Options**  
+
 1. Use quantile regression with multiple target quantiles  
 2. Implement Monte Carlo dropout in gradient boosting  
 3. Apply jackknife resampling to estimate prediction variance  
@@ -707,9 +789,11 @@ Training multiple gradient boosting models with quantile loss functions at
   distribution of the target variable, providing a rigorous non-parametric
   approach to uncertainty quantification that captures heteroscedasticity.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_28_answer_long_01.md](data/Modelling/qn_28_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q29"></a> Qn 29
 
@@ -717,6 +801,7 @@ Training multiple gradient boosting models with quantile loss functions at
 What's the most appropriate technique for automated feature engineering in time series forecasting?
 
 **Options**  
+
 1. Use tsfresh with appropriate feature filtering based on p-values  
 2. Implement custom feature extractors with domain-specific transformations  
 3. Apply featuretools with time-aware aggregation primitives  
@@ -731,9 +816,11 @@ tsfresh automatically extracts and selects relevant time series features (over
   designed for time series data unlike general feature engineering tools, making
   it ideal for time series forecasting tasks.
 
+**Detailed Explanation**  
+See detailed documentation: [qn_29_answer_long_01.md](data/Modelling/qn_29_answer_long_01.md)
+
 [↑ Go to TOC](#toc)
 
-  
 
 ### <a id="q30"></a> Qn 30
 
@@ -741,6 +828,7 @@ tsfresh automatically extracts and selects relevant time series features (over
 Which approach correctly implements proper evaluation metrics for a multi-class imbalanced classification problem?
 
 **Options**  
+
 1. Use macro-averaged precision, recall, and F1 score  
 2. Implement balanced accuracy and Cohen's kappa statistic  
 3. Use ROC AUC with one-vs-rest approach and weighted averaging  
@@ -756,11 +844,13 @@ For imbalanced multi-class problems, precision-recall curves with prevalence
   relevant performance for minority classes while accounting for class
   distribution.
 
-[↑ Go to TOC](#toc)
+**Detailed Explanation**  
+See detailed documentation: [qn_30_answer_long_01.md](data/Modelling/qn_30_answer_long_01.md)
 
+[↑ Go to TOC](#toc)
 
 
 ---
 
-*Automatically generated from [modelling_questions.json](modelling_questions.json)*  
-*Updated: 2025-05-16 15:26*
+*Automatically generated from [modelling_questions.json](modelling_questions.json)*
+*Updated: 2025-05-18 13:57*

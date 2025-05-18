@@ -344,7 +344,7 @@ Implement drift detection algorithms with adaptive learning techniques
 `Elastic Net` regularization with cross-validation
 
 
-**Explanation:** Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validation—making it more effective than methods that either eliminate or transform features.
+**Explanation:** Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validationâ€”making it more effective than methods that either eliminate or transform features.
 
 </details></p>
 

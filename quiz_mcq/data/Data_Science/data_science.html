@@ -1,306 +1,820 @@
-<html>
-<head><title>Data Science</title></head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data_Science Quiz</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 <body>
-<h1>Data Science</h1>
-<h2>Qn 01: What is the primary goal of data wrangling?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Cleaning and transforming raw data into a usable format
-<br><strong>Explanation:</strong> Data wrangling involves cleaning, structuring, and enriching raw data into a format suitable for analysis.
-</div>
-
-<h2>Qn 02: Which of the following is NOT a measure of central tendency?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Standard deviation
-<br><strong>Explanation:</strong> Standard deviation measures dispersion, not central tendency. The three main measures of central tendency are mean, median, and mode.
-</div>
-
-<h2>Qn 03: What type of chart would be most appropriate for comparing proportions of a whole?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Pie chart
-<br><strong>Explanation:</strong> Pie charts are best for showing proportions of a whole, though they should be used sparingly and only with a small number of categories.
-</div>
-
-<h2>Qn 04: Which Python library is primarily used for working with tabular data structures?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Pandas
-<br><strong>Explanation:</strong> Pandas provides DataFrame objects which are ideal for working with tabular data, similar to spreadsheets or SQL tables.
-</div>
-
-<h2>Qn 05: What does the groupby() operation in Pandas return before aggregation?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> A DataFrameGroupBy object
-<br><strong>Explanation:</strong> groupby() returns a DataFrameGroupBy object which can then be aggregated using functions like sum(), mean(), etc.
-</div>
-
-<h2>Qn 06: What does 'NaN' represent in a Pandas DataFrame?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Not a Number (missing or undefined value)
-<br><strong>Explanation:</strong> NaN stands for 'Not a Number' and represents missing or undefined numerical data in Pandas.
-</div>
-
-<h2>Qn 07: Which technique is NOT typically used for feature selection?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Data normalization
-<br><strong>Explanation:</strong> Data normalization scales features but doesn't select them. PCA, correlation analysis, and recursive elimination are feature selection methods.
-</div>
-
-<h2>Qn 08: Which metric is NOT used to evaluate regression models?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Accuracy
-<br><strong>Explanation:</strong> Accuracy is used for classification problems. MSE, RMSE, and R-squared are common regression metrics.
-</div>
-
-<h2>Qn 09: What is the most common method for handling missing numerical data?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Replacing with the mean or median
-<br><strong>Explanation:</strong> Mean/median imputation is common for numerical data, though the best approach depends on the data and missingness pattern.
-</div>
-
-<h2>Qn 10: Which library is essential for numerical computing in Python?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> NumPy
-<br><strong>Explanation:</strong> NumPy provides foundational support for numerical computing with efficient array operations and mathematical functions.
-</div>
-
-<h2>Qn 11: What is the purpose of a correlation matrix?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To measure linear relationships between numerical variables
-<br><strong>Explanation:</strong> A correlation matrix measures the linear relationship between pairs of numerical variables, ranging from -1 to 1.
-</div>
-
-<h2>Qn 12: What is the main advantage of using a box plot?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Displaying the distribution and outliers of a dataset
-<br><strong>Explanation:</strong> Box plots effectively show a dataset's quartiles, median, and potential outliers.
-</div>
-
-<h2>Qn 13: What does the term 'overfitting' refer to in machine learning?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> A model that performs well on training data but poorly on unseen data
-<br><strong>Explanation:</strong> Overfitting occurs when a model learns the training data too well, including its noise, reducing generalization to new data.
-</div>
-
-<h2>Qn 14: Which of these is a supervised learning algorithm?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Random Forest
-<br><strong>Explanation:</strong> Random Forest is a supervised learning algorithm. K-means and PCA are unsupervised, and t-SNE is for visualization.
-</div>
-
-<h2>Qn 15: What is the purpose of a train-test split?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To evaluate how well a model generalizes to unseen data
-<br><strong>Explanation:</strong> Splitting data into training and test sets helps estimate model performance on new, unseen data.
-</div>
-
-<h2>Qn 16: Which Python library is most commonly used for creating static visualizations?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Matplotlib
-<br><strong>Explanation:</strong> Matplotlib is the foundational plotting library in Python, though Seaborn builds on it for statistical visualizations.
-</div>
-
-<h2>Qn 17: What is the main purpose of normalization in data preprocessing?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To scale features to a similar range
-<br><strong>Explanation:</strong> Normalization scales numerical features to a standard range (often [0,1] or with mean=0, std=1) to prevent some features from dominating others.
-</div>
-
-<h2>Qn 18: What does SQL stand for?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Structured Query Language
-<br><strong>Explanation:</strong> SQL stands for Structured Query Language, used for managing and querying relational databases.
-</div>
-
-<h2>Qn 19: Which of these is NOT a common data type in Pandas?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Array
-<br><strong>Explanation:</strong> Pandas' main data structures are DataFrame (2D), Series (1D), and Panel (3D, now deprecated). Arrays are from NumPy.
-</div>
-
-<h2>Qn 20: What is the primary use of the Scikit-learn library?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Machine learning algorithms
-<br><strong>Explanation:</strong> Scikit-learn provides simple and efficient tools for predictive data analysis and machine learning.
-</div>
-
-<h2>Qn 21: What is the difference between classification and regression?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Classification predicts categories, regression predicts continuous values
-<br><strong>Explanation:</strong> Classification predicts discrete class labels, while regression predicts continuous numerical values.
-</div>
-
-<h2>Qn 22: What is a confusion matrix used for?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Evaluating the performance of a classification model
-<br><strong>Explanation:</strong> A confusion matrix shows true/false positives/negatives, helping evaluate classification model performance.
-</div>
-
-<h2>Qn 23: What does ETL stand for in data engineering?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Extract, Transform, Load
-<br><strong>Explanation:</strong> ETL refers to the process of extracting data from sources, transforming it, and loading it into a destination system.
-</div>
-
-<h2>Qn 24: Which of these is a dimensionality reduction technique?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Principal Component Analysis (PCA)
-<br><strong>Explanation:</strong> PCA reduces dimensionality by transforming data to a new coordinate system with fewer dimensions.
-</div>
-
-<h2>Qn 25: What is the purpose of cross-validation?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To get more reliable estimates of model performance
-<br><strong>Explanation:</strong> Cross-validation provides more robust performance estimates by using multiple train/test splits of the data.
-</div>
-
-<h2>Qn 26: What is the main advantage of using a Jupyter Notebook?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> It combines code, visualizations, and narrative text
-<br><strong>Explanation:</strong> Jupyter Notebooks allow interactive development with code, visualizations, and explanatory text in a single document.
-</div>
-
-<h2>Qn 27: What is the purpose of one-hot encoding?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To convert categorical variables to numerical format
-<br><strong>Explanation:</strong> One-hot encoding converts categorical variables to a binary (0/1) numerical format that machine learning algorithms can process.
-</div>
-
-<h2>Qn 28: Which metric would you use for an imbalanced classification problem?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Precision-Recall curve
-<br><strong>Explanation:</strong> For imbalanced classes, accuracy can be misleading. Precision-Recall curves provide better insight into model performance.
-</div>
-
-<h2>Qn 29: What is feature engineering?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Creating new features from existing data
-<br><strong>Explanation:</strong> Feature engineering involves creating new input features from existing data to improve model performance.
-</div>
-
-<h2>Qn 30: What is the purpose of a ROC curve?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To visualize the trade-off between true positive and false positive rates
-<br><strong>Explanation:</strong> ROC curves show the diagnostic ability of a binary classifier by plotting true positive rate vs false positive rate.
-</div>
-
-<h2>Qn 31: What is the main advantage of using a random forest over a single decision tree?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> It reduces overfitting by averaging multiple trees
-<br><strong>Explanation:</strong> Random forests combine multiple decision trees to reduce variance and overfitting compared to a single tree.
-</div>
-
-<h2>Qn 32: What is the purpose of the 'iloc' method in Pandas?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To select data by integer position
-<br><strong>Explanation:</strong> iloc is primarily integer-location based indexing for selection by position.
-</div>
-
-<h2>Qn 33: What is the difference between deep learning and traditional machine learning?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Deep learning automatically learns feature hierarchies from raw data
-<br><strong>Explanation:</strong> Deep learning models can learn hierarchical feature representations directly from data, while traditional ML often requires manual feature engineering.
-</div>
-
-<h2>Qn 34: What is the purpose of a learning curve in machine learning?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To show the relationship between training set size and model performance
-<br><strong>Explanation:</strong> Learning curves plot model performance (e.g., accuracy) against training set size or training iterations.
-</div>
-
-<h2>Qn 35: What is the bias-variance tradeoff?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> The balance between model complexity and generalization
-<br><strong>Explanation:</strong> The bias-variance tradeoff refers to balancing a model's simplicity (bias) against its sensitivity to training data (variance) to achieve good generalization.
-</div>
-
-<h2>Qn 36: What is the purpose of regularization in machine learning?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To reduce overfitting by penalizing complex models
-<br><strong>Explanation:</strong> Regularization techniques like L1/L2 add penalty terms to prevent overfitting by discouraging overly complex models.
-</div>
-
-<h2>Qn 37: What is transfer learning in deep learning?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Using a pre-trained model as a starting point for a new task
-<br><strong>Explanation:</strong> Transfer learning leverages knowledge gained from solving one problem and applies it to a different but related problem.
-</div>
-
-<h2>Qn 38: What is the purpose of a word embedding in NLP?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To represent words as dense vectors capturing semantic meaning
-<br><strong>Explanation:</strong> Word embeddings represent words as numerical vectors where similar words have similar vector representations.
-</div>
-
-<h2>Qn 39: What is the main advantage of using SQL databases over NoSQL?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Stronger consistency guarantees
-<br><strong>Explanation:</strong> SQL databases provide ACID transactions and strong consistency, while NoSQL prioritizes scalability and flexibility.
-</div>
-
-<h2>Qn 40: What is the purpose of A/B testing?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To test two different versions of a product feature
-<br><strong>Explanation:</strong> A/B testing compares two versions (A and B) to determine which performs better on a specific metric.
-</div>
-
-<h2>Qn 41: What is the main purpose of the 'apply' function in Pandas?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To apply a function along an axis of a DataFrame
-<br><strong>Explanation:</strong> The apply() function applies a function along an axis (rows or columns) of a DataFrame or Series.
-</div>
-
-<h2>Qn 42: What is the difference between batch gradient descent and stochastic gradient descent?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> Batch uses all data per update, stochastic uses one sample
-<br><strong>Explanation:</strong> Batch GD computes gradients using the entire dataset, while SGD uses a single random sample per iteration.
-</div>
-
-<h2>Qn 43: What is the purpose of the 'dropna' method in Pandas?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To drop rows or columns with missing values
-<br><strong>Explanation:</strong> dropna() removes missing values (NaN) from a DataFrame, either by rows or columns.
-</div>
-
-<h2>Qn 44: What is the main advantage of using a pipeline in Scikit-learn?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To chain multiple processing steps into a single object
-<br><strong>Explanation:</strong> Pipelines sequentially apply transforms and a final estimator, ensuring steps are executed in the right order.
-</div>
-
-<h2>Qn 45: What is the purpose of the 'value_counts' method in Pandas?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To count the number of unique values in a Series
-<br><strong>Explanation:</strong> value_counts() returns a Series containing counts of unique values in descending order.
-</div>
-
-<h2>Qn 46: What is the main purpose of feature scaling?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To ensure all features contribute equally to distance-based algorithms
-<br><strong>Explanation:</strong> Feature scaling normalizes the range of features so that features with larger scales don't dominate algorithms like KNN or SVM.
-</div>
-
-<h2>Qn 47: What is the difference between 'fit' and 'transform' in Scikit-learn?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> 'fit' learns parameters, 'transform' applies them
-<br><strong>Explanation:</strong> fit() learns model parameters from training data, while transform() applies the learned transformation to data.
-</div>
-
-<h2>Qn 48: What is the purpose of the 'merge' function in Pandas?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To combine DataFrames based on common columns
-<br><strong>Explanation:</strong> merge() combines DataFrames using database-style joins on columns or indices.
-</div>
-
-<h2>Qn 49: What is the main advantage of using a dictionary for vectorization in NLP?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> It creates a fixed-length representation regardless of document length
-<br><strong>Explanation:</strong> Dictionary-based vectorization (like CountVectorizer) creates consistent-length vectors from variable-length texts.
-</div>
-
-<h2>Qn 50: What is the purpose of the 'pivot_table' function in Pandas?</h2>
-<div style="border-radius:10px; padding: 15px; background-color: #ffeacc; font-size:120%; text-align:left">
-<strong>Answer:</strong> To create a spreadsheet-style pivot table as a DataFrame
-<br><strong>Explanation:</strong> pivot_table() creates a multi-dimensional summary table similar to Excel pivot tables, aggregating data.
-</div>
-
+    <div class="container">
+        <h1>Data_Science Quiz</h1>
+        <div class="quiz-container">
+    
+            <div class="question" id="q1">
+                <h3>Question 1: What is the primary goal of data wrangling?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q1" id="q1o0" value="0"><label for="q1o0">Building machine learning models</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o1" value="1"><label for="q1o1">Cleaning and transforming raw data into a usable format</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o2" value="2"><label for="q1o2">Creating interactive dashboards</label></div>
+<div class="option"><input type="radio" name="q1" id="q1o3" value="3"><label for="q1o3">Writing complex SQL queries</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Cleaning and transforming raw data into a usable format</p>
+                    <p><strong>Explanation:</strong> Data wrangling involves cleaning, structuring, and enriching raw data into a format suitable for analysis.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q2">
+                <h3>Question 2: Which of the following is NOT a measure of central tendency?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q2" id="q2o0" value="0"><label for="q2o0">Mean</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o1" value="1"><label for="q2o1">Median</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o2" value="2"><label for="q2o2">Mode</label></div>
+<div class="option"><input type="radio" name="q2" id="q2o3" value="3"><label for="q2o3">Standard deviation</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Standard deviation</p>
+                    <p><strong>Explanation:</strong> Standard deviation measures dispersion, not central tendency. The three main measures of central tendency are mean, median, and mode.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q3">
+                <h3>Question 3: What type of chart would be most appropriate for comparing proportions of a whole?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q3" id="q3o0" value="0"><label for="q3o0">Scatter plot</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o1" value="1"><label for="q3o1">Histogram</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o2" value="2"><label for="q3o2">Pie chart</label></div>
+<div class="option"><input type="radio" name="q3" id="q3o3" value="3"><label for="q3o3">Line chart</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Pie chart</p>
+                    <p><strong>Explanation:</strong> Pie charts are best for showing proportions of a whole, though they should be used sparingly and only with a small number of categories.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q4">
+                <h3>Question 4: Which Python library is primarily used for working with tabular data structures?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q4" id="q4o0" value="0"><label for="q4o0">NumPy</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o1" value="1"><label for="q4o1">Matplotlib</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o2" value="2"><label for="q4o2">Pandas</label></div>
+<div class="option"><input type="radio" name="q4" id="q4o3" value="3"><label for="q4o3">Scikit-learn</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Pandas</p>
+                    <p><strong>Explanation:</strong> Pandas provides DataFrame objects which are ideal for working with tabular data, similar to spreadsheets or SQL tables.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q5">
+                <h3>Question 5: What does the groupby() operation in Pandas return before aggregation?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q5" id="q5o0" value="0"><label for="q5o0">A transformed DataFrame</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o1" value="1"><label for="q5o1">A list of grouped indices</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o2" value="2"><label for="q5o2">A DataFrameGroupBy object</label></div>
+<div class="option"><input type="radio" name="q5" id="q5o3" value="3"><label for="q5o3">A Series with group labels</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> A DataFrameGroupBy object</p>
+                    <p><strong>Explanation:</strong> groupby() returns a DataFrameGroupBy object which can then be aggregated using functions like sum(), mean(), etc.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q6">
+                <h3>Question 6: What does 'NaN' represent in a Pandas DataFrame?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q6" id="q6o0" value="0"><label for="q6o0">A very large number</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o1" value="1"><label for="q6o1">Not a Number (missing or undefined value)</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o2" value="2"><label for="q6o2">Negative number</label></div>
+<div class="option"><input type="radio" name="q6" id="q6o3" value="3"><label for="q6o3">Newly added node</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Not a Number (missing or undefined value)</p>
+                    <p><strong>Explanation:</strong> NaN stands for 'Not a Number' and represents missing or undefined numerical data in Pandas.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q7">
+                <h3>Question 7: Which technique is NOT typically used for feature selection?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q7" id="q7o0" value="0"><label for="q7o0">Recursive feature elimination</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o1" value="1"><label for="q7o1">Principal Component Analysis (PCA)</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o2" value="2"><label for="q7o2">Selecting features by correlation</label></div>
+<div class="option"><input type="radio" name="q7" id="q7o3" value="3"><label for="q7o3">Data normalization</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Data normalization</p>
+                    <p><strong>Explanation:</strong> Data normalization scales features but doesn't select them. PCA, correlation analysis, and recursive elimination are feature selection methods.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q8">
+                <h3>Question 8: Which metric is NOT used to evaluate regression models?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q8" id="q8o0" value="0"><label for="q8o0">Mean Squared Error (MSE)</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o1" value="1"><label for="q8o1">R-squared</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o2" value="2"><label for="q8o2">Accuracy</label></div>
+<div class="option"><input type="radio" name="q8" id="q8o3" value="3"><label for="q8o3">Root Mean Squared Error (RMSE)</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Accuracy</p>
+                    <p><strong>Explanation:</strong> Accuracy is used for classification problems. MSE, RMSE, and R-squared are common regression metrics.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q9">
+                <h3>Question 9: What is the most common method for handling missing numerical data?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q9" id="q9o0" value="0"><label for="q9o0">Deleting all rows with missing values</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o1" value="1"><label for="q9o1">Replacing with the mean or median</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o2" value="2"><label for="q9o2">Setting all missing values to zero</label></div>
+<div class="option"><input type="radio" name="q9" id="q9o3" value="3"><label for="q9o3">Using a placeholder like -999</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Replacing with the mean or median</p>
+                    <p><strong>Explanation:</strong> Mean/median imputation is common for numerical data, though the best approach depends on the data and missingness pattern.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q10">
+                <h3>Question 10: Which library is essential for numerical computing in Python?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q10" id="q10o0" value="0"><label for="q10o0">Matplotlib</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o1" value="1"><label for="q10o1">Pandas</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o2" value="2"><label for="q10o2">NumPy</label></div>
+<div class="option"><input type="radio" name="q10" id="q10o3" value="3"><label for="q10o3">Seaborn</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> NumPy</p>
+                    <p><strong>Explanation:</strong> NumPy provides foundational support for numerical computing with efficient array operations and mathematical functions.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q11">
+                <h3>Question 11: What is the purpose of a correlation matrix?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q11" id="q11o0" value="0"><label for="q11o0">To show relationships between categorical variables</label></div>
+<div class="option"><input type="radio" name="q11" id="q11o1" value="1"><label for="q11o1">To measure linear relationships between numerical variables</label></div>
+<div class="option"><input type="radio" name="q11" id="q11o2" value="2"><label for="q11o2">To visualize hierarchical clustering</label></div>
+<div class="option"><input type="radio" name="q11" id="q11o3" value="3"><label for="q11o3">To perform dimensionality reduction</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To measure linear relationships between numerical variables</p>
+                    <p><strong>Explanation:</strong> A correlation matrix measures the linear relationship between pairs of numerical variables, ranging from -1 to 1.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q12">
+                <h3>Question 12: What is the main advantage of using a box plot?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q12" id="q12o0" value="0"><label for="q12o0">Showing exact data points</label></div>
+<div class="option"><input type="radio" name="q12" id="q12o1" value="1"><label for="q12o1">Displaying the distribution and outliers of a dataset</label></div>
+<div class="option"><input type="radio" name="q12" id="q12o2" value="2"><label for="q12o2">Comparing more than 10 categories clearly</label></div>
+<div class="option"><input type="radio" name="q12" id="q12o3" value="3"><label for="q12o3">Showing trends over time</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Displaying the distribution and outliers of a dataset</p>
+                    <p><strong>Explanation:</strong> Box plots effectively show a dataset's quartiles, median, and potential outliers.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q13">
+                <h3>Question 13: What does the term 'overfitting' refer to in machine learning?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q13" id="q13o0" value="0"><label for="q13o0">A model that performs well on training data but poorly on unseen data</label></div>
+<div class="option"><input type="radio" name="q13" id="q13o1" value="1"><label for="q13o1">A model that performs poorly on both training and test data</label></div>
+<div class="option"><input type="radio" name="q13" id="q13o2" value="2"><label for="q13o2">A model that takes too long to train</label></div>
+<div class="option"><input type="radio" name="q13" id="q13o3" value="3"><label for="q13o3">A model with too few features</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> A model that performs well on training data but poorly on unseen data</p>
+                    <p><strong>Explanation:</strong> Overfitting occurs when a model learns the training data too well, including its noise, reducing generalization to new data.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q14">
+                <h3>Question 14: Which of these is a supervised learning algorithm?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q14" id="q14o0" value="0"><label for="q14o0">K-means clustering</label></div>
+<div class="option"><input type="radio" name="q14" id="q14o1" value="1"><label for="q14o1">Principal Component Analysis</label></div>
+<div class="option"><input type="radio" name="q14" id="q14o2" value="2"><label for="q14o2">Random Forest</label></div>
+<div class="option"><input type="radio" name="q14" id="q14o3" value="3"><label for="q14o3">t-SNE</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Random Forest</p>
+                    <p><strong>Explanation:</strong> Random Forest is a supervised learning algorithm. K-means and PCA are unsupervised, and t-SNE is for visualization.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q15">
+                <h3>Question 15: What is the purpose of a train-test split?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q15" id="q15o0" value="0"><label for="q15o0">To reduce the size of large datasets</label></div>
+<div class="option"><input type="radio" name="q15" id="q15o1" value="1"><label for="q15o1">To evaluate how well a model generalizes to unseen data</label></div>
+<div class="option"><input type="radio" name="q15" id="q15o2" value="2"><label for="q15o2">To balance class distributions in classification problems</label></div>
+<div class="option"><input type="radio" name="q15" id="q15o3" value="3"><label for="q15o3">To speed up model training</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To evaluate how well a model generalizes to unseen data</p>
+                    <p><strong>Explanation:</strong> Splitting data into training and test sets helps estimate model performance on new, unseen data.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q16">
+                <h3>Question 16: Which Python library is most commonly used for creating static visualizations?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q16" id="q16o0" value="0"><label for="q16o0">Plotly</label></div>
+<div class="option"><input type="radio" name="q16" id="q16o1" value="1"><label for="q16o1">Matplotlib</label></div>
+<div class="option"><input type="radio" name="q16" id="q16o2" value="2"><label for="q16o2">Seaborn</label></div>
+<div class="option"><input type="radio" name="q16" id="q16o3" value="3"><label for="q16o3">Bokeh</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Matplotlib</p>
+                    <p><strong>Explanation:</strong> Matplotlib is the foundational plotting library in Python, though Seaborn builds on it for statistical visualizations.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q17">
+                <h3>Question 17: What is the main purpose of normalization in data preprocessing?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q17" id="q17o0" value="0"><label for="q17o0">To remove outliers from the data</label></div>
+<div class="option"><input type="radio" name="q17" id="q17o1" value="1"><label for="q17o1">To convert categorical variables to numerical</label></div>
+<div class="option"><input type="radio" name="q17" id="q17o2" value="2"><label for="q17o2">To scale features to a similar range</label></div>
+<div class="option"><input type="radio" name="q17" id="q17o3" value="3"><label for="q17o3">To handle missing values</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To scale features to a similar range</p>
+                    <p><strong>Explanation:</strong> Normalization scales numerical features to a standard range (often [0,1] or with mean=0, std=1) to prevent some features from dominating others.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q18">
+                <h3>Question 18: What does SQL stand for?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q18" id="q18o0" value="0"><label for="q18o0">Structured Question Language</label></div>
+<div class="option"><input type="radio" name="q18" id="q18o1" value="1"><label for="q18o1">Standard Query Language</label></div>
+<div class="option"><input type="radio" name="q18" id="q18o2" value="2"><label for="q18o2">Structured Query Language</label></div>
+<div class="option"><input type="radio" name="q18" id="q18o3" value="3"><label for="q18o3">Sequential Query Language</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Structured Query Language</p>
+                    <p><strong>Explanation:</strong> SQL stands for Structured Query Language, used for managing and querying relational databases.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q19">
+                <h3>Question 19: Which of these is NOT a common data type in Pandas?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q19" id="q19o0" value="0"><label for="q19o0">DataFrame</label></div>
+<div class="option"><input type="radio" name="q19" id="q19o1" value="1"><label for="q19o1">Series</label></div>
+<div class="option"><input type="radio" name="q19" id="q19o2" value="2"><label for="q19o2">Array</label></div>
+<div class="option"><input type="radio" name="q19" id="q19o3" value="3"><label for="q19o3">Panel</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Array</p>
+                    <p><strong>Explanation:</strong> Pandas' main data structures are DataFrame (2D), Series (1D), and Panel (3D, now deprecated). Arrays are from NumPy.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q20">
+                <h3>Question 20: What is the primary use of the Scikit-learn library?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q20" id="q20o0" value="0"><label for="q20o0">Data visualization</label></div>
+<div class="option"><input type="radio" name="q20" id="q20o1" value="1"><label for="q20o1">Machine learning algorithms</label></div>
+<div class="option"><input type="radio" name="q20" id="q20o2" value="2"><label for="q20o2">Web scraping</label></div>
+<div class="option"><input type="radio" name="q20" id="q20o3" value="3"><label for="q20o3">Database management</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Machine learning algorithms</p>
+                    <p><strong>Explanation:</strong> Scikit-learn provides simple and efficient tools for predictive data analysis and machine learning.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q21">
+                <h3>Question 21: What is the difference between classification and regression?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q21" id="q21o0" value="0"><label for="q21o0">Classification predicts categories, regression predicts continuous values</label></div>
+<div class="option"><input type="radio" name="q21" id="q21o1" value="1"><label for="q21o1">Classification uses unsupervised learning, regression uses supervised</label></div>
+<div class="option"><input type="radio" name="q21" id="q21o2" value="2"><label for="q21o2">Classification is for small datasets, regression for large</label></div>
+<div class="option"><input type="radio" name="q21" id="q21o3" value="3"><label for="q21o3">There is no difference</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Classification predicts categories, regression predicts continuous values</p>
+                    <p><strong>Explanation:</strong> Classification predicts discrete class labels, while regression predicts continuous numerical values.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q22">
+                <h3>Question 22: What is a confusion matrix used for?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q22" id="q22o0" value="0"><label for="q22o0">Visualizing high-dimensional data</label></div>
+<div class="option"><input type="radio" name="q22" id="q22o1" value="1"><label for="q22o1">Evaluating the performance of a classification model</label></div>
+<div class="option"><input type="radio" name="q22" id="q22o2" value="2"><label for="q22o2">Storing large datasets efficiently</label></div>
+<div class="option"><input type="radio" name="q22" id="q22o3" value="3"><label for="q22o3">Performing matrix calculations in linear algebra</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Evaluating the performance of a classification model</p>
+                    <p><strong>Explanation:</strong> A confusion matrix shows true/false positives/negatives, helping evaluate classification model performance.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q23">
+                <h3>Question 23: What does ETL stand for in data engineering?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q23" id="q23o0" value="0"><label for="q23o0">Extract, Transform, Load</label></div>
+<div class="option"><input type="radio" name="q23" id="q23o1" value="1"><label for="q23o1">Evaluate, Test, Learn</label></div>
+<div class="option"><input type="radio" name="q23" id="q23o2" value="2"><label for="q23o2">Extract, Test, Load</label></div>
+<div class="option"><input type="radio" name="q23" id="q23o3" value="3"><label for="q23o3">Explore, Transform, Label</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Extract, Transform, Load</p>
+                    <p><strong>Explanation:</strong> ETL refers to the process of extracting data from sources, transforming it, and loading it into a destination system.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q24">
+                <h3>Question 24: Which of these is a dimensionality reduction technique?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q24" id="q24o0" value="0"><label for="q24o0">Linear Regression</label></div>
+<div class="option"><input type="radio" name="q24" id="q24o1" value="1"><label for="q24o1">Decision Trees</label></div>
+<div class="option"><input type="radio" name="q24" id="q24o2" value="2"><label for="q24o2">Principal Component Analysis (PCA)</label></div>
+<div class="option"><input type="radio" name="q24" id="q24o3" value="3"><label for="q24o3">K-Nearest Neighbors</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Principal Component Analysis (PCA)</p>
+                    <p><strong>Explanation:</strong> PCA reduces dimensionality by transforming data to a new coordinate system with fewer dimensions.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q25">
+                <h3>Question 25: What is the purpose of cross-validation?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q25" id="q25o0" value="0"><label for="q25o0">To increase the size of the training set</label></div>
+<div class="option"><input type="radio" name="q25" id="q25o1" value="1"><label for="q25o1">To reduce the need for a test set</label></div>
+<div class="option"><input type="radio" name="q25" id="q25o2" value="2"><label for="q25o2">To get more reliable estimates of model performance</label></div>
+<div class="option"><input type="radio" name="q25" id="q25o3" value="3"><label for="q25o3">To speed up model training</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To get more reliable estimates of model performance</p>
+                    <p><strong>Explanation:</strong> Cross-validation provides more robust performance estimates by using multiple train/test splits of the data.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q26">
+                <h3>Question 26: What is the main advantage of using a Jupyter Notebook?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q26" id="q26o0" value="0"><label for="q26o0">It provides the fastest execution speed</label></div>
+<div class="option"><input type="radio" name="q26" id="q26o1" value="1"><label for="q26o1">It combines code, visualizations, and narrative text</label></div>
+<div class="option"><input type="radio" name="q26" id="q26o2" value="2"><label for="q26o2">It automatically documents all code</label></div>
+<div class="option"><input type="radio" name="q26" id="q26o3" value="3"><label for="q26o3">It doesn't require any programming knowledge</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> It combines code, visualizations, and narrative text</p>
+                    <p><strong>Explanation:</strong> Jupyter Notebooks allow interactive development with code, visualizations, and explanatory text in a single document.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q27">
+                <h3>Question 27: What is the purpose of one-hot encoding?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q27" id="q27o0" value="0"><label for="q27o0">To compress large datasets</label></div>
+<div class="option"><input type="radio" name="q27" id="q27o1" value="1"><label for="q27o1">To convert categorical variables to numerical format</label></div>
+<div class="option"><input type="radio" name="q27" id="q27o2" value="2"><label for="q27o2">To normalize numerical data</label></div>
+<div class="option"><input type="radio" name="q27" id="q27o3" value="3"><label for="q27o3">To handle missing values</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To convert categorical variables to numerical format</p>
+                    <p><strong>Explanation:</strong> One-hot encoding converts categorical variables to a binary (0/1) numerical format that machine learning algorithms can process.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q28">
+                <h3>Question 28: Which metric would you use for an imbalanced classification problem?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q28" id="q28o0" value="0"><label for="q28o0">Accuracy</label></div>
+<div class="option"><input type="radio" name="q28" id="q28o1" value="1"><label for="q28o1">Precision-Recall curve</label></div>
+<div class="option"><input type="radio" name="q28" id="q28o2" value="2"><label for="q28o2">Mean Squared Error</label></div>
+<div class="option"><input type="radio" name="q28" id="q28o3" value="3"><label for="q28o3">R-squared</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Precision-Recall curve</p>
+                    <p><strong>Explanation:</strong> For imbalanced classes, accuracy can be misleading. Precision-Recall curves provide better insight into model performance.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q29">
+                <h3>Question 29: What is feature engineering?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q29" id="q29o0" value="0"><label for="q29o0">Creating new features from existing data</label></div>
+<div class="option"><input type="radio" name="q29" id="q29o1" value="1"><label for="q29o1">Selecting the most important features</label></div>
+<div class="option"><input type="radio" name="q29" id="q29o2" value="2"><label for="q29o2">Building machine learning models</label></div>
+<div class="option"><input type="radio" name="q29" id="q29o3" value="3"><label for="q29o3">Visualizing data features</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Creating new features from existing data</p>
+                    <p><strong>Explanation:</strong> Feature engineering involves creating new input features from existing data to improve model performance.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q30">
+                <h3>Question 30: What is the purpose of a ROC curve?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q30" id="q30o0" value="0"><label for="q30o0">To visualize the trade-off between true positive and false positive rates</label></div>
+<div class="option"><input type="radio" name="q30" id="q30o1" value="1"><label for="q30o1">To show the distribution of a single variable</label></div>
+<div class="option"><input type="radio" name="q30" id="q30o2" value="2"><label for="q30o2">To compare regression models</label></div>
+<div class="option"><input type="radio" name="q30" id="q30o3" value="3"><label for="q30o3">To perform clustering analysis</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To visualize the trade-off between true positive and false positive rates</p>
+                    <p><strong>Explanation:</strong> ROC curves show the diagnostic ability of a binary classifier by plotting true positive rate vs false positive rate.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q31">
+                <h3>Question 31: What is the main advantage of using a random forest over a single decision tree?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q31" id="q31o0" value="0"><label for="q31o0">It's always more accurate</label></div>
+<div class="option"><input type="radio" name="q31" id="q31o1" value="1"><label for="q31o1">It reduces overfitting by averaging multiple trees</label></div>
+<div class="option"><input type="radio" name="q31" id="q31o2" value="2"><label for="q31o2">It requires less computational power</label></div>
+<div class="option"><input type="radio" name="q31" id="q31o3" value="3"><label for="q31o3">It works better with small datasets</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> It reduces overfitting by averaging multiple trees</p>
+                    <p><strong>Explanation:</strong> Random forests combine multiple decision trees to reduce variance and overfitting compared to a single tree.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q32">
+                <h3>Question 32: What is the purpose of the 'iloc' method in Pandas?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q32" id="q32o0" value="0"><label for="q32o0">To select data by integer position</label></div>
+<div class="option"><input type="radio" name="q32" id="q32o1" value="1"><label for="q32o1">To select data by label</label></div>
+<div class="option"><input type="radio" name="q32" id="q32o2" value="2"><label for="q32o2">To perform interpolation</label></div>
+<div class="option"><input type="radio" name="q32" id="q32o3" value="3"><label for="q32o3">To handle missing values</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To select data by integer position</p>
+                    <p><strong>Explanation:</strong> iloc is primarily integer-location based indexing for selection by position.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q33">
+                <h3>Question 33: What is the difference between deep learning and traditional machine learning?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q33" id="q33o0" value="0"><label for="q33o0">Deep learning always performs better</label></div>
+<div class="option"><input type="radio" name="q33" id="q33o1" value="1"><label for="q33o1">Deep learning automatically learns feature hierarchies from raw data</label></div>
+<div class="option"><input type="radio" name="q33" id="q33o2" value="2"><label for="q33o2">Deep learning requires less data</label></div>
+<div class="option"><input type="radio" name="q33" id="q33o3" value="3"><label for="q33o3">There is no difference</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Deep learning automatically learns feature hierarchies from raw data</p>
+                    <p><strong>Explanation:</strong> Deep learning models can learn hierarchical feature representations directly from data, while traditional ML often requires manual feature engineering.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q34">
+                <h3>Question 34: What is the purpose of a learning curve in machine learning?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q34" id="q34o0" value="0"><label for="q34o0">To visualize model performance over time</label></div>
+<div class="option"><input type="radio" name="q34" id="q34o1" value="1"><label for="q34o1">To show the relationship between training set size and model performance</label></div>
+<div class="option"><input type="radio" name="q34" id="q34o2" value="2"><label for="q34o2">To track the learning rate during training</label></div>
+<div class="option"><input type="radio" name="q34" id="q34o3" value="3"><label for="q34o3">To compare different optimization algorithms</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To show the relationship between training set size and model performance</p>
+                    <p><strong>Explanation:</strong> Learning curves plot model performance (e.g., accuracy) against training set size or training iterations.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q35">
+                <h3>Question 35: What is the bias-variance tradeoff?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q35" id="q35o0" value="0"><label for="q35o0">The balance between model complexity and generalization</label></div>
+<div class="option"><input type="radio" name="q35" id="q35o1" value="1"><label for="q35o1">The choice between supervised and unsupervised learning</label></div>
+<div class="option"><input type="radio" name="q35" id="q35o2" value="2"><label for="q35o2">The decision to use Python or R</label></div>
+<div class="option"><input type="radio" name="q35" id="q35o3" value="3"><label for="q35o3">The selection of training vs test data size</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> The balance between model complexity and generalization</p>
+                    <p><strong>Explanation:</strong> The bias-variance tradeoff refers to balancing a model's simplicity (bias) against its sensitivity to training data (variance) to achieve good generalization.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q36">
+                <h3>Question 36: What is the purpose of regularization in machine learning?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q36" id="q36o0" value="0"><label for="q36o0">To speed up model training</label></div>
+<div class="option"><input type="radio" name="q36" id="q36o1" value="1"><label for="q36o1">To reduce overfitting by penalizing complex models</label></div>
+<div class="option"><input type="radio" name="q36" id="q36o2" value="2"><label for="q36o2">To handle missing data</label></div>
+<div class="option"><input type="radio" name="q36" id="q36o3" value="3"><label for="q36o3">To normalize input features</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To reduce overfitting by penalizing complex models</p>
+                    <p><strong>Explanation:</strong> Regularization techniques like L1/L2 add penalty terms to prevent overfitting by discouraging overly complex models.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q37">
+                <h3>Question 37: What is transfer learning in deep learning?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q37" id="q37o0" value="0"><label for="q37o0">Training multiple models simultaneously</label></div>
+<div class="option"><input type="radio" name="q37" id="q37o1" value="1"><label for="q37o1">Using a pre-trained model as a starting point for a new task</label></div>
+<div class="option"><input type="radio" name="q37" id="q37o2" value="2"><label for="q37o2">Transferring data between different formats</label></div>
+<div class="option"><input type="radio" name="q37" id="q37o3" value="3"><label for="q37o3">Moving models between different hardware</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Using a pre-trained model as a starting point for a new task</p>
+                    <p><strong>Explanation:</strong> Transfer learning leverages knowledge gained from solving one problem and applies it to a different but related problem.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q38">
+                <h3>Question 38: What is the purpose of a word embedding in NLP?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q38" id="q38o0" value="0"><label for="q38o0">To count word frequencies</label></div>
+<div class="option"><input type="radio" name="q38" id="q38o1" value="1"><label for="q38o1">To represent words as dense vectors capturing semantic meaning</label></div>
+<div class="option"><input type="radio" name="q38" id="q38o2" value="2"><label for="q38o2">To correct spelling errors</label></div>
+<div class="option"><input type="radio" name="q38" id="q38o3" value="3"><label for="q38o3">To translate between languages</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To represent words as dense vectors capturing semantic meaning</p>
+                    <p><strong>Explanation:</strong> Word embeddings represent words as numerical vectors where similar words have similar vector representations.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q39">
+                <h3>Question 39: What is the main advantage of using SQL databases over NoSQL?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q39" id="q39o0" value="0"><label for="q39o0">Better scalability</label></div>
+<div class="option"><input type="radio" name="q39" id="q39o1" value="1"><label for="q39o1">More flexible schema</label></div>
+<div class="option"><input type="radio" name="q39" id="q39o2" value="2"><label for="q39o2">Stronger consistency guarantees</label></div>
+<div class="option"><input type="radio" name="q39" id="q39o3" value="3"><label for="q39o3">Faster write speeds</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Stronger consistency guarantees</p>
+                    <p><strong>Explanation:</strong> SQL databases provide ACID transactions and strong consistency, while NoSQL prioritizes scalability and flexibility.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q40">
+                <h3>Question 40: What is the purpose of A/B testing?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q40" id="q40o0" value="0"><label for="q40o0">To compare two machine learning models</label></div>
+<div class="option"><input type="radio" name="q40" id="q40o1" value="1"><label for="q40o1">To test two different versions of a product feature</label></div>
+<div class="option"><input type="radio" name="q40" id="q40o2" value="2"><label for="q40o2">To analyze variance in datasets</label></div>
+<div class="option"><input type="radio" name="q40" id="q40o3" value="3"><label for="q40o3">To balance class distributions</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To test two different versions of a product feature</p>
+                    <p><strong>Explanation:</strong> A/B testing compares two versions (A and B) to determine which performs better on a specific metric.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q41">
+                <h3>Question 41: What is the main purpose of the 'apply' function in Pandas?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q41" id="q41o0" value="0"><label for="q41o0">To apply mathematical operations to a DataFrame</label></div>
+<div class="option"><input type="radio" name="q41" id="q41o1" value="1"><label for="q41o1">To apply a function along an axis of a DataFrame</label></div>
+<div class="option"><input type="radio" name="q41" id="q41o2" value="2"><label for="q41o2">To apply CSS styles to a DataFrame display</label></div>
+<div class="option"><input type="radio" name="q41" id="q41o3" value="3"><label for="q41o3">To apply machine learning models to data</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To apply a function along an axis of a DataFrame</p>
+                    <p><strong>Explanation:</strong> The apply() function applies a function along an axis (rows or columns) of a DataFrame or Series.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q42">
+                <h3>Question 42: What is the difference between batch gradient descent and stochastic gradient descent?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q42" id="q42o0" value="0"><label for="q42o0">Batch uses all data per update, stochastic uses one sample</label></div>
+<div class="option"><input type="radio" name="q42" id="q42o1" value="1"><label for="q42o1">Batch is for classification, stochastic for regression</label></div>
+<div class="option"><input type="radio" name="q42" id="q42o2" value="2"><label for="q42o2">Batch is faster but less accurate</label></div>
+<div class="option"><input type="radio" name="q42" id="q42o3" value="3"><label for="q42o3">There is no difference</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> Batch uses all data per update, stochastic uses one sample</p>
+                    <p><strong>Explanation:</strong> Batch GD computes gradients using the entire dataset, while SGD uses a single random sample per iteration.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q43">
+                <h3>Question 43: What is the purpose of the 'dropna' method in Pandas?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q43" id="q43o0" value="0"><label for="q43o0">To drop columns with missing values</label></div>
+<div class="option"><input type="radio" name="q43" id="q43o1" value="1"><label for="q43o1">To drop rows or columns with missing values</label></div>
+<div class="option"><input type="radio" name="q43" id="q43o2" value="2"><label for="q43o2">To replace missing values with zeros</label></div>
+<div class="option"><input type="radio" name="q43" id="q43o3" value="3"><label for="q43o3">To count missing values</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To drop rows or columns with missing values</p>
+                    <p><strong>Explanation:</strong> dropna() removes missing values (NaN) from a DataFrame, either by rows or columns.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q44">
+                <h3>Question 44: What is the main advantage of using a pipeline in Scikit-learn?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q44" id="q44o0" value="0"><label for="q44o0">To speed up model training</label></div>
+<div class="option"><input type="radio" name="q44" id="q44o1" value="1"><label for="q44o1">To chain multiple processing steps into a single object</label></div>
+<div class="option"><input type="radio" name="q44" id="q44o2" value="2"><label for="q44o2">To visualize model performance</label></div>
+<div class="option"><input type="radio" name="q44" id="q44o3" value="3"><label for="q44o3">To handle large datasets that don't fit in memory</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To chain multiple processing steps into a single object</p>
+                    <p><strong>Explanation:</strong> Pipelines sequentially apply transforms and a final estimator, ensuring steps are executed in the right order.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q45">
+                <h3>Question 45: What is the purpose of the 'value_counts' method in Pandas?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q45" id="q45o0" value="0"><label for="q45o0">To count the number of unique values in a Series</label></div>
+<div class="option"><input type="radio" name="q45" id="q45o1" value="1"><label for="q45o1">To calculate the mean of numerical columns</label></div>
+<div class="option"><input type="radio" name="q45" id="q45o2" value="2"><label for="q45o2">To count missing values</label></div>
+<div class="option"><input type="radio" name="q45" id="q45o3" value="3"><label for="q45o3">To enumerate all values in a DataFrame</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To count the number of unique values in a Series</p>
+                    <p><strong>Explanation:</strong> value_counts() returns a Series containing counts of unique values in descending order.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q46">
+                <h3>Question 46: What is the main purpose of feature scaling?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q46" id="q46o0" value="0"><label for="q46o0">To remove unimportant features</label></div>
+<div class="option"><input type="radio" name="q46" id="q46o1" value="1"><label for="q46o1">To ensure all features contribute equally to distance-based algorithms</label></div>
+<div class="option"><input type="radio" name="q46" id="q46o2" value="2"><label for="q46o2">To reduce the number of features</label></div>
+<div class="option"><input type="radio" name="q46" id="q46o3" value="3"><label for="q46o3">To handle categorical variables</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To ensure all features contribute equally to distance-based algorithms</p>
+                    <p><strong>Explanation:</strong> Feature scaling normalizes the range of features so that features with larger scales don't dominate algorithms like KNN or SVM.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q47">
+                <h3>Question 47: What is the difference between 'fit' and 'transform' in Scikit-learn?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q47" id="q47o0" value="0"><label for="q47o0">'fit' learns parameters, 'transform' applies them</label></div>
+<div class="option"><input type="radio" name="q47" id="q47o1" value="1"><label for="q47o1">'fit' trains models, 'transform' makes predictions</label></div>
+<div class="option"><input type="radio" name="q47" id="q47o2" value="2"><label for="q47o2">'fit' is for classification, 'transform' for regression</label></div>
+<div class="option"><input type="radio" name="q47" id="q47o3" value="3"><label for="q47o3">There is no difference</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> 'fit' learns parameters, 'transform' applies them</p>
+                    <p><strong>Explanation:</strong> fit() learns model parameters from training data, while transform() applies the learned transformation to data.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q48">
+                <h3>Question 48: What is the purpose of the 'merge' function in Pandas?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q48" id="q48o0" value="0"><label for="q48o0">To combine DataFrames based on common columns</label></div>
+<div class="option"><input type="radio" name="q48" id="q48o1" value="1"><label for="q48o1">To concatenate DataFrames vertically</label></div>
+<div class="option"><input type="radio" name="q48" id="q48o2" value="2"><label for="q48o2">To merge cells in a DataFrame</label></div>
+<div class="option"><input type="radio" name="q48" id="q48o3" value="3"><label for="q48o3">To combine Series objects</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To combine DataFrames based on common columns</p>
+                    <p><strong>Explanation:</strong> merge() combines DataFrames using database-style joins on columns or indices.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q49">
+                <h3>Question 49: What is the main advantage of using a dictionary for vectorization in NLP?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q49" id="q49o0" value="0"><label for="q49o0">It preserves word order</label></div>
+<div class="option"><input type="radio" name="q49" id="q49o1" value="1"><label for="q49o1">It's more memory efficient than other methods</label></div>
+<div class="option"><input type="radio" name="q49" id="q49o2" value="2"><label for="q49o2">It creates a fixed-length representation regardless of document length</label></div>
+<div class="option"><input type="radio" name="q49" id="q49o3" value="3"><label for="q49o3">It automatically handles spelling errors</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> It creates a fixed-length representation regardless of document length</p>
+                    <p><strong>Explanation:</strong> Dictionary-based vectorization (like CountVectorizer) creates consistent-length vectors from variable-length texts.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+            <div class="question" id="q50">
+                <h3>Question 50: What is the purpose of the 'pivot_table' function in Pandas?</h3>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q50" id="q50o0" value="0"><label for="q50o0">To rotate a DataFrame 90 degrees</label></div>
+<div class="option"><input type="radio" name="q50" id="q50o1" value="1"><label for="q50o1">To create a spreadsheet-style pivot table as a DataFrame</label></div>
+<div class="option"><input type="radio" name="q50" id="q50o2" value="2"><label for="q50o2">To pivot between different data types</label></div>
+<div class="option"><input type="radio" name="q50" id="q50o3" value="3"><label for="q50o3">To transform wide data to long format</label></div>
+                </div>
+                <div class="answer hidden">
+                    <p><strong>Answer:</strong> To create a spreadsheet-style pivot table as a DataFrame</p>
+                    <p><strong>Explanation:</strong> pivot_table() creates a multi-dimensional summary table similar to Excel pivot tables, aggregating data.</p>
+                    
+                </div>
+                <button class="show-answer">Show Answer</button>
+            </div>
+        
+        </div>
+    </div>
+    <script src="../quiz.js"></script>
 </body>
 </html>
+    
