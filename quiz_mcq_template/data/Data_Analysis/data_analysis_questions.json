@@ -1,0 +1,10 @@
+{
+  "questions": [
+    "data/Data_Analysis/questions/qn_01/qn_01.json",
+    "data/Data_Analysis/questions/qn_02/qn_02.json"
+  ],
+  "metadata": {
+    "topic": "Data Analysis",
+    "question_count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "categories": {
+    "Data Analysis": "data/Data_Analysis/data_analysis_questions.json",
+    "Statistics": "data/Statistics/statistics_questions.json"
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-05-18"
+  }
+}

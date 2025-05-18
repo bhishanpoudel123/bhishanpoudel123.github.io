@@ -1,0 +1,20 @@
+{
+    "id": 2,
+    "category": "Data Analysis",
+    "question": "What technique would you use to handle high-dimensional sparse data when performing PCA?",
+    "options": [
+        "Standard PCA with normalization",
+        "`Truncated SVD` (also known as LSA)",
+        "`Kernel PCA` with RBF kernel",
+        "`Factor Analysis`"
+    ],
+    "answer": "`Truncated SVD` (also known as LSA)",
+    "explanation": "Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.",
+    "learning_resources": [
+      {
+        "type": "markdown",
+        "title": "answer 01",
+        "path": "data/Data_Analysis/questions/qn_02/markdown/qn_02_answer_01.md"
+      }
+    ]
+  }
