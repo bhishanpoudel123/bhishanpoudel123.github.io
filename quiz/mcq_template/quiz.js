@@ -1,5 +1,5 @@
 const isGitHubPages = window.location.host.includes('github.io');
-const basePath = isGitHubPages ? '/quiz_mcq' : '';
+const basePath = isGitHubPages ? '/quiz/mcq_template' : '';
 
 // Quiz State Management
 const quizState = {

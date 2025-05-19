@@ -1,7 +1,7 @@
 {
 	"name": "Technical Interview Quiz",
 	"short_name": "TechQuiz",
-	"start_url": "/quiz_mcq/",
+	"start_url": "/quiz/mcq_template/",
 	"display": "standalone",
 	"background_color": "#ffffff",
 	"theme_color": "#007bff",
