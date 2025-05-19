@@ -1,6 +1,6 @@
 {
     "id": 1,
-    "category": "Data Analysis",
+    "tags": ["Data Analysis", "PCA", "ML Algorithms"],
     "question": "What technique would you use to handle high-dimensional sparse data when performing PCA?",
     "options": [
         "Standard PCA with normalization",
@@ -19,7 +19,7 @@
       {
         "type": "markdown", 
         "title": "answer 02",
-        "path": "data/Data_Analysis/questions/qn_01/markdown/qn_01_answer_01.md"
+        "path": "data/Data_Analysis/questions/qn_01/markdown/qn_01_answer_02.md"
       },
       {
         "type": "code", 

@@ -8,7 +8,8 @@ const quizState = {
     currentIndex: 0,
     userAnswers: {},
     showAnswer: false,
-    categories: [],
+    tags: [],
+    selectedTag: null,
     timerInterval: null,
     quizDuration: 20 * 60,
     timeLeft: 20 * 60,
@@ -16,17 +17,15 @@ const quizState = {
     endTime: null,
     quizStarted: false,
     indexMap: {},
-    htmlIndex: {},
     markedInstance: marked.marked.setOptions({
         highlight: (code, lang) => hljs.highlightAuto(code).value
     }),
-    sidebarVisible: true,
-    learningResources: {} // Track learning resources for each question
+    sidebarVisible: true
 };
 
 // DOM Elements
 const dom = {
-    categorySelector: document.getElementById('category-selector'),
+    tagSelector: document.getElementById('tag-selector'),
     durationSelector: document.getElementById('duration-selector'),
     quizContainer: document.getElementById('quiz-container'),
     questionTitle: document.getElementById('question-title'),
@@ -49,112 +48,98 @@ const dom = {
     startQuizBtn: document.getElementById('start-quiz'),
     learnTopicBtn: document.getElementById('learn-topic'),
     topicContainer: document.getElementById('topic-container'),
-    topicContent: document.getElementById('topic-content'),
+    topicIframe: document.getElementById('topic-iframe'),
     backToQuizBtn: document.getElementById('back-to-quiz'),
     toggleSidebarBtn: document.getElementById('toggle-sidebar'),
-    sidebar: document.querySelector('.sidebar'),
-    htmlSelector: document.getElementById('html-selector'),
-    topicIframe: document.getElementById('topic-iframe'),
-    learningPanel: document.createElement('div'),
-    resourceTabs: document.createElement('div'),
-    resourceContent: document.createElement('div')
+    sidebar: document.querySelector('.sidebar')
 };
 
 // Initialize Quiz
 document.addEventListener('DOMContentLoaded', async () => {
-    await loadIndexJson();
-    populateDurationOptions();
-    setupEventListeners();
-    initLearningPanel();
+    try {
+        await loadIndexJson();
+        populateDurationOptions();
+        setupEventListeners();
+    } catch (error) {
+        console.error('Initialization error:', error);
+        dom.questionText.innerHTML = `<div class="error">Initialization failed. Check console for details.</div>`;
+    }
 });
 
-// Initialize the learning resources panel
-function initLearningPanel() {
-    dom.learningPanel.className = 'learning-panel hidden';
-    dom.learningPanel.innerHTML = `
-        <div class="panel-header">
-            <h3>Learning Resources</h3>
-            <button class="close-panel">×</button>
-        </div>
-    `;
-    
-    dom.resourceTabs.className = 'resource-tabs';
-    dom.resourceContent.className = 'resource-content';
-    
-    dom.learningPanel.appendChild(dom.resourceTabs);
-    dom.learningPanel.appendChild(dom.resourceContent);
-    document.body.appendChild(dom.learningPanel);
-    
-    // Close panel handler
-    dom.learningPanel.querySelector('.close-panel').addEventListener('click', () => {
-        dom.learningPanel.classList.add('hidden');
-    });
-}
-
-// Load index.json and fetch questions
 async function loadIndexJson() {
     try {
         const response = await fetch(`${basePath}/data/index.json`);
-        if (!response.ok) throw new Error('Failed to load index');
-        
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const indexData = await response.json();
         quizState.indexMap = indexData.categories;
         await loadAllQuestions(indexData.categories);
     } catch (err) {
         console.error('Error loading index:', err);
-        dom.questionText.innerHTML = `<div class="error">Error loading index file</div>`;
+        throw err;
     }
 }
 
 async function loadAllQuestions(categories) {
     const allQuestions = [];
-    const categoryNames = Object.keys(categories);
+    const allTags = new Set();
 
-    for (const category of categoryNames) {
-        const categoryPath = categories[category];
+    for (const [topic, questionsFile] of Object.entries(categories)) {
         try {
-            const response = await fetch(`${basePath}/${categoryPath}`);
-            if (!response.ok) throw new Error(`Failed to load ${categoryPath}`);
+            const questionsResponse = await fetch(`${basePath}/${questionsFile}`);
+            if (!questionsResponse.ok) throw new Error(`Failed to load ${questionsFile}`);
+            const questionsData = await questionsResponse.json();
             
-            const categoryData = await response.json();
-            for (const questionPath of categoryData.questions) {
+            for (const questionPath of questionsData.questions) {
                 try {
-                    const qResponse = await fetch(`${basePath}/${questionPath}`);
-                    if (!qResponse.ok) throw new Error(`Failed to load ${questionPath}`);
+                    const questionResponse = await fetch(`${basePath}/${questionPath}`);
+                    if (!questionResponse.ok) throw new Error(`Failed to load ${questionPath}`);
+                    const question = await questionResponse.json();
                     
-                    const question = await qResponse.json();
-                    question.category = category;
+                    if (!question.tags) question.tags = [];
+                    if (!question.tags.includes(topic)) question.tags.push(topic);
+                    
+                    question.tags.forEach(tag => allTags.add(tag));
                     allQuestions.push(question);
-                    
-                    // Store learning resources
-                    if (question.learning_resources) {
-                        quizState.learningResources[question.id] = question.learning_resources;
-                    }
                 } catch (err) {
                     console.warn(`Skipped ${questionPath}:`, err.message);
                 }
             }
         } catch (err) {
-            console.warn(`Skipped ${categoryPath}:`, err.message);
+            console.warn(`Skipped ${topic} questions:`, err.message);
         }
     }
 
     quizState.questions = allQuestions;
-    quizState.categories = [...new Set(categoryNames)];
-    populateCategories();
+    quizState.tags = Array.from(allTags).sort();
+    populateTagSelector();
 }
 
-// Category dropdown
-function populateCategories() {
-    quizState.categories.forEach(cat => {
-        const opt = document.createElement('option');
-        opt.value = cat;
-        opt.textContent = cat;
-        dom.categorySelector.appendChild(opt);
+function populateTagSelector() {
+    dom.tagSelector.innerHTML = '<option value="">Select a tag...</option>';
+    quizState.tags.forEach(tag => {
+        const option = document.createElement('option');
+        option.value = tag;
+        option.textContent = tag;
+        dom.tagSelector.appendChild(option);
     });
 }
 
-// Duration dropdown
+function filterQuestions() {
+    if (!quizState.selectedTag) {
+        quizState.filteredQuestions = [];
+        showQuestion();
+        return;
+    }
+
+    quizState.filteredQuestions = quizState.questions.filter(question => 
+        question.tags && question.tags.includes(quizState.selectedTag)
+    );
+    
+    quizState.currentIndex = 0;
+    quizState.userAnswers = {};
+    showQuestion();
+}
+
 function populateDurationOptions() {
     [5, 10, 15, 20, 30, 45, 60].forEach(min => {
         const opt = document.createElement('option');
@@ -165,7 +150,6 @@ function populateDurationOptions() {
     dom.durationSelector.value = 20;
 }
 
-// Timer
 function initTimer() {
     const mins = parseInt(dom.durationSelector.value);
     quizState.quizDuration = mins * 60;
@@ -191,13 +175,14 @@ function updateTimer() {
     if (quizState.timeLeft <= 0) endQuiz();
 }
 
-// Quiz Controls
 function resetQuiz() {
     clearInterval(quizState.timerInterval);
     quizState.currentIndex = 0;
     quizState.userAnswers = {};
     quizState.showAnswer = false;
     quizState.quizStarted = false;
+    quizState.selectedTag = null;
+    dom.tagSelector.value = '';
     dom.timerDisplay.textContent = '--:--';
     dom.startTime.textContent = '-';
     dom.endTime.textContent = '-';
@@ -209,23 +194,28 @@ function resetQuiz() {
 
 function endQuiz() {
     clearInterval(quizState.timerInterval);
+    showQuizResults();
+}
 
+function showQuizResults() {
     const total = quizState.filteredQuestions.length;
     const correct = quizState.filteredQuestions.filter(q => quizState.userAnswers[q.id] === q.answer).length;
     const unanswered = quizState.filteredQuestions.filter(q => !quizState.userAnswers.hasOwnProperty(q.id)).length;
     const incorrect = total - correct - unanswered;
 
+    const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+    
     const summaryHTML = `
         <div class="score-summary">
-            <h2>Quiz Summary</h2>
-            <div class="score">${correct}/${total} Correct (${Math.round((correct / total) * 100)}%)</div>
+            <h2>Quiz Results</h2>
+            <div class="score">Score: ${correct}/${total} (${percentage}%)</div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: ${percentage}%"></div>
+            </div>
             <div class="stats">
                 <div class="stat correct-stat">✓ Correct: ${correct}</div>
                 <div class="stat incorrect-stat">✗ Incorrect: ${incorrect}</div>
                 <div class="stat unanswered-stat">? Unanswered: ${unanswered}</div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: ${(correct / total) * 100}%"></div>
             </div>
             <button id="restart-btn" class="restart-btn">Restart Quiz</button>
         </div>
@@ -233,16 +223,15 @@ function endQuiz() {
             <h3>Question Review</h3>
             ${quizState.filteredQuestions.map(q => {
                 const ua = quizState.userAnswers[q.id];
-                const correct = ua === q.answer;
-                const status = !ua ? 'unanswered' : correct ? 'correct' : 'incorrect';
+                const isCorrect = ua === q.answer;
+                const status = !ua ? 'unanswered' : isCorrect ? 'correct' : 'incorrect';
                 return `
                 <div class="review-question ${status}">
-                    <h3>Question ${q.id} - ${q.category}</h3>
+                    <h4>Question ${q.id}</h4>
                     <div class="question">${renderMarkdown(q.question)}</div>
-                    ${ua ? `<div class="user-answer"><strong>Your answer:</strong> ${renderMarkdown(ua)} <span>${correct ? '✓' : '✗'}</span></div>` : '<div class="unanswered">Not answered</div>'}
-                    <div class="correct-answer"><strong>Correct:</strong> ${renderMarkdown(q.answer)}</div>
+                    ${ua ? `<div class="user-answer"><strong>Your answer:</strong> ${renderMarkdown(ua)} <span>${isCorrect ? '✓' : '✗'}</span></div>` : '<div class="unanswered">Not answered</div>'}
+                    <div class="correct-answer"><strong>Correct answer:</strong> ${renderMarkdown(q.answer)}</div>
                     <div class="explanation">${renderMarkdown(q.explanation)}</div>
-                    <button class="view-resources" data-question-id="${q.id}">View Learning Resources</button>
                 </div>`;
             }).join('')}
         </div>
@@ -252,162 +241,24 @@ function endQuiz() {
     dom.topicContainer.style.display = 'none';
     dom.scoreSection.innerHTML = summaryHTML;
     dom.scoreSection.style.display = 'block';
-    
     document.getElementById('restart-btn')?.addEventListener('click', resetQuiz);
-    
-    // Add event listeners for learning resources buttons
-    document.querySelectorAll('.view-resources').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const questionId = parseInt(e.target.dataset.questionId);
-            showLearningResources(questionId);
-        });
-    });
-    
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Show learning resources for a question
-function showLearningResources(questionId) {
-    const resources = quizState.learningResources[questionId];
-    if (!resources || resources.length === 0) {
-        dom.resourceContent.innerHTML = '<div class="error">No learning resources available for this question</div>';
-        dom.learningPanel.classList.remove('hidden');
-        return;
-    }
-
-    // Clear previous tabs and content
-    dom.resourceTabs.innerHTML = '';
-    dom.resourceContent.innerHTML = '';
-
-    // Create tabs for each resource
-    resources.forEach((resource, index) => {
-        const tab = document.createElement('button');
-        tab.className = 'resource-tab' + (index === 0 ? ' active' : '');
-        tab.textContent = resource.title;
-        tab.dataset.resourceIndex = index;
-        
-        tab.addEventListener('click', () => {
-            // Set active tab
-            document.querySelectorAll('.resource-tab').forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            // Load resource content
-            loadResourceContent(resource);
-        });
-        
-        dom.resourceTabs.appendChild(tab);
-    });
-
-    // Load first resource by default
-    if (resources.length > 0) {
-        loadResourceContent(resources[0]);
-    }
-
-    dom.learningPanel.classList.remove('hidden');
-}
-
-// Load content for a specific resource
-function loadResourceContent(resource) {
-    dom.resourceContent.innerHTML = '<div class="loading">Loading resource...</div>';
-    
-    const resourcePath = `${basePath}/${resource.path}`;
-    
-    if (resource.type === 'markdown' || resource.type === 'code') {
-        fetch(resourcePath)
-            .then(res => {
-                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-                return res.text();
-            })
-            .then(text => {
-                if (resource.type === 'markdown') {
-                    dom.resourceContent.innerHTML = quizState.markedInstance.parse(text);
-                } else {
-                    // For code files, display in a pre block
-                    dom.resourceContent.innerHTML = `<pre><code class="language-${resource.path.split('.').pop()}">${escapeHtml(text)}</code></pre>`;
-                }
-                hljs.highlightAll();
-            })
-            .catch(err => {
-                console.error('Error loading resource:', err);
-                dom.resourceContent.innerHTML = `<div class="error">Failed to load resource: ${err.message}</div>`;
-            });
-    } else if (resource.type === 'html') {
-        dom.resourceContent.innerHTML = `<iframe class="resource-iframe" src="${resourcePath}"></iframe>`;
-    }
-}
-
-// Show all learning resources for a category
-async function showCategoryResources(category) {
-    const questions = quizState.questions.filter(q => q.category === category);
-    if (questions.length === 0) {
-        alert('No questions found for this category');
-        return;
-    }
-
-    // Hide quiz and show topic container
-    dom.quizContainer.style.display = 'none';
-    dom.scoreSection.style.display = 'none';
-    dom.topicContainer.style.display = 'block';
-    
-    // Create HTML for all resources in this category
-    let resourcesHTML = `<h2>${category} Learning Resources</h2>`;
-    
-    for (const question of questions) {
-        if (!question.learning_resources || question.learning_resources.length === 0) continue;
-        
-        resourcesHTML += `<div class="question-resources">
-            <h3>Question ${question.id}: ${question.question}</h3>`;
-        
-        for (const resource of question.learning_resources) {
-            resourcesHTML += `<div class="resource-item">
-                <h4>${resource.title} (${resource.type})</h4>`;
-            
-            if (resource.type === 'markdown') {
-                try {
-                    const response = await fetch(`${basePath}/${resource.path}`);
-                    const text = await response.text();
-                    resourcesHTML += quizState.markedInstance.parse(text);
-                } catch (err) {
-                    resourcesHTML += `<div class="error">Failed to load resource: ${err.message}</div>`;
-                }
-            } else if (resource.type === 'code') {
-                try {
-                    const response = await fetch(`${basePath}/${resource.path}`);
-                    const code = await response.text();
-                    resourcesHTML += `<pre><code class="language-${resource.path.split('.').pop()}">${escapeHtml(code)}</code></pre>`;
-                } catch (err) {
-                    resourcesHTML += `<div class="error">Failed to load code: ${err.message}</div>`;
-                }
-            } else if (resource.type === 'html') {
-                resourcesHTML += `<iframe src="${basePath}/${resource.path}" class="resource-iframe"></iframe>`;
-            }
-            
-            resourcesHTML += `</div>`;
-        }
-        
-        resourcesHTML += `</div><hr>`;
-    }
-    
-    dom.topicContent.innerHTML = resourcesHTML;
-    hljs.highlightAll();
-}
-
-// Helper to escape HTML
-function escapeHtml(unsafe) {
-    return unsafe
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-}
-
-// Question Display
 function showQuestion() {
+    if (quizState.filteredQuestions.length === 0) {
+        dom.questionTitle.textContent = "No questions available";
+        dom.questionText.innerHTML = quizState.selectedTag 
+            ? `No questions found for "${quizState.selectedTag}"`
+            : "Please select a tag to start the quiz";
+        dom.optionsContainer.innerHTML = '';
+        return;
+    }
+
     const question = quizState.filteredQuestions[quizState.currentIndex];
     if (!question) return;
 
-    dom.questionTitle.textContent = `Question ${question.id} - ${question.category}`;
+    dom.questionTitle.innerHTML = `Question ${question.id}`;
     dom.questionText.innerHTML = renderMarkdown(question.question);
     dom.optionsContainer.innerHTML = '';
 
@@ -423,6 +274,10 @@ function showQuestion() {
     dom.questionJump.value = question.id;
     updateNavigationButtons();
     updateAnswerDisplay(question);
+
+    if (Object.keys(quizState.userAnswers).length === quizState.filteredQuestions.length) {
+        endQuiz();
+    }
 }
 
 function selectOption(id, option) {
@@ -439,7 +294,67 @@ function updateNavigationButtons() {
     dom.nextBtn.disabled = quizState.currentIndex >= quizState.filteredQuestions.length - 1;
 }
 
+async function updateAnswerDisplay(question) {
+    if (quizState.showAnswer) {
+        dom.answerSection.style.display = 'block';
+        dom.correctAnswer.innerHTML = renderMarkdown(`**Answer:** ${question.answer}`);
+        dom.explanation.innerHTML = renderMarkdown(`**Explanation:** ${question.explanation || ''}`);
 
+        // Clear previous resources
+        const existingResources = document.querySelectorAll('.learning-resource');
+        existingResources.forEach(el => el.remove());
+
+        // Load and display learning resources if they exist
+        if (question.learning_resources && question.learning_resources.length > 0) {
+            const resourcesContainer = document.createElement('div');
+            resourcesContainer.className = 'learning-resources-container';
+            resourcesContainer.innerHTML = '<h3>Additional Resources:</h3>';
+            
+            for (const resource of question.learning_resources) {
+                const resourceDiv = document.createElement('div');
+                resourceDiv.className = 'learning-resource';
+                
+                const details = document.createElement('details');
+                const summary = document.createElement('summary');
+                summary.textContent = `${resource.title} (${resource.type})`;
+                details.appendChild(summary);
+                
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'resource-content';
+                
+                try {
+                    let content = '';
+                    switch (resource.type) {
+                        case 'markdown':
+                            content = await loadMarkdown(resource.path);
+                            break;
+                        case 'html':
+                            content = await loadHTML(resource.path);
+                            break;
+                        case 'code':
+                            content = await loadCode(resource.path);
+                            break;
+                        default:
+                            content = `<div class="error">Unsupported resource type: ${resource.type}</div>`;
+                    }
+                    contentDiv.innerHTML = content;
+                } catch (err) {
+                    console.error('Error loading resource:', err);
+                    contentDiv.innerHTML = `<div class="error">Failed to load resource: ${err.message}</div>`;
+                }
+                
+                details.appendChild(contentDiv);
+                resourceDiv.appendChild(details);
+                resourcesContainer.appendChild(resourceDiv);
+            }
+            
+            dom.explanation.appendChild(resourcesContainer);
+            hljs.highlightAll();
+        }
+    } else {
+        dom.answerSection.style.display = 'none';
+    }
+}
 
 async function loadMarkdown(path) {
     try {
@@ -477,65 +392,14 @@ async function loadCode(path) {
     }
 }
 
-// Update the updateAnswerDisplay function to use collapsible sections
-async function updateAnswerDisplay(question) {
-    if (quizState.showAnswer) {
-        dom.answerSection.style.display = 'block';
-        dom.correctAnswer.innerHTML = renderMarkdown(`**Answer:** ${question.answer}`);
-        dom.explanation.innerHTML = renderMarkdown(`**Explanation:** ${question.explanation || ''}`);
-        
-        // Clear previous resources
-        const existingResources = document.querySelectorAll('.answer-resource');
-        existingResources.forEach(el => el.remove());
-        
-        // Load and display all available resources
-        if (question.learning_resources && question.learning_resources.length > 0) {
-            const resourcesContainer = document.createElement('div');
-            resourcesContainer.className = 'answer-resources-container';
-            resourcesContainer.innerHTML = '<h3>Learning Resources:</h3>';
-            
-            for (const resource of question.learning_resources) {
-                const resourceDiv = document.createElement('div');
-                resourceDiv.className = 'answer-resource';
-                
-                // Create collapsible details element
-                const details = document.createElement('details');
-                const summary = document.createElement('summary');
-                summary.textContent = `${resource.title} (${resource.type})`;
-                details.appendChild(summary);
-                
-                let content = '';
-                switch (resource.type) {
-                    case 'markdown':
-                        content = await loadMarkdown(resource.path);
-                        break;
-                    case 'html':
-                        const htmlContent = await loadHTML(resource.path);
-                        content = `<div class="html-content">${htmlContent}</div>`;
-                        break;
-                    case 'code':
-                        content = await loadCode(resource.path);
-                        break;
-                    default:
-                        content = `<div class="error">Unknown resource type: ${resource.type}</div>`;
-                }
-                
-                const contentDiv = document.createElement('div');
-                contentDiv.className = 'resource-content';
-                contentDiv.innerHTML = content;
-                details.appendChild(contentDiv);
-                resourceDiv.appendChild(details);
-                resourcesContainer.appendChild(resourceDiv);
-            }
-            
-            dom.explanation.appendChild(resourcesContainer);
-            hljs.highlightAll();
-        }
-    } else {
-        dom.answerSection.style.display = 'none';
-    }
+function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
-
 
 function jumpToQuestion(id) {
     const index = quizState.filteredQuestions.findIndex(q => q.id === id);
@@ -546,50 +410,25 @@ function jumpToQuestion(id) {
     }
 }
 
-function filterQuestions() {
-    const selectedCategory = dom.categorySelector.value;
-    quizState.filteredQuestions = quizState.questions.filter(q => q.category === selectedCategory);
-    quizState.currentIndex = 0;
-    quizState.userAnswers = {};
-    showQuestion();
-}
-
 async function loadTopicContent() {
+    if (!quizState.selectedTag) {
+        alert('Please select a tag first');
+        return;
+    }
+
+    const topicPath = `${basePath}/data/${quizState.selectedTag.replace(/\s+/g, '_')}/${quizState.selectedTag.toLowerCase().replace(/\s+/g, '_')}.html`;
+
     try {
-        const selectedCategory = dom.categorySelector.value;
-        if (!selectedCategory || selectedCategory === 'All') {
-            alert('Please select a specific topic category first');
-            return;
-        }
-
-        // Construct the path to the category's HTML file
-        const categoryFolder = selectedCategory.replace(/\s+/g, '_');
-        const topicPath = `${basePath}/data/${categoryFolder}/${categoryFolder.toLowerCase()}.html`;
-
-        // Test if the file exists first
-        try {
-            const testResponse = await fetch(topicPath);
-            if (!testResponse.ok) {
-                throw new Error(`File not found: ${topicPath}`);
-            }
-            
-            // Load the topic HTML file into the iframe
-            dom.topicIframe.src = topicPath;
-            
-            // Show/hide sections
-            dom.quizContainer.style.display = 'none';
-            dom.scoreSection.style.display = 'none';
-            dom.topicContainer.style.display = 'block';
-
-            if (quizState.sidebarVisible) toggleSidebar();
-        } catch (err) {
-            console.error('Error loading topic:', err);
-            // If the main HTML file doesn't exist, fall back to showing all resources
-            await showCategoryResources(selectedCategory);
-        }
+        const testResponse = await fetch(topicPath);
+        if (!testResponse.ok) throw new Error(`File not found: ${topicPath}`);
+        
+        dom.topicIframe.src = topicPath;
+        dom.quizContainer.style.display = 'none';
+        dom.scoreSection.style.display = 'none';
+        dom.topicContainer.style.display = 'block';
     } catch (err) {
-        console.error('Error in loadTopicContent:', err);
-        alert('An error occurred while loading the topic');
+        console.error('Error loading topic:', err);
+        alert(`No learning material available for "${quizState.selectedTag}"`);
     }
 }
 
@@ -614,13 +453,21 @@ function toggleSidebar() {
     }
 }
 
-// Event Listeners
 function setupEventListeners() {
-    dom.categorySelector.addEventListener('change', filterQuestions);
+    // Tag selection
+    dom.tagSelector.addEventListener('change', (e) => {
+        quizState.selectedTag = e.target.value || null;
+        filterQuestions();
+    });
+    
+    // Quiz controls
     dom.durationSelector.addEventListener('change', () => quizState.timerInterval && initTimer());
     dom.startQuizBtn.addEventListener('click', () => {
+        if (!quizState.selectedTag) {
+            alert('Please select a tag first');
+            return;
+        }
         initTimer();
-        filterQuestions();
     });
     dom.previousBtn.addEventListener('click', () => {
         if (quizState.currentIndex > 0) {
@@ -646,7 +493,11 @@ function setupEventListeners() {
     dom.questionJump.addEventListener('keypress', e => {
         if (e.key === 'Enter') jumpToQuestion(Number(dom.questionJump.value));
     });
+
+    // Learn topic feature
     dom.learnTopicBtn.addEventListener('click', loadTopicContent);
     dom.backToQuizBtn.addEventListener('click', backToQuiz);
+    
+    // Sidebar toggle
     dom.toggleSidebarBtn.addEventListener('click', toggleSidebar);
 }

@@ -1,6 +1,6 @@
 {
     "id": 2,
-    "category": "Data Analysis",
+    "tags": ["Data Analysis"],
     "question": "What technique would you use to handle high-dimensional sparse data when performing PCA?",
     "options": [
         "Standard PCA with normalization",
