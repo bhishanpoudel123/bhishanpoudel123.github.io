@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What does the 'I' component in ARIMA represent, and why is it necessary?",
+  "options": [
+    "Integrated - differencing to achieve stationarity",
+    "Interpolated - filling in missing values",
+    "Independent - ensuring variables are independent",
+    "Incremental - adding incremental changes to the model"
+  ],
+  "answer": "Integrated - differencing to achieve stationarity",
+  "explanation": "The 'I' in ARIMA stands for Integrated, which refers to differencing the time series to achieve stationarity. Many time series have trends or seasonal patterns that make them non-stationary. The 'd' parameter in ARIMA(p,d,q) indicates how many times the data needs to be differenced to achieve stationarity. For example, if d=1, we take the difference between consecutive observations. This transformation is necessary because ARIMA models assume the underlying process is stationary, meaning its statistical properties do not change over time.",
+  "learning_resources": []
+}

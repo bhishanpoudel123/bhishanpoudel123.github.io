@@ -1,0 +1,22 @@
+{
+  "id": 27,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which technique is most appropriate for detecting and visualizing non-linear relationships in supervised learning?",
+  "options": [
+    "Partial dependence plots with contour plots for interactions",
+    "Accumulated Local Effects (ALE) plots with bootstrap confidence intervals",
+    "SHAP interaction values with dependency plots",
+    "Individual Conditional Expectation (ICE) plots with centered PDP"
+  ],
+  "answer": "Individual Conditional Expectation (ICE) plots with centered PDP",
+  "explanation": "ICE plots show how predictions change for individual instances across the range of a feature, while centering them helps visualize heterogeneous effects that would be masked by averaging in standard partial dependence plots, making them ideal for detecting complex non-linear relationships.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_27_answer_long_01",
+      "path": "data/Modelling/questions/qn_27/markdown/qn_27_answer_01.md"
+    }
+  ]
+}

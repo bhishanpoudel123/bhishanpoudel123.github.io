@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the primary goal of data wrangling?",
+  "options": [
+    "Building machine learning models",
+    "Cleaning and transforming raw data into a usable format",
+    "Creating interactive dashboards",
+    "Writing complex SQL queries"
+  ],
+  "answer": "Cleaning and transforming raw data into a usable format",
+  "explanation": "Data wrangling involves cleaning, structuring, and enriching raw data into a format suitable for analysis.",
+  "learning_resources": []
+}

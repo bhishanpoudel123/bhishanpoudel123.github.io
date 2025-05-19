@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most statistically sound approach to perform feature selection for a regression task with potential non-linear relationships?",
+  "options": [
+    "`Mutual information`-based selection with permutation testing",
+    "`LASSO` regression with stability selection",
+    "`Random Forest` with Boruta algorithm",
+    "`Generalized Additive Models` with significance testing of smooth terms"
+  ],
+  "answer": "`Mutual information`-based selection with permutation testing",
+  "explanation": "Mutual information captures both linear and non-linear dependencies between variables without assuming functional form, while permutation testing provides a statistically rigorous way to assess the significance of these dependencies, controlling for multiple testing issues.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_30_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_30/markdown/qn_30_answer_01.md"
+    }
+  ]
+}

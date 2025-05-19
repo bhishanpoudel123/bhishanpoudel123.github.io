@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "Which of the following is a DDL command?",
+  "options": [
+    "INSERT",
+    "UPDATE",
+    "DELETE",
+    "CREATE"
+  ],
+  "answer": "CREATE",
+  "explanation": "CREATE is a DDL (Data Definition Language) command used to create a new table or database.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 7,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which approach correctly implements a custom kernel for SVM in scikit-learn?",
+  "options": [
+    "Subclass sklearn.svm.SVC and override the _compute_kernel method",
+    "Define a function that takes two arrays and returns a kernel matrix",
+    "Use sklearn.metrics.pairwise.pairwise_kernels with a custom metric",
+    "Define a custom kernel using sklearn.gaussian_process.kernels.Kernel"
+  ],
+  "answer": "Define a function that takes two arrays and returns a kernel matrix",
+  "explanation": "For custom kernels in scikit-learn SVMs, one must define a function K(X, Y) that calculates the kernel matrix between arrays X and Y, then pass this function as the 'kernel' parameter to SVC. This approach allows full flexibility in kernel design while maintaining compatibility with scikit-learn's implementation.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_07_answer_long_01",
+      "path": "data/Modelling/questions/qn_07/markdown/qn_07_answer_01.md"
+    }
+  ]
+}

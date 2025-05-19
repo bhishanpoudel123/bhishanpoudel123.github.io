@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What does the 'AR' component in ARIMA represent, and how does it capture patterns in time series data?",
+  "options": [
+    "Autoregressive - using past values to predict future values",
+    "Auto Recursive - using recursive algorithms for prediction",
+    "Autonomously Restrictive - restricting variables autonomously",
+    "Average Residuals - averaging the residual errors"
+  ],
+  "answer": "Autoregressive - using past values to predict future values",
+  "explanation": "The 'AR' in ARIMA stands for Autoregressive, which means the model uses past values of the time series to predict future values. Specifically, an AR(p) model uses p previous time steps as predictors. For example, in an AR(2) model, the current value is predicted using a linear combination of the previous two values, plus an error term. This component is particularly useful for capturing momentum or inertia in time series where recent values influence future values.",
+  "learning_resources": []
+}

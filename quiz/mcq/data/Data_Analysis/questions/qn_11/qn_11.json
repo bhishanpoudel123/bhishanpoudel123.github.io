@@ -1,0 +1,22 @@
+{
+  "id": 11,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "When performing anomaly detection in a multivariate time series, which technique is most appropriate for detecting contextual anomalies?",
+  "options": [
+    "`Isolation Forest` with sliding windows",
+    "`One-class SVM` on feature vectors",
+    "`LSTM Autoencoder` with reconstruction error thresholding",
+    "`ARIMA` with Mahalanobis distance on residuals"
+  ],
+  "answer": "`LSTM Autoencoder` with reconstruction error thresholding",
+  "explanation": "LSTM Autoencoders can capture complex temporal dependencies in multivariate time series data, making them ideal for detecting contextual anomalies where data points are abnormal specifically in their context rather than globally.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_11_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_11/markdown/qn_11_answer_01.md"
+    }
+  ]
+}

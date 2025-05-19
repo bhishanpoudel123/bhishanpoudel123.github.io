@@ -1,0 +1,16 @@
+{
+  "id": 25,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Suppose the first 2 statements are true. Is the third one true/false or not certain?\n1) Jack greeted Jill.\n2) Jill greeted Joe.\n3) Jack didnt greet Joe.",
+  "options": [
+    "True",
+    "Uncertain",
+    "False",
+    "unrelated"
+  ],
+  "answer": "Uncertain",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

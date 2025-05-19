@@ -1,0 +1,16 @@
+{
+  "id": 28,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which metric would you use for an imbalanced classification problem?",
+  "options": [
+    "Accuracy",
+    "Precision-Recall curve",
+    "Mean Squared Error",
+    "R-squared"
+  ],
+  "answer": "Precision-Recall curve",
+  "explanation": "For imbalanced classes, accuracy can be misleading. Precision-Recall curves provide better insight into model performance.",
+  "learning_resources": []
+}

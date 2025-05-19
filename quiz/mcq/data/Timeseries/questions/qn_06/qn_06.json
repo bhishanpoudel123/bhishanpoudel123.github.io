@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "How can you determine the appropriate values for p and q in an ARIMA(p,d,q) model?",
+  "options": [
+    "By examining ACF and PACF plots",
+    "By using cross-validation only",
+    "By checking the kurtosis and skewness",
+    "By analyzing the histogram of the data"
+  ],
+  "answer": "By examining ACF and PACF plots",
+  "explanation": "The appropriate values for p and q in an ARIMA model can be determined by examining the Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) plots of the stationary time series. For identifying the AR order (p), look for significant spikes in the PACF that cut off after lag p. For the MA order (q), look for significant spikes in the ACF that cut off after lag q. Additionally, information criteria like AIC (Akaike Information Criterion) or BIC (Bayesian Information Criterion) can be used to compare different model specifications and select the best combination of parameters.",
+  "learning_resources": []
+}

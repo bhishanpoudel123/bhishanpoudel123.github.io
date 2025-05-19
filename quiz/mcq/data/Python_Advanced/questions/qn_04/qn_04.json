@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "What is a key difference between multiprocessing and threading in Python?",
+  "options": [
+    "Threads use more memory",
+    "Processes can utilize multiple CPUs",
+    "Threads can run in parallel on multiple cores",
+    "Multiprocessing is slower than threading"
+  ],
+  "answer": "Processes can utilize multiple CPUs",
+  "explanation": "Due to the GIL, threads are limited; multiprocessing uses separate memory space and cores.",
+  "learning_resources": []
+}

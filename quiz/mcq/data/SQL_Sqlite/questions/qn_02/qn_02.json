@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "Which function would you use in SQLite to get the current timestamp?",
+  "options": [
+    "NOW()",
+    "CURRENT_TIMESTAMP",
+    "GETDATE()",
+    "SYSDATE"
+  ],
+  "answer": "CURRENT_TIMESTAMP",
+  "explanation": "`CURRENT_TIMESTAMP` returns the current date and time in SQLite.",
+  "learning_resources": []
+}

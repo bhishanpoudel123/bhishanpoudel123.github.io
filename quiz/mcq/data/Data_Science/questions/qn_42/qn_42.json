@@ -1,0 +1,16 @@
+{
+  "id": 42,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the difference between batch gradient descent and stochastic gradient descent?",
+  "options": [
+    "Batch uses all data per update, stochastic uses one sample",
+    "Batch is for classification, stochastic for regression",
+    "Batch is faster but less accurate",
+    "There is no difference"
+  ],
+  "answer": "Batch uses all data per update, stochastic uses one sample",
+  "explanation": "Batch GD computes gradients using the entire dataset, while SGD uses a single random sample per iteration.",
+  "learning_resources": []
+}

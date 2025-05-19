@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Data Visualization"
+  ],
+  "question": "Which Python library is most commonly used for creating static, animated, and interactive visualizations?",
+  "options": [
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn"
+  ],
+  "answer": "Matplotlib",
+  "explanation": "`Matplotlib` is a foundational library for creating a wide variety of plots and charts.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "IQ"
+  ],
+  "question": "In a party, 10 men shake hands with each other and they get to shake everyones hand once. How many total handshakes are there?",
+  "options": [
+    "50",
+    "45",
+    "100",
+    "40"
+  ],
+  "answer": "45",
+  "explanation": "Use n(n-1)/2 formula for handshakes.",
+  "learning_resources": []
+}

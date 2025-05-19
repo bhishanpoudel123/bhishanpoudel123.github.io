@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What does the method `groupby().agg()` allow you to do?",
+  "options": [
+    "Group data and apply a single aggregation function",
+    "Group data and apply different aggregation functions to different columns",
+    "Group data and apply multiple aggregation functions to the same column",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "The agg() method is versatile and can apply single or multiple functions to grouped data, either to all columns or selectively.",
+  "learning_resources": []
+}

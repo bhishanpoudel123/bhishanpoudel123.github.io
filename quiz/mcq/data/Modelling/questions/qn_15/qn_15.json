@@ -1,0 +1,22 @@
+{
+  "id": 15,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which is the most statistically rigorous approach to implement feature selection for a regression problem with heteroscedastic errors?",
+  "options": [
+    "Use sklearn's SelectFromModel with LassoCV",
+    "Implement weighted LASSO with weight inversely proportional to error variance",
+    "Apply robust feature selection using Huber regression",
+    "Implement stability selection with bootstrapped samples"
+  ],
+  "answer": "Implement weighted LASSO with weight inversely proportional to error variance",
+  "explanation": "Weighted LASSO that downweights observations with high error variance accounts for heteroscedasticity in the selection process, ensuring that features aren't selected or rejected due to non-constant error variance, resulting in more reliable feature selection.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_15_answer_long_01",
+      "path": "data/Modelling/questions/qn_15/markdown/qn_15_answer_01.md"
+    }
+  ]
+}

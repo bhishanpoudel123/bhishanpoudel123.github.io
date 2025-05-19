@@ -1,0 +1,22 @@
+{
+  "id": 7,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which technique is most appropriate for identifying non-linear relationships between variables in a high-dimensional dataset?",
+  "options": [
+    "Pearson correlation matrix with hierarchical clustering",
+    "Distance correlation matrix with MDS visualization",
+    "`MINE` statistics (Maximal Information-based Nonparametric Exploration)",
+    "Random Forest feature importance with partial dependence plots"
+  ],
+  "answer": "`MINE` statistics (Maximal Information-based Nonparametric Exploration)",
+  "explanation": "MINE statistics, particularly the Maximal Information Coefficient (MIC), detect both linear and non-linear associations without assuming a specific functional form, outperforming traditional correlation measures for complex relationships.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_07_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_07/markdown/qn_07_answer_01.md"
+    }
+  ]
+}

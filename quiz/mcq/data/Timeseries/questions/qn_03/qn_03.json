@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What does the 'MA' component in ARIMA represent, and how does it differ from AR?",
+  "options": [
+    "Moving Average - using past forecast errors in the model",
+    "Mean Adjustment - adjusting the mean over time",
+    "Maximum Amplitude - capturing amplitude changes",
+    "Multiple Analysis - analyzing multiple factors simultaneously"
+  ],
+  "answer": "Moving Average - using past forecast errors in the model",
+  "explanation": "The 'MA' in ARIMA stands for Moving Average, which incorporates past forecast errors (residuals) into the model rather than past values of the time series itself. An MA(q) model uses the previous q forecast errors as predictors. This differs fundamentally from AR, which uses the actual past values. MA components capture the short-term reactions to past shocks or random events in the system. For example, an MA(1) model would use the forecast error from the previous time step to adjust the current prediction.",
+  "learning_resources": []
+}

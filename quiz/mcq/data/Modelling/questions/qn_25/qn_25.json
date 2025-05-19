@@ -1,0 +1,22 @@
+{
+  "id": 25,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which approach correctly addresses Simpson's paradox in a predictive modeling context?",
+  "options": [
+    "Include interaction terms between potentially confounding variables",
+    "Use causal graphical models to identify proper conditioning sets",
+    "Apply hierarchical/multilevel modeling to account for grouping",
+    "Use propensity score matching before building predictive models"
+  ],
+  "answer": "Use causal graphical models to identify proper conditioning sets",
+  "explanation": "Causal graphical models (e.g., DAGs) allow identifying which variables should or should not be conditioned on to avoid Simpson's paradox, ensuring that the model captures the true causal relationship rather than spurious associations that reverse with conditioning.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_25_answer_long_01",
+      "path": "data/Modelling/questions/qn_25/markdown/qn_25_answer_01.md"
+    }
+  ]
+}

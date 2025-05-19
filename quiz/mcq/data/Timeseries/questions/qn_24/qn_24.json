@@ -1,0 +1,16 @@
+{
+  "id": 24,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the difference between strong and weak stationarity in time series?",
+  "options": [
+    "Weak stationarity requires constant mean and variance and time-invariant autocorrelation; strong stationarity requires the entire distribution to be time-invariant",
+    "Strong stationarity applies to long time series, weak stationarity to short time series",
+    "Strong stationarity means no differencing is required, weak stationarity means first differencing is sufficient",
+    "Weak stationarity allows for seasonal patterns, strong stationarity does not"
+  ],
+  "answer": "Weak stationarity requires constant mean and variance and time-invariant autocorrelation; strong stationarity requires the entire distribution to be time-invariant",
+  "explanation": "The distinction between strong (strict) and weak stationarity lies in how much of the data's statistical properties must remain constant over time. Weak stationarity, which is usually sufficient for ARIMA modeling, requires only that the mean and variance remain constant and that the autocorrelation function depends only on the lag between points, not their absolute position in time. In contrast, strong stationarity is more demanding, requiring that the entire joint probability distribution of the process remains unchanged when shifted in time. This means all higher moments (not just the first two) must be constant, and all multivariate distributions (not just bivariate correlations) must be time-invariant. In practice, analysts typically work with weak stationarity because it's easier to test for and sufficient for many applications.",
+  "learning_resources": []
+}

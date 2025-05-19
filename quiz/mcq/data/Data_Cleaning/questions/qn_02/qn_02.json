@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Data Cleaning"
+  ],
+  "question": "What does the `dropna()` function do?",
+  "options": [
+    "Replaces missing values",
+    "Fills missing values with mean",
+    "Drops rows with missing values",
+    "Sorts the DataFrame"
+  ],
+  "answer": "Drops rows with missing values",
+  "explanation": "`dropna()` removes rows (or columns) that contain missing values.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 12,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which method performs a cross-tabulation of two factors?",
+  "options": [
+    "pd.crosstab(df['A'], df['B'])",
+    "df.pivot_table(index='A', columns='B', aggfunc='count')",
+    "df.groupby(['A', 'B']).size().unstack()",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "All methods can create cross-tabulations, though crosstab() is specifically designed for this purpose.",
+  "learning_resources": []
+}

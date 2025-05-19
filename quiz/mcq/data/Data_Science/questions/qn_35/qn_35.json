@@ -1,0 +1,16 @@
+{
+  "id": 35,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the bias-variance tradeoff?",
+  "options": [
+    "The balance between model complexity and generalization",
+    "The choice between supervised and unsupervised learning",
+    "The decision to use Python or R",
+    "The selection of training vs test data size"
+  ],
+  "answer": "The balance between model complexity and generalization",
+  "explanation": "The bias-variance tradeoff refers to balancing a model's simplicity (bias) against its sensitivity to training data (variance) to achieve good generalization.",
+  "learning_resources": []
+}

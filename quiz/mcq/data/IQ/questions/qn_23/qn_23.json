@@ -1,0 +1,16 @@
+{
+  "id": 23,
+  "tags": [
+    "IQ"
+  ],
+  "question": "How many days are there in three years?",
+  "options": [
+    "1,090",
+    "1,105",
+    "1,095",
+    "1,085"
+  ],
+  "answer": "1,095",
+  "explanation": "365 days in a year, so 3 years = 3 * 365 = 1,095 days.",
+  "learning_resources": []
+}

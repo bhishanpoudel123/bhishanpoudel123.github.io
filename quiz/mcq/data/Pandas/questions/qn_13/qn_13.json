@@ -1,0 +1,16 @@
+{
+  "id": 13,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you calculate cumulative statistics in pandas?",
+  "options": [
+    "df.cumsum(), df.cumprod(), df.cummax(), df.cummin()",
+    "df.rolling().sum(), df.rolling().prod(), df.rolling().max(), df.rolling().min()",
+    "df.expanding().sum(), df.expanding().prod(), df.expanding().max(), df.expanding().min()",
+    "df.aggregate(['sum', 'prod', 'max', 'min'])"
+  ],
+  "answer": "df.cumsum(), df.cumprod(), df.cummax(), df.cummin()",
+  "explanation": "The cum- methods (cumsum, cumprod, cummax, cummin) calculate cumulative statistics along an axis.",
+  "learning_resources": []
+}

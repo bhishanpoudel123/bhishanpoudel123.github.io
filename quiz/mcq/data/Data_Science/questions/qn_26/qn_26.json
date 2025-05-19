@@ -1,0 +1,16 @@
+{
+  "id": 26,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main advantage of using a Jupyter Notebook?",
+  "options": [
+    "It provides the fastest execution speed",
+    "It combines code, visualizations, and narrative text",
+    "It automatically documents all code",
+    "It doesn't require any programming knowledge"
+  ],
+  "answer": "It combines code, visualizations, and narrative text",
+  "explanation": "Jupyter Notebooks allow interactive development with code, visualizations, and explanatory text in a single document.",
+  "learning_resources": []
+}

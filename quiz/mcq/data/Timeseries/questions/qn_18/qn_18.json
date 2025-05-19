@@ -1,0 +1,16 @@
+{
+  "id": 18,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the purpose of the Box-Jenkins methodology in time series analysis?",
+  "options": [
+    "A systematic approach to identify, estimate, and validate ARIMA models",
+    "A transformation technique to normalize skewed time series data",
+    "A diagnostic test for heteroscedasticity in residuals",
+    "A method to decompose time series into trend, seasonal, and residual components"
+  ],
+  "answer": "A systematic approach to identify, estimate, and validate ARIMA models",
+  "explanation": "The Box-Jenkins methodology is a systematic approach to identify, estimate, and validate ARIMA models for time series forecasting. It consists of three main stages: identification, estimation, and diagnostic checking. In the identification stage, you determine appropriate values for p, d, and q by analyzing ACF/PACF plots and using stationarity tests. In the estimation stage, you fit the selected ARIMA model to the data and estimate its parameters. In the diagnostic checking stage, you analyze residuals to ensure they resemble white noise and refine the model if needed. Box-Jenkins emphasizes iterative model building, where you cycle through these stages until you find an adequate model. This methodical approach helps ensure that the final model captures the data's patterns efficiently.",
+  "learning_resources": []
+}

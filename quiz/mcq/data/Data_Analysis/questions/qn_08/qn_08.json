@@ -1,0 +1,22 @@
+{
+  "id": 8,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most statistically sound approach to handle imbalanced multiclass classification with severe class imbalance?",
+  "options": [
+    "Oversampling minority classes using SMOTE",
+    "Undersampling majority classes using NearMiss",
+    "Cost-sensitive learning with class weights inversely proportional to frequencies",
+    "Ensemble of balanced subsets with `META` learning"
+  ],
+  "answer": "Ensemble of balanced subsets with `META` learning",
+  "explanation": "META (Minority Ethnicity and Threshold Adjustment) learning with ensembling addresses severe multiclass imbalance by training multiple models on balanced subsets and combining them, avoiding information loss from undersampling while preventing the artificial patterns that can be introduced by synthetic oversampling.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_08_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_08/markdown/qn_08_answer_01.md"
+    }
+  ]
+}

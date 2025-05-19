@@ -1,0 +1,16 @@
+{
+  "id": 15,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of a train-test split?",
+  "options": [
+    "To reduce the size of large datasets",
+    "To evaluate how well a model generalizes to unseen data",
+    "To balance class distributions in classification problems",
+    "To speed up model training"
+  ],
+  "answer": "To evaluate how well a model generalizes to unseen data",
+  "explanation": "Splitting data into training and test sets helps estimate model performance on new, unseen data.",
+  "learning_resources": []
+}

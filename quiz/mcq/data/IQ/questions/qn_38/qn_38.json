@@ -1,0 +1,16 @@
+{
+  "id": 38,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Identify next number in the series.\n9, 3, 1, 1/3, _____",
+  "options": [
+    "1/13",
+    "1/6",
+    "1/9",
+    "1/10"
+  ],
+  "answer": "1/9",
+  "explanation": "Each next number is one third of the previous number.",
+  "learning_resources": []
+}

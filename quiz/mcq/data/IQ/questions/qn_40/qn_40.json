@@ -1,0 +1,16 @@
+{
+  "id": 40,
+  "tags": [
+    "IQ"
+  ],
+  "question": "An automotive shop owner bought some tools for $5,500. He sold those for $7,300 with a profit of $50 per tool. How many tools did he sell?",
+  "options": [
+    "60",
+    "20",
+    "75",
+    "36"
+  ],
+  "answer": "36",
+  "explanation": "7300 - 5500 = 1800 profit. 1800/50 = 36 tools sold.",
+  "learning_resources": []
+}

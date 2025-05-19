@@ -1,0 +1,16 @@
+{
+  "id": 33,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Calculate:  -70 + 35",
+  "options": [
+    "25",
+    "-25",
+    "35",
+    "-35"
+  ],
+  "answer": "-35",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

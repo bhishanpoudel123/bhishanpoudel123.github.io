@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "What will the result of the query 'SELECT * FROM employees WHERE department IS NULL;' be?",
+  "options": [
+    "It will throw an error",
+    "It selects employees with empty strings",
+    "It selects employees with NULL department",
+    "It selects all employees"
+  ],
+  "answer": "It selects employees with NULL department",
+  "explanation": "IS NULL checks for columns that contain NULL values.",
+  "learning_resources": []
+}

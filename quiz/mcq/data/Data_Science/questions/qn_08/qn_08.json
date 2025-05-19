@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which metric is NOT used to evaluate regression models?",
+  "options": [
+    "Mean Squared Error (MSE)",
+    "R-squared",
+    "Accuracy",
+    "Root Mean Squared Error (RMSE)"
+  ],
+  "answer": "Accuracy",
+  "explanation": "Accuracy is used for classification problems. MSE, RMSE, and R-squared are common regression metrics.",
+  "learning_resources": []
+}

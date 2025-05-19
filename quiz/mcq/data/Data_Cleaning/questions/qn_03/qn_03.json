@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Data Cleaning"
+  ],
+  "question": "Which method is used to fill missing values with the mean of the column?",
+  "options": [
+    "fillna(mean)",
+    "impute(mean)",
+    "fill(mean)",
+    "replace(mean)"
+  ],
+  "answer": "fillna(mean)",
+  "explanation": "`fillna()` is used to fill missing values, and you can pass the column mean to it.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 24,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Adam is selling yarn for $.04/foot. How many feet can you buy from him for $0.52?",
+  "options": [
+    "13 feet",
+    "12 feet",
+    "50 feet",
+    "10 feet"
+  ],
+  "answer": "13 feet",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

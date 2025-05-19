@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "Which built-in function returns the identity of an object?",
+  "options": [
+    "type()",
+    "id()",
+    "hash()",
+    "repr()"
+  ],
+  "answer": "id()",
+  "explanation": "`id()` returns the identity (memory address) of an object.",
+  "learning_resources": []
+}

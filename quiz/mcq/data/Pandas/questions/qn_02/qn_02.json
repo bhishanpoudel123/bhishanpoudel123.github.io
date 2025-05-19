@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What's the correct way to merge two DataFrames on multiple columns?",
+  "options": [
+    "pd.merge(df1, df2, on=['col1', 'col2'])",
+    "pd.join(df1, df2, keys=['col1', 'col2'])",
+    "df1.merge(df2, how='inner', left_on=['col1', 'col2'], right_on=['col1', 'col2'])",
+    "Both A and C"
+  ],
+  "answer": "Both A and C",
+  "explanation": "Both pd.merge() and DataFrame.merge() methods can merge on multiple columns specified as lists.",
+  "learning_resources": []
+}

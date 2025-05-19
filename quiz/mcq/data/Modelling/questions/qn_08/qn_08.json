@@ -1,0 +1,22 @@
+{
+  "id": 8,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most rigorous approach to handle feature selection with highly correlated features in a regression context?",
+  "options": [
+    "Sequential feature selection with tolerance for multicollinearity",
+    "Recursive feature elimination with cross-validation (RFECV)",
+    "Elastic Net regularization with randomized hyperparameter search",
+    "Use variance inflation factor (VIF) with backward elimination"
+  ],
+  "answer": "Elastic Net regularization with randomized hyperparameter search",
+  "explanation": "Elastic Net combines L1 and L2 penalties, effectively handling correlated features by either selecting one from a correlated group (via L1) or assigning similar coefficients to correlated features (via L2), with the optimal balance determined through randomized hyperparameter search across different alpha and l1_ratio values.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_08_answer_long_01",
+      "path": "data/Modelling/questions/qn_08/markdown/qn_08_answer_01.md"
+    }
+  ]
+}

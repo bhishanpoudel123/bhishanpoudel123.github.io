@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "Which SQL keyword is used to sort the result-set?",
+  "options": [
+    "SORT BY",
+    "ORDER BY",
+    "GROUP BY",
+    "ARRANGE BY"
+  ],
+  "answer": "ORDER BY",
+  "explanation": "ORDER BY is used to sort the results of a SELECT query.",
+  "learning_resources": []
+}

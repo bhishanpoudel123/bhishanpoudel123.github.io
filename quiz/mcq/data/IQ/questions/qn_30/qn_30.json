@@ -1,0 +1,16 @@
+{
+  "id": 30,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Ferguson has 8 hats, 6 shirts and 4 pairs of pants. How many days can he dress up without repeating the same combination?",
+  "options": [
+    "12 days",
+    "18 days",
+    "192 days",
+    "180 days"
+  ],
+  "answer": "192 days",
+  "explanation": "We need to multiply the number of hats, shirts and pants to get the total combinations. 8 * 6 * 4 = 192.",
+  "learning_resources": []
+}

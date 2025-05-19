@@ -1,0 +1,16 @@
+{
+  "id": 20,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which method is correct for resampling time series data to monthly frequency?",
+  "options": [
+    "df.resample('M').mean()",
+    "df.groupby(pd.Grouper(freq='M')).mean()",
+    "df.asfreq('M')",
+    "Both A and B"
+  ],
+  "answer": "Both A and B",
+  "explanation": "Both resample() and groupby() with Grouper can aggregate time series data to monthly frequency, though asfreq() only changes frequency without aggregation.",
+  "learning_resources": []
+}

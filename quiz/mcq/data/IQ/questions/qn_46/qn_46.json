@@ -1,0 +1,16 @@
+{
+  "id": 46,
+  "tags": [
+    "IQ"
+  ],
+  "question": "In a week, Rose spent $28.49 on lunch. What was the average cost per day?",
+  "options": [
+    "$4.7",
+    "$4.07",
+    "$3.97",
+    "$3.87"
+  ],
+  "answer": "$4.07",
+  "explanation": "Basic multiplication or unit price calculation.",
+  "learning_resources": []
+}

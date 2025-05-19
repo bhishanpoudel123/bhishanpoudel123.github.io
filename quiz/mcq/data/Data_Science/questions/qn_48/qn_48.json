@@ -1,0 +1,16 @@
+{
+  "id": 48,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of the 'merge' function in Pandas?",
+  "options": [
+    "To combine DataFrames based on common columns",
+    "To concatenate DataFrames vertically",
+    "To merge cells in a DataFrame",
+    "To combine Series objects"
+  ],
+  "answer": "To combine DataFrames based on common columns",
+  "explanation": "merge() combines DataFrames using database-style joins on columns or indices.",
+  "learning_resources": []
+}

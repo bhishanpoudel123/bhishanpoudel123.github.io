@@ -1,0 +1,16 @@
+{
+  "id": 20,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the primary use of the Scikit-learn library?",
+  "options": [
+    "Data visualization",
+    "Machine learning algorithms",
+    "Web scraping",
+    "Database management"
+  ],
+  "answer": "Machine learning algorithms",
+  "explanation": "Scikit-learn provides simple and efficient tools for predictive data analysis and machine learning.",
+  "learning_resources": []
+}

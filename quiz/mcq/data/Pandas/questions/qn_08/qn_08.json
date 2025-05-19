@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you perform a pivot operation in pandas?",
+  "options": [
+    "df.pivot(index='A', columns='B', values='C')",
+    "pd.pivot_table(df, index='A', columns='B', values='C')",
+    "df.pivot_table(index='A', columns='B', values='C')",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "All three methods can perform pivot operations, with pivot_table being more flexible as it can aggregate duplicate entries.",
+  "learning_resources": []
+}

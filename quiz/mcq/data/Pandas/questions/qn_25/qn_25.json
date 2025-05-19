@@ -1,0 +1,16 @@
+{
+  "id": 25,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you efficiently perform a custom window operation in pandas?",
+  "options": [
+    "df.rolling(window=3).apply(custom_func, raw=True)",
+    "df.rolling(window=3).apply(custom_func)",
+    "df.apply(lambda x: [custom_func(x[i:i+3]) for i in range(len(x)-2)])",
+    "Both A and B"
+  ],
+  "answer": "Both A and B",
+  "explanation": "Both approaches work for custom window operations, but using raw=True can be more efficient for numerical operations by passing a NumPy array instead of a Series.",
+  "learning_resources": []
+}

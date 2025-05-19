@@ -1,0 +1,22 @@
+{
+  "id": 23,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "When implementing a multi-armed bandit algorithm for real-time optimization, which approach balances exploration and exploitation most effectively?",
+  "options": [
+    "Epsilon-greedy with annealing schedule",
+    "`Upper Confidence Bound` (UCB) algorithm",
+    "`Thompson Sampling` with prior distribution updates",
+    "Contextual bandits with linear payoffs"
+  ],
+  "answer": "`Thompson Sampling` with prior distribution updates",
+  "explanation": "Thompson Sampling with Bayesian updates to prior distributions maintains explicit uncertainty estimates and naturally balances exploration/exploitation, with theoretical guarantees of optimality and empirically better performance than UCB and epsilon-greedy methods in many applications.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_23_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_23/markdown/qn_23_answer_01.md"
+    }
+  ]
+}

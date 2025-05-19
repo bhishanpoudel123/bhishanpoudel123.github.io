@@ -1,0 +1,16 @@
+{
+  "id": 24,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a large city, 45% of residents prefer public transportation, 35% prefer driving, and 20% prefer cycling. If three residents are randomly selected, what is the probability that at least one of them prefers cycling?",
+  "options": [
+    "0.488",
+    "0.512",
+    "0.728",
+    "0.992"
+  ],
+  "answer": "0.488",
+  "explanation": "The probability that a selected resident does not prefer cycling is 1 - 0.2 = 0.8. The probability that none of the three selected residents prefers cycling is (0.8)^3 = 0.512. Therefore, the probability that at least one prefers cycling is 1 - 0.512 = 0.488 or 48.8%.",
+  "learning_resources": []
+}

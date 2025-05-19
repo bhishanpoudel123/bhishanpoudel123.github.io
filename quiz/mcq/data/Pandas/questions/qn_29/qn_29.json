@@ -1,0 +1,16 @@
+{
+  "id": 29,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which method correctly identifies the top-k values in each group?",
+  "options": [
+    "df.groupby('group')['value'].nlargest(k)",
+    "df.groupby('group').apply(lambda x: x.nlargest(k, 'value'))",
+    "df.sort_values('value', ascending=False).groupby('group').head(k)",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "All three methods can get the top-k values within each group, with different syntax but similar results.",
+  "learning_resources": []
+}

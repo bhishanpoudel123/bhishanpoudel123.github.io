@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Python General"
+  ],
+  "question": "Which data structure allows duplicate elements?",
+  "options": [
+    "Set",
+    "List",
+    "Dictionary",
+    "All of the above"
+  ],
+  "answer": "List",
+  "explanation": "Lists in Python can contain duplicate elements.",
+  "learning_resources": []
+}

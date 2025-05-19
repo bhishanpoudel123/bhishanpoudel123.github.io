@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Machine Learning"
+  ],
+  "question": "What is the purpose of the learning rate in gradient descent?",
+  "options": [
+    "To control the number of iterations",
+    "To avoid overfitting",
+    "To control how much the model is adjusted during each update",
+    "To validate the model"
+  ],
+  "answer": "To control how much the model is adjusted during each update",
+  "explanation": "The learning rate determines the step size at each iteration while moving toward a minimum of a loss function.",
+  "learning_resources": []
+}

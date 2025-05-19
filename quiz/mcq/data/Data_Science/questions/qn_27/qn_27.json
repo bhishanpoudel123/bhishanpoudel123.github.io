@@ -1,0 +1,16 @@
+{
+  "id": 27,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of one-hot encoding?",
+  "options": [
+    "To compress large datasets",
+    "To convert categorical variables to numerical format",
+    "To normalize numerical data",
+    "To handle missing values"
+  ],
+  "answer": "To convert categorical variables to numerical format",
+  "explanation": "One-hot encoding converts categorical variables to a binary (0/1) numerical format that machine learning algorithms can process.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 23,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What does it mean when an ARIMA model is said to be 'invertible'?",
+  "options": [
+    "The MA component can be rewritten as an infinite AR process",
+    "The model can be solved for both forecasting and backcasting",
+    "The model parameters can be reversed to get the original time series",
+    "The model works equally well on the original and differenced series"
+  ],
+  "answer": "The MA component can be rewritten as an infinite AR process",
+  "explanation": "In time series analysis, when an ARIMA model is said to be 'invertible,' it means that its Moving Average (MA) component can be rewritten as an infinite Autoregressive (AR) process. This property ensures that the MA coefficients decrease in impact as we go further back in time, allowing the process to be approximated by a finite AR model. Invertibility is a mathematical property that ensures a unique MA representation and stable forecasting. Technically, for invertibility, the roots of the MA polynomial must lie outside the unit circle. Without invertibility, different MA models could produce identical autocorrelation patterns, making identification problematic. Invertibility is analogous to stationarity for AR processes and is checked during the model estimation phase.",
+  "learning_resources": []
+}

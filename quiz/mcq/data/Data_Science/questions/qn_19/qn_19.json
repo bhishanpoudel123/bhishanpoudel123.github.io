@@ -1,0 +1,16 @@
+{
+  "id": 19,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which of these is NOT a common data type in Pandas?",
+  "options": [
+    "DataFrame",
+    "Series",
+    "Array",
+    "Panel"
+  ],
+  "answer": "Array",
+  "explanation": "Pandas' main data structures are DataFrame (2D), Series (1D), and Panel (3D, now deprecated). Arrays are from NumPy.",
+  "learning_resources": []
+}

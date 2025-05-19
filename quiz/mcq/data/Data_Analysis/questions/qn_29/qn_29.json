@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which technique is most appropriate for analyzing complex interactions between variables in a predictive modeling context?",
+  "options": [
+    "Generalized Additive Models with tensor product smooths",
+    "`Random Forest` with partial dependence plots and ICE curves",
+    "`Neural networks` with feature crossing and attention mechanisms",
+    "`Gradient Boosting` with SHAP interaction values"
+  ],
+  "answer": "`Gradient Boosting` with SHAP interaction values",
+  "explanation": "Gradient Boosting effectively captures complex non-linear relationships, while SHAP interaction values specifically quantify how much of the prediction is attributable to interactions between features, providing a rigorous statistical framework for analyzing and visualizing interactions.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_29_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_29/markdown/qn_29_answer_01.md"
+    }
+  ]
+}

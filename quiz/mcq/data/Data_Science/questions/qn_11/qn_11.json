@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of a correlation matrix?",
+  "options": [
+    "To show relationships between categorical variables",
+    "To measure linear relationships between numerical variables",
+    "To visualize hierarchical clustering",
+    "To perform dimensionality reduction"
+  ],
+  "answer": "To measure linear relationships between numerical variables",
+  "explanation": "A correlation matrix measures the linear relationship between pairs of numerical variables, ranging from -1 to 1.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 18,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Jack and John have 56 marbles together. John has 6x more marbles than Jack. How many marbles does Jack have?",
+  "options": [
+    "10",
+    "50",
+    "45",
+    "8"
+  ],
+  "answer": "8",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

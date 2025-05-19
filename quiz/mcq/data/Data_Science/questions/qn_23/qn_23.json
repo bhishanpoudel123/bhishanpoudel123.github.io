@@ -1,0 +1,16 @@
+{
+  "id": 23,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What does ETL stand for in data engineering?",
+  "options": [
+    "Extract, Transform, Load",
+    "Evaluate, Test, Learn",
+    "Extract, Test, Load",
+    "Explore, Transform, Label"
+  ],
+  "answer": "Extract, Transform, Load",
+  "explanation": "ETL refers to the process of extracting data from sources, transforming it, and loading it into a destination system.",
+  "learning_resources": []
+}

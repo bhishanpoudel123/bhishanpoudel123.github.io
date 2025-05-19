@@ -1,0 +1,22 @@
+{
+  "id": 26,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most appropriate technique for feature selection when dealing with multicollinearity in a regression context?",
+  "options": [
+    "Forward stepwise selection with VIF thresholding",
+    "`Elastic Net` regularization with cross-validation",
+    "Principal Component Regression (PCR)",
+    "Recursive Feature Elimination with stability selection"
+  ],
+  "answer": "`Elastic Net` regularization with cross-validation",
+  "explanation": "Elastic Net combines L1 and L2 penalties, handling multicollinearity by grouping correlated features while still performing feature selection, with the optimal balance determined through cross-validation\u00e2\u20ac\u201dmaking it more effective than methods that either eliminate or transform features.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_26_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_26/markdown/qn_26_answer_01.md"
+    }
+  ]
+}

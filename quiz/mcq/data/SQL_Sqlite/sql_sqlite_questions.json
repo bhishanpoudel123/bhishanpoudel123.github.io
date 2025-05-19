@@ -1,0 +1,18 @@
+{
+  "questions": [
+    "data/SQL_Sqlite/questions/qn_01/qn_01.json",
+    "data/SQL_Sqlite/questions/qn_02/qn_02.json",
+    "data/SQL_Sqlite/questions/qn_03/qn_03.json",
+    "data/SQL_Sqlite/questions/qn_04/qn_04.json",
+    "data/SQL_Sqlite/questions/qn_05/qn_05.json",
+    "data/SQL_Sqlite/questions/qn_06/qn_06.json",
+    "data/SQL_Sqlite/questions/qn_07/qn_07.json",
+    "data/SQL_Sqlite/questions/qn_08/qn_08.json",
+    "data/SQL_Sqlite/questions/qn_09/qn_09.json",
+    "data/SQL_Sqlite/questions/qn_10/qn_10.json"
+  ],
+  "metadata": {
+    "topic": "SQL Sqlite",
+    "question_count": 10
+  }
+}

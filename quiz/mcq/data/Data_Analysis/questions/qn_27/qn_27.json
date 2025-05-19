@@ -1,0 +1,22 @@
+{
+  "id": 27,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which approach correctly implements online learning for a classification task with a non-stationary data distribution?",
+  "options": [
+    "`SGDClassifier` with `partial_fit` and appropriate `class_weight` adjustments",
+    "`River's HoeffdingTreeClassifier` with drift detection",
+    "Custom implementation using incremental learning and time-based feature weighting",
+    "Ensemble of incremental learners with dynamic weighting based on recent performance"
+  ],
+  "answer": "Ensemble of incremental learners with dynamic weighting based on recent performance",
+  "explanation": "This ensemble approach maintains multiple incremental models updated with new data, dynamically adjusting their weights based on recent performance, allowing the system to adapt to concept drift by giving more influence to models that perform well on recent data.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_27_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_27/markdown/qn_27_answer_01.md"
+    }
+  ]
+}

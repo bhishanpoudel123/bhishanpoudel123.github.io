@@ -1,0 +1,22 @@
+{
+  "id": 12,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most rigorous approach to perform causal inference from observational data when randomized experiments aren't possible?",
+  "options": [
+    "Propensity score matching with sensitivity analysis",
+    "Instrumental variable analysis with validity tests",
+    "Causal graphical models with do-calculus",
+    "Difference-in-differences with parallel trends validation"
+  ],
+  "answer": "Causal graphical models with do-calculus",
+  "explanation": "Causal graphical models using do-calculus provide a comprehensive mathematical framework for identifying causal effects from observational data, allowing researchers to formally express causal assumptions and determine whether causal quantities are identifiable from available data.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_12_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_12/markdown/qn_12_answer_01.md"
+    }
+  ]
+}

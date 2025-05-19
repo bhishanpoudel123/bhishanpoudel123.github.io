@@ -1,0 +1,16 @@
+{
+  "id": 22,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "Why might you perform a Box-Cox transformation before applying an ARIMA model?",
+  "options": [
+    "To stabilize variance and make the data more normally distributed",
+    "To remove seasonality from the data",
+    "To reduce the impact of outliers",
+    "To convert the time series to a stationary process"
+  ],
+  "answer": "To stabilize variance and make the data more normally distributed",
+  "explanation": "A Box-Cox transformation is often performed before applying an ARIMA model to stabilize variance and make the data more normally distributed. Many time series exhibit heteroscedasticity (changing variance over time) or skewness, which can violate ARIMA assumptions. The Box-Cox transformation is a family of power transformations defined by the parameter \u03bb: when \u03bb=0, it's equivalent to a log transformation; when \u03bb=1, it's essentially the original data (with a shift). The optimal \u03bb value can be determined by maximizing the log-likelihood function. This transformation helps make the time series' variance more constant across time and its distribution more symmetric, leading to more reliable parameter estimates and prediction intervals in the ARIMA model.",
+  "learning_resources": []
+}

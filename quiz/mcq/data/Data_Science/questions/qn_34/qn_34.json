@@ -1,0 +1,16 @@
+{
+  "id": 34,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of a learning curve in machine learning?",
+  "options": [
+    "To visualize model performance over time",
+    "To show the relationship between training set size and model performance",
+    "To track the learning rate during training",
+    "To compare different optimization algorithms"
+  ],
+  "answer": "To show the relationship between training set size and model performance",
+  "explanation": "Learning curves plot model performance (e.g., accuracy) against training set size or training iterations.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "Which of the following is true about SQLite's `VACUUM` command?",
+  "options": [
+    "It deletes rows with NULL values",
+    "It compacts the database file",
+    "It removes duplicate records",
+    "It optimizes table indexes"
+  ],
+  "answer": "It compacts the database file",
+  "explanation": "`VACUUM` rebuilds the database file to defragment it and reduce its size.",
+  "learning_resources": []
+}

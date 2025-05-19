@@ -1,0 +1,16 @@
+{
+  "id": 17,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main purpose of normalization in data preprocessing?",
+  "options": [
+    "To remove outliers from the data",
+    "To convert categorical variables to numerical",
+    "To scale features to a similar range",
+    "To handle missing values"
+  ],
+  "answer": "To scale features to a similar range",
+  "explanation": "Normalization scales numerical features to a standard range (often [0,1] or with mean=0, std=1) to prevent some features from dominating others.",
+  "learning_resources": []
+}

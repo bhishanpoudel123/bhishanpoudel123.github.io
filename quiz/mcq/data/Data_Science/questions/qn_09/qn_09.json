@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the most common method for handling missing numerical data?",
+  "options": [
+    "Deleting all rows with missing values",
+    "Replacing with the mean or median",
+    "Setting all missing values to zero",
+    "Using a placeholder like -999"
+  ],
+  "answer": "Replacing with the mean or median",
+  "explanation": "Mean/median imputation is common for numerical data, though the best approach depends on the data and missingness pattern.",
+  "learning_resources": []
+}

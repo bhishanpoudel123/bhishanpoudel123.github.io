@@ -1,0 +1,16 @@
+{
+  "id": 18,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you efficiently implement a custom aggregation function that requires the entire group?",
+  "options": [
+    "df.groupby('group').agg(custom_func)",
+    "df.groupby('group').apply(custom_func)",
+    "df.groupby('group').transform(custom_func)",
+    "df.groupby('group').aggregate(custom_func)"
+  ],
+  "answer": "df.groupby('group').apply(custom_func)",
+  "explanation": "apply() is designed for operations that need the entire group as a DataFrame, whereas agg() is better for operations that can be vectorized.",
+  "learning_resources": []
+}

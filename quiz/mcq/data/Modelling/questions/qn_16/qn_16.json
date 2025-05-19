@@ -1,0 +1,22 @@
+{
+  "id": 16,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most effective way to implement an interpretable yet powerful model for regression with potentially non-linear effects?",
+  "options": [
+    "Use a Random Forest with post-hoc SHAP explanations",
+    "Implement Generalized Additive Models (GAMs) with shape constraints",
+    "Use Explainable Boosting Machines (EBMs) from InterpretML",
+    "Linear model with carefully engineered non-linear features"
+  ],
+  "answer": "Use Explainable Boosting Machines (EBMs) from InterpretML",
+  "explanation": "EBMs combine the interpretability of GAMs with the predictive power of boosting, learning feature functions and pairwise interactions in an additive structure while remaining highly interpretable, offering better performance than standard GAMs while maintaining transparency.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_16_answer_long_01",
+      "path": "data/Modelling/questions/qn_16/markdown/qn_16_answer_01.md"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 13,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is seasonal differencing and when should it be applied?",
+  "options": [
+    "Calculating differences between observations separated by the seasonal period, applied when there's seasonal non-stationarity",
+    "Calculating differences between adjacent seasons, applied to remove annual trends",
+    "Finding the mean difference between seasons, applied to normalize seasonal data",
+    "Converting seasons to binary variables, applied for classification models"
+  ],
+  "answer": "Calculating differences between observations separated by the seasonal period, applied when there's seasonal non-stationarity",
+  "explanation": "Seasonal differencing involves calculating differences between observations separated by the seasonal period (e.g., 12 months for monthly data with yearly seasonality). It's represented by the D parameter in SARIMA models and is applied when the time series exhibits seasonal non-stationarity, meaning the seasonal pattern changes over time. For example, with monthly data, seasonal differencing would compute Yt - Yt-12. This helps remove repeating seasonal patterns just as regular differencing removes trends. You should apply seasonal differencing when visual inspection shows persistent seasonal patterns after regular differencing, or when seasonal unit root tests indicate seasonal non-stationarity.",
+  "learning_resources": []
+}

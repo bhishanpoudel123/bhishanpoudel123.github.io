@@ -1,0 +1,16 @@
+{
+  "id": 14,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which approach efficiently calculates the difference between consecutive rows in a DataFrame?",
+  "options": [
+    "df - df.shift(1)",
+    "df.diff()",
+    "df.rolling(2).apply(lambda x: x.iloc[1] - x.iloc[0])",
+    "Both A and B"
+  ],
+  "answer": "Both A and B",
+  "explanation": "Both subtracting a shifted DataFrame and using diff() calculate element-wise differences between consecutive rows.",
+  "learning_resources": []
+}

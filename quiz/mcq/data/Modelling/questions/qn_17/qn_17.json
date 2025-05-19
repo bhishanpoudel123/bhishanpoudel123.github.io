@@ -1,0 +1,22 @@
+{
+  "id": 17,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which approach correctly implements quantile regression forests for prediction intervals?",
+  "options": [
+    "Use sklearn's RandomForestRegressor with bootstrap=True and calculate empirical quantiles of tree predictions",
+    "Use the forestci package to compute jackknife-based prediction intervals",
+    "Use GradientBoostingRegressor with loss='quantile' and train separate models for each quantile",
+    "Implement a custom version of RandomForestRegressor that stores all leaf node samples"
+  ],
+  "answer": "Implement a custom version of RandomForestRegressor that stores all leaf node samples",
+  "explanation": "Quantile regression forests require storing the empirical distribution of training samples in each leaf node (not just their mean), requiring a custom implementation that extends standard random forests to compute conditional quantiles from these stored distributions.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_17_answer_long_01",
+      "path": "data/Modelling/questions/qn_17/markdown/qn_17_answer_01.md"
+    }
+  ]
+}

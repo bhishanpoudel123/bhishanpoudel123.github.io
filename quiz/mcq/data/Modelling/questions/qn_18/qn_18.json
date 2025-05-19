@@ -1,0 +1,22 @@
+{
+  "id": 18,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most rigorous approach to handle outliers in the target variable for regression problems?",
+  "options": [
+    "Winsorize the target variable at specific quantiles",
+    "Use Huber or Quantile regression with robust loss functions",
+    "Remove observations with Cook's distance > 4/n",
+    "Apply a power transform to the target before modeling"
+  ],
+  "answer": "Use Huber or Quantile regression with robust loss functions",
+  "explanation": "Robust regression methods like Huber or Quantile regression use loss functions that inherently reduce the influence of outliers during model training, addressing the issue without removing potentially valuable data points or distorting the target distribution through transformations.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_18_answer_long_01",
+      "path": "data/Modelling/questions/qn_18/markdown/qn_18_answer_01.md"
+    }
+  ]
+}

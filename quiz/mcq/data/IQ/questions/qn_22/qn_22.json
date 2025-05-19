@@ -1,0 +1,16 @@
+{
+  "id": 22,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Identify the next number in the series?\n5, 15, 10, 13, 15, 11, _____",
+  "options": [
+    "9",
+    "16",
+    "20",
+    "17"
+  ],
+  "answer": "20",
+  "explanation": "The odd positions are increasing by 5 and the even positions are decreasing by 2.",
+  "learning_resources": []
+}

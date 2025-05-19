@@ -1,0 +1,16 @@
+{
+  "id": 38,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of a word embedding in NLP?",
+  "options": [
+    "To count word frequencies",
+    "To represent words as dense vectors capturing semantic meaning",
+    "To correct spelling errors",
+    "To translate between languages"
+  ],
+  "answer": "To represent words as dense vectors capturing semantic meaning",
+  "explanation": "Word embeddings represent words as numerical vectors where similar words have similar vector representations.",
+  "learning_resources": []
+}

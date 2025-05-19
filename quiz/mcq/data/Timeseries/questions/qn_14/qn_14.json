@@ -1,0 +1,16 @@
+{
+  "id": 14,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What are residuals in the context of ARIMA modeling, and why are they important?",
+  "options": [
+    "The differences between observed and predicted values, important for diagnostic checking",
+    "The remaining trends after differencing, important for model specification",
+    "The seasonal components not captured by the model, important for seasonal adjustment",
+    "The exogenous variables not included in the model, important for feature selection"
+  ],
+  "answer": "The differences between observed and predicted values, important for diagnostic checking",
+  "explanation": "In ARIMA modeling, residuals are the differences between the observed values and the values predicted by the model. They represent the part of the data that the model couldn't explain. Residuals are crucial for diagnostic checking because a well-fitted ARIMA model should have residuals that resemble white noise - they should be uncorrelated, have zero mean, constant variance, and follow a normal distribution. If patterns remain in the residuals, it suggests the model hasn't captured all the systematic information in the time series. Common residual diagnostics include ACF/PACF plots of residuals, the Ljung-Box test for autocorrelation, and Q-Q plots for normality checking.",
+  "learning_resources": []
+}

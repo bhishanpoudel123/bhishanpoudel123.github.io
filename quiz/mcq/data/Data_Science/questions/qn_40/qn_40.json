@@ -1,0 +1,16 @@
+{
+  "id": 40,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of A/B testing?",
+  "options": [
+    "To compare two machine learning models",
+    "To test two different versions of a product feature",
+    "To analyze variance in datasets",
+    "To balance class distributions"
+  ],
+  "answer": "To test two different versions of a product feature",
+  "explanation": "A/B testing compares two versions (A and B) to determine which performs better on a specific metric.",
+  "learning_resources": []
+}

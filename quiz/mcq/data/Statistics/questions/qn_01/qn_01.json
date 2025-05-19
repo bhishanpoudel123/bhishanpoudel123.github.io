@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Statistics"
+  ],
+  "question": "What does the p-value represent in hypothesis testing?",
+  "options": [
+    "Probability of null hypothesis being true",
+    "Probability of obtaining test results at least as extreme as the results actually observed",
+    "Probability of alternative hypothesis",
+    "Confidence level"
+  ],
+  "answer": "Probability of obtaining test results at least as extreme as the results actually observed",
+  "explanation": "The p-value quantifies the evidence against the null hypothesis. A small p-value suggests the observed data is unlikely under the null hypothesis.",
+  "learning_resources": []
+}

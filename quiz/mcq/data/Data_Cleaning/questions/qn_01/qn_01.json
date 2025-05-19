@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Data Cleaning"
+  ],
+  "question": "Which function in Pandas is used to detect missing values?",
+  "options": [
+    "is.na()",
+    "is.null()",
+    "isnull()",
+    "detect_na()"
+  ],
+  "answer": "isnull()",
+  "explanation": "The `isnull()` function is used to detect missing values in a DataFrame.",
+  "learning_resources": []
+}

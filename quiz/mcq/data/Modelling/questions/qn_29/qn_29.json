@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most appropriate technique for automated feature engineering in time series forecasting?",
+  "options": [
+    "Use tsfresh with appropriate feature filtering based on p-values",
+    "Implement custom feature extractors with domain-specific transformations",
+    "Apply featuretools with time-aware aggregation primitives",
+    "Use automatic feature engineering with symbolic transformations and genetic programming"
+  ],
+  "answer": "Use tsfresh with appropriate feature filtering based on p-values",
+  "explanation": "tsfresh automatically extracts and selects relevant time series features (over 700 features) while controlling for multiple hypothesis testing, specifically designed for time series data unlike general feature engineering tools, making it ideal for time series forecasting tasks.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_29_answer_long_01",
+      "path": "data/Modelling/questions/qn_29/markdown/qn_29_answer_01.md"
+    }
+  ]
+}

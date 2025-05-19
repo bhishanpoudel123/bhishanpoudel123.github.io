@@ -1,0 +1,22 @@
+{
+  "id": 25,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which method is most appropriate for detecting and handling multivariate outliers in high-dimensional data?",
+  "options": [
+    "Z-scores on each dimension independently",
+    "`Mahalanobis distance` with robust covariance estimation",
+    "`Local Outlier Factor` with appropriate neighborhood size",
+    "`Isolation Forest` with random projection"
+  ],
+  "answer": "`Mahalanobis distance` with robust covariance estimation",
+  "explanation": "Mahalanobis distance accounts for the covariance structure of the data, and using robust covariance estimation (e.g., Minimum Covariance Determinant) prevents outliers from influencing the distance metric itself, making it ideal for identifying multivariate outliers.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_25_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_25/markdown/qn_25_answer_01.md"
+    }
+  ]
+}

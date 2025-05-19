@@ -1,0 +1,22 @@
+{
+  "id": 28,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most rigorous approach to quantify uncertainty in predictions from a gradient boosting model?",
+  "options": [
+    "Use quantile regression with multiple target quantiles",
+    "Implement Monte Carlo dropout in gradient boosting",
+    "Apply jackknife resampling to estimate prediction variance",
+    "Use Lower Upper Bound Estimation (LUBE) with pinball loss"
+  ],
+  "answer": "Use quantile regression with multiple target quantiles",
+  "explanation": "Training multiple gradient boosting models with quantile loss functions at different quantiles (e.g., 5%, 50%, 95%) directly models the conditional distribution of the target variable, providing a rigorous non-parametric approach to uncertainty quantification that captures heteroscedasticity.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_28_answer_long_01",
+      "path": "data/Modelling/questions/qn_28/markdown/qn_28_answer_01.md"
+    }
+  ]
+}

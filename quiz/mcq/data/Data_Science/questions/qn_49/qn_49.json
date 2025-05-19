@@ -1,0 +1,16 @@
+{
+  "id": 49,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main advantage of using a dictionary for vectorization in NLP?",
+  "options": [
+    "It preserves word order",
+    "It's more memory efficient than other methods",
+    "It creates a fixed-length representation regardless of document length",
+    "It automatically handles spelling errors"
+  ],
+  "answer": "It creates a fixed-length representation regardless of document length",
+  "explanation": "Dictionary-based vectorization (like CountVectorizer) creates consistent-length vectors from variable-length texts.",
+  "learning_resources": []
+}

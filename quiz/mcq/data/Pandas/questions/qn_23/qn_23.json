@@ -1,0 +1,16 @@
+{
+  "id": 23,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you sample data from a DataFrame with weights?",
+  "options": [
+    "df.sample(n=5, weights='probability_column')",
+    "df.sample(frac=0.1, weights=df['probability_column'])",
+    "df.sample(n=5, weights=df['probability_column']/df['probability_column'].sum())",
+    "Both B and C"
+  ],
+  "answer": "Both B and C",
+  "explanation": "Both approaches correctly sample with weights, though weights don't need to be normalized as pandas normalizes them internally.",
+  "learning_resources": []
+}

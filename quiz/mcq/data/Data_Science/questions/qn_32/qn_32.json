@@ -1,0 +1,16 @@
+{
+  "id": 32,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of the 'iloc' method in Pandas?",
+  "options": [
+    "To select data by integer position",
+    "To select data by label",
+    "To perform interpolation",
+    "To handle missing values"
+  ],
+  "answer": "To select data by integer position",
+  "explanation": "iloc is primarily integer-location based indexing for selection by position.",
+  "learning_resources": []
+}

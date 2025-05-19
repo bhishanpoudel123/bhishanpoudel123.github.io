@@ -1,0 +1,16 @@
+{
+  "id": 37,
+  "tags": [
+    "IQ"
+  ],
+  "question": "October is the ____ month of the year",
+  "options": [
+    "9th",
+    "8th",
+    "11th",
+    "10th"
+  ],
+  "answer": "10th",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "What does the COUNT() function do in SQL?",
+  "options": [
+    "Counts rows with NULLs",
+    "Counts only numeric values",
+    "Counts non-NULL rows",
+    "Counts unique values"
+  ],
+  "answer": "Counts non-NULL rows",
+  "explanation": "COUNT() returns the number of non-NULL values in a specified column.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 3,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "When implementing stratified k-fold cross-validation for a multi-label classification problem, which approach is most statistically sound?",
+  "options": [
+    "Use sklearn's `StratifiedKFold` with the most common label for each instance",
+    "Create an iterative partitioning algorithm that balances all label combinations across folds",
+    "Use sklearn's `MultilabelStratifiedKFold` from the iterative-stratification package",
+    "Convert to a multi-class problem using label powerset and then apply standard stratification"
+  ],
+  "answer": "Use sklearn's `MultilabelStratifiedKFold` from the iterative-stratification package",
+  "explanation": "MultilabelStratifiedKFold implements iterative stratification, which preserves the distribution of all labels across folds, addressing the key challenge in multi-label stratification that normal StratifiedKFold cannot handle.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_03_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_03/markdown/qn_03_answer_01.md"
+    }
+  ]
+}

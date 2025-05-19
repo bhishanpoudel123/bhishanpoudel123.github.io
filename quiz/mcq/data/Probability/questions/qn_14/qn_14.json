@@ -1,0 +1,16 @@
+{
+  "id": 14,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A researcher is testing a new drug. In reality, the drug has no effect, but the researcher will conclude it works if the p-value is less than 0.05. What is the probability that the researcher incorrectly concludes the drug works?",
+  "options": [
+    "0.05",
+    "0.95",
+    "0.5",
+    "Cannot be determined from the information given"
+  ],
+  "answer": "0.05",
+  "explanation": "The p-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is true. Here, the null hypothesis is that the drug has no effect (which is actually true). By definition, the probability of getting a p-value below 0.05 when the null hypothesis is true (Type I error) is 0.05 or 5%.",
+  "learning_resources": []
+}

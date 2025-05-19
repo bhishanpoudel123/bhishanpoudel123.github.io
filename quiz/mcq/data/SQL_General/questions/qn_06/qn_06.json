@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "Which SQL clause is used with aggregate functions to group result-set by one or more columns?",
+  "options": [
+    "GROUP BY",
+    "ORDER BY",
+    "WHERE",
+    "HAVING"
+  ],
+  "answer": "GROUP BY",
+  "explanation": "GROUP BY groups rows that have the same values into summary rows.",
+  "learning_resources": []
+}

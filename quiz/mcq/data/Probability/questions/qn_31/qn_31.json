@@ -1,0 +1,16 @@
+{
+  "id": 31,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a randomized controlled trial, patients are randomly assigned to either treatment or control groups with equal probability. If 10 patients are enrolled, what is the probability that exactly 5 are assigned to the treatment group?",
+  "options": [
+    "0.176",
+    "0.246",
+    "0.252",
+    "0.385"
+  ],
+  "answer": "0.246",
+  "explanation": "This follows a binomial distribution with n=10 and p=0.5. P(X=5) = C(10,5) \u00d7 (0.5)^5 \u00d7 (0.5)^5 = 252 \u00d7 (0.5)^10 = 252/1024 = 0.2461 or about 24.6%.",
+  "learning_resources": []
+}

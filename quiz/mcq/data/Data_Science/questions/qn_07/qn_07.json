@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which technique is NOT typically used for feature selection?",
+  "options": [
+    "Recursive feature elimination",
+    "Principal Component Analysis (PCA)",
+    "Selecting features by correlation",
+    "Data normalization"
+  ],
+  "answer": "Data normalization",
+  "explanation": "Data normalization scales features but doesn't select them. PCA, correlation analysis, and recursive elimination are feature selection methods.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 4,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which approach correctly calculates the Wasserstein distance (Earth Mover's Distance) between two empirical distributions in Python?",
+  "options": [
+    "`scipy.stats.wasserstein_distance(x, y)`",
+    "`numpy.linalg.norm(np.sort(x) - np.sort(y), ord=1)`",
+    "`scipy.spatial.distance.cdist(x.reshape(-1,1), y.reshape(-1,1), metric='euclidean').min(axis=1).sum()`",
+    "`sklearn.metrics.pairwise_distances(x.reshape(-1,1), y.reshape(-1,1), metric='manhattan').min(axis=1).mean()`"
+  ],
+  "answer": "`scipy.stats.wasserstein_distance(x, y)`",
+  "explanation": "`scipy.stats.wasserstein_distance` correctly implements the 1D Wasserstein distance between empirical distributions, which measures the minimum 'work' required to transform one distribution into another.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_04_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_04/markdown/qn_04_answer_01.md"
+    }
+  ]
+}

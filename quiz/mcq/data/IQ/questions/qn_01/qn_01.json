@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "IQ"
+  ],
+  "question": "The cost of one paper is 15 cents. How much will 40 papers cost?",
+  "options": [
+    "$6.00",
+    "$2.60",
+    "$4.00",
+    "$40.00"
+  ],
+  "answer": "$6.00",
+  "explanation": "Basic multiplication or unit price calculation.",
+  "learning_resources": []
+}

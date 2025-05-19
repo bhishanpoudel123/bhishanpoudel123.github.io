@@ -1,0 +1,22 @@
+{
+  "id": 20,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What technique is most appropriate for analyzing complex network data with community structures?",
+  "options": [
+    "K-means clustering on the adjacency matrix",
+    "Spectral clustering with normalized Laplacian",
+    "`Louvain` algorithm for community detection",
+    "DBSCAN on node2vec embeddings"
+  ],
+  "answer": "`Louvain` algorithm for community detection",
+  "explanation": "The Louvain algorithm specifically optimizes modularity to detect communities in networks, automatically finding the appropriate number of communities and handling multi-scale resolution, making it ideal for complex networks with hierarchical community structures.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_20_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_20/markdown/qn_20_answer_01.md"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "questions": [
+    "data/Data_Visualization/questions/qn_01/qn_01.json",
+    "data/Data_Visualization/questions/qn_02/qn_02.json",
+    "data/Data_Visualization/questions/qn_03/qn_03.json",
+    "data/Data_Visualization/questions/qn_04/qn_04.json",
+    "data/Data_Visualization/questions/qn_05/qn_05.json"
+  ],
+  "metadata": {
+    "topic": "Data Visualization",
+    "question_count": 5
+  }
+}

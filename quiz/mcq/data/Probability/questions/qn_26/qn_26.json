@@ -1,0 +1,16 @@
+{
+  "id": 26,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a Poisson process where events occur at an average rate of 3 per hour, what is the probability that exactly 2 events occur in a 1-hour period?",
+  "options": [
+    "0.149",
+    "0.224",
+    "0.324",
+    "0.423"
+  ],
+  "answer": "0.224",
+  "explanation": "For a Poisson distribution with parameter \u03bb=3, the probability mass function gives P(X=2) = e^(-\u03bb) \u00d7 \u03bb^2 / 2! = e^(-3) \u00d7 3^2 / 2 = e^(-3) \u00d7 9 / 2 = 0.0498 \u00d7 4.5 \u2248 0.224 or about 22.4%.",
+  "learning_resources": []
+}

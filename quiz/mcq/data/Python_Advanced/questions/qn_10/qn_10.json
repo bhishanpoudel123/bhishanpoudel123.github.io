@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "What happens when you use the `is` operator between two equal strings in Python?",
+  "options": [
+    "It checks value equality",
+    "It compares object identity",
+    "It converts them to integers",
+    "It raises an exception"
+  ],
+  "answer": "It compares object identity",
+  "explanation": "`is` checks whether two variables point to the same object, not if their values are equal.",
+  "learning_resources": []
+}

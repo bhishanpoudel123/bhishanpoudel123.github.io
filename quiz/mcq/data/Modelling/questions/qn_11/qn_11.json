@@ -1,0 +1,22 @@
+{
+  "id": 11,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which approach correctly implements an interpretable model for binary classification with uncertainty quantification?",
+  "options": [
+    "Random Forest with prediction intervals based on quantiles of tree predictions",
+    "Gradient Boosting with NGBoost for natural gradient boosting",
+    "Bayesian Logistic Regression with MCMC sampling for posterior distribution",
+    "Bootstrapped ensemble of decision trees with variance estimation"
+  ],
+  "answer": "Bayesian Logistic Regression with MCMC sampling for posterior distribution",
+  "explanation": "Bayesian Logistic Regression provides both interpretability (coefficients have clear meanings) and principled uncertainty quantification through the posterior distribution of parameters, capturing both aleatoric and epistemic uncertainty while maintaining model transparency.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_11_answer_long_01",
+      "path": "data/Modelling/questions/qn_11/markdown/qn_11_answer_01.md"
+    }
+  ]
+}

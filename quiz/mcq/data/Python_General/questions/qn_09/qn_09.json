@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "Python General"
+  ],
+  "question": "What does `range(3)` return?",
+  "options": [
+    "[1, 2, 3]",
+    "[0, 1, 2, 3]",
+    "[0, 1, 2]",
+    "[1, 2]"
+  ],
+  "answer": "[0, 1, 2]",
+  "explanation": "`range(3)` generates numbers starting from 0 up to (but not including) 3.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 25,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of cross-validation?",
+  "options": [
+    "To increase the size of the training set",
+    "To reduce the need for a test set",
+    "To get more reliable estimates of model performance",
+    "To speed up model training"
+  ],
+  "answer": "To get more reliable estimates of model performance",
+  "explanation": "Cross-validation provides more robust performance estimates by using multiple train/test splits of the data.",
+  "learning_resources": []
+}

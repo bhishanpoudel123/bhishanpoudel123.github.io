@@ -1,0 +1,23 @@
+{
+  "categories": {
+    "SQL General": "data/SQL_General/sql_general_questions.json",
+    "SQL Sqlite": "data/SQL_Sqlite/sql_sqlite_questions.json",
+    "Data Visualization": "data/Data_Visualization/data_visualization_questions.json",
+    "IQ": "data/IQ/iq_questions.json",
+    "Timeseries": "data/Timeseries/timeseries_questions.json",
+    "Python General": "data/Python_General/python_general_questions.json",
+    "Pandas": "data/Pandas/pandas_questions.json",
+    "Machine Learning": "data/Machine_Learning/machine_learning_questions.json",
+    "Data Analysis": "data/Data_Analysis/data_analysis_questions.json",
+    "Modelling": "data/Modelling/modelling_questions.json",
+    "Statistics": "data/Statistics/statistics_questions.json",
+    "Python Advanced": "data/Python_Advanced/python_advanced_questions.json",
+    "Data Science": "data/Data_Science/data_science_questions.json",
+    "Probability": "data/Probability/probability_questions.json",
+    "Data Cleaning": "data/Data_Cleaning/data_cleaning_questions.json"
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-05-19"
+  }
+}

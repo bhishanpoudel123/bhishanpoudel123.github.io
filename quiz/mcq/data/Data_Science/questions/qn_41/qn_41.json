@@ -1,0 +1,16 @@
+{
+  "id": 41,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main purpose of the 'apply' function in Pandas?",
+  "options": [
+    "To apply mathematical operations to a DataFrame",
+    "To apply a function along an axis of a DataFrame",
+    "To apply CSS styles to a DataFrame display",
+    "To apply machine learning models to data"
+  ],
+  "answer": "To apply a function along an axis of a DataFrame",
+  "explanation": "The apply() function applies a function along an axis (rows or columns) of a DataFrame or Series.",
+  "learning_resources": []
+}

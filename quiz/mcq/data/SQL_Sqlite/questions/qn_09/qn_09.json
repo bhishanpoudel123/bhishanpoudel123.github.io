@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "How does SQLite implement AUTOINCREMENT?",
+  "options": [
+    "Using INTEGER PRIMARY KEY",
+    "Using IDENTITY",
+    "Using SERIAL",
+    "Using a sequence object"
+  ],
+  "answer": "Using INTEGER PRIMARY KEY",
+  "explanation": "SQLite uses `INTEGER PRIMARY KEY AUTOINCREMENT` to create an auto-incrementing ID.",
+  "learning_resources": []
+}

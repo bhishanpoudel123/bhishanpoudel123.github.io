@@ -1,0 +1,22 @@
+{
+  "id": 13,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which technique is most appropriate for efficiently clustering a dataset with millions of data points and hundreds of features?",
+  "options": [
+    "`Mini-batch K-means` with dimensionality reduction",
+    "`HDBSCAN` with feature selection",
+    "`Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)",
+    "`Spectral clustering` with Nystr\u00c3\u00b6m approximation"
+  ],
+  "answer": "`Birch` (Balanced Iterative Reducing and Clustering using Hierarchies)",
+  "explanation": "Birch is specifically designed for very large datasets as it builds a tree structure in a single pass through the data, has linear time complexity, limited memory requirements, and can handle outliers effectively, making it ideal for clustering massive high-dimensional datasets.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_13_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_13/markdown/qn_13_answer_01.md"
+    }
+  ]
+}

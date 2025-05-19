@@ -1,0 +1,16 @@
+{
+  "id": 16,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which method is most appropriate for performing complex string operations on DataFrame columns?",
+  "options": [
+    "df['col'].apply(lambda x: x.upper())",
+    "df['col'].str.upper()",
+    "df['col'].map(str.upper)",
+    "All of the above work, but B is most efficient"
+  ],
+  "answer": "All of the above work, but B is most efficient",
+  "explanation": "While all methods can transform strings, the .str accessor provides vectorized string functions that are generally more efficient than apply() or map().",
+  "learning_resources": []
+}

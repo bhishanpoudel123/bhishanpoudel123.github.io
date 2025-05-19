@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Which of these objects has the largest diameter?",
+  "options": [
+    "Moon",
+    "Cricket Bat",
+    "Tennis Ball",
+    "Sun"
+  ],
+  "answer": "Sun",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

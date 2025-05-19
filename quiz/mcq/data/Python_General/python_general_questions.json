@@ -1,0 +1,17 @@
+{
+  "questions": [
+    "data/Python_General/questions/qn_01/qn_01.json",
+    "data/Python_General/questions/qn_02/qn_02.json",
+    "data/Python_General/questions/qn_03/qn_03.json",
+    "data/Python_General/questions/qn_04/qn_04.json",
+    "data/Python_General/questions/qn_05/qn_05.json",
+    "data/Python_General/questions/qn_06/qn_06.json",
+    "data/Python_General/questions/qn_07/qn_07.json",
+    "data/Python_General/questions/qn_08/qn_08.json",
+    "data/Python_General/questions/qn_09/qn_09.json"
+  ],
+  "metadata": {
+    "topic": "Python General",
+    "question_count": 9
+  }
+}

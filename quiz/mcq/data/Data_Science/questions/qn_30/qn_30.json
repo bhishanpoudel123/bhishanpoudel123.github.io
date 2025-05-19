@@ -1,0 +1,16 @@
+{
+  "id": 30,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of a ROC curve?",
+  "options": [
+    "To visualize the trade-off between true positive and false positive rates",
+    "To show the distribution of a single variable",
+    "To compare regression models",
+    "To perform clustering analysis"
+  ],
+  "answer": "To visualize the trade-off between true positive and false positive rates",
+  "explanation": "ROC curves show the diagnostic ability of a binary classifier by plotting true positive rate vs false positive rate.",
+  "learning_resources": []
+}

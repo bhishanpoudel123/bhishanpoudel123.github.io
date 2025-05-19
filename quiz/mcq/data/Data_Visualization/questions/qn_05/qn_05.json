@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Data Visualization"
+  ],
+  "question": "How do you display a plot in Jupyter Notebook?",
+  "options": [
+    "%show",
+    "%graph",
+    "%matplotlib inline",
+    "%display inline"
+  ],
+  "answer": "%matplotlib inline",
+  "explanation": "`%matplotlib inline` is a magic command to render plots directly in the notebook.",
+  "learning_resources": []
+}

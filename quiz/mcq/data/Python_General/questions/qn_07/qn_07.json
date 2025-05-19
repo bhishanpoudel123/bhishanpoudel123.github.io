@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "tags": [
+    "Python General"
+  ],
+  "question": "Which of the following is used to handle exceptions in Python?",
+  "options": [
+    "try-except",
+    "do-catch",
+    "try-catch",
+    "handle-except"
+  ],
+  "answer": "try-except",
+  "explanation": "Python uses `try-except` blocks to handle exceptions.",
+  "learning_resources": []
+}

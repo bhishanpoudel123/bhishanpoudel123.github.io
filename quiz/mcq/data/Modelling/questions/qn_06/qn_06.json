@@ -1,0 +1,22 @@
+{
+  "id": 6,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most statistically sound approach to implement monotonic constraints in gradient boosting?",
+  "options": [
+    "Post-processing model predictions to enforce monotonicity",
+    "Using XGBoost's monotone_constraints parameter",
+    "Transforming features with isotonic regression before modeling",
+    "Implementing a custom callback for LightGBM that penalizes non-monotonic splits"
+  ],
+  "answer": "Using XGBoost's monotone_constraints parameter",
+  "explanation": "XGBoost's native monotone_constraints parameter enforces monotonicity during tree building by constraining only monotonic splits, resulting in a fully monotonic model without sacrificing performance\u2014unlike post-processing which can degrade model accuracy or pre-processing which doesn't guarantee model monotonicity.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_06_answer_long_01",
+      "path": "data/Modelling/questions/qn_06/markdown/qn_06_answer_01.md"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": 22,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which method is most appropriate for interpretable anomaly detection in high-dimensional data?",
+  "options": [
+    "`Isolation Forest` with LIME explanations",
+    "Autoencoders with attention mechanisms",
+    "SHAP values on `One-Class SVM` predictions",
+    "Supervised anomaly detection with feature importance"
+  ],
+  "answer": "`Isolation Forest` with LIME explanations",
+  "explanation": "Isolation Forest efficiently detects anomalies in high dimensions by isolating observations, while LIME provides local interpretable explanations for each anomaly, showing which features contributed most to its identification, making the detection both efficient and explainable.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_22_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_22/markdown/qn_22_answer_01.md"
+    }
+  ]
+}

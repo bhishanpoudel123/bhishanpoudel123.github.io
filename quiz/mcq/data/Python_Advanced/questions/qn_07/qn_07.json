@@ -1,0 +1,22 @@
+{
+  "id": 7,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "What does the `@staticmethod` decorator do in Python?",
+  "options": [
+    "Defines a method that takes no self or cls argument",
+    "Makes method private",
+    "Allows inheritance",
+    "Makes the method static across all classes"
+  ],
+  "answer": "Defines a method that takes no self or cls argument",
+  "explanation": "`@staticmethod` defines a method that does not receive an implicit first argument.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_07_answer_long_01",
+      "path": "data/Python_Advanced/questions/qn_07/markdown/qn_07_answer_01.md"
+    }
+  ]
+}

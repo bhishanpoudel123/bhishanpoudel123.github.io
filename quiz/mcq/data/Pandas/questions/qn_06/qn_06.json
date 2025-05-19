@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How can you efficiently select rows where a column value meets a complex condition?",
+  "options": [
+    "df.loc[df['column'] > 5 & df['column'] < 10]",
+    "df.loc[(df['column'] > 5) & (df['column'] < 10)]",
+    "df.query('column > 5 and column < 10')",
+    "Both B and C"
+  ],
+  "answer": "Both B and C",
+  "explanation": "Both loc with boolean indexing (with proper parentheses) and query() method can filter data based on complex conditions.",
+  "learning_resources": []
+}

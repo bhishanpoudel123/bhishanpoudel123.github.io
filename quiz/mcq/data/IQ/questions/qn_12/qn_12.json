@@ -1,0 +1,16 @@
+{
+  "id": 12,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Calculate:  -43 + 9",
+  "options": [
+    "-34",
+    "-32",
+    "32",
+    "34"
+  ],
+  "answer": "-34",
+  "explanation": "-43+10 would be -33, so -43+9 is -34.",
+  "learning_resources": []
+}

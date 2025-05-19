@@ -1,0 +1,16 @@
+{
+  "id": 16,
+  "tags": [
+    "IQ"
+  ],
+  "question": "What is the square root of 8?",
+  "options": [
+    "16",
+    "4.66",
+    "2.82",
+    "3.56"
+  ],
+  "answer": "2.82",
+  "explanation": "Square root is the number that gives the original number when multiplied by itself.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 14,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the correct approach to implement a custom scoring function for sklearn's RandomizedSearchCV that accounts for both predictive performance and model complexity?",
+  "options": [
+    "Use make_scorer with a function that combines multiple metrics",
+    "Implement a custom Scorer class with a custom __call__ method",
+    "Use multiple evaluation metrics with refit parameter specifying the primary metric",
+    "Create a pipeline with a custom transformer that adds a penalty term based on complexity"
+  ],
+  "answer": "Use make_scorer with a function that combines multiple metrics",
+  "explanation": "make_scorer allows creating a custom scoring function that can combine predictive performance (e.g., AUC) with penalties for model complexity (e.g., number of features or model parameters), providing a single metric for optimization that balances performance and parsimony.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_14_answer_long_01",
+      "path": "data/Modelling/questions/qn_14/markdown/qn_14_answer_01.md"
+    }
+  ]
+}

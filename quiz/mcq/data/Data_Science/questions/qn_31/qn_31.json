@@ -1,0 +1,16 @@
+{
+  "id": 31,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main advantage of using a random forest over a single decision tree?",
+  "options": [
+    "It's always more accurate",
+    "It reduces overfitting by averaging multiple trees",
+    "It requires less computational power",
+    "It works better with small datasets"
+  ],
+  "answer": "It reduces overfitting by averaging multiple trees",
+  "explanation": "Random forests combine multiple decision trees to reduce variance and overfitting compared to a single tree.",
+  "learning_resources": []
+}

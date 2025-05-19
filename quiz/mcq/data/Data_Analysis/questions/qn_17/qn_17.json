@@ -1,0 +1,22 @@
+{
+  "id": 17,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "When performing hyperparameter tuning for a complex model with many parameters, which advanced optimization technique is most efficient?",
+  "options": [
+    "Random search with early stopping",
+    "Genetic algorithms with tournament selection",
+    "Bayesian optimization with Gaussian processes",
+    "Hyperband with successive halving"
+  ],
+  "answer": "Bayesian optimization with Gaussian processes",
+  "explanation": "Bayesian optimization with Gaussian processes builds a probabilistic model of the objective function to intelligently select the most promising hyperparameter configurations based on previous evaluations, making it more efficient than random or grid search for exploring high-dimensional parameter spaces.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_17_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_17/markdown/qn_17_answer_01.md"
+    }
+  ]
+}

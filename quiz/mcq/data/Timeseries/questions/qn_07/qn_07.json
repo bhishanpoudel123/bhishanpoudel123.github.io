@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the purpose of the Augmented Dickey-Fuller (ADF) test in time series analysis?",
+  "options": [
+    "To test for stationarity",
+    "To calculate forecast accuracy",
+    "To detect seasonality",
+    "To identify outliers"
+  ],
+  "answer": "To test for stationarity",
+  "explanation": "The Augmented Dickey-Fuller (ADF) test is a statistical test used to determine whether a time series is stationary or not. The null hypothesis of the test is that the time series contains a unit root, implying it is non-stationary. If the p-value from the test is less than the significance level (typically 0.05), we reject the null hypothesis and conclude that the series is stationary. This test is crucial before applying ARIMA models because stationarity is a key assumption. The test includes lags of the differenced series to account for serial correlation, making it more robust than the simple Dickey-Fuller test.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 21,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a multiple-choice test with 5 questions, each question has 4 options with exactly one correct answer. If a student guesses randomly on all questions, what is the probability of getting at least 3 questions correct?",
+  "options": [
+    "0.0146",
+    "0.0330",
+    "0.0537",
+    "0.0781"
+  ],
+  "answer": "0.0537",
+  "explanation": "The probability of getting a single question correct by random guessing is 1/4 = 0.25. Using the binomial distribution with n=5 and p=0.25: P(X \u2265 3) = P(X=3) + P(X=4) + P(X=5) = C(5,3) \u00d7 (0.25)^3 \u00d7 (0.75)^2 + C(5,4) \u00d7 (0.25)^4 \u00d7 (0.75)^1 + C(5,5) \u00d7 (0.25)^5 \u00d7 (0.75)^0 \u2248 0.0439 + 0.0073 + 0.0010 = 0.0522 or about 5.22%.",
+  "learning_resources": []
+}

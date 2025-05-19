@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "Which SQL keyword is used to retrieve only distinct values?",
+  "options": [
+    "UNIQUE",
+    "ONLY",
+    "DISTINCT",
+    "SEPARATE"
+  ],
+  "answer": "DISTINCT",
+  "explanation": "DISTINCT is used to return only different (distinct) values.",
+  "learning_resources": []
+}

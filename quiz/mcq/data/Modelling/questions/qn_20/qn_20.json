@@ -1,0 +1,22 @@
+{
+  "id": 20,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most efficient way to implement early stopping in a gradient boosting model to prevent overfitting?",
+  "options": [
+    "Set max_depth and n_estimators conservatively based on cross-validation",
+    "Use early_stopping_rounds with a validation set in XGBoost/LightGBM",
+    "Implement a custom callback function that monitors training metrics",
+    "Use cross-validation to find optimal number of boosting rounds then retrain"
+  ],
+  "answer": "Use early_stopping_rounds with a validation set in XGBoost/LightGBM",
+  "explanation": "Using early_stopping_rounds with a separate validation set stops training when performance on the validation set stops improving for a specified number of rounds, efficiently determining the optimal number of trees in a single training run without requiring multiple cross-validation runs.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_20_answer_long_01",
+      "path": "data/Modelling/questions/qn_20/markdown/qn_20_answer_01.md"
+    }
+  ]
+}

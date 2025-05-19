@@ -1,0 +1,16 @@
+{
+  "id": 29,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a lottery where 5 numbers are drawn from 1 to 49 without replacement, what is the probability of matching exactly 3 numbers on a single ticket?",
+  "options": [
+    "0.012",
+    "0.015",
+    "0.018",
+    "0.021"
+  ],
+  "answer": "0.015",
+  "explanation": "Total number of possible 5-number combinations is C(49,5) = 1,906,884. Ways to match exactly 3 numbers out of 5: You must match 3 of the winning numbers [C(5,3) = 10] and 2 of the non-winning numbers [C(44,2) = 946]. So favorable outcomes = 10 \u00d7 946 = 9,460. Probability = 9,460/1,906,884 \u2248 0.00496 or about 0.5%.",
+  "learning_resources": []
+}

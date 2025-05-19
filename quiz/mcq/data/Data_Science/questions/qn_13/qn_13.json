@@ -1,0 +1,16 @@
+{
+  "id": 13,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What does the term 'overfitting' refer to in machine learning?",
+  "options": [
+    "A model that performs well on training data but poorly on unseen data",
+    "A model that performs poorly on both training and test data",
+    "A model that takes too long to train",
+    "A model with too few features"
+  ],
+  "answer": "A model that performs well on training data but poorly on unseen data",
+  "explanation": "Overfitting occurs when a model learns the training data too well, including its noise, reducing generalization to new data.",
+  "learning_resources": []
+}

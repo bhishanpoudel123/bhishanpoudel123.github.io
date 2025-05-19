@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "IQ"
+  ],
+  "question": "A pad costs 33 cents. How much will 5 pads cost?",
+  "options": [
+    "$1.65",
+    "$2.28",
+    "$1.10",
+    "$1.45"
+  ],
+  "answer": "$1.65",
+  "explanation": "Basic multiplication or unit price calculation.",
+  "learning_resources": []
+}

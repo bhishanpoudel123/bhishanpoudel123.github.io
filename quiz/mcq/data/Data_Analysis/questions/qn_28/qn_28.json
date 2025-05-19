@@ -1,0 +1,22 @@
+{
+  "id": 28,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most rigorous approach to handle missing data in a longitudinal study with potential non-random missingness?",
+  "options": [
+    "Multiple imputation by chained equations (MICE) with auxiliary variables",
+    "Pattern mixture models with sensitivity analysis",
+    "Joint modeling of missingness and outcomes",
+    "Inverse probability weighting with doubly robust estimation"
+  ],
+  "answer": "Joint modeling of missingness and outcomes",
+  "explanation": "Joint modeling directly incorporates the missingness mechanism into the analysis model, allowing for valid inference under non-random missingness (MNAR) scenarios by explicitly modeling the relationship between the missing data process and the outcomes of interest.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_28_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_28/markdown/qn_28_answer_01.md"
+    }
+  ]
+}

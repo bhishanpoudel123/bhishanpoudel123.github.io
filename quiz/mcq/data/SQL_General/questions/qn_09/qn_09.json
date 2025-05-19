@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "What does the SQL INNER JOIN keyword do?",
+  "options": [
+    "Returns rows when there is a match in both tables",
+    "Returns all rows from the left table",
+    "Returns all rows from the right table",
+    "Combines all rows from both tables"
+  ],
+  "answer": "Returns rows when there is a match in both tables",
+  "explanation": "INNER JOIN selects records that have matching values in both tables.",
+  "learning_resources": []
+}

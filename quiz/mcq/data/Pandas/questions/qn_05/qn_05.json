@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which of the following transforms a DataFrame to a long format?",
+  "options": [
+    "df.stack()",
+    "df.melt()",
+    "pd.wide_to_long(df)",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "stack(), melt(), and wide_to_long() all convert data from wide format to long format, albeit with different approaches and parameters.",
+  "learning_resources": []
+}

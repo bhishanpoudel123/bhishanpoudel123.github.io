@@ -1,0 +1,16 @@
+{
+  "id": 33,
+  "tags": [
+    "Probability"
+  ],
+  "question": "Two fair six-sided dice are rolled. Given that the sum of the dice is greater than 7, what is the probability that at least one die shows a 6?",
+  "options": [
+    "5/12",
+    "6/12",
+    "7/12",
+    "8/12"
+  ],
+  "answer": "7/12",
+  "explanation": "The possible outcomes for sum > 7 are: (2,6), (3,5), (3,6), (4,4), (4,5), (4,6), (5,3), (5,4), (5,5), (5,6), (6,2), (6,3), (6,4), (6,5), (6,6) - a total of 15 outcomes. Of these, 11 outcomes include at least one 6: (2,6), (3,6), (4,6), (5,6), (6,2), (6,3), (6,4), (6,5), (6,6). Therefore, the probability is 11/15 = 11/15 or about 73.3%.",
+  "learning_resources": []
+}

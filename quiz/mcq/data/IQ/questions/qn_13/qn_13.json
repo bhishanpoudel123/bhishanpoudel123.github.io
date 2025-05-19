@@ -1,0 +1,16 @@
+{
+  "id": 13,
+  "tags": [
+    "IQ"
+  ],
+  "question": "The cost of one egg is 15 cents. How much will 4 eggs cost?",
+  "options": [
+    "$0.60",
+    "$0.40",
+    "$0.65",
+    "$0.50"
+  ],
+  "answer": "$0.60",
+  "explanation": "Basic multiplication or unit price calculation.",
+  "learning_resources": []
+}

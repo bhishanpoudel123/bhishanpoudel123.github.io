@@ -1,0 +1,16 @@
+{
+  "id": 25,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the primary purpose of the KPSS test in time series analysis?",
+  "options": [
+    "To test for stationarity with a null hypothesis of stationarity",
+    "To determine the optimal order of differencing",
+    "To test for normality of residuals",
+    "To assess the significance of seasonal components"
+  ],
+  "answer": "To test for stationarity with a null hypothesis of stationarity",
+  "explanation": "The KPSS (Kwiatkowski-Phillips-Schmidt-Shin) test is used to test for stationarity in time series analysis, but unlike the ADF test, its null hypothesis is that the series is stationary. This reversal makes it a complementary test to ADF, which has a null hypothesis of non-stationarity. Using both tests together provides stronger evidence: if the ADF test rejects its null and the KPSS fails to reject its null, you have consistent evidence of stationarity. The KPSS test specifically tests whether the series can be described as stationary around a deterministic trend or has a unit root. A low p-value leads to rejecting the null, suggesting non-stationarity. This test is particularly useful for distinguishing between trend-stationary processes and difference-stationary processes.",
+  "learning_resources": []
+}

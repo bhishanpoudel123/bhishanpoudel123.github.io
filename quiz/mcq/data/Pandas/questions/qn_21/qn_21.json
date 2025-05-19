@@ -1,0 +1,16 @@
+{
+  "id": 21,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you efficiently identify and remove duplicate rows in a DataFrame?",
+  "options": [
+    "df[~df.duplicated()]",
+    "df.drop_duplicates()",
+    "df.loc[~df.index.duplicated()]",
+    "Both A and B"
+  ],
+  "answer": "Both A and B",
+  "explanation": "Both df[~df.duplicated()] and df.drop_duplicates() remove duplicate rows, with the latter being more readable and offering more options.",
+  "learning_resources": []
+}

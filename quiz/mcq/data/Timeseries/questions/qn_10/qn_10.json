@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "How are seasonality parameters represented in a SARIMA model?",
+  "options": [
+    "As (P,D,Q)m where m is the seasonal period",
+    "As a sine wave with amplitude A and period T",
+    "As a separate time series added to the main series",
+    "As a scaling factor applied to the ACF"
+  ],
+  "answer": "As (P,D,Q)m where m is the seasonal period",
+  "explanation": "In a SARIMA (Seasonal ARIMA) model, seasonality parameters are represented as (P,D,Q)m, where P is the seasonal autoregressive order, D is the seasonal differencing order, Q is the seasonal moving average order, and m is the number of periods in each season (the seasonal period). For example, in monthly data with yearly seasonality, m would be 12. In a SARIMA(1,1,1)(1,1,1)12 model, the non-seasonal components are (1,1,1) and the seasonal components are (1,1,1)12. The seasonal components operate at lag m, 2m, etc., capturing patterns that repeat every m periods. Seasonal differencing (D) involves subtracting the value from m periods ago, helping to remove seasonal non-stationarity.",
+  "learning_resources": []
+}

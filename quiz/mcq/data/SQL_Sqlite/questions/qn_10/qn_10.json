@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "What pragma statement turns on write-ahead logging in SQLite?",
+  "options": [
+    "PRAGMA enable_wal = ON",
+    "PRAGMA journal_mode = WAL",
+    "PRAGMA log_mode = ON",
+    "PRAGMA write_ahead = TRUE"
+  ],
+  "answer": "PRAGMA journal_mode = WAL",
+  "explanation": "`PRAGMA journal_mode = WAL` enables write-ahead logging in SQLite.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "Which of the following is the most memory-efficient way to handle large numerical data arrays in Python?",
+  "options": [
+    "List of lists",
+    "Pandas DataFrame",
+    "NumPy arrays",
+    "Tuples"
+  ],
+  "answer": "NumPy arrays",
+  "explanation": "NumPy arrays are memory efficient and optimized for numerical operations.",
+  "learning_resources": []
+}

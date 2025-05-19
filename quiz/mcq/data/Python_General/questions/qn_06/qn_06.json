@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "Python General"
+  ],
+  "question": "How do you insert a comment in Python?",
+  "options": [
+    "// comment",
+    "/* comment */",
+    "# comment",
+    "-- comment"
+  ],
+  "answer": "# comment",
+  "explanation": "Python uses the `#` symbol to indicate a comment.",
+  "learning_resources": []
+}

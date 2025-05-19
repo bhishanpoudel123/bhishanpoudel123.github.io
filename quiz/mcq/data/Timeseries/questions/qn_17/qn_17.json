@@ -1,0 +1,16 @@
+{
+  "id": 17,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is meant by the 'order of integration' in time series analysis?",
+  "options": [
+    "The number of times a series needs to be differenced to achieve stationarity",
+    "The number of times a series needs to be smoothed to remove noise",
+    "The number of observations required for reliable forecasting",
+    "The number of exogenous variables included in the model"
+  ],
+  "answer": "The number of times a series needs to be differenced to achieve stationarity",
+  "explanation": "The 'order of integration' refers to the number of times a time series needs to be differenced to achieve stationarity. It's represented by the parameter d in ARIMA(p,d,q) models. A series that requires differencing once (d=1) to become stationary is said to be integrated of order 1, or I(1). Similarly, a series requiring two differences is I(2). A naturally stationary series is I(0). The concept is important because it quantifies how persistent trends are in the data. Most economic and business time series are I(1), meaning they have stochastic trends that can be removed with first differencing. The order of integration can be determined using unit root tests like the Augmented Dickey-Fuller test.",
+  "learning_resources": []
+}

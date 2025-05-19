@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "How are boolean values stored in SQLite?",
+  "options": [
+    "As TRUE/FALSE literals",
+    "As 1 and 0 integers",
+    "As BIT type",
+    "As TEXT 'true'/'false'"
+  ],
+  "answer": "As 1 and 0 integers",
+  "explanation": "SQLite does not have a separate BOOLEAN type; it uses integers 1 (true) and 0 (false).",
+  "learning_resources": []
+}

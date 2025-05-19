@@ -1,0 +1,22 @@
+{
+  "id": 26,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most efficient way to implement hyperparameter tuning for an ensemble of diverse model types?",
+  "options": [
+    "Use separate GridSearchCV for each model type and combine best models",
+    "Implement nested hyperparameter optimization with DEAP genetic algorithm",
+    "Use FLAML for automated and efficient hyperparameter tuning",
+    "Apply multi-objective Bayesian optimization to balance diversity and performance"
+  ],
+  "answer": "Apply multi-objective Bayesian optimization to balance diversity and performance",
+  "explanation": "Multi-objective Bayesian optimization can simultaneously optimize for both individual model performance and ensemble diversity, finding an optimal set of hyperparameters for each model type while ensuring the ensemble as a whole performs well through complementary strengths.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_26_answer_long_01",
+      "path": "data/Modelling/questions/qn_26/markdown/qn_26_answer_01.md"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a room of 30 people, what is the probability that at least two people share the same birthday (assuming 365 days in a year and birthdays are uniformly distributed)?",
+  "options": [
+    "Less than 50%",
+    "About 70%",
+    "Greater than 90%",
+    "Exactly 50%"
+  ],
+  "answer": "Greater than 90%",
+  "explanation": "This is the famous birthday paradox. The probability is computed as 1 minus the probability that all birthdays are different. For 30 people, P(at least one shared birthday) = 1 - (365/365 \u00d7 364/365 \u00d7 363/365 \u00d7 ... \u00d7 336/365) \u2248 0.706, which is approximately 70.6%. While this is closest to 'About 70%', the exact calculation gives 70.6%, not 'Greater than 90%'. The probability exceeds 90% when there are 41 or more people in the room.",
+  "learning_resources": []
+}

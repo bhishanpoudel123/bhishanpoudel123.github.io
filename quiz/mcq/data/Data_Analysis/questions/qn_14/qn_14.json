@@ -1,0 +1,22 @@
+{
+  "id": 14,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most rigorous method for selecting the optimal number of components in a Gaussian Mixture Model?",
+  "options": [
+    "Elbow method with distortion scores",
+    "Bayesian Information Criterion (BIC) or Akaike Information Criterion (AIC)",
+    "Cross-validation with log-likelihood scoring",
+    "Variational Bayesian inference with automatic relevance determination"
+  ],
+  "answer": "Variational Bayesian inference with automatic relevance determination",
+  "explanation": "Variational Bayesian inference with automatic relevance determination (implemented in sklearn as GaussianMixture(n_components=n, weight_concentration_prior_type='dirichlet_process')) can automatically prune unnecessary components, effectively determining the optimal number without requiring multiple model fits and comparisons.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_14_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_14/markdown/qn_14_answer_01.md"
+    }
+  ]
+}

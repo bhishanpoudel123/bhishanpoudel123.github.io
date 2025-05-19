@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the key assumption that must be satisfied before applying ARIMA models?",
+  "options": [
+    "The time series must be stationary",
+    "The time series must have missing values imputed",
+    "The time series must follow a normal distribution",
+    "The time series must have equal intervals between observations"
+  ],
+  "answer": "The time series must be stationary",
+  "explanation": "The fundamental assumption for ARIMA models is that the time series is stationary or can be made stationary through differencing. A stationary time series has constant mean, variance, and autocorrelation structure over time. Without stationarity, the model cannot reliably learn patterns from the data. This is why the 'I' (Integrated) component exists in ARIMA - to transform non-stationary data through differencing. Analysts typically use statistical tests like the Augmented Dickey-Fuller (ADF) test to check for stationarity before applying ARIMA models.",
+  "learning_resources": []
+}

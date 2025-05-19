@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What's the most efficient way to calculate a rolling 7-day average of a time series?",
+  "options": [
+    "df['rolling_avg'] = df['value'].rolling(window=7).mean()",
+    "df['rolling_avg'] = df['value'].resample('7D').mean()",
+    "df['rolling_avg'] = df.groupby(pd.Grouper(freq='7D'))['value'].transform('mean')",
+    "df['rolling_avg'] = pd.rolling_mean(df['value'], window=7)"
+  ],
+  "answer": "df['rolling_avg'] = df['value'].rolling(window=7).mean()",
+  "explanation": "The rolling() method with a window of 7 followed by mean() calculates a rolling average over a 7-period window.",
+  "learning_resources": []
+}

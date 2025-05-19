@@ -1,0 +1,16 @@
+{
+  "id": 30,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What's the best way to add a new column based on a categorical mapping of an existing column?",
+  "options": [
+    "df['category'] = df['value'].map({'low': 1, 'medium': 2, 'high': 3})",
+    "df['category'] = df['value'].replace({'low': 1, 'medium': 2, 'high': 3})",
+    "df['category'] = pd.Categorical(df['value']).map({'low': 1, 'medium': 2, 'high': 3})",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "All methods can map values to new ones, though map() is generally preferred for dictionary-based mappings.",
+  "learning_resources": []
+}

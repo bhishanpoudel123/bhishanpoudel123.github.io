@@ -1,0 +1,16 @@
+{
+  "id": 28,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you efficiently compute a weighted mean in pandas?",
+  "options": [
+    "(df['value'] * df['weight']).sum() / df['weight'].sum()",
+    "df['value'].mean(weights=df['weight'])",
+    "np.average(df['value'], weights=df['weight'])",
+    "Both A and C"
+  ],
+  "answer": "Both A and C",
+  "explanation": "Both manually computing weighted mean and using np.average() work efficiently, though pandas Series doesn't have a weights parameter for mean().",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Statistics"
+  ],
+  "question": "Which of the following measures of central tendency is not affected by extreme values?",
+  "options": [
+    "Mean",
+    "Median",
+    "Mode",
+    "Standard Deviation"
+  ],
+  "answer": "Median",
+  "explanation": "Median is the middle value and is not affected by extremely large or small values, unlike the mean.",
+  "learning_resources": []
+}

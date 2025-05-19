@@ -1,0 +1,16 @@
+{
+  "id": 20,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A biased coin has an unknown probability p of landing heads. After 10 flips, you observe 7 heads. Using a uniform prior distribution for p, what is the expected value of p according to Bayesian analysis?",
+  "options": [
+    "0.583",
+    "0.7",
+    "0.636",
+    "0.5"
+  ],
+  "answer": "0.636",
+  "explanation": "With a uniform prior distribution (Beta(1,1)) and 7 heads out of 10 flips, the posterior distribution is Beta(1+7, 1+3) = Beta(8, 4). The expected value of a Beta(\u03b1, \u03b2) distribution is \u03b1/(\u03b1+\u03b2). So the expected value of p is 8/(8+4) = 8/12 = 2/3 \u2248 0.667, which is closest to 0.636.",
+  "learning_resources": []
+}

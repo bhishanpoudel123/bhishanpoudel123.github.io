@@ -1,0 +1,22 @@
+{
+  "id": 12,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most robust approach to handling class imbalance in a multi-class classification problem?",
+  "options": [
+    "Use class_weight='balanced' in sklearn classifiers",
+    "Apply SMOTE for oversampling minority classes",
+    "Implement a cost-sensitive learning approach with custom loss function",
+    "Use ensemble methods with resampling strategies specific to each classifier"
+  ],
+  "answer": "Use ensemble methods with resampling strategies specific to each classifier",
+  "explanation": "Ensemble methods with class-specific resampling strategies (e.g., EasyEnsemble or SMOTEBoost) combine the diversity of multiple classifiers with targeted handling of class imbalance, outperforming both global resampling and simple class weighting, especially for multi-class problems with varying degrees of imbalance.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_12_answer_long_01",
+      "path": "data/Modelling/questions/qn_12/markdown/qn_12_answer_01.md"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 21,
+  "tags": [
+    "IQ"
+  ],
+  "question": "How many bananas will you find in a dozen?",
+  "options": [
+    "11",
+    "10",
+    "14",
+    "12"
+  ],
+  "answer": "12",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

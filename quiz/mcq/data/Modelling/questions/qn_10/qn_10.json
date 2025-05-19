@@ -1,0 +1,22 @@
+{
+  "id": 10,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most effective way to implement a time-based split for cross-validation in time series forecasting?",
+  "options": [
+    "Use sklearn's TimeSeriesSplit with appropriate gap",
+    "Implement a sliding window validation with fixed lookback period",
+    "Use BlockingTimeSeriesSplit from sktime with custom test window growth",
+    "Define a custom cross-validator with expanding window and purging"
+  ],
+  "answer": "Define a custom cross-validator with expanding window and purging",
+  "explanation": "A custom cross-validator with expanding windows (increasing training set) and purging (gap between train and test to prevent leakage) most accurately simulates real-world forecasting scenarios while handling temporal dependencies and avoiding lookahead bias.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_10_answer_long_01",
+      "path": "data/Modelling/questions/qn_10/markdown/qn_10_answer_01.md"
+    }
+  ]
+}

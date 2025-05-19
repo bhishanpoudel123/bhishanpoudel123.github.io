@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A data scientist applies a machine learning model to classify emails as spam or not spam. The model has 98% accuracy on legitimate emails and 95% accuracy on spam emails. If 20% of all incoming emails are spam, what is the probability that an email classified as spam by the model is actually spam?",
+  "options": [
+    "0.72",
+    "0.83",
+    "0.95",
+    "0.98"
+  ],
+  "answer": "0.83",
+  "explanation": "Using Bayes' theorem: P(Spam|Classified as Spam) = [P(Classified as Spam|Spam) \u00d7 P(Spam)] / P(Classified as Spam). P(Classified as Spam) = P(Classified as Spam|Spam) \u00d7 P(Spam) + P(Classified as Spam|Not Spam) \u00d7 P(Not Spam) = 0.95 \u00d7 0.2 + 0.02 \u00d7 0.8 = 0.19 + 0.016 = 0.206. Therefore, P(Spam|Classified as Spam) = (0.95 \u00d7 0.2) / 0.206 = 0.19/0.206 \u2248 0.83 or 83%.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 4,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most memory-efficient way to implement incremental learning for large datasets with scikit-learn?",
+  "options": [
+    "Use SGDClassifier with partial_fit on data chunks",
+    "Use MiniBatchKMeans for unsupervised feature extraction followed by classification",
+    "Implement dask-ml for distributed model training",
+    "Use HistGradientBoostingClassifier with max_bins parameter tuning"
+  ],
+  "answer": "Use SGDClassifier with partial_fit on data chunks",
+  "explanation": "SGDClassifier with partial_fit allows true incremental learning, processing data in chunks without storing the entire dataset in memory, updating model parameters with each batch and converging to the same solution as batch processing would with sufficient iterations.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_04_answer_long_01",
+      "path": "data/Modelling/questions/qn_04/markdown/qn_04_answer_01.md"
+    }
+  ]
+}

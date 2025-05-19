@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "What is the time complexity of inserting an element at the beginning of a Python list?",
+  "options": [
+    "O(1)",
+    "O(n)",
+    "O(log n)",
+    "O(n log n)"
+  ],
+  "answer": "O(n)",
+  "explanation": "Inserting at the beginning of a Python list requires shifting all elements, hence O(n).",
+  "learning_resources": []
+}

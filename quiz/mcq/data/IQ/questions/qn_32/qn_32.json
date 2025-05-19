@@ -1,0 +1,16 @@
+{
+  "id": 32,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Identify the next number in the series:\n1, 1, 2, 3, 5, 8, _____",
+  "options": [
+    "10",
+    "20",
+    "9",
+    "13"
+  ],
+  "answer": "13",
+  "explanation": "This is fibonacci series. The next number is the sum of the last two numbers.",
+  "learning_resources": []
+}

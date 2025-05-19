@@ -1,0 +1,16 @@
+{
+  "id": 26,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which approach can create a lagged feature in a time series DataFrame?",
+  "options": [
+    "df['lagged'] = df['value'].shift(1)",
+    "df['lagged'] = df['value'].shift(-1)",
+    "df['lagged'] = df['value'].rolling(window=2).apply(lambda x: x.iloc[0])",
+    "Both A and B"
+  ],
+  "answer": "Both A and B",
+  "explanation": "shift(1) creates a lag (past values), while shift(-1) creates a lead (future values), both useful for time series analysis.",
+  "learning_resources": []
+}

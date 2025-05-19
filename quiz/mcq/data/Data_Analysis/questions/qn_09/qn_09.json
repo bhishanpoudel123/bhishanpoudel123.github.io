@@ -1,0 +1,22 @@
+{
+  "id": 9,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the correct approach to implement a memory-efficient pipeline for one-hot encoding categorical variables with high cardinality in pandas?",
+  "options": [
+    "`pd.get_dummies(df, sparse=True)`",
+    "`pd.Categorical(df['col']).codes` in combination with sklearn's `OneHotEncoder(sparse=True)`",
+    "Use `pd.factorize()` on all categorical columns followed by scipy's sparse matrices",
+    "Convert to category dtype then use `df['col'].cat.codes` with sklearn's `OneHotEncoder(sparse=True)`"
+  ],
+  "answer": "Convert to category dtype then use `df['col'].cat.codes` with sklearn's `OneHotEncoder(sparse=True)`",
+  "explanation": "Converting to pandas' memory-efficient category dtype first, then using cat.codes with a sparse OneHotEncoder creates a memory-efficient pipeline that preserves category labels and works well with scikit-learn while minimizing memory usage.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_09_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_09/markdown/qn_09_answer_01.md"
+    }
+  ]
+}

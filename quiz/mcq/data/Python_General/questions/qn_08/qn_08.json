@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "Python General"
+  ],
+  "question": "What keyword is used to define a function in Python?",
+  "options": [
+    "def",
+    "function",
+    "fun",
+    "define"
+  ],
+  "answer": "def",
+  "explanation": "The `def` keyword is used to define functions in Python.",
+  "learning_resources": []
+}

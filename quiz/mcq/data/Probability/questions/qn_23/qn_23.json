@@ -1,0 +1,16 @@
+{
+  "id": 23,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A fair six-sided die is rolled 10 times. What is the probability of getting exactly 2 sixes?",
+  "options": [
+    "0.2222",
+    "0.2907",
+    "0.3025",
+    "0.3273"
+  ],
+  "answer": "0.2907",
+  "explanation": "This follows a binomial distribution with n=10 and p=1/6. P(X=2) = C(10,2) \u00d7 (1/6)^2 \u00d7 (5/6)^8 = 45 \u00d7 (1/36) \u00d7 (1,679,616/1,679,616) = 45/36 \u00d7 0.2323 \u2248 1.25 \u00d7 0.2323 = 0.2904 or about 29.04%.",
+  "learning_resources": []
+}

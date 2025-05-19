@@ -1,0 +1,16 @@
+{
+  "id": 17,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What's the best way to compute percentiles for grouped data?",
+  "options": [
+    "df.groupby('group').quantile([0.25, 0.5, 0.75])",
+    "df.groupby('group').agg(lambda x: np.percentile(x, [25, 50, 75]))",
+    "df.groupby('group').describe(percentiles=[0.25, 0.5, 0.75])",
+    "Both A and C"
+  ],
+  "answer": "Both A and C",
+  "explanation": "Both quantile() and describe() can compute percentiles for grouped data, with describe() providing additional statistics. For option B, While this approach uses the right function (numpy's percentile), there's an issue with how it's implemented in the context of pandas GroupBy. This would likely raise errors because the lambda function returns arrays rather than scalars, which is problematic for the standard aggregation pipeline.",
+  "learning_resources": []
+}

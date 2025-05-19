@@ -1,0 +1,16 @@
+{
+  "id": 28,
+  "tags": [
+    "IQ"
+  ],
+  "question": "There are 14 more potatoes than onions in a basket of 36 potatoes and onions. How many potatoes are there in the basket?",
+  "options": [
+    "11",
+    "28",
+    "13",
+    "25"
+  ],
+  "answer": "25",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

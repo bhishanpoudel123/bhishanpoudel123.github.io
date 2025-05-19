@@ -1,0 +1,16 @@
+{
+  "id": 16,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which Python library is most commonly used for creating static visualizations?",
+  "options": [
+    "Plotly",
+    "Matplotlib",
+    "Seaborn",
+    "Bokeh"
+  ],
+  "answer": "Matplotlib",
+  "explanation": "Matplotlib is the foundational plotting library in Python, though Seaborn builds on it for statistical visualizations.",
+  "learning_resources": []
+}

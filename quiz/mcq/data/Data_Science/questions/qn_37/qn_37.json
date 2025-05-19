@@ -1,0 +1,16 @@
+{
+  "id": 37,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is transfer learning in deep learning?",
+  "options": [
+    "Training multiple models simultaneously",
+    "Using a pre-trained model as a starting point for a new task",
+    "Transferring data between different formats",
+    "Moving models between different hardware"
+  ],
+  "answer": "Using a pre-trained model as a starting point for a new task",
+  "explanation": "Transfer learning leverages knowledge gained from solving one problem and applies it to a different but related problem.",
+  "learning_resources": []
+}

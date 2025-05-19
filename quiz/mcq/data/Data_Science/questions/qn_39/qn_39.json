@@ -1,0 +1,16 @@
+{
+  "id": 39,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main advantage of using SQL databases over NoSQL?",
+  "options": [
+    "Better scalability",
+    "More flexible schema",
+    "Stronger consistency guarantees",
+    "Faster write speeds"
+  ],
+  "answer": "Stronger consistency guarantees",
+  "explanation": "SQL databases provide ACID transactions and strong consistency, while NoSQL prioritizes scalability and flexibility.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 13,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which technique is most appropriate for detecting and quantifying the importance of interaction effects in a Random Forest model?",
+  "options": [
+    "Use feature_importances_ attribute and partial dependence plots",
+    "Implement H-statistic from Friedman and Popescu",
+    "Extract and analyze individual decision paths from trees",
+    "Use permutation importance with pairwise feature shuffling"
+  ],
+  "answer": "Implement H-statistic from Friedman and Popescu",
+  "explanation": "The H-statistic specifically quantifies interaction strength between features by comparing the variation in predictions when features are varied together versus independently, providing a statistical measure of interactions that can't be captured by standard importance metrics or partial dependence alone.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_13_answer_long_01",
+      "path": "data/Modelling/questions/qn_13/markdown/qn_13_answer_01.md"
+    }
+  ]
+}

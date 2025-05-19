@@ -1,0 +1,16 @@
+{
+  "id": 14,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which of these is a supervised learning algorithm?",
+  "options": [
+    "K-means clustering",
+    "Principal Component Analysis",
+    "Random Forest",
+    "t-SNE"
+  ],
+  "answer": "Random Forest",
+  "explanation": "Random Forest is a supervised learning algorithm. K-means and PCA are unsupervised, and t-SNE is for visualization.",
+  "learning_resources": []
+}

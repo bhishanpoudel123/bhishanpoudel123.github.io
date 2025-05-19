@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A bag contains 5 red marbles and 7 blue marbles. If 3 marbles are drawn without replacement, what is the probability that exactly 2 of them are red?",
+  "options": [
+    "35/132",
+    "21/44",
+    "15/44",
+    "35/144"
+  ],
+  "answer": "35/132",
+  "explanation": "Total ways to select 3 marbles from 12 is C(12,3) = 220. Ways to select 2 red marbles from 5 red and 1 blue marble from 7 blue is C(5,2) \u00d7 C(7,1) = 10 \u00d7 7 = 70. Therefore probability = 70/220 = 7/22 = 35/110 = 7/22.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 5,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "When dealing with competing risks in survival analysis, which implementation correctly handles the problem?",
+  "options": [
+    "Cox Proportional Hazards model with stratification by risk type",
+    "Kaplan-Meier estimator with censoring of competing events",
+    "Fine-Gray subdistribution hazard model from pysurvival",
+    "Random Survival Forests with cause-specific cumulative incidence function"
+  ],
+  "answer": "Fine-Gray subdistribution hazard model from pysurvival",
+  "explanation": "The Fine-Gray model explicitly accounts for competing risks by modeling the subdistribution hazard, allowing for valid inference about the probability of an event in the presence of competing events, unlike standard Cox models or Kaplan-Meier which can produce biased estimates under competing risks.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_05_answer_long_01",
+      "path": "data/Modelling/questions/qn_05/markdown/qn_05_answer_01.md"
+    }
+  ]
+}

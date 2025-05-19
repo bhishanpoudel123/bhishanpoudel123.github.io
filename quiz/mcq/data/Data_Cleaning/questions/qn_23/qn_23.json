@@ -1,0 +1,16 @@
+{
+  "id": 23,
+  "tags": [
+    "Data Cleaning"
+  ],
+  "question": "Sample data cleaning question 23?",
+  "options": [
+    "Option A",
+    "Option B",
+    "Option C",
+    "Option D"
+  ],
+  "answer": "Option A",
+  "explanation": "Explanation for sample question 23.",
+  "learning_resources": []
+}

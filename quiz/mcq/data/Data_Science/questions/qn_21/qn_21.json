@@ -1,0 +1,16 @@
+{
+  "id": 21,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the difference between classification and regression?",
+  "options": [
+    "Classification predicts categories, regression predicts continuous values",
+    "Classification uses unsupervised learning, regression uses supervised",
+    "Classification is for small datasets, regression for large",
+    "There is no difference"
+  ],
+  "answer": "Classification predicts categories, regression predicts continuous values",
+  "explanation": "Classification predicts discrete class labels, while regression predicts continuous numerical values.",
+  "learning_resources": []
+}

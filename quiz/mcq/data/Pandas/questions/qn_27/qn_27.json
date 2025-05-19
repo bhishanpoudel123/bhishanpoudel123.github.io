@@ -1,0 +1,16 @@
+{
+  "id": 27,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What's the best way to explode a DataFrame column containing lists into multiple rows?",
+  "options": [
+    "pd.DataFrame([[i, x] for i, y in df['list_col'].iteritems() for x in y])",
+    "df.explode('list_col')",
+    "df.assign(list_col=df['list_col']).explode('list_col')",
+    "Both B and C"
+  ],
+  "answer": "Both B and C",
+  "explanation": "explode() transforms each element of a list-like column into a row, with the original index duplicated as needed.",
+  "learning_resources": []
+}

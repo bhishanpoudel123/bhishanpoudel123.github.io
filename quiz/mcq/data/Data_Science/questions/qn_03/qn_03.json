@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What type of chart would be most appropriate for comparing proportions of a whole?",
+  "options": [
+    "Scatter plot",
+    "Histogram",
+    "Pie chart",
+    "Line chart"
+  ],
+  "answer": "Pie chart",
+  "explanation": "Pie charts are best for showing proportions of a whole, though they should be used sparingly and only with a small number of categories.",
+  "learning_resources": []
+}

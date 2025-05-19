@@ -1,0 +1,22 @@
+{
+  "id": 10,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which approach correctly implements a multi-output Gradient Boosting Regressor for simultaneously predicting multiple continuous targets with different scales?",
+  "options": [
+    "`MultiOutputRegressor(GradientBoostingRegressor())`",
+    "`GradientBoostingRegressor` with `multioutput='raw_values'`",
+    "`RegressorChain(GradientBoostingRegressor())` with StandardScaler for each target",
+    "Separate scaled `GradientBoostingRegressor` for each target in a Pipeline"
+  ],
+  "answer": "`MultiOutputRegressor(GradientBoostingRegressor())`",
+  "explanation": "MultiOutputRegressor fits a separate GradientBoostingRegressor for each target, allowing each model to optimize independently, which is crucial when targets have different scales and relationships with features.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_10_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_10/markdown/qn_10_answer_01.md"
+    }
+  ]
+}

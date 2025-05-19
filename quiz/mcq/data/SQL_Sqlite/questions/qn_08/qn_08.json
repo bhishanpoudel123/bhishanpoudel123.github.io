@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "How does SQLite handle foreign key constraints by default?",
+  "options": [
+    "They are enforced automatically",
+    "They must be manually triggered",
+    "They are off by default and must be enabled",
+    "They are not supported in SQLite"
+  ],
+  "answer": "They are off by default and must be enabled",
+  "explanation": "SQLite supports foreign keys, but enforcement must be enabled with `PRAGMA foreign_keys = ON`.",
+  "learning_resources": []
+}

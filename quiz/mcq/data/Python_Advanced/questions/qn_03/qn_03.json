@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "Which Python library provides decorators and context managers to handle retries with exponential backoff?",
+  "options": [
+    "retrying",
+    "backoff",
+    "tenacity",
+    "retry"
+  ],
+  "answer": "tenacity",
+  "explanation": "Tenacity provides powerful retry strategies including exponential backoff.",
+  "learning_resources": []
+}

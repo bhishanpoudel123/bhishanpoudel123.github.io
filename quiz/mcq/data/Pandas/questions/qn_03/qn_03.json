@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you handle missing values in a DataFrame column?",
+  "options": [
+    "df['column'].fillna(0)",
+    "df['column'].dropna()",
+    "df['column'].replace(np.nan, 0)",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "All listed methods can handle missing values: fillna() replaces NaNs, dropna() removes rows with NaNs, and replace() can substitute NaNs with specified values.",
+  "learning_resources": []
+}

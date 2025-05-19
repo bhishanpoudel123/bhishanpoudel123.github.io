@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Statistics"
+  ],
+  "question": "What does standard deviation measure?",
+  "options": [
+    "Average",
+    "Spread of data",
+    "Skewness",
+    "Maximum value"
+  ],
+  "answer": "Spread of data",
+  "explanation": "Standard deviation measures the amount of variation or dispersion of a set of values.",
+  "learning_resources": []
+}

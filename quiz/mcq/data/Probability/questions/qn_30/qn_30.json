@@ -1,0 +1,16 @@
+{
+  "id": 30,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a random sample from a normal distribution with mean 100 and standard deviation 15, what is the probability that a single observation exceeds 125?",
+  "options": [
+    "0.0478",
+    "0.0548",
+    "0.0668",
+    "0.0951"
+  ],
+  "answer": "0.0478",
+  "explanation": "Standardizing, z = (125 - 100)/15 = 1.67. The probability P(X > 125) = P(Z > 1.67) \u2248 0.0475 or about 4.75%, which is closest to 0.0478.",
+  "learning_resources": []
+}

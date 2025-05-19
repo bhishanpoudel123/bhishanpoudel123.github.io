@@ -1,0 +1,16 @@
+{
+  "id": 12,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the purpose of differencing in time series analysis?",
+  "options": [
+    "To remove trends and achieve stationarity",
+    "To smooth out random fluctuations",
+    "To interpolate missing values",
+    "To standardize the scale of the data"
+  ],
+  "answer": "To remove trends and achieve stationarity",
+  "explanation": "Differencing in time series analysis involves computing the differences between consecutive observations. The primary purpose is to remove trends and achieve stationarity, which is a key requirement for ARIMA modeling. First-order differencing (d=1) can eliminate linear trends by calculating Yt - Yt-1. If the series still shows non-stationarity after first differencing, second-order differencing (d=2) can be applied to remove quadratic trends. However, over-differencing can introduce unnecessary complexity and artificial patterns, so it's important to use statistical tests like the ADF test to determine the appropriate level of differencing needed.",
+  "learning_resources": []
+}

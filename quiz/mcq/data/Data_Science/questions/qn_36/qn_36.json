@@ -1,0 +1,16 @@
+{
+  "id": 36,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of regularization in machine learning?",
+  "options": [
+    "To speed up model training",
+    "To reduce overfitting by penalizing complex models",
+    "To handle missing data",
+    "To normalize input features"
+  ],
+  "answer": "To reduce overfitting by penalizing complex models",
+  "explanation": "Regularization techniques like L1/L2 add penalty terms to prevent overfitting by discouraging overly complex models.",
+  "learning_resources": []
+}

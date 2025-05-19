@@ -1,0 +1,16 @@
+{
+  "id": 28,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A medical test for a disease has sensitivity (true positive rate) of 90% and specificity (true negative rate) of 95%. In a population where 2% of people have the disease, what is the positive predictive value (probability that a person with a positive test result actually has the disease)?",
+  "options": [
+    "0.15",
+    "0.27",
+    "0.38",
+    "0.50"
+  ],
+  "answer": "0.27",
+  "explanation": "Using Bayes' theorem: PPV = P(Disease|Positive test) = [P(Positive test|Disease) \u00d7 P(Disease)] / P(Positive test). P(Positive test) = P(Positive test|Disease) \u00d7 P(Disease) + P(Positive test|No Disease) \u00d7 P(No Disease) = 0.9 \u00d7 0.02 + 0.05 \u00d7 0.98 = 0.018 + 0.049 = 0.067. Therefore, PPV = (0.9 \u00d7 0.02) / 0.067 = 0.018/0.067 \u2248 0.27 or 27%.",
+  "learning_resources": []
+}

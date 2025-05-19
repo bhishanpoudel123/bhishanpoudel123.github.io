@@ -1,0 +1,16 @@
+{
+  "id": 19,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What information criterion is commonly used to select between different ARIMA models?",
+  "options": [
+    "AIC (Akaike Information Criterion)",
+    "R-squared value",
+    "Mean Absolute Error (MAE)",
+    "Standard Error of the regression"
+  ],
+  "answer": "AIC (Akaike Information Criterion)",
+  "explanation": "The AIC (Akaike Information Criterion) is commonly used to select between different ARIMA models. It balances model fit against complexity by penalizing models with more parameters. The formula is AIC = -2log(L) + 2k, where L is the likelihood of the model and k is the number of parameters. A lower AIC value indicates a better model. When comparing ARIMA models with different p, d, and q values, analysts typically choose the model with the lowest AIC. Other similar criteria include BIC (Bayesian Information Criterion), which penalizes model complexity more heavily. These criteria help prevent overfitting by ensuring that additional parameters are only included if they substantially improve the model's fit to the data.",
+  "learning_resources": []
+}

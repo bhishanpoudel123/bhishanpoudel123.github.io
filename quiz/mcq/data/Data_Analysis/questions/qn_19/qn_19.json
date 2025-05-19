@@ -1,0 +1,22 @@
+{
+  "id": 19,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which approach correctly implements a hierarchical time series forecasting model that respects aggregation constraints?",
+  "options": [
+    "Bottom-up approach: forecast at lowest level and aggregate upwards",
+    "Top-down approach: forecast at highest level and disaggregate proportionally",
+    "Middle-out approach: forecast at a middle level and propagate in both directions",
+    "Reconciliation approach: forecast at all levels independently then reconcile with constraints"
+  ],
+  "answer": "Reconciliation approach: forecast at all levels independently then reconcile with constraints",
+  "explanation": "The reconciliation approach (optimal combination) generates forecasts at all levels independently, then applies a mathematical reconciliation procedure that minimizes revisions while ensuring hierarchical consistency, typically outperforming both bottom-up and top-down approaches.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_19_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_19/markdown/qn_19_answer_01.md"
+    }
+  ]
+}

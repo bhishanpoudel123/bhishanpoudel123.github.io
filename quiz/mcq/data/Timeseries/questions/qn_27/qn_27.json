@@ -1,0 +1,16 @@
+{
+  "id": 27,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What are the three main components of a Facebook Prophet model?",
+  "options": [
+    "Trend, seasonality, and holidays/events",
+    "Mean, variance, and autocorrelation",
+    "Intercept, slope, and residuals",
+    "AR terms, MA terms, and exogenous variables"
+  ],
+  "answer": "Trend, seasonality, and holidays/events",
+  "explanation": "Facebook Prophet decomposes time series into three main components: trend, seasonality, and holidays/events. The trend component captures non-periodic changes, and can be modeled as either linear or logistic growth with automatic changepoint detection to accommodate trend changes. The seasonality component captures periodic patterns using Fourier series, and can simultaneously model multiple seasonal patterns (e.g., daily, weekly, annual). The holidays/events component accounts for irregular schedules and events that affect the time series but don't follow a seasonal pattern. Users can provide a custom list of holidays or events with their dates. By modeling these components separately and then adding them together, Prophet creates an interpretable forecast that can be easily understood and adjusted by analysts.",
+  "learning_resources": []
+}

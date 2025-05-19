@@ -1,0 +1,16 @@
+{
+  "id": 45,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of the 'value_counts' method in Pandas?",
+  "options": [
+    "To count the number of unique values in a Series",
+    "To calculate the mean of numerical columns",
+    "To count missing values",
+    "To enumerate all values in a DataFrame"
+  ],
+  "answer": "To count the number of unique values in a Series",
+  "explanation": "value_counts() returns a Series containing counts of unique values in descending order.",
+  "learning_resources": []
+}

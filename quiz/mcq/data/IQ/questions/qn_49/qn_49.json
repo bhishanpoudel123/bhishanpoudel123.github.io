@@ -1,0 +1,16 @@
+{
+  "id": 49,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Rule out the odd word from the set of words.",
+  "options": [
+    "drought",
+    "budget",
+    "debt",
+    "credit"
+  ],
+  "answer": "drought",
+  "explanation": "drought is a prolonged dry period, while the others are related to finance. Budget refers to a plan for spending money, debt refers to money owed, and credit refers to the ability to borrow money.",
+  "learning_resources": []
+}

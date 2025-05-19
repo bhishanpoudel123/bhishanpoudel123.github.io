@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "Which SQLite command lists all tables in the database?",
+  "options": [
+    "SHOW TABLES",
+    "SELECT * FROM sqlite_master WHERE type='table'",
+    ".list tables",
+    "DESCRIBE"
+  ],
+  "answer": "SELECT * FROM sqlite_master WHERE type='table'",
+  "explanation": "SQLite uses the `sqlite_master` table to store metadata about the database, including table names.",
+  "learning_resources": []
+}

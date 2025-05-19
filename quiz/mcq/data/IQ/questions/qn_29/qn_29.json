@@ -1,0 +1,16 @@
+{
+  "id": 29,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Martin got a 25% salary raise. If his previous salary was $1,200, how much will it be after implementing the raise?",
+  "options": [
+    "$1,500",
+    "$1,550",
+    "$1,450",
+    "$1,350"
+  ],
+  "answer": "$1,500",
+  "explanation": "Convert the percentage to decimal by dividing by 100.",
+  "learning_resources": []
+}

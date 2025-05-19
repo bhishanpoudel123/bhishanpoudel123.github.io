@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "What is the purpose of Python's `__slots__` declaration?",
+  "options": [
+    "Reduce memory usage by preventing dynamic attribute creation",
+    "Enable dynamic typing",
+    "Improve readability",
+    "Create private attributes"
+  ],
+  "answer": "Reduce memory usage by preventing dynamic attribute creation",
+  "explanation": "`__slots__` limits attribute assignment and avoids `__dict__` overhead.",
+  "learning_resources": []
+}

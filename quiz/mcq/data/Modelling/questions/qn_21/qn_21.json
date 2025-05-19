@@ -1,0 +1,22 @@
+{
+  "id": 21,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which approach correctly implements a counterfactual explanation method for a black-box classifier?",
+  "options": [
+    "Use LIME to generate local explanations around the instance",
+    "Implement DiCE (Diverse Counterfactual Explanations) to generate multiple feasible counterfactuals",
+    "Apply SHAP values to identify feature importance for the prediction",
+    "Use a surrogate explainable model to approximate the black-box decision boundary"
+  ],
+  "answer": "Implement DiCE (Diverse Counterfactual Explanations) to generate multiple feasible counterfactuals",
+  "explanation": "DiCE specifically generates diverse counterfactual explanations that show how an instance's features would need to change to receive a different classification, addressing the 'what-if' question directly rather than just explaining the current prediction.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_21_answer_long_01",
+      "path": "data/Modelling/questions/qn_21/markdown/qn_21_answer_01.md"
+    }
+  ]
+}

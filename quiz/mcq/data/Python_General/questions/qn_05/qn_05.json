@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Python General"
+  ],
+  "question": "Which of the following is a mutable data type?",
+  "options": [
+    "tuple",
+    "list",
+    "str",
+    "int"
+  ],
+  "answer": "list",
+  "explanation": "Lists are mutable in Python, allowing modifications.",
+  "learning_resources": []
+}

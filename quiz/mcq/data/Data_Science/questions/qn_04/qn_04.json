@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which Python library is primarily used for working with tabular data structures?",
+  "options": [
+    "NumPy",
+    "Matplotlib",
+    "Pandas",
+    "Scikit-learn"
+  ],
+  "answer": "Pandas",
+  "explanation": "Pandas provides DataFrame objects which are ideal for working with tabular data, similar to spreadsheets or SQL tables.",
+  "learning_resources": []
+}

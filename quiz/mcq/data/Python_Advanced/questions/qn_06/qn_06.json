@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "What will `functools.lru_cache` do?",
+  "options": [
+    "Cache function output to speed up subsequent calls",
+    "Limit recursion depth",
+    "Create memory leaks",
+    "Parallelize function calls"
+  ],
+  "answer": "Cache function output to speed up subsequent calls",
+  "explanation": "`lru_cache` stores results of expensive function calls for reuse.",
+  "learning_resources": []
+}

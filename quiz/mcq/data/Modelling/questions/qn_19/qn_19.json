@@ -1,0 +1,22 @@
+{
+  "id": 19,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which implementation correctly addresses the curse of dimensionality in nearest neighbor models?",
+  "options": [
+    "Use KNeighborsClassifier with algorithm='kd_tree'",
+    "Apply dimensionality reduction like PCA before KNN",
+    "Use approximate nearest neighbors with Annoy or FAISS",
+    "Implement distance metric learning with NCA or LMNN"
+  ],
+  "answer": "Implement distance metric learning with NCA or LMNN",
+  "explanation": "Distance metric learning adaptively learns a transformation of the feature space that emphasizes discriminative dimensions, effectively addressing the curse of dimensionality by creating a more semantically meaningful distance metric, unlike fixed trees or general dimensionality reduction.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_19_answer_long_01",
+      "path": "data/Modelling/questions/qn_19/markdown/qn_19_answer_01.md"
+    }
+  ]
+}

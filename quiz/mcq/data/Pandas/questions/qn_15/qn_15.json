@@ -1,0 +1,16 @@
+{
+  "id": 15,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you create a MultiIndex DataFrame from scratch?",
+  "options": [
+    "pd.DataFrame(data, index=pd.MultiIndex.from_tuples([('A',1), ('A',2), ('B',1), ('B',2)]))",
+    "pd.DataFrame(data, index=pd.MultiIndex.from_product([['A', 'B'], [1, 2]]))",
+    "pd.DataFrame(data, index=pd.MultiIndex.from_arrays([['A', 'A', 'B', 'B'], [1, 2, 1, 2]]))",
+    "All of the above"
+  ],
+  "answer": "All of the above",
+  "explanation": "All three methods create equivalent MultiIndex objects using different approaches: from_tuples, from_product, and from_arrays.",
+  "learning_resources": []
+}

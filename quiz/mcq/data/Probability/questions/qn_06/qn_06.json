@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a Bayesian analysis, a disease has a 1% prevalence in a population. A test for the disease has 95% sensitivity (true positive rate) and 90% specificity (true negative rate). If a person tests positive, what is the probability they actually have the disease?",
+  "options": [
+    "Around 8.7%",
+    "Around 50%",
+    "Around 95%",
+    "Around 1%"
+  ],
+  "answer": "Around 8.7%",
+  "explanation": "Using Bayes' theorem: P(Disease|Positive) = [P(Positive|Disease) \u00d7 P(Disease)] / P(Positive). P(Positive) = P(Positive|Disease) \u00d7 P(Disease) + P(Positive|No Disease) \u00d7 P(No Disease) = 0.95 \u00d7 0.01 + 0.10 \u00d7 0.99 = 0.0095 + 0.099 = 0.1085. Therefore, P(Disease|Positive) = (0.95 \u00d7 0.01) / 0.1085 \u2248 0.0095/0.1085 \u2248 0.0876 or about 8.7%.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Python General"
+  ],
+  "question": "What is the output of `type([])` in Python?",
+  "options": [
+    "<class 'list'>",
+    "<class 'tuple'>",
+    "<class 'dict'>",
+    "<class 'set'>"
+  ],
+  "answer": "<class 'list'>",
+  "explanation": "`[]` represents an empty list in Python.",
+  "learning_resources": []
+}

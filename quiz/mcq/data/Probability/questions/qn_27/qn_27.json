@@ -1,0 +1,16 @@
+{
+  "id": 27,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A data scientist is analyzing user engagement on a website. If the probability distribution of the number of pages viewed by a visitor follows a geometric distribution with p=0.2, what is the probability that a visitor views exactly 5 pages before leaving the site?",
+  "options": [
+    "0.082",
+    "0.131",
+    "0.164",
+    "0.205"
+  ],
+  "answer": "0.082",
+  "explanation": "For a geometric distribution with parameter p=0.2, the probability mass function gives P(X=5) = p(1-p)^(k-1) = 0.2 \u00d7 (0.8)^4 = 0.2 \u00d7 0.4096 = 0.08192 \u2248 0.082 or about 8.2%.",
+  "learning_resources": []
+}

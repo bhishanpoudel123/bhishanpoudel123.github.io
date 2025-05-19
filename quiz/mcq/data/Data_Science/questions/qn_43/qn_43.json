@@ -1,0 +1,16 @@
+{
+  "id": 43,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of the 'dropna' method in Pandas?",
+  "options": [
+    "To drop columns with missing values",
+    "To drop rows or columns with missing values",
+    "To replace missing values with zeros",
+    "To count missing values"
+  ],
+  "answer": "To drop rows or columns with missing values",
+  "explanation": "dropna() removes missing values (NaN) from a DataFrame, either by rows or columns.",
+  "learning_resources": []
+}

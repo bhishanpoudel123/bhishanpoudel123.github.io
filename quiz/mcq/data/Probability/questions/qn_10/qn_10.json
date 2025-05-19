@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "tags": [
+    "Probability"
+  ],
+  "question": "Four cards are randomly selected from a standard 52-card deck. What is the probability of getting exactly 2 aces?",
+  "options": [
+    "0.0264",
+    "0.0399",
+    "0.0426",
+    "0.0526"
+  ],
+  "answer": "0.0399",
+  "explanation": "Total number of ways to select 4 cards from 52 is C(52,4) = 270,725. Ways to select exactly 2 aces from 4 aces is C(4,2) = 6. Ways to select the other 2 cards from the non-ace cards is C(48,2) = 1,128. So favorable outcomes = 6 \u00d7 1,128 = 6,768. Probability = 6,768/270,725 \u2248 0.0399 or about 4%.",
+  "learning_resources": []
+}

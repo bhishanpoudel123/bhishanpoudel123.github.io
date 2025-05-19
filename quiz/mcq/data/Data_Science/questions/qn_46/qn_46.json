@@ -1,0 +1,16 @@
+{
+  "id": 46,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main purpose of feature scaling?",
+  "options": [
+    "To remove unimportant features",
+    "To ensure all features contribute equally to distance-based algorithms",
+    "To reduce the number of features",
+    "To handle categorical variables"
+  ],
+  "answer": "To ensure all features contribute equally to distance-based algorithms",
+  "explanation": "Feature scaling normalizes the range of features so that features with larger scales don't dominate algorithms like KNN or SVM.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 18,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most statistically sound approach to handle heteroscedasticity in a regression model?",
+  "options": [
+    "Visual inspection of residuals vs. fitted values plot",
+    "`Breusch-Pagan` test for constant variance",
+    "`White's test` for homoscedasticity",
+    "Both B and C, with different null hypotheses"
+  ],
+  "answer": "Both B and C, with different null hypotheses",
+  "explanation": "Both tests detect heteroscedasticity but with different assumptions: Breusch-Pagan assumes that heteroscedasticity is a linear function of the independent variables, while White's test is more general and doesn't make this assumption, making them complementary approaches.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_18_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_18/markdown/qn_18_answer_01.md"
+    }
+  ]
+}

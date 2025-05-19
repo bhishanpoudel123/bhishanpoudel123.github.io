@@ -1,0 +1,16 @@
+{
+  "id": 50,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Which three words have the same meaning?\nA. Information\nB. Indoctrinate\nC. Brainwash\nD. Convince\nE. Class",
+  "options": [
+    "CDE",
+    "ABD",
+    "ACD",
+    "BCD"
+  ],
+  "answer": "BCD",
+  "explanation": "Find the synonym.",
+  "learning_resources": []
+}

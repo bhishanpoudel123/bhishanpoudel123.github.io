@@ -1,0 +1,16 @@
+{
+  "id": 20,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "In the context of ARIMA residual analysis, what should a Q-Q plot ideally show?",
+  "options": [
+    "Points falling approximately along a straight line, indicating normally distributed residuals",
+    "Points forming a horizontal band, indicating homoscedasticity",
+    "Points showing no pattern, indicating randomness",
+    "Points clustered around zero, indicating unbiased estimation"
+  ],
+  "answer": "Points falling approximately along a straight line, indicating normally distributed residuals",
+  "explanation": "In ARIMA residual analysis, a Q-Q (Quantile-Quantile) plot should ideally show points falling approximately along a straight line. This indicates that the residuals follow a normal distribution, which is an assumption for valid statistical inference in ARIMA modeling. The Q-Q plot compares the quantiles of the residuals against the quantiles of a theoretical normal distribution. Deviations from the straight line suggest non-normality: a sigmoidal pattern indicates skewness, while an S-shaped curve suggests heavy or light tails compared to a normal distribution. Serious deviations might indicate model misspecification or the presence of outliers that could affect the reliability of confidence intervals and hypothesis tests for the model parameters.",
+  "learning_resources": []
+}

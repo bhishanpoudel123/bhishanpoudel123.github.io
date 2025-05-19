@@ -1,0 +1,16 @@
+{
+  "id": 19,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What's the most memory-efficient way to read a large CSV file with pandas?",
+  "options": [
+    "pd.read_csv('file.csv', nrows=1000)",
+    "pd.read_csv('file.csv', chunksize=1000)",
+    "pd.read_csv('file.csv', usecols=['needed_col1', 'needed_col2'])",
+    "pd.read_csv('file.csv', dtype={'col1': 'category', 'col2': 'int8'})"
+  ],
+  "answer": "pd.read_csv('file.csv', dtype={'col1': 'category', 'col2': 'int8'})",
+  "explanation": "Specifying appropriate dtypes, especially using 'category' for string columns with repeated values, significantly reduces memory usage.",
+  "learning_resources": []
+}

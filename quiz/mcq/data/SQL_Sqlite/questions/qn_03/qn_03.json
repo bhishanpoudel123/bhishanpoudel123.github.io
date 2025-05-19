@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "What is the default data type of a column in SQLite if not specified?",
+  "options": [
+    "TEXT",
+    "NUMERIC",
+    "ANY",
+    "NONE"
+  ],
+  "answer": "NONE",
+  "explanation": "If no type is specified, SQLite assigns it an affinity of NONE.",
+  "learning_resources": []
+}

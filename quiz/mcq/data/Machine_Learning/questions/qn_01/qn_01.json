@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Machine Learning"
+  ],
+  "question": "Which algorithm is used for classification problems?",
+  "options": [
+    "Linear Regression",
+    "K-Means",
+    "Logistic Regression",
+    "PCA"
+  ],
+  "answer": "Logistic Regression",
+  "explanation": "Logistic regression is used for binary and multi-class classification problems.",
+  "learning_resources": []
+}

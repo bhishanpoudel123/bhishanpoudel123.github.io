@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "What is the purpose of the `WITHOUT ROWID` clause in SQLite?",
+  "options": [
+    "To create a view without row numbers",
+    "To disable rowid for performance reasons",
+    "To create a table without the implicit ROWID column",
+    "To avoid storing duplicate rows"
+  ],
+  "answer": "To create a table without the implicit ROWID column",
+  "explanation": "`WITHOUT ROWID` creates a table without the implicit `ROWID`, useful for certain optimizations.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 6,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "When dealing with millions of rows of time series data with irregular timestamps, which method is most efficient for resampling to regular intervals with proper handling of missing values?",
+  "options": [
+    "`df.set_index('timestamp').asfreq('1H').interpolate(method='time')`",
+    "`df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')`",
+    "`df.set_index('timestamp').resample('1H').mean().interpolate(method='time')`",
+    "`df.groupby(pd.Grouper(key='timestamp', freq='1H')).apply(lambda x: x.mean() if not x.empty else pd.Series(np.nan, index=df.columns))`"
+  ],
+  "answer": "`df.set_index('timestamp').resample('1H').asfreq().interpolate(method='time')`",
+  "explanation": "This approach correctly converts irregular timestamps to a regular frequency with .resample('1H').asfreq(), then intelligently fills missing values using time-based interpolation which respects the actual timing of observations.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_06_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_06/markdown/qn_06_answer_01.md"
+    }
+  ]
+}

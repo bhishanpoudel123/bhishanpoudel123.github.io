@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Machine Learning"
+  ],
+  "question": "What is overfitting in machine learning?",
+  "options": [
+    "When the model performs well on test data but poorly on training data",
+    "When the model performs well on training data but poorly on test data",
+    "When the model performs well on both training and test data",
+    "When the model ignores outliers in the data"
+  ],
+  "answer": "When the model performs well on training data but poorly on test data",
+  "explanation": "Overfitting occurs when a model learns the training data too well, including noise and outliers, which leads to poor generalization to new data.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which method can reshape a DataFrame by stacking column labels to rows?",
+  "options": [
+    "df.unstack()",
+    "df.pivot()",
+    "df.stack()",
+    "df.melt()"
+  ],
+  "answer": "df.stack()",
+  "explanation": "stack() method pivots the columns of a DataFrame to become the innermost index level, creating a Series with a MultiIndex.",
+  "learning_resources": []
+}

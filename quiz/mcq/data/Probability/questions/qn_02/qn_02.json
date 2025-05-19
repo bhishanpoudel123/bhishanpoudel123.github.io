@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A biased coin has a 60% chance of landing heads. If you flip this coin 5 times, what is the probability of getting exactly 3 heads?",
+  "options": [
+    "0.23040",
+    "0.25920",
+    "0.30720",
+    "0.34560"
+  ],
+  "answer": "0.34560",
+  "explanation": "We use the binomial probability formula: P(X=k) = C(n,k) \u00d7 p^k \u00d7 (1-p)^(n-k), where n=5, k=3, p=0.6. C(5,3) = 10 possible ways to arrange 3 heads in 5 flips. So P(X=3) = 10 \u00d7 (0.6)^3 \u00d7 (0.4)^2 = 10 \u00d7 0.216 \u00d7 0.16 = 0.3456 or 34.56%.",
+  "learning_resources": []
+}

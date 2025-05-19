@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Machine Learning"
+  ],
+  "question": "Which technique is used to reduce the dimensionality of data?",
+  "options": [
+    "Gradient Descent",
+    "Regularization",
+    "PCA",
+    "Bagging"
+  ],
+  "answer": "PCA",
+  "explanation": "Principal Component Analysis (PCA) is a dimensionality reduction technique that transforms data to a lower-dimensional space.",
+  "learning_resources": []
+}

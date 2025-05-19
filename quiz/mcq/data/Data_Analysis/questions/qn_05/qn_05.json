@@ -1,0 +1,22 @@
+{
+  "id": 5,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most computationally efficient way to find the k-nearest neighbors for each point in a large dataset using scikit-learn?",
+  "options": [
+    "`sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='brute').fit(X).kneighbors(X)`",
+    "`sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='kd_tree').fit(X).kneighbors(X)`",
+    "`sklearn.neighbors.NearestNeighbors(n_neighbors=k, algorithm='ball_tree').fit(X).kneighbors(X)`",
+    "Depends on data dimensionality, size, and structure"
+  ],
+  "answer": "Depends on data dimensionality, size, and structure",
+  "explanation": "The most efficient algorithm depends on the dataset characteristics: brute force works well for small datasets and high dimensions, kd_tree excels in low dimensions (<20), and ball_tree performs better in higher dimensions or with non-Euclidean metrics.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_05_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_05/markdown/qn_05_answer_01.md"
+    }
+  ]
+}

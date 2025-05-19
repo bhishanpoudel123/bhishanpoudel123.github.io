@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a group of 5 people, what is the probability that at least 2 people have the same zodiac sign (assuming zodiac signs are uniformly distributed across 12 possible signs)?",
+  "options": [
+    "0.55",
+    "0.67",
+    "0.82",
+    "0.96"
+  ],
+  "answer": "0.96",
+  "explanation": "The probability that all 5 people have different zodiac signs is (12/12) \u00d7 (11/12) \u00d7 (10/12) \u00d7 (9/12) \u00d7 (8/12) = 0.0397. Therefore, the probability that at least 2 people share a zodiac sign is 1 - 0.0397 = 0.9603 \u2248 0.96 or 96%.",
+  "learning_resources": []
+}

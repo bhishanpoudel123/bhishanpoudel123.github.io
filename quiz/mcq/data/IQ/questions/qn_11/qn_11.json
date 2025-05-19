@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Which word doesnt belong in this set of words?",
+  "options": [
+    "surgeon",
+    "mason",
+    "economist",
+    "barrister"
+  ],
+  "answer": "mason",
+  "explanation": "A mason is a skilled worker who builds or works with stone, brick, or concrete. The other three are professions that require a degree or specialized training. A barrister is a lawyer who specializes in court cases, an economist studies the economy, and a surgeon is a medical doctor who performs surgery.",
+  "learning_resources": []
+}

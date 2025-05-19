@@ -1,0 +1,16 @@
+{
+  "id": 18,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A data center has 5 servers, each with a 1% probability of failing in a given day, independently of the others. What is the probability that at least one server fails today?",
+  "options": [
+    "0.01",
+    "0.05",
+    "0.0490",
+    "0.0491"
+  ],
+  "answer": "0.0490",
+  "explanation": "The probability that a specific server doesn't fail is 0.99. The probability that all servers don't fail is (0.99)^5 \u2248 0.9510. Therefore, the probability that at least one server fails is 1 - 0.9510 = 0.0490 or about 4.9%.",
+  "learning_resources": []
+}

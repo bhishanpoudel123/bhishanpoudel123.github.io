@@ -1,0 +1,16 @@
+{
+  "id": 47,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the difference between 'fit' and 'transform' in Scikit-learn?",
+  "options": [
+    "'fit' learns parameters, 'transform' applies them",
+    "'fit' trains models, 'transform' makes predictions",
+    "'fit' is for classification, 'transform' for regression",
+    "There is no difference"
+  ],
+  "answer": "'fit' learns parameters, 'transform' applies them",
+  "explanation": "fit() learns model parameters from training data, while transform() applies the learned transformation to data.",
+  "learning_resources": []
+}

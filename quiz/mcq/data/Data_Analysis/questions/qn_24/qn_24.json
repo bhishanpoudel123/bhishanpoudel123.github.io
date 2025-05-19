@@ -1,0 +1,22 @@
+{
+  "id": 24,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most efficient technique for calculating pairwise distances between all points in a very large dataset?",
+  "options": [
+    "`numpy.linalg.norm` with broadcasting",
+    "`scipy.spatial.distance.pdist` with `squareform`",
+    "`sklearn.metrics.pairwise_distances` with `n_jobs=-1`",
+    "Custom `numba`-accelerated function with parallel processing"
+  ],
+  "answer": "`scipy.spatial.distance.pdist` with `squareform`",
+  "explanation": "pdist computes distances using an optimized implementation that avoids redundant calculations (since distance matrices are symmetric), and squareform can convert to a square matrix if needed; this approach is significantly more memory-efficient than computing the full distance matrix directly.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_24_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_24/markdown/qn_24_answer_01.md"
+    }
+  ]
+}

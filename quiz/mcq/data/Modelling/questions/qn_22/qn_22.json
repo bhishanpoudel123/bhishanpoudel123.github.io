@@ -1,0 +1,22 @@
+{
+  "id": 22,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most effective approach to implement online learning for a regression task with concept drift?",
+  "options": [
+    "Use SGDRegressor with warm_start=True and smaller alpha as more data arrives",
+    "Implement a sliding window approach that retrains on recent data periodically",
+    "Use incremental learning with drift detection algorithms to trigger model updates",
+    "Maintain an ensemble of models trained on different time windows"
+  ],
+  "answer": "Use incremental learning with drift detection algorithms to trigger model updates",
+  "explanation": "Combining incremental learning with explicit drift detection (e.g., ADWIN, DDM) allows the model to adapt continuously to new data while only performing major updates when the data distribution actually changes, balancing computational efficiency with adaptation to concept drift.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_22_answer_long_01",
+      "path": "data/Modelling/questions/qn_22/markdown/qn_22_answer_01.md"
+    }
+  ]
+}

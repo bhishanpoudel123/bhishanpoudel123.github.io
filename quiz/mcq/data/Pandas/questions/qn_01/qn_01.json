@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which method efficiently applies a function along an axis of a DataFrame?",
+  "options": [
+    "df.map(func)",
+    "df.apply(func, axis=0)",
+    "df.transform(func)",
+    "df.aggregate(func)"
+  ],
+  "answer": "df.apply(func, axis=0)",
+  "explanation": "The apply() method allows applying a function along an axis (rows or columns) of a DataFrame.",
+  "learning_resources": []
+}

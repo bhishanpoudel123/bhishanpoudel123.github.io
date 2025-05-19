@@ -1,0 +1,16 @@
+{
+  "id": 16,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the primary difference between ARMA and ARIMA models?",
+  "options": [
+    "ARIMA includes differencing for non-stationary data, while ARMA requires stationary data",
+    "ARIMA works with continuous data, ARMA only works with discrete data",
+    "ARIMA includes exogenous variables, ARMA does not",
+    "ARIMA can handle missing values, ARMA cannot"
+  ],
+  "answer": "ARIMA includes differencing for non-stationary data, while ARMA requires stationary data",
+  "explanation": "The primary difference between ARMA (AutoRegressive Moving Average) and ARIMA (AutoRegressive Integrated Moving Average) models is that ARIMA includes a differencing step (the 'I' component) to handle non-stationary data. ARMA models combine autoregressive (AR) and moving average (MA) components but assume that the time series is already stationary. ARIMA extends this by first differencing the data d times to achieve stationarity before applying the ARMA model. This makes ARIMA more versatile for real-world time series that often contain trends. Essentially, an ARIMA(p,d,q) model is equivalent to applying an ARMA(p,q) model to a time series after differencing it d times.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Pick out the number with the smallest value.",
+  "options": [
+    "002",
+    "007",
+    "0.80",
+    "0.33"
+  ],
+  "answer": "0.33",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

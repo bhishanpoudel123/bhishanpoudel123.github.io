@@ -1,0 +1,16 @@
+{
+  "id": 44,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main advantage of using a pipeline in Scikit-learn?",
+  "options": [
+    "To speed up model training",
+    "To chain multiple processing steps into a single object",
+    "To visualize model performance",
+    "To handle large datasets that don't fit in memory"
+  ],
+  "answer": "To chain multiple processing steps into a single object",
+  "explanation": "Pipelines sequentially apply transforms and a final estimator, ensuring steps are executed in the right order.",
+  "learning_resources": []
+}

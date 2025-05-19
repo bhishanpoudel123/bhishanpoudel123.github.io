@@ -1,0 +1,16 @@
+{
+  "id": 44,
+  "tags": [
+    "IQ"
+  ],
+  "question": "(8 \u00f7 4) x (9 \u00f7 3) = ?",
+  "options": [
+    "10",
+    "6",
+    "12",
+    "15"
+  ],
+  "answer": "6",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

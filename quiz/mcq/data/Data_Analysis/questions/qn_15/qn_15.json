@@ -1,0 +1,22 @@
+{
+  "id": 15,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the correct approach to implement a custom scoring function for model evaluation in scikit-learn that handles class imbalance better than accuracy?",
+  "options": [
+    "`sklearn.metrics.make_scorer(custom_metric, greater_is_better=True)`",
+    "`sklearn.metrics.make_scorer(custom_metric, needs_proba=True, greater_is_better=True)`",
+    "Create a scorer class that implements __call__(self, estimator, X, y) and gets_score() methods",
+    "A and B are both correct depending on the custom_metric function"
+  ],
+  "answer": "A and B are both correct depending on the custom_metric function",
+  "explanation": "make_scorer() is the correct approach, but the parameters depend on the specific metric: needs_proba=True for metrics requiring probability estimates (like AUC), and needs_threshold=True for metrics requiring decision thresholds; the appropriate configuration varies based on the specific imbalance-handling metric.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_15_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_15/markdown/qn_15_answer_01.md"
+    }
+  ]
+}

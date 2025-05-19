@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What additional component does SARIMAX add compared to ARIMA?",
+  "options": [
+    "Seasonal components and exogenous variables",
+    "Square root transformation capabilities",
+    "Sigmoid activation functions",
+    "Smoothing parameters for exponential weighting"
+  ],
+  "answer": "Seasonal components and exogenous variables",
+  "explanation": "SARIMAX (Seasonal AutoRegressive Integrated Moving Average with eXogenous factors) extends ARIMA by adding two important capabilities. First, it incorporates seasonal components, allowing the model to capture repeating patterns that occur at fixed intervals (like daily, weekly, or yearly seasonality). The seasonal component is specified with parameters (P,D,Q)m, where m is the seasonal period. Second, SARIMAX allows for exogenous variables (the 'X' part), which are external factors that can influence the time series but are not part of the series itself. These could include variables like temperature affecting energy consumption, or promotions affecting sales. This makes SARIMAX much more versatile than standard ARIMA for real-world applications with seasonal patterns and external influences.",
+  "learning_resources": []
+}

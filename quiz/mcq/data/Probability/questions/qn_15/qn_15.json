@@ -1,0 +1,16 @@
+{
+  "id": 15,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A database has 1,000,000 records, and a data scientist estimates that 50 records are corrupted. If the data scientist randomly samples 100 records for manual inspection, what is the probability of finding at least one corrupted record?",
+  "options": [
+    "0.0050",
+    "0.0500",
+    "0.4988",
+    "0.9950"
+  ],
+  "answer": "0.4988",
+  "explanation": "The probability of selecting a corrupted record is 50/1,000,000 = 0.00005. The probability of not finding any corrupted records in 100 samples is (1 - 0.00005)^100 \u2248 0.9950. Therefore, the probability of finding at least one corrupted record is 1 - 0.9950 = 0.0050 or 0.5%.",
+  "learning_resources": []
+}

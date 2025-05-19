@@ -1,0 +1,16 @@
+{
+  "id": 24,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which of these is a dimensionality reduction technique?",
+  "options": [
+    "Linear Regression",
+    "Decision Trees",
+    "Principal Component Analysis (PCA)",
+    "K-Nearest Neighbors"
+  ],
+  "answer": "Principal Component Analysis (PCA)",
+  "explanation": "PCA reduces dimensionality by transforming data to a new coordinate system with fewer dimensions.",
+  "learning_resources": []
+}

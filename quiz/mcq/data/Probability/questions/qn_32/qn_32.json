@@ -1,0 +1,16 @@
+{
+  "id": 32,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A data scientist runs 20 independent A/B tests, each with a 5% false positive rate (Type I error). What is the probability of observing at least one false positive result across all tests if none of the tested hypotheses are actually true?",
+  "options": [
+    "0.05",
+    "0.64",
+    "0.95",
+    "0.36"
+  ],
+  "answer": "0.64",
+  "explanation": "The probability of not observing a false positive in a single test is 1 - 0.05 = 0.95. The probability of not observing any false positives in 20 independent tests is (0.95)^20 \u2248 0.358. Therefore, the probability of observing at least one false positive is 1 - 0.358 = 0.642 or about 64.2%.",
+  "learning_resources": []
+}

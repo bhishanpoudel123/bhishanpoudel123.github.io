@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the difference between ACF (Autocorrelation Function) and PACF (Partial Autocorrelation Function)?",
+  "options": [
+    "ACF measures correlation between series and lagged values accounting for intermediate lags, PACF removes indirect correlation effects",
+    "ACF is for AR models only, PACF is for MA models only",
+    "ACF works on raw data, PACF requires differenced data",
+    "ACF is a graphical technique, PACF is a numerical technique"
+  ],
+  "answer": "ACF measures correlation between series and lagged values accounting for intermediate lags, PACF removes indirect correlation effects",
+  "explanation": "The ACF (Autocorrelation Function) measures the correlation between a time series and its lagged values, including both direct and indirect effects. It shows the correlation at each lag without controlling for correlations at shorter lags. In contrast, the PACF (Partial Autocorrelation Function) measures the correlation between a time series and its lagged values while controlling for the values of the time series at all shorter lags. This effectively removes the indirect correlation effects, showing only the direct relationship between observations separated by a specific lag. ACF helps identify MA(q) order, while PACF helps identify AR(p) order in ARIMA modeling.",
+  "learning_resources": []
+}

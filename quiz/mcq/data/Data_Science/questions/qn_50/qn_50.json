@@ -1,0 +1,16 @@
+{
+  "id": 50,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the purpose of the 'pivot_table' function in Pandas?",
+  "options": [
+    "To rotate a DataFrame 90 degrees",
+    "To create a spreadsheet-style pivot table as a DataFrame",
+    "To pivot between different data types",
+    "To transform wide data to long format"
+  ],
+  "answer": "To create a spreadsheet-style pivot table as a DataFrame",
+  "explanation": "pivot_table() creates a multi-dimensional summary table similar to Excel pivot tables, aggregating data.",
+  "learning_resources": []
+}

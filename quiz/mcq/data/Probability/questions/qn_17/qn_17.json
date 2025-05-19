@@ -1,0 +1,16 @@
+{
+  "id": 17,
+  "tags": [
+    "Probability"
+  ],
+  "question": "Five fair six-sided dice are rolled. What is the probability that all five dice show different numbers?",
+  "options": [
+    "0.0926",
+    "0.1543",
+    "0.3240",
+    "0.5400"
+  ],
+  "answer": "0.0926",
+  "explanation": "Total number of possible outcomes when rolling 5 dice is 6^5 = 7,776. For all dice to show different numbers, we can arrange 5 different numbers from the set {1,2,3,4,5,6} in 6!/1! = 720 ways. Therefore, the probability is 720/7,776 = 0.0926 or about 9.26%.",
+  "learning_resources": []
+}

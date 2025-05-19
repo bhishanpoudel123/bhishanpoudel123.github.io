@@ -1,0 +1,16 @@
+{
+  "id": 22,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a hypergeometric distribution scenario, a shipment of 100 electronic components contains 8 defective parts. If 10 components are randomly selected without replacement for inspection, what is the probability of finding exactly 1 defective component?",
+  "options": [
+    "0.3307",
+    "0.3816",
+    "0.4211",
+    "0.4704"
+  ],
+  "answer": "0.3816",
+  "explanation": "Using the hypergeometric probability mass function: P(X=1) = [C(8,1) \u00d7 C(92,9)] / C(100,10) = [8 \u00d7 1,742,281,695] / 17,310,309,728 = 13,938,253,560 / 17,310,309,728 \u2248 0.3816 or about 38.16%.",
+  "learning_resources": []
+}

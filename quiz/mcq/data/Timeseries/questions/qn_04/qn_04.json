@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "How do you interpret the parameters p, d, and q in ARIMA(p,d,q)?",
+  "options": [
+    "p = AR order, d = differencing order, q = MA order",
+    "p = prediction horizon, d = data points, q = quality metric",
+    "p = precision factor, d = decay rate, q = quantile value",
+    "p = periodicity, d = dimension reduction, q = querying frequency"
+  ],
+  "answer": "p = AR order, d = differencing order, q = MA order",
+  "explanation": "In ARIMA(p,d,q), p represents the order of the autoregressive (AR) component, indicating how many lagged values of the series are included in the model. A higher p means more past values are used for prediction. The parameter d represents the degree of differencing required to make the series stationary, with d=1 meaning first difference, d=2 meaning second difference, etc. Finally, q is the order of the moving average (MA) component, indicating how many lagged forecast errors are included in the model. Together, these parameters define the structure of the ARIMA model and must be carefully selected based on the characteristics of the time series.",
+  "learning_resources": []
+}

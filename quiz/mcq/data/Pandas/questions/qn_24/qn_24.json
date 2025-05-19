@@ -1,0 +1,16 @@
+{
+  "id": 24,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "What's the correct way to use the pd.cut() function for binning continuous data?",
+  "options": [
+    "pd.cut(df['age'], bins=[0, 18, 35, 60, 100], labels=['Child', 'Young', 'Middle', 'Senior'])",
+    "pd.cut(df['age'], bins=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])",
+    "pd.qcut(df['age'], q=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])",
+    "All of the above are valid uses"
+  ],
+  "answer": "All of the above are valid uses",
+  "explanation": "All approaches are valid: using explicit bin edges, equal-width bins (cut), or equal-frequency bins (qcut).",
+  "learning_resources": []
+}

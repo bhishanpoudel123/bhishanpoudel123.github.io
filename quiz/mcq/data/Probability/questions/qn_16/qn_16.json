@@ -1,0 +1,16 @@
+{
+  "id": 16,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a certain city, 60% of days are sunny, 30% are cloudy, and 10% are rainy. The probability of a traffic jam is 0.1 on sunny days, 0.3 on cloudy days, and 0.5 on rainy days. If there is a traffic jam today, what is the probability that it is a sunny day?",
+  "options": [
+    "0.33",
+    "0.40",
+    "0.60",
+    "0.67"
+  ],
+  "answer": "0.33",
+  "explanation": "Using Bayes' theorem: P(Sunny|Traffic Jam) = [P(Traffic Jam|Sunny) \u00d7 P(Sunny)] / P(Traffic Jam). P(Traffic Jam) = 0.1 \u00d7 0.6 + 0.3 \u00d7 0.3 + 0.5 \u00d7 0.1 = 0.06 + 0.09 + 0.05 = 0.2. Therefore, P(Sunny|Traffic Jam) = (0.1 \u00d7 0.6) / 0.2 = 0.06/0.2 = 0.3 or 30%.",
+  "learning_resources": []
+}

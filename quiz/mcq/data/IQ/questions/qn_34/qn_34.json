@@ -1,0 +1,16 @@
+{
+  "id": 34,
+  "tags": [
+    "IQ"
+  ],
+  "question": "61% converted to decimal notation is:",
+  "options": [
+    "6.01",
+    "6.1",
+    "0.61",
+    "61"
+  ],
+  "answer": "0.61",
+  "explanation": "Convert the percentage to decimal by dividing by 100.",
+  "learning_resources": []
+}

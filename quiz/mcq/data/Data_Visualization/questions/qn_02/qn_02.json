@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Data Visualization"
+  ],
+  "question": "Which function is used to create a line plot in Matplotlib?",
+  "options": [
+    "line()",
+    "plot()",
+    "draw()",
+    "graph()"
+  ],
+  "answer": "plot()",
+  "explanation": "`plot()` is used to generate line plots in Matplotlib.",
+  "learning_resources": []
+}

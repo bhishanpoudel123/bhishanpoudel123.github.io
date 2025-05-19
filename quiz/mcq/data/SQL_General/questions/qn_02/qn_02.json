@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "Which SQL clause is used to filter records?",
+  "options": [
+    "WHERE",
+    "GROUP BY",
+    "ORDER BY",
+    "HAVING"
+  ],
+  "answer": "WHERE",
+  "explanation": "The WHERE clause is used to filter records based on specific conditions.",
+  "learning_resources": []
+}

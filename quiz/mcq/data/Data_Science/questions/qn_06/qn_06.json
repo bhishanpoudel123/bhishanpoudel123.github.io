@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What does 'NaN' represent in a Pandas DataFrame?",
+  "options": [
+    "A very large number",
+    "Not a Number (missing or undefined value)",
+    "Negative number",
+    "Newly added node"
+  ],
+  "answer": "Not a Number (missing or undefined value)",
+  "explanation": "NaN stands for 'Not a Number' and represents missing or undefined numerical data in Pandas.",
+  "learning_resources": []
+}

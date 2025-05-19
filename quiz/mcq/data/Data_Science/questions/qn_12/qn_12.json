@@ -1,0 +1,16 @@
+{
+  "id": 12,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the main advantage of using a box plot?",
+  "options": [
+    "Showing exact data points",
+    "Displaying the distribution and outliers of a dataset",
+    "Comparing more than 10 categories clearly",
+    "Showing trends over time"
+  ],
+  "answer": "Displaying the distribution and outliers of a dataset",
+  "explanation": "Box plots effectively show a dataset's quartiles, median, and potential outliers.",
+  "learning_resources": []
+}

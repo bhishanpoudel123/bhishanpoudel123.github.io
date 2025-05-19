@@ -1,0 +1,16 @@
+{
+  "id": 42,
+  "tags": [
+    "IQ"
+  ],
+  "question": "If a person is half a century old. How old is he?",
+  "options": [
+    "75",
+    "50",
+    "25",
+    "100"
+  ],
+  "answer": "50",
+  "explanation": "Century means 100 years. Half a century means 50 years.",
+  "learning_resources": []
+}

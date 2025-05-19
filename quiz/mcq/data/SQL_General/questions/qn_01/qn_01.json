@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "Which SQL statement is used to extract data from a database?",
+  "options": [
+    "GET",
+    "SELECT",
+    "OPEN",
+    "EXTRACT"
+  ],
+  "answer": "SELECT",
+  "explanation": "The SELECT statement is used to extract data from a database table.",
+  "learning_resources": []
+}

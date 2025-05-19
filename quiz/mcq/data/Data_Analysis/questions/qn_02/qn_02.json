@@ -1,0 +1,22 @@
+{
+  "id": 2,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most efficient way to perform grouped sampling with replacement in pandas, ensuring each group maintains its original size?",
+  "options": [
+    "`df.groupby('group').apply(lambda x: x.sample(n=len(x), replace=True))`",
+    "`pd.concat([df[df['group']==g].sample(n=sum(df['group']==g), replace=True) for g in df['group'].unique()])`",
+    "`df.set_index('group').sample(frac=1, replace=True).reset_index()`",
+    "`df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])`"
+  ],
+  "answer": "`df.groupby('group').apply(lambda x: x.iloc[np.random.choice(len(x), size=len(x), replace=True)])`",
+  "explanation": "This approach uses numpy's efficient random sampling directly on indices, avoiding the overhead of pandas' sample function while maintaining group sizes and allowing replacement.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_02_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_02/markdown/qn_02_answer_01.md"
+    }
+  ]
+}

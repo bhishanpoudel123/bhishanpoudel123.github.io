@@ -1,0 +1,22 @@
+{
+  "id": 2,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most effective technique for calibrating probability estimates from a gradient boosting classifier?",
+  "options": [
+    "Use XGBoost's built-in calibration with scale_pos_weight parameter",
+    "Apply sklearn's CalibratedClassifierCV with isotonic regression",
+    "Implement custom Platt scaling with holdout validation",
+    "Use quantile regression forests instead of standard gradient boosting"
+  ],
+  "answer": "Apply sklearn's CalibratedClassifierCV with isotonic regression",
+  "explanation": "Isotonic regression via CalibratedClassifierCV is non-parametric and can correct any monotonic distortion in probability estimates, making it more flexible than Platt scaling, particularly for gradient boosting models which often produce well-ranked but not well-calibrated probabilities.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_02_answer_long_01",
+      "path": "data/Modelling/questions/qn_02/markdown/qn_02_answer_01.md"
+    }
+  ]
+}

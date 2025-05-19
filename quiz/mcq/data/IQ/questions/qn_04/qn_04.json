@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Jim makes 8.50 an hour and 3 extra for cleaning a store. If he worked 36 hours and cleaned 17 stores. How much money did he make?",
+  "options": [
+    "$300",
+    "$320",
+    "$357",
+    "$440"
+  ],
+  "answer": "$357",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 33,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is the difference between deep learning and traditional machine learning?",
+  "options": [
+    "Deep learning always performs better",
+    "Deep learning automatically learns feature hierarchies from raw data",
+    "Deep learning requires less data",
+    "There is no difference"
+  ],
+  "answer": "Deep learning automatically learns feature hierarchies from raw data",
+  "explanation": "Deep learning models can learn hierarchical feature representations directly from data, while traditional ML often requires manual feature engineering.",
+  "learning_resources": []
+}

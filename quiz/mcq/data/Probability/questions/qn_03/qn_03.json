@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a standard deck of 52 cards, what is the probability of drawing a royal flush (A, K, Q, J, 10 of the same suit) in a 5-card poker hand?",
+  "options": [
+    "1/649,740",
+    "1/30,940",
+    "4/2,598,960",
+    "1/2,598,960"
+  ],
+  "answer": "4/2,598,960",
+  "explanation": "There are C(52,5) = 2,598,960 possible 5-card hands from a standard deck. There are exactly 4 possible royal flushes (one for each suit). Therefore, the probability is 4/2,598,960 = 1/649,740 or approximately 0.00000154.",
+  "learning_resources": []
+}

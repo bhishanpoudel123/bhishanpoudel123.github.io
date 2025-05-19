@@ -1,0 +1,16 @@
+{
+  "id": 21,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What is the meaning of the 'exogenous variables' in the context of SARIMAX models?",
+  "options": [
+    "External predictor variables that influence the time series but are not influenced by it",
+    "Random error terms that follow an external probability distribution",
+    "Extraordinary observations that are treated as outliers",
+    "Exponential growth factors in the time series"
+  ],
+  "answer": "External predictor variables that influence the time series but are not influenced by it",
+  "explanation": "In SARIMAX models, exogenous variables (the 'X' part) are external predictor variables that influence the time series being modeled but are not influenced by it. These are independent variables that provide additional information beyond what's contained in the past values of the time series itself. For example, when forecasting electricity demand, temperature might be an exogenous variable since it affects demand but isn't affected by it. Unlike the autoregressive components that use the series' own past values, exogenous variables inject outside information into the model. This can significantly improve forecast accuracy when the time series is known to be affected by measurable external factors. Mathematically, exogenous variables enter the SARIMAX equation as a regression component.",
+  "learning_resources": []
+}

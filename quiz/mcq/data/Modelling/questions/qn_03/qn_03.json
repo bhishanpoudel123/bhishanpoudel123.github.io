@@ -1,0 +1,22 @@
+{
+  "id": 3,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which approach correctly implements proper nested cross-validation for model selection and evaluation?",
+  "options": [
+    "GridSearchCV inside a for loop of train_test_split iterations",
+    "Nested loops of KFold.split(), with inner loop for hyperparameter tuning",
+    "Pipeline with GridSearchCV followed by cross_val_score",
+    "Custom implementation with an outer cross-validation and inner RandomizedSearchCV"
+  ],
+  "answer": "Nested loops of KFold.split(), with inner loop for hyperparameter tuning",
+  "explanation": "Proper nested cross-validation requires an outer loop for performance estimation and an inner loop for hyperparameter tuning, completely separating the data used for model selection from the data used for model evaluation, avoiding optimistic bias.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_03_answer_long_01",
+      "path": "data/Modelling/questions/qn_03/markdown/qn_03_answer_01.md"
+    }
+  ]
+}

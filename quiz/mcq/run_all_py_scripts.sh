@@ -1,0 +1,3 @@
+python python_scripts/create_index_json_files.py
+python python_scripts/create_topic_html.py
+

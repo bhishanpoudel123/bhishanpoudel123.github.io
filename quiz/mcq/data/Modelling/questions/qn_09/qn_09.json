@@ -1,0 +1,22 @@
+{
+  "id": 9,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which implementation correctly handles ordinal encoding for machine learning while preserving the ordinal nature of features?",
+  "options": [
+    "sklearn.preprocessing.OrdinalEncoder",
+    "Custom encoding using pd.Categorical with ordered=True",
+    "sklearn.preprocessing.PolynomialFeatures with degree=1",
+    "Target-guided ordinal encoding based on response variable"
+  ],
+  "answer": "Custom encoding using pd.Categorical with ordered=True",
+  "explanation": "Using pandas Categorical with ordered=True preserves the ordinal relationship and allows for appropriate distance calculations between categories, which is essential for models that consider feature relationships (unlike OrdinalEncoder which assigns arbitrary numeric values without preserving distances).",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_09_answer_long_01",
+      "path": "data/Modelling/questions/qn_09/markdown/qn_09_answer_01.md"
+    }
+  ]
+}

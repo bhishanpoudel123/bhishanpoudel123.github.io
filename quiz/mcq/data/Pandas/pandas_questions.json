@@ -1,0 +1,38 @@
+{
+  "questions": [
+    "data/Pandas/questions/qn_01/qn_01.json",
+    "data/Pandas/questions/qn_02/qn_02.json",
+    "data/Pandas/questions/qn_03/qn_03.json",
+    "data/Pandas/questions/qn_04/qn_04.json",
+    "data/Pandas/questions/qn_05/qn_05.json",
+    "data/Pandas/questions/qn_06/qn_06.json",
+    "data/Pandas/questions/qn_07/qn_07.json",
+    "data/Pandas/questions/qn_08/qn_08.json",
+    "data/Pandas/questions/qn_09/qn_09.json",
+    "data/Pandas/questions/qn_10/qn_10.json",
+    "data/Pandas/questions/qn_11/qn_11.json",
+    "data/Pandas/questions/qn_12/qn_12.json",
+    "data/Pandas/questions/qn_13/qn_13.json",
+    "data/Pandas/questions/qn_14/qn_14.json",
+    "data/Pandas/questions/qn_15/qn_15.json",
+    "data/Pandas/questions/qn_16/qn_16.json",
+    "data/Pandas/questions/qn_17/qn_17.json",
+    "data/Pandas/questions/qn_18/qn_18.json",
+    "data/Pandas/questions/qn_19/qn_19.json",
+    "data/Pandas/questions/qn_20/qn_20.json",
+    "data/Pandas/questions/qn_21/qn_21.json",
+    "data/Pandas/questions/qn_22/qn_22.json",
+    "data/Pandas/questions/qn_23/qn_23.json",
+    "data/Pandas/questions/qn_24/qn_24.json",
+    "data/Pandas/questions/qn_25/qn_25.json",
+    "data/Pandas/questions/qn_26/qn_26.json",
+    "data/Pandas/questions/qn_27/qn_27.json",
+    "data/Pandas/questions/qn_28/qn_28.json",
+    "data/Pandas/questions/qn_29/qn_29.json",
+    "data/Pandas/questions/qn_30/qn_30.json"
+  ],
+  "metadata": {
+    "topic": "Pandas",
+    "question_count": 30
+  }
+}

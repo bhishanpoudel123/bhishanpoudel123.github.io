@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "When implementing stacking ensemble with scikit-learn, what's the most rigorous approach to prevent target leakage in the meta-learner?",
+  "options": [
+    "Use StackingClassifier with cv=5",
+    "Manually implement out-of-fold predictions for each base learner",
+    "Train base models on 70% of data and meta-model on remaining 30%",
+    "Use scikit-learn's pipeline to ensure proper nesting of cross-validation"
+  ],
+  "answer": "Manually implement out-of-fold predictions for each base learner",
+  "explanation": "Manually generating out-of-fold predictions ensures the meta-learner only sees predictions made on data that base models weren't trained on, fully preventing leakage while utilizing all data. This approach is more flexible than StackingClassifier and can incorporate diverse base models while maintaining proper validation boundaries.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_01_answer_long_01",
+      "path": "data/Modelling/questions/qn_01/markdown/qn_01_answer_01.md"
+    }
+  ]
+}

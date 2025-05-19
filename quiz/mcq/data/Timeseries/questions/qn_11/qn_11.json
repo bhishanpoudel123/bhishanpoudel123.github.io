@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What does it mean when we say a time series exhibits 'stationarity'?",
+  "options": [
+    "Its statistical properties remain constant over time",
+    "It has no missing values",
+    "It shows strong seasonality",
+    "It has been sampled at regular intervals"
+  ],
+  "answer": "Its statistical properties remain constant over time",
+  "explanation": "A stationary time series has statistical properties that remain constant over time. Specifically, it has a constant mean, constant variance, and a constant autocorrelation structure. This means the process generating the time series is in statistical equilibrium. Stationarity is a crucial assumption for many time series models, including ARIMA, because it ensures that patterns learned from historical data will continue to be valid in the future. Non-stationary series might have trends (changing mean) or heteroscedasticity (changing variance), which can lead to unreliable forecasts if not properly addressed through transformations like differencing or variance stabilization.",
+  "learning_resources": []
+}

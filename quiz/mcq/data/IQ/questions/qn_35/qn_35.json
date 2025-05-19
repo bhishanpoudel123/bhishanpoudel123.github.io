@@ -1,0 +1,16 @@
+{
+  "id": 35,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Which number has the smallest value?",
+  "options": [
+    "2",
+    "20",
+    "0.2",
+    "0.02"
+  ],
+  "answer": "0.02",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

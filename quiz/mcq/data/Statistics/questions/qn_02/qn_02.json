@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Statistics"
+  ],
+  "question": "What is the main difference between population and sample in statistics?",
+  "options": [
+    "Sample is larger than population",
+    "Population is derived from sample",
+    "Sample is a subset of population",
+    "They are the same"
+  ],
+  "answer": "Sample is a subset of population",
+  "explanation": "A population includes all elements from a set of data, while a sample consists of one or more observations drawn from the population.",
+  "learning_resources": []
+}

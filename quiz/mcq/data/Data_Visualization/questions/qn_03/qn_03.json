@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "tags": [
+    "Data Visualization"
+  ],
+  "question": "What does the `Seaborn` library primarily focus on?",
+  "options": [
+    "Statistical data visualization",
+    "Machine learning",
+    "Data preprocessing",
+    "Text analysis"
+  ],
+  "answer": "Statistical data visualization",
+  "explanation": "`Seaborn` builds on top of Matplotlib and integrates closely with Pandas for statistical plots.",
+  "learning_resources": []
+}

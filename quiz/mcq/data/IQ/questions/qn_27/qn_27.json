@@ -1,0 +1,16 @@
+{
+  "id": 27,
+  "tags": [
+    "IQ"
+  ],
+  "question": "What number should come next?\n8, 4, 2, 1, 1/2, 1/4, _____",
+  "options": [
+    "1/16",
+    "1/12",
+    "1/8",
+    "1/6"
+  ],
+  "answer": "1/8",
+  "explanation": "Each next number are half of the previous number.",
+  "learning_resources": []
+}

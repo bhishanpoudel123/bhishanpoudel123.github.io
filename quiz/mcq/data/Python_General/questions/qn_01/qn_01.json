@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "tags": [
+    "Python General"
+  ],
+  "question": "What is the output of `len('Python')`?",
+  "options": [
+    "5",
+    "6",
+    "7",
+    "0"
+  ],
+  "answer": "6",
+  "explanation": "The string 'Python' has 6 characters.",
+  "learning_resources": []
+}

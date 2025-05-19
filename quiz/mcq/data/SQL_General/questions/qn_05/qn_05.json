@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "SQL General"
+  ],
+  "question": "Which command is used to remove all records from a table in SQL without deleting the table?",
+  "options": [
+    "DELETE",
+    "REMOVE",
+    "DROP",
+    "TRUNCATE"
+  ],
+  "answer": "TRUNCATE",
+  "explanation": "TRUNCATE removes all records from a table but retains the table structure.",
+  "learning_resources": []
+}

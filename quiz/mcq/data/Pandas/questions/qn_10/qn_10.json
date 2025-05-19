@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "How do you efficiently concatenate many DataFrames with identical columns?",
+  "options": [
+    "pd.join([df1, df2, df3])",
+    "pd.merge([df1, df2, df3])",
+    "pd.concat([df1, df2, df3])",
+    "df1.append([df2, df3])"
+  ],
+  "answer": "pd.concat([df1, df2, df3])",
+  "explanation": "pd.concat() is designed to efficiently concatenate pandas objects along a particular axis with optional set logic.",
+  "learning_resources": []
+}

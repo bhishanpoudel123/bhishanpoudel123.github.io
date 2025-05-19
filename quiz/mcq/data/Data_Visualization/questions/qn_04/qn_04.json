@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "Data Visualization"
+  ],
+  "question": "Which method can be used to show the distribution of a single variable?",
+  "options": [
+    "barplot()",
+    "distplot()",
+    "scatterplot()",
+    "lineplot()"
+  ],
+  "answer": "distplot()",
+  "explanation": "`distplot()` or `histplot()` can be used to show distribution of a variable.",
+  "learning_resources": []
+}

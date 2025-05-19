@@ -1,0 +1,16 @@
+{
+  "id": 15,
+  "tags": [
+    "IQ"
+  ],
+  "question": "The volume of a rectangular box is 100 cubic inches. If the minimum dimension of any given side is 1 inch, which of the alternatives is its greatest possible length?",
+  "options": [
+    "90 inches",
+    "80 inches",
+    "100 inches",
+    "110 inches"
+  ],
+  "answer": "100 inches",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 21,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "What's the most robust approach to handle concept drift in a production machine learning system?",
+  "options": [
+    "Implement automatic model retraining when performance degrades below a threshold",
+    "Use an ensemble of models with different time windows",
+    "Implement drift detection algorithms with adaptive learning techniques",
+    "Deploy a champion-challenger framework with continuous evaluation"
+  ],
+  "answer": "Implement drift detection algorithms with adaptive learning techniques",
+  "explanation": "This approach combines statistical drift detection (e.g., ADWIN, DDM, or KSWIN) with adaptive learning methods that can continuously update models or model weights as new patterns emerge, allowing for immediate adaptation to changing data distributions.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_21_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_21/markdown/qn_21_answer_01.md"
+    }
+  ]
+}

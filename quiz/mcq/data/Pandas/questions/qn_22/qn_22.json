@@ -1,0 +1,16 @@
+{
+  "id": 22,
+  "tags": [
+    "Pandas"
+  ],
+  "question": "Which method is most efficient for applying a custom function to a DataFrame that returns a scalar?",
+  "options": [
+    "df.pipe(custom_func)",
+    "df.transform(custom_func)",
+    "df.apply(custom_func)",
+    "custom_func(df)"
+  ],
+  "answer": "df.pipe(custom_func)",
+  "explanation": "pipe() is designed for functions that take and return a DataFrame, creating readable method chains when applying multiple functions.",
+  "learning_resources": []
+}

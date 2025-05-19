@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "Statistics"
+  ],
+  "question": "In a normal distribution, what percentage of data lies within one standard deviation of the mean?",
+  "options": [
+    "50%",
+    "68%",
+    "95%",
+    "99.7%"
+  ],
+  "answer": "68%",
+  "explanation": "In a normal distribution, approximately 68% of the data falls within one standard deviation of the mean.",
+  "learning_resources": []
+}

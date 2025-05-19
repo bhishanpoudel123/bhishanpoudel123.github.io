@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which approach correctly implements proper evaluation metrics for a multi-class imbalanced classification problem?",
+  "options": [
+    "Use macro-averaged precision, recall, and F1 score",
+    "Implement balanced accuracy and Cohen's kappa statistic",
+    "Use ROC AUC with one-vs-rest approach and weighted averaging",
+    "Apply precision-recall curves with prevalence-corrected metrics"
+  ],
+  "answer": "Apply precision-recall curves with prevalence-corrected metrics",
+  "explanation": "For imbalanced multi-class problems, precision-recall curves with prevalence correction (e.g., weighted by actual class frequencies) provide more informative evaluation than accuracy or ROC-based metrics, focusing on relevant performance for minority classes while accounting for class distribution.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_30_answer_long_01",
+      "path": "data/Modelling/questions/qn_30/markdown/qn_30_answer_01.md"
+    }
+  ]
+}

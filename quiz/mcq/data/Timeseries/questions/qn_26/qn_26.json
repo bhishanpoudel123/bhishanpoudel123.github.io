@@ -1,0 +1,16 @@
+{
+  "id": 26,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What does Facebook Prophet use to model seasonality in time series data?",
+  "options": [
+    "Fourier series for multiple seasonal periods",
+    "ARMA models with seasonal lags",
+    "Exponential smoothing with seasonal components",
+    "Seasonal dummies for each period"
+  ],
+  "answer": "Fourier series for multiple seasonal periods",
+  "explanation": "Facebook Prophet uses Fourier series to model seasonality in time series data. This approach represents seasonal patterns as a sum of sine and cosine terms of different frequencies, allowing for flexible modeling of complex seasonal patterns. Prophet can simultaneously model multiple seasonal periods (e.g., daily, weekly, and yearly seasonality) by using different Fourier series for each. The number of terms in each Fourier series (specified by the 'order' parameter) controls the flexibility of the seasonal component - higher orders capture more complex patterns but risk overfitting. This approach is particularly powerful because it can handle irregular time series and missing data better than traditional seasonal ARIMA models, which require regular time intervals.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 22,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is a confusion matrix used for?",
+  "options": [
+    "Visualizing high-dimensional data",
+    "Evaluating the performance of a classification model",
+    "Storing large datasets efficiently",
+    "Performing matrix calculations in linear algebra"
+  ],
+  "answer": "Evaluating the performance of a classification model",
+  "explanation": "A confusion matrix shows true/false positives/negatives, helping evaluate classification model performance.",
+  "learning_resources": []
+}

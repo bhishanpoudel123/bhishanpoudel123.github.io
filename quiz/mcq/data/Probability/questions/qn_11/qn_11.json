@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a standard normal distribution, what is the probability that a randomly selected observation falls between -1.96 and 1.96?",
+  "options": [
+    "0.90",
+    "0.95",
+    "0.99",
+    "0.68"
+  ],
+  "answer": "0.95",
+  "explanation": "In a standard normal distribution, the area between z-scores of -1.96 and 1.96 corresponds to 95% of the distribution. This is a fundamental value in statistics, often used for 95% confidence intervals.",
+  "learning_resources": []
+}

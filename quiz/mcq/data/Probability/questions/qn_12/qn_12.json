@@ -1,0 +1,16 @@
+{
+  "id": 12,
+  "tags": [
+    "Probability"
+  ],
+  "question": "A manufacturing process has a 3% defect rate. If 50 items are randomly selected, what is the probability that at most 2 are defective?",
+  "options": [
+    "0.4769",
+    "0.5231",
+    "0.6063",
+    "0.7149"
+  ],
+  "answer": "0.6063",
+  "explanation": "This follows a binomial distribution with n=50 and p=0.03. P(X \u2264 2) = P(X=0) + P(X=1) + P(X=2) = C(50,0) \u00d7 (0.03)^0 \u00d7 (0.97)^50 + C(50,1) \u00d7 (0.03)^1 \u00d7 (0.97)^49 + C(50,2) \u00d7 (0.03)^2 \u00d7 (0.97)^48 \u2248 0.2231 + 0.3453 + 0.2379 = 0.6063 or about 60.63%.",
+  "learning_resources": []
+}

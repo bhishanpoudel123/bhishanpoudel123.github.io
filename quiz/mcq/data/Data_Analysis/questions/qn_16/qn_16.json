@@ -1,0 +1,22 @@
+{
+  "id": 16,
+  "tags": [
+    "Data Analysis"
+  ],
+  "question": "Which approach correctly implements a memory-efficient data pipeline for processing and analyzing a dataset too large to fit in memory?",
+  "options": [
+    "Use pandas with `low_memory=True` and `chunksize` parameter",
+    "Implement `dask.dataframe` with lazy evaluation and out-of-core computation",
+    "Use pandas-on-spark (formerly Koalas) with distributed processing",
+    "Implement `vaex` for memory-mapping and out-of-core dataframes"
+  ],
+  "answer": "Implement `dask.dataframe` with lazy evaluation and out-of-core computation",
+  "explanation": "dask.dataframe provides a pandas-like API with lazy evaluation, parallel execution, and out-of-core computation, allowing for scalable data processing beyond available RAM while maintaining familiar pandas operations and requiring minimal code changes.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_16_answer_long_01",
+      "path": "data/Data_Analysis/questions/qn_16/markdown/qn_16_answer_01.md"
+    }
+  ]
+}

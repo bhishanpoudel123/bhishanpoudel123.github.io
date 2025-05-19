@@ -1,0 +1,22 @@
+{
+  "id": 24,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "What's the most statistically sound approach to implement feature selection for time series forecasting?",
+  "options": [
+    "Apply recursive feature elimination with time series cross-validation",
+    "Use LASSO regression with temporal blocking of folds",
+    "Implement feature importance from tree-based models with purged cross-validation",
+    "Use filter methods based on mutual information with time-lagged target variable"
+  ],
+  "answer": "Implement feature importance from tree-based models with purged cross-validation",
+  "explanation": "Tree-based feature importance combined with purged cross-validation (which leaves gaps between train and test sets) correctly handles temporal dependence in the data, preventing information leakage while identifying features that have genuine predictive power for future time points.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_24_answer_long_01",
+      "path": "data/Modelling/questions/qn_24/markdown/qn_24_answer_01.md"
+    }
+  ]
+}

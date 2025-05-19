@@ -1,0 +1,16 @@
+{
+  "id": 19,
+  "tags": [
+    "Probability"
+  ],
+  "question": "In a random sample of 20 people, what is the probability that at least 2 people were born in the same month of the year (assuming uniform distribution of birth months)?",
+  "options": [
+    "0.8545",
+    "0.8667",
+    "0.9139",
+    "0.9577"
+  ],
+  "answer": "0.9139",
+  "explanation": "The probability that all 20 people were born in different months is 0 since there are only 12 months. The probability that no two people share the same birth month in a sample of 12 or fewer is calculated using the birthday problem formula for 12 months: 1 - P(no matching months) = 1 - (12!/12^n \u00d7 (12-n)!) for n=12. For n>12, the probability of at least one match is 1.",
+  "learning_resources": []
+}

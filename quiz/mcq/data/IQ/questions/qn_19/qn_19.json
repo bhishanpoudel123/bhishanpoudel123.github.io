@@ -1,0 +1,16 @@
+{
+  "id": 19,
+  "tags": [
+    "IQ"
+  ],
+  "question": "Which digit represents the tenths space in 10,987.36?",
+  "options": [
+    "3",
+    "8",
+    "6",
+    "7"
+  ],
+  "answer": "3",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

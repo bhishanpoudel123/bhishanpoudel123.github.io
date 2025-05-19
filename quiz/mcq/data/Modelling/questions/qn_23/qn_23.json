@@ -1,0 +1,22 @@
+{
+  "id": 23,
+  "tags": [
+    "Modelling"
+  ],
+  "question": "Which method is most appropriate for tuning hyperparameters when training time is extremely limited?",
+  "options": [
+    "Use model-based optimization with Gaussian Processes",
+    "Implement multi-fidelity optimization with Hyperband",
+    "Apply Optuna with pruning functionality",
+    "Use meta-learning from similar tasks to warm-start optimization"
+  ],
+  "answer": "Implement multi-fidelity optimization with Hyperband",
+  "explanation": "Hyperband uses a bandit-based approach to allocate resources efficiently, quickly discarding poor configurations and allocating more compute to promising ones, making it particularly effective when training time is limited and early performance is indicative of final performance.",
+  "learning_resources": [
+    {
+      "type": "markdown",
+      "title": "qn_23_answer_long_01",
+      "path": "data/Modelling/questions/qn_23/markdown/qn_23_answer_01.md"
+    }
+  ]
+}

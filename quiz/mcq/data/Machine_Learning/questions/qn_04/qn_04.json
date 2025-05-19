@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "tags": [
+    "Machine Learning"
+  ],
+  "question": "What is the main goal of unsupervised learning?",
+  "options": [
+    "Predict outcomes based on labeled data",
+    "Optimize a function",
+    "Find hidden patterns or groupings in data",
+    "Validate model accuracy"
+  ],
+  "answer": "Find hidden patterns or groupings in data",
+  "explanation": "Unsupervised learning aims to discover the underlying structure of data without predefined labels.",
+  "learning_resources": []
+}

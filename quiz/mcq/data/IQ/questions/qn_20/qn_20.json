@@ -1,0 +1,16 @@
+{
+  "id": 20,
+  "tags": [
+    "IQ"
+  ],
+  "question": "How many pairs are duplicates?\n987878; 987788\n124555; 123555\n6845; 6845\n45641; 45641\n9898547; -9898745",
+  "options": [
+    "4",
+    "1",
+    "2",
+    "3"
+  ],
+  "answer": "2",
+  "explanation": "Apply logic or perform basic arithmetic to solve.",
+  "learning_resources": []
+}

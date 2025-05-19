@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "tags": [
+    "SQL Sqlite"
+  ],
+  "question": "Which SQLite command allows you to see the schema of a table?",
+  "options": [
+    "PRAGMA schema",
+    "SHOW TABLE",
+    "DESCRIBE",
+    ".schema"
+  ],
+  "answer": ".schema",
+  "explanation": "`.schema` is a command in the SQLite shell that shows the schema for tables.",
+  "learning_resources": []
+}

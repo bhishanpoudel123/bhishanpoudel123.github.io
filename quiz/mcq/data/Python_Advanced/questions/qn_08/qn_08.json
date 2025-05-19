@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "tags": [
+    "Python Advanced"
+  ],
+  "question": "How can you profile memory usage in a Python function?",
+  "options": [
+    "Using memoryview",
+    "Using tracemalloc",
+    "Using psutil only",
+    "Using timeit"
+  ],
+  "answer": "Using tracemalloc",
+  "explanation": "`tracemalloc` tracks memory allocations in Python.",
+  "learning_resources": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": 45,
+  "tags": [
+    "IQ"
+  ],
+  "question": "What is the relation betweed Credence and Credit?",
+  "options": [
+    "unrelated",
+    "similar",
+    "opposite",
+    "contradictory"
+  ],
+  "answer": "similar",
+  "explanation": "Credence means belief or trust, while credit refers to the ability to obtain goods or services before payment. They are related in the context of trust and belief.",
+  "learning_resources": []
+}

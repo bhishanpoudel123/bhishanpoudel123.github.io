@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What does the groupby() operation in Pandas return before aggregation?",
+  "options": [
+    "A transformed DataFrame",
+    "A list of grouped indices",
+    "A DataFrameGroupBy object",
+    "A Series with group labels"
+  ],
+  "answer": "A DataFrameGroupBy object",
+  "explanation": "groupby() returns a DataFrameGroupBy object which can then be aggregated using functions like sum(), mean(), etc.",
+  "learning_resources": []
+}

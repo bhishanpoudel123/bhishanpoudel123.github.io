@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "Which of the following is NOT a measure of central tendency?",
+  "options": [
+    "Mean",
+    "Median",
+    "Mode",
+    "Standard deviation"
+  ],
+  "answer": "Standard deviation",
+  "explanation": "Standard deviation measures dispersion, not central tendency. The three main measures of central tendency are mean, median, and mode.",
+  "learning_resources": []
+}

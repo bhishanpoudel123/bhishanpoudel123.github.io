@@ -1,0 +1,16 @@
+{
+  "id": 15,
+  "tags": [
+    "Timeseries"
+  ],
+  "question": "What does the Ljung-Box test evaluate in time series analysis?",
+  "options": [
+    "Whether residuals exhibit autocorrelation",
+    "Whether the time series is stationary",
+    "Whether the model has the correct number of parameters",
+    "Whether the series has significant seasonality"
+  ],
+  "answer": "Whether residuals exhibit autocorrelation",
+  "explanation": "The Ljung-Box test is a statistical test used to evaluate whether residuals from a time series model exhibit autocorrelation. The null hypothesis is that the residuals are independently distributed (i.e., no autocorrelation). If the p-value is less than the significance level (typically 0.05), we reject the null hypothesis and conclude that the residuals contain significant autocorrelation, suggesting the model hasn't captured all the patterns in the data. The test examines multiple lags simultaneously, making it more comprehensive than just looking at individual autocorrelation values. A good ARIMA model should have residuals that pass the Ljung-Box test, indicating they approximate white noise.",
+  "learning_resources": []
+}

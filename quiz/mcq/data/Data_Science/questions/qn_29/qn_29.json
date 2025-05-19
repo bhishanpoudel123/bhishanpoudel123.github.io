@@ -1,0 +1,16 @@
+{
+  "id": 29,
+  "tags": [
+    "Data Science"
+  ],
+  "question": "What is feature engineering?",
+  "options": [
+    "Creating new features from existing data",
+    "Selecting the most important features",
+    "Building machine learning models",
+    "Visualizing data features"
+  ],
+  "answer": "Creating new features from existing data",
+  "explanation": "Feature engineering involves creating new input features from existing data to improve model performance.",
+  "learning_resources": []
+}
