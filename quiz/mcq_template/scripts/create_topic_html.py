@@ -16,17 +16,28 @@ def read_file_content(file_path):
         return f"Error reading file: {str(e)}"
 
 def render_markdown(content):
-    """Convert markdown to HTML with code syntax highlighting support"""
+    """Convert markdown to HTML with proper code block handling"""
     import markdown
     from markdown.extensions.codehilite import CodeHiliteExtension
     from markdown.extensions.fenced_code import FencedCodeExtension
     
     extensions = [
-        CodeHiliteExtension(linenums=False, css_class='highlight'),
+        CodeHiliteExtension(
+            linenums=False,
+            css_class='language-',
+            guess_lang=True,
+            use_pygments=False
+        ),
         FencedCodeExtension(),
         'tables',
         'nl2br'
     ]
+    
+    # Ensure code blocks have language classes
+    content = content.replace('```python', '```python')
+    content = content.replace('```javascript', '```javascript')
+    content = content.replace('```bash', '```bash')
+    content = content.replace('```sql', '```sql')
     
     return markdown.markdown(content, extensions=extensions)
 
@@ -47,8 +58,10 @@ def create_topic_html(topic_dir, topic_folder):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{topic_name} Learning Resources</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+    <!-- PrismJS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet" />
     <style>
         body {{
             font-family: Arial, sans-serif;
@@ -100,10 +113,63 @@ def create_topic_html(topic_dir, topic_folder):
             font-weight: bold;
             cursor: pointer;
         }}
-        pre {{
-            margin: 15px 0;
+        pre[class*="language-"] {{
+            margin: 1em 0;
             border-radius: 5px;
-            overflow-x: auto;
+            background: #2d2d2d;
+            padding: 1em;
+            overflow: auto;
+        }}
+        code[class*="language-"] {{
+            font-size: 14px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+        }}
+        .token.comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {{
+            color: #999;
+        }}
+        .token.punctuation {{
+            color: #ccc;
+        }}
+        .token.property,
+        .token.tag,
+        .token.boolean,
+        .token.number,
+        .token.constant,
+        .token.symbol,
+        .token.deleted {{
+            color: #f92672;
+        }}
+        .token.selector,
+        .token.attr-name,
+        .token.string,
+        .token.char,
+        .token.builtin,
+        .token.inserted {{
+            color: #a6e22e;
+        }}
+        .token.operator,
+        .token.entity,
+        .token.url,
+        .language-css .token.string,
+        .style .token.string {{
+            color: #67cdcc;
+        }}
+        .token.atrule,
+        .token.attr-value,
+        .token.keyword {{
+            color: #66d9ef;
+        }}
+        .token.function,
+        .token.class-name {{
+            color: #e6db74;
+        }}
+        .token.regex,
+        .token.important,
+        .token.variable {{
+            color: #fd971f;
         }}
         .resource {{
             margin-top: 15px;
@@ -137,11 +203,26 @@ def create_topic_html(topic_dir, topic_folder):
         </div>
     </div>
 
+    <!-- PrismJS Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <!-- PrismJS Autoloader -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <!-- PrismJS Toolbar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <!-- PrismJS Copy to Clipboard -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <!-- PrismJS Line Numbers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <!-- Language Components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {{
+            // Generate TOC
             const questions = document.querySelectorAll('.question');
             const tocList = document.getElementById('toc-list');
             
@@ -158,16 +239,17 @@ def create_topic_html(topic_dir, topic_folder):
                 tocList.appendChild(tocItem);
             }});
             
-            const details = document.querySelectorAll('details');
-            details.forEach(function(detail) {{
+            // Initialize Prism for all code blocks
+            Prism.highlightAll();
+            
+            // Special handling for details elements
+            document.querySelectorAll('details').forEach(detail => {{
                 detail.addEventListener('toggle', function() {{
                     if (this.open) {{
                         Prism.highlightAllUnder(this);
                     }}
                 }});
             }});
-            
-            Prism.highlightAll();
         }});
     </script>
 </body>
@@ -219,6 +301,7 @@ def create_topic_html(topic_dir, topic_folder):
                 question_div.append(resources_title)
                 
                 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+                
                 for resource in question_data['learning_resources']:
                     resource_path = resource['path']
                     
@@ -244,17 +327,17 @@ def create_topic_html(topic_dir, topic_folder):
                             resource_div.append(BeautifulSoup(content, 'html.parser'))
                         elif resource['type'] == 'code':
                             content = read_file_content(full_path)
-                            pre = soup.new_tag('pre')
+                            pre = soup.new_tag('pre', **{'class': 'line-numbers'})
                             file_extension = resource_path.split('.')[-1].lower()
-                            language = file_extension
-                            if file_extension == 'py':
-                                language = 'python'
-                            elif file_extension == 'js':
-                                language = 'javascript'
-                            elif file_extension == 'md':
-                                language = 'markdown'
+                            language = {
+                                'py': 'python',
+                                'js': 'javascript',
+                                'sh': 'bash',
+                                'sql': 'sql',
+                                'md': 'markdown'
+                            }.get(file_extension, file_extension)
                             
-                            code = soup.new_tag('code', attrs={'class': f"language-{language}"})
+                            code = soup.new_tag('code', **{'class': f'language-{language}'})
                             code.string = content
                             pre.append(code)
                             resource_div.append(pre)
@@ -319,6 +402,6 @@ if __name__ == "__main__":
         from markdown.extensions.fenced_code import FencedCodeExtension
     except ImportError:
         print("Installing required packages...")
-        # import subprocess
+        import subprocess
         # subprocess.call(['pip', 'install', 'beautifulsoup4', 'markdown', 'pygments'])
     main()
