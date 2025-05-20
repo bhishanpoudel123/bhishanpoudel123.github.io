@@ -21,7 +21,6 @@ def render_markdown(content):
     from markdown.extensions.codehilite import CodeHiliteExtension
     from markdown.extensions.fenced_code import FencedCodeExtension
     
-    # Use extensions for better code block handling
     extensions = [
         CodeHiliteExtension(linenums=False, css_class='highlight'),
         FencedCodeExtension(),
@@ -48,7 +47,6 @@ def create_topic_html(topic_dir, topic_folder):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{topic_name} Learning Resources</title>
-    <!-- PrismJS CSS for syntax highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
     <style>
@@ -114,7 +112,6 @@ def create_topic_html(topic_dir, topic_folder):
             font-weight: bold;
             color: #2c3e50;
         }}
-        /* Minor adjustments for Prism */
         :not(pre) > code {{
             padding: 2px 5px;
             background: #f0f0f0;
@@ -140,14 +137,11 @@ def create_topic_html(topic_dir, topic_folder):
         </div>
     </div>
 
-    <!-- PrismJS scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     
     <script>
-        // Generate table of contents and setup Prism
         document.addEventListener('DOMContentLoaded', function() {{
-            // Generate TOC
             const questions = document.querySelectorAll('.question');
             const tocList = document.getElementById('toc-list');
             
@@ -164,18 +158,15 @@ def create_topic_html(topic_dir, topic_folder):
                 tocList.appendChild(tocItem);
             }});
             
-            // Setup Prism highlight for code in details when expanded
             const details = document.querySelectorAll('details');
             details.forEach(function(detail) {{
                 detail.addEventListener('toggle', function() {{
                     if (this.open) {{
-                        // Force Prism to highlight code in this section
                         Prism.highlightAllUnder(this);
                     }}
                 }});
             }});
             
-            // Initial highlighting
             Prism.highlightAll();
         }});
     </script>
@@ -183,12 +174,10 @@ def create_topic_html(topic_dir, topic_folder):
 </html>
 """
     
-    # Parse the HTML template
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(html_template, 'html.parser')
     questions_container = soup.find('div', {'id': 'questions-container'})
     
-    # Find all question folders
     question_folders = sorted([d for d in os.listdir(questions_dir) if d.startswith('qn_')])
     
     for index, qn_folder in enumerate(question_folders):
@@ -199,20 +188,16 @@ def create_topic_html(topic_dir, topic_folder):
             continue
         
         try:
-            # Load question data
             with open(qn_json, 'r', encoding='utf-8') as f:
                 question_data = json.load(f)
             
-            # Create question section
             question_div = soup.new_tag('div', attrs={'class': 'question'})
             question_div['id'] = f'q-{index}'
             
-            # Add question title
             qn_title = soup.new_tag('h2', attrs={'class': 'question-title'})
             qn_title.string = f"Qn {question_data['id']}: {question_data['question']}"
             question_div.append(qn_title)
             
-            # Add answer
             answer_div = soup.new_tag('div', attrs={'class': 'answer'})
             answer_title = soup.new_tag('h3')
             answer_title.string = "Answer"
@@ -220,7 +205,6 @@ def create_topic_html(topic_dir, topic_folder):
             answer_div.append(BeautifulSoup(render_markdown(question_data['answer']), 'html.parser'))
             question_div.append(answer_div)
             
-            # Add explanation
             if 'explanation' in question_data and question_data['explanation']:
                 explanation_div = soup.new_tag('div', attrs={'class': 'explanation'})
                 explanation_title = soup.new_tag('h3')
@@ -229,27 +213,21 @@ def create_topic_html(topic_dir, topic_folder):
                 explanation_div.append(BeautifulSoup(render_markdown(question_data['explanation']), 'html.parser'))
                 question_div.append(explanation_div)
             
-            # Add learning resources if they exist
             if 'learning_resources' in question_data and question_data['learning_resources']:
                 resources_title = soup.new_tag('h3')
                 resources_title.string = "Additional Resources"
                 question_div.append(resources_title)
                 
-                # Reference to project root (2 levels up from the script)
-                project_root = os.path.join(os.path.dirname(__file__), '..')
-                
+                project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
                 for resource in question_data['learning_resources']:
                     resource_path = resource['path']
                     
-                    # Fix the path resolution
+                    # Handle both absolute and relative paths
                     if resource_path.startswith('data/'):
-                        # Path is relative to project root, construct full path
-                        full_path = os.path.join(project_root, resource_path)
+                        full_path = os.path.normpath(os.path.join(project_root, resource_path))
                     else:
-                        # Path is relative to question directory
-                        full_path = os.path.join(qn_dir, resource_path)
+                        full_path = os.path.normpath(os.path.join(qn_dir, resource_path))
                     
-                    # Create collapsible resource section
                     details = soup.new_tag('details')
                     summary = soup.new_tag('summary')
                     summary.string = f"{resource['title']} ({resource['type']})"
@@ -258,7 +236,6 @@ def create_topic_html(topic_dir, topic_folder):
                     resource_div = soup.new_tag('div', attrs={'class': 'resource'})
                     
                     try:
-                        # Handle different resource types
                         if resource['type'] == 'markdown':
                             content = read_file_content(full_path)
                             resource_div.append(BeautifulSoup(render_markdown(content), 'html.parser'))
@@ -268,7 +245,6 @@ def create_topic_html(topic_dir, topic_folder):
                         elif resource['type'] == 'code':
                             content = read_file_content(full_path)
                             pre = soup.new_tag('pre')
-                            # Determine language from file extension
                             file_extension = resource_path.split('.')[-1].lower()
                             language = file_extension
                             if file_extension == 'py':
@@ -294,7 +270,6 @@ def create_topic_html(topic_dir, topic_folder):
                         details.append(resource_div)
                         question_div.append(details)
             
-            # Add the question to the container
             questions_container.append(question_div)
             
         except Exception as e:
@@ -303,7 +278,6 @@ def create_topic_html(topic_dir, topic_folder):
             error_div['style'] = "color: red; padding: 10px; margin: 10px 0; border: 1px solid red;"
             questions_container.append(error_div)
     
-    # Write the final HTML file
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     
@@ -311,7 +285,6 @@ def create_topic_html(topic_dir, topic_folder):
     return output_file
 
 def main():
-    # Get the data directory path
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
     
     if not os.path.exists(data_dir):
@@ -321,7 +294,6 @@ def main():
     print("🚀 Starting HTML creation for topics...")
     print(f"📂 Data directory: {os.path.abspath(data_dir)}")
     
-    # Find all topic directories
     topics = [d for d in os.listdir(data_dir) 
               if os.path.isdir(os.path.join(data_dir, d)) and not d.startswith('.')]
     
@@ -331,7 +303,6 @@ def main():
     
     print(f"\nFound {len(topics)} topics: {', '.join(format_category_name(t) for t in topics)}")
     
-    # Create HTML for each topic
     for topic_folder in topics:
         topic_dir = os.path.join(data_dir, topic_folder)
         html_file = create_topic_html(topic_dir, topic_folder)
@@ -341,7 +312,6 @@ def main():
     print("\n🏁 Completed HTML generation for all topics")
 
 if __name__ == "__main__":
-    # Install required packages if not available
     try:
         from bs4 import BeautifulSoup
         import markdown
@@ -349,6 +319,6 @@ if __name__ == "__main__":
         from markdown.extensions.fenced_code import FencedCodeExtension
     except ImportError:
         print("Installing required packages...")
-        #import subprocess
-        #subprocess.call(['pip', 'install', 'beautifulsoup4', 'markdown', 'pygments'])
+        # import subprocess
+        # subprocess.call(['pip', 'install', 'beautifulsoup4', 'markdown', 'pygments'])
     main()
