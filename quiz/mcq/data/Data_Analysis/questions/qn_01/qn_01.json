@@ -17,6 +17,16 @@
       "type": "markdown",
       "title": "qn_01_answer_long_01",
       "path": "data/Data_Analysis/questions/qn_01/markdown/qn_01_answer_01.md"
+    },
+    {
+      "type": "markdown",
+      "title": "PCA Explanation",
+      "path": "data/Data_Analysis/questions/qn_01/markdown/PCA_explanation.md"
+    },
+    {
+      "type": "html",
+      "title": "PCA Alternatives",
+      "path": "data/Data_Analysis/questions/qn_01/markdown/pca_alternatives.html"
     }
   ]
 }
