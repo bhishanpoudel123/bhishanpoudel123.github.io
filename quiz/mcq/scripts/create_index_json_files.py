@@ -13,14 +13,18 @@ def validate_question_json(question_path, topic_folder):
         with open(question_path, 'r') as f:
             data = json.load(f)
         
-        required_fields = ['id', 'category', 'question', 'options', 'answer', 'explanation']
+        required_fields = ['id', 'tags', 'question', 'options', 'answer', 'explanation']
         for field in required_fields:
             if field not in data:
                 raise ValueError(f"Missing required field: {field}")
         
-        expected_category = format_category_name(topic_folder)
-        if data['category'] != expected_category:
-            raise ValueError(f"Category mismatch: Expected '{expected_category}', found '{data['category']}'")
+        # Validate tags is a list and contains the topic name
+        if not isinstance(data['tags'], list):
+            raise ValueError("Tags must be a list")
+        
+        expected_topic = format_category_name(topic_folder)
+        if expected_topic not in data['tags']:
+            raise ValueError(f"Tags should include the topic name: '{expected_topic}'")
         
         if not isinstance(data['options'], list) or len(data['options']) < 2:
             raise ValueError("Options must be a list with at least 2 items")
@@ -147,7 +151,7 @@ def main():
         index_file = create_topic_index(topic_dir, topic_folder)
         if index_file:
             topic_index_files.append(index_file)
-    
+
     # Create the main index.json
     create_main_index(data_dir, topics)
     
