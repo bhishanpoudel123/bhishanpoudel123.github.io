@@ -6,3 +6,7 @@ This text is from `data/Data_Analysis/questions/qn_01/markdown/qn_01_answer_01.m
 import os
 print('Bhishan Poudel')
 ```
+
+```sql
+select * from mytable;
+```

@@ -16,20 +16,9 @@ def read_file_content(file_path):
         return f"Error reading file: {str(e)}"
 
 def render_markdown(content):
-    """Convert markdown to HTML with code syntax highlighting support"""
+    """Convert markdown to HTML"""
     import markdown
-    from markdown.extensions.codehilite import CodeHiliteExtension
-    from markdown.extensions.fenced_code import FencedCodeExtension
-    
-    # Use extensions for better code block handling
-    extensions = [
-        CodeHiliteExtension(linenums=False, css_class='highlight'),
-        FencedCodeExtension(),
-        'tables',
-        'nl2br'
-    ]
-    
-    return markdown.markdown(content, extensions=extensions)
+    return markdown.markdown(content)
 
 def create_topic_html(topic_dir, topic_folder):
     """Create a comprehensive HTML file for a topic"""
@@ -48,9 +37,6 @@ def create_topic_html(topic_dir, topic_folder):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{topic_name} Learning Resources</title>
-    <!-- PrismJS CSS for syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
     <style>
         body {{
             font-family: Arial, sans-serif;
@@ -103,9 +89,13 @@ def create_topic_html(topic_dir, topic_folder):
             cursor: pointer;
         }}
         pre {{
-            margin: 15px 0;
-            border-radius: 5px;
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 3px;
             overflow-x: auto;
+        }}
+        code {{
+            font-family: 'Courier New', monospace;
         }}
         .resource {{
             margin-top: 15px;
@@ -113,16 +103,6 @@ def create_topic_html(topic_dir, topic_folder):
         .resource-title {{
             font-weight: bold;
             color: #2c3e50;
-        }}
-        /* Minor adjustments for Prism */
-        :not(pre) > code {{
-            padding: 2px 5px;
-            background: #f0f0f0;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-        }}
-        details[open] {{
-            padding-bottom: 15px;
         }}
     </style>
 </head>
@@ -140,14 +120,9 @@ def create_topic_html(topic_dir, topic_folder):
         </div>
     </div>
 
-    <!-- PrismJS scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    
     <script>
-        // Generate table of contents and setup Prism
+        // Generate table of contents
         document.addEventListener('DOMContentLoaded', function() {{
-            // Generate TOC
             const questions = document.querySelectorAll('.question');
             const tocList = document.getElementById('toc-list');
             
@@ -163,20 +138,6 @@ def create_topic_html(topic_dir, topic_folder):
                 tocItem.appendChild(tocLink);
                 tocList.appendChild(tocItem);
             }});
-            
-            // Setup Prism highlight for code in details when expanded
-            const details = document.querySelectorAll('details');
-            details.forEach(function(detail) {{
-                detail.addEventListener('toggle', function() {{
-                    if (this.open) {{
-                        // Force Prism to highlight code in this section
-                        Prism.highlightAllUnder(this);
-                    }}
-                }});
-            }});
-            
-            // Initial highlighting
-            Prism.highlightAll();
         }});
     </script>
 </body>
@@ -235,19 +196,13 @@ def create_topic_html(topic_dir, topic_folder):
                 resources_title.string = "Additional Resources"
                 question_div.append(resources_title)
                 
-                # Reference to project root (2 levels up from the script)
-                project_root = os.path.join(os.path.dirname(__file__), '..')
-                
                 for resource in question_data['learning_resources']:
+                    # Handle both relative and absolute paths
                     resource_path = resource['path']
-                    
-                    # Fix the path resolution
                     if resource_path.startswith('data/'):
-                        # Path is relative to project root, construct full path
-                        full_path = os.path.join(project_root, resource_path)
-                    else:
-                        # Path is relative to question directory
-                        full_path = os.path.join(qn_dir, resource_path)
+                        # Remove the data/ prefix if present
+                        resource_path = resource_path[5:]
+                    full_path = os.path.join(qn_dir, resource_path)
                     
                     # Create collapsible resource section
                     details = soup.new_tag('details')
@@ -257,51 +212,29 @@ def create_topic_html(topic_dir, topic_folder):
                     
                     resource_div = soup.new_tag('div', attrs={'class': 'resource'})
                     
-                    try:
-                        # Handle different resource types
-                        if resource['type'] == 'markdown':
-                            content = read_file_content(full_path)
-                            resource_div.append(BeautifulSoup(render_markdown(content), 'html.parser'))
-                        elif resource['type'] == 'html':
-                            content = read_file_content(full_path)
-                            resource_div.append(BeautifulSoup(content, 'html.parser'))
-                        elif resource['type'] == 'code':
-                            content = read_file_content(full_path)
-                            pre = soup.new_tag('pre')
-                            # Determine language from file extension
-                            file_extension = resource_path.split('.')[-1].lower()
-                            language = file_extension
-                            if file_extension == 'py':
-                                language = 'python'
-                            elif file_extension == 'js':
-                                language = 'javascript'
-                            elif file_extension == 'md':
-                                language = 'markdown'
-                            
-                            code = soup.new_tag('code', attrs={'class': f"language-{language}"})
-                            code.string = content
-                            pre.append(code)
-                            resource_div.append(pre)
-                        
-                        details.append(resource_div)
-                        question_div.append(details)
-                        
-                    except Exception as e:
-                        error_msg = soup.new_tag('p')
-                        error_msg.string = f"Error loading resource: {str(e)} - Path: {full_path}"
-                        error_msg['style'] = "color: red;"
-                        resource_div.append(error_msg)
-                        details.append(resource_div)
-                        question_div.append(details)
+                    # Handle different resource types
+                    if resource['type'] == 'markdown':
+                        content = read_file_content(full_path)
+                        resource_div.append(BeautifulSoup(render_markdown(content), 'html.parser'))
+                    elif resource['type'] == 'html':
+                        content = read_file_content(full_path)
+                        resource_div.append(BeautifulSoup(content, 'html.parser'))
+                    elif resource['type'] == 'code':
+                        content = read_file_content(full_path)
+                        pre = soup.new_tag('pre')
+                        code = soup.new_tag('code', attrs={'class': f"language-{resource_path.split('.')[-1]}"})
+                        code.string = content
+                        pre.append(code)
+                        resource_div.append(pre)
+                    
+                    details.append(resource_div)
+                    question_div.append(details)
             
-            # Add the question to the container
             questions_container.append(question_div)
             
         except Exception as e:
-            error_div = soup.new_tag('div')
-            error_div.string = f"Error processing question {qn_folder}: {str(e)}"
-            error_div['style'] = "color: red; padding: 10px; margin: 10px 0; border: 1px solid red;"
-            questions_container.append(error_div)
+            print(f"⚠️ Error processing {qn_folder}: {str(e)}")
+            continue
     
     # Write the final HTML file
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -344,11 +277,6 @@ if __name__ == "__main__":
     # Install required packages if not available
     try:
         from bs4 import BeautifulSoup
-        import markdown
-        from markdown.extensions.codehilite import CodeHiliteExtension
-        from markdown.extensions.fenced_code import FencedCodeExtension
     except ImportError:
-        print("Installing required packages...")
-        #import subprocess
-        #subprocess.call(['pip', 'install', 'beautifulsoup4', 'markdown', 'pygments'])
+        print("Install required packages...")    
     main()

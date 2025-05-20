@@ -1,0 +1,55 @@
+.
+├── assets
+│   └── icons
+│       ├── favicon.ico
+│       └── icon-512x512.png
+├── data
+│   ├── Data_Analysis
+│   │   ├── data_analysis.html
+│   │   ├── data_analysis_questions.json
+│   │   └── questions
+│   │       ├── qn_01
+│   │       │   ├── code
+│   │       │   │   └── qn_01_answer_01.py
+│   │       │   ├── html
+│   │       │   │   └── qn_01_answer_01.html
+│   │       │   ├── markdown
+│   │       │   │   ├── qn_01_answer_01.md
+│   │       │   │   └── qn_01_answer_02.md
+│   │       │   └── qn_01.json
+│   │       └── qn_02
+│   │           ├── markdown
+│   │           │   └── qn_02_answer_01.md
+│   │           └── qn_02.json
+│   ├── index.json
+│   └── Statistics
+│       ├── questions
+│       │   ├── qn_01
+│       │   │   ├── code
+│       │   │   │   └── qn_01_answer_01.py
+│       │   │   ├── html
+│       │   │   │   └── qn_01_answer_01.html
+│       │   │   ├── markdown
+│       │   │   │   ├── qn_01_answer_01.md
+│       │   │   │   └── qn_01_answer_02.md
+│       │   │   └── qn_01.json
+│       │   └── qn_02
+│       │       ├── markdown
+│       │       │   └── qn_02_answer_01.md
+│       │       └── qn_02.json
+│       ├── statistics.html
+│       └── statistics_questions.json
+├── index.html
+├── manifest.json
+├── quiz.js
+├── README.md
+├── run_all_py_scripts.sh
+├── scripts
+│   ├── create_index_json_files.py
+│   ├── create_topic_html.py
+│   ├── remove_index_files.sh
+│   └── remove_topic_html.py
+├── styles.css
+└── tree.txt
+
+21 directories, 32 files
