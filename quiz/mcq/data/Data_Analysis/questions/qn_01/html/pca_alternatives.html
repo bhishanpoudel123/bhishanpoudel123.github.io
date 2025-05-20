@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alternatives to PCA with Python Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, monospace;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Alternatives to PCA (Principal Component Analysis)</h1>
+    <p>PCA is a widely-used dimensionality reduction method, but it’s linear and may not capture complex structures. Here are some powerful alternatives with Python examples:</p>
+
+    <div class="section">
+        <h2>1. t-SNE (t-Distributed Stochastic Neighbor Embedding)</h2>
+        <p>Best for visualization of high-dimensional data in 2D or 3D. Captures non-linear structure but is not ideal for feature extraction due to high computation cost.</p>
+        <pre><code>from sklearn.manifold import TSNE
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+
+data = load_iris()
+X = data.data
+y = data.target
+
+tsne = TSNE(n_components=2, perplexity=30, random_state=42)
+X_reduced = tsne.fit_transform(X)
+
+plt.scatter(X_reduced[:, 0], X_reduced[:, 1], c=y)
+plt.title("t-SNE projection")
+plt.show()</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>2. UMAP (Uniform Manifold Approximation and Projection)</h2>
+        <p>Preserves more of the global structure than t-SNE and is faster. Great for visualization and feature extraction.</p>
+        <pre><code>import umap
+import seaborn as sns
+
+reducer = umap.UMAP(n_components=2, random_state=42)
+X_umap = reducer.fit_transform(X)
+
+sns.scatterplot(x=X_umap[:, 0], y=X_umap[:, 1], hue=y)
+plt.title("UMAP projection")
+plt.show()</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>3. Autoencoders (Neural Network-based)</h2>
+        <p>Learn a compressed representation of the data using neural networks. Suitable for non-linear and complex data patterns.</p>
+        <pre><code>from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Dense
+from sklearn.preprocessing import StandardScaler
+
+X_scaled = StandardScaler().fit_transform(X)
+
+input_dim = X.shape[1]
+encoding_dim = 2
+
+input_layer = Input(shape=(input_dim,))
+encoded = Dense(encoding_dim, activation='relu')(input_layer)
+decoded = Dense(input_dim, activation='linear')(encoded)
+
+autoencoder = Model(inputs=input_layer, outputs=decoded)
+encoder = Model(inputs=input_layer, outputs=encoded)
+
+autoencoder.compile(optimizer='adam', loss='mse')
+autoencoder.fit(X_scaled, X_scaled, epochs=100, batch_size=16, verbose=0)
+
+X_encoded = encoder.predict(X_scaled)
+plt.scatter(X_encoded[:, 0], X_encoded[:, 1], c=y)
+plt.title("Autoencoder projection")
+plt.show()</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>4. Factor Analysis</h2>
+        <p>A statistical method that explains variability among observed variables in terms of fewer unobserved variables called factors.</p>
+        <pre><code>from sklearn.decomposition import FactorAnalysis
+
+fa = FactorAnalysis(n_components=2, random_state=42)
+X_fa = fa.fit_transform(X)
+
+plt.scatter(X_fa[:, 0], X_fa[:, 1], c=y)
+plt.title("Factor Analysis projection")
+plt.show()</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>5. ICA (Independent Component Analysis)</h2>
+        <p>Finds statistically independent components. Useful in signal separation and some dimensionality reduction tasks.</p>
+        <pre><code>from sklearn.decomposition import FastICA
+
+ica = FastICA(n_components=2, random_state=42)
+X_ica = ica.fit_transform(X)
+
+plt.scatter(X_ica[:, 0], X_ica[:, 1], c=y)
+plt.title("ICA projection")
+plt.show()</code></pre>
+    </div>
+
+    <p><strong>Note:</strong> Always scale your data before applying these methods. Use <code>StandardScaler</code> or similar from <code>sklearn.preprocessing</code>.</p>
+
+</body>
+</html>
