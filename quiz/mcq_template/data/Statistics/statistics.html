@@ -5,8 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Statistics Learning Resources</title>
-<!-- PrismJS CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/>
+<!-- PrismJS Solarized Dark Theme -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizeddark.min.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet"/>
 <style>
@@ -15,70 +15,80 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            color: #333;
+            color: #839496;
+            background-color: #002b36;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
         }
         h1, h2, h3 {
-            color: #2c3e50;
+            color: #93a1a1;
         }
         .toc {
-            background: #f8f9fa;
+            background: #073642;
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 20px;
+            border: 1px solid #586e75;
         }
         .question {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #586e75;
         }
         .question-title {
-            color: #3498db;
+            color: #b58900;
         }
         .answer {
-            background: #f8f9fa;
+            background: #073642;
             padding: 15px;
             border-radius: 5px;
             margin: 10px 0;
+            border: 1px solid #586e75;
         }
         .explanation {
-            background: #e8f4f8;
+            background: #073642;
             padding: 15px;
             border-radius: 5px;
             margin: 10px 0;
+            border: 1px solid #586e75;
         }
         details {
             margin: 10px 0;
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #586e75;
             border-radius: 5px;
+            background: #073642;
         }
         summary {
             font-weight: bold;
             cursor: pointer;
+            color: #b58900;
         }
         pre[class*="language-"] {
             margin: 1em 0;
             border-radius: 5px;
-            background: #2d2d2d;
             padding: 1em;
             overflow: auto;
+            font-size: 0.95em;
+            line-height: 1.5;
+            border: 1px solid #586e75 !important;
+            background: #002b36 !important;
         }
         code[class*="language-"] {
             font-size: 14px;
             font-family: 'Fira Code', 'Consolas', monospace;
+            background: transparent !important;
         }
         .token.comment,
         .token.prolog,
         .token.doctype,
         .token.cdata {
-            color: #999;
+            color: #586e75;
         }
         .token.punctuation {
-            color: #ccc;
+            color: #93a1a1;
         }
         .token.property,
         .token.tag,
@@ -87,7 +97,7 @@
         .token.constant,
         .token.symbol,
         .token.deleted {
-            color: #f92672;
+            color: #268bd2;
         }
         .token.selector,
         .token.attr-name,
@@ -95,44 +105,53 @@
         .token.char,
         .token.builtin,
         .token.inserted {
-            color: #a6e22e;
+            color: #2aa198;
         }
         .token.operator,
         .token.entity,
         .token.url,
         .language-css .token.string,
         .style .token.string {
-            color: #67cdcc;
+            color: #cb4b16;
         }
         .token.atrule,
         .token.attr-value,
         .token.keyword {
-            color: #66d9ef;
+            color: #859900;
         }
         .token.function,
         .token.class-name {
-            color: #e6db74;
+            color: #b58900;
         }
         .token.regex,
         .token.important,
         .token.variable {
-            color: #fd971f;
+            color: #d33682;
         }
         .resource {
             margin-top: 15px;
         }
         .resource-title {
             font-weight: bold;
-            color: #2c3e50;
+            color: #93a1a1;
         }
         :not(pre) > code {
             padding: 2px 5px;
-            background: #f0f0f0;
+            background: #073642;
             border-radius: 3px;
             font-family: 'Courier New', monospace;
+            color: #cb4b16;
+            border: 1px solid #586e75;
         }
         details[open] {
             padding-bottom: 15px;
+        }
+        a {
+            color: #268bd2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -147,31 +166,28 @@
 </div>
 <div id="questions-container">
 <!-- Questions will be inserted here -->
-<div class="question" id="q-0"><h2 class="question-title">Qn 1: What technique would you use to handle high-dimensional sparse data when performing PCA?</h2><div class="answer"><h3>Answer</h3><p><code>Truncated SVD</code> (also known as LSA)</p></div><div class="explanation"><h3>Explanation</h3><p>Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.</p></div><h3>Additional Resources</h3><details><summary>answer 01 (markdown)</summary><div class="resource"><h1>Qn 01 answer 01 markdown</h1>
-<p>sample answer</p></div></details><details><summary>answer 02 (markdown)</summary><div class="resource"><h1>Qn 01 answer 01 markdown</h1>
-<p>sample answer</p></div></details><details><summary>answer 01 (code)</summary><div class="resource"><pre class="line-numbers"><code class="language-python">import numpy as np
+<div class="question" id="q-1"><h2 class="question-title">Qn 1: What technique would you use to handle high-dimensional sparse data when performing PCA?</h2><div class="answer"><h3>Answer</h3><p><code>Truncated SVD</code> (also known as LSA)</p></div><div class="explanation"><h3>Explanation</h3><p>Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.</p></div><h3>Additional Resources</h3><details><summary>answer 01 (markdown)</summary><div class="resource"><div class="markdown-content"><h1>Qn 01 answer 01 markdown</h1>
+<p>sample answer</p></div></div></details><details><summary>answer 02 (markdown)</summary><div class="resource"><div class="markdown-content"><h1>Qn 01 answer 01 markdown</h1>
+<p>sample answer</p></div></div></details><details><summary>answer 01 (code)</summary><div class="resource"><pre class="line-numbers"><code class="language-python">import numpy as np
 
-print(np.arange(10))</code></pre></div></details><details><summary>answer 01 (html)</summary><div class="resource"><h1 id="qn-01-answer-01-markdown">Qn 01 answer 01 markdown</h1>
+print(np.arange(10))</code></pre></div></details><details><summary>answer 01 (html)</summary><div class="resource"><div class="html-content"><h1 id="qn-01-answer-01-markdown">Qn 01 answer 01 markdown</h1>
 <p>sample answer</p>
-</div></details></div><div class="question" id="q-1"><h2 class="question-title">Qn 2: What technique would you use to handle high-dimensional sparse data when performing PCA?</h2><div class="answer"><h3>Answer</h3><p><code>Truncated SVD</code> (also known as LSA)</p></div><div class="explanation"><h3>Explanation</h3><p>Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.</p></div><h3>Additional Resources</h3><details><summary>answer 01 (markdown)</summary><div class="resource"><h1>Qn 02 answer 01 markdown</h1>
-<p>sample answer</p></div></details></div></div>
+</div></div></details></div><div class="question" id="q-2"><h2 class="question-title">Qn 2: What technique would you use to handle high-dimensional sparse data when performing PCA?</h2><div class="answer"><h3>Answer</h3><p><code>Truncated SVD</code> (also known as LSA)</p></div><div class="explanation"><h3>Explanation</h3><p>Truncated SVD is specifically designed for sparse matrices and doesn't center the data (which would destroy sparsity), making it more memory-efficient and appropriate for high-dimensional sparse datasets.</p></div><h3>Additional Resources</h3><details><summary>answer 01 (markdown)</summary><div class="resource"><div class="markdown-content"><h1>Qn 02 answer 01 markdown</h1>
+<p>sample answer</p></div></div></details></div></div>
 </div>
-<!-- PrismJS Core -->
+<!-- PrismJS Core must come first -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-<!-- PrismJS Autoloader -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-<!-- PrismJS Toolbar -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
-<!-- PrismJS Copy to Clipboard -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-<!-- PrismJS Line Numbers -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-<!-- Language Components -->
+<!-- Language components -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+<!-- Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Generate TOC
@@ -179,7 +195,7 @@ print(np.arange(10))</code></pre></div></details><details><summary>answer 01 (ht
             const tocList = document.getElementById('toc-list');
             
             questions.forEach(function(question, index) {
-                const questionId = 'q-' + index;
+                const questionId = 'q-' + (index + 1);
                 question.id = questionId;
                 const title = question.querySelector('.question-title').textContent;
                 
@@ -191,16 +207,53 @@ print(np.arange(10))</code></pre></div></details><details><summary>answer 01 (ht
                 tocList.appendChild(tocItem);
             });
             
-            // Initialize Prism for all code blocks
-            Prism.highlightAll();
+            // Initialize Prism with a slight delay to ensure all elements are loaded
+            setTimeout(function() {
+                Prism.highlightAll();
+                if (typeof Prism.plugins.lineNumbers !== 'undefined') {
+                    Prism.plugins.lineNumbers.resize();
+                }
+            }, 100);
             
             // Special handling for details elements
             document.querySelectorAll('details').forEach(detail => {
+                if (detail.open) {
+                    Prism.highlightAllUnder(detail);
+                }
+                
                 detail.addEventListener('toggle', function() {
                     if (this.open) {
-                        Prism.highlightAllUnder(this);
+                        setTimeout(() => {
+                            Prism.highlightAllUnder(this);
+                            if (typeof Prism.plugins.lineNumbers !== 'undefined') {
+                                Prism.plugins.lineNumbers.resize();
+                            }
+                        }, 50);
                     }
                 });
+            });
+            
+            // MutationObserver for dynamic content
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length) {
+                        Array.from(mutation.addedNodes).forEach(function(node) {
+                            if (node.nodeType === 1 && node.querySelector('pre code')) {
+                                setTimeout(() => {
+                                    Prism.highlightAllUnder(node);
+                                    if (typeof Prism.plugins.lineNumbers !== 'undefined') {
+                                        Prism.plugins.lineNumbers.resize();
+                                    }
+                                }, 50);
+                            }
+                        });
+                    }
+                });
+            });
+            
+            observer.observe(document.getElementById('questions-container'), {
+                childList: true,
+                subtree: true
             });
         });
     </script>
