@@ -1,63 +1,62 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Machine Learning Learning Resources</title>
-<!-- PrismJS Solarized Light Theme -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet"/>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TOPIC_NAME}} Learning Resources</title>
+    <!-- PrismJS Dracula Theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet" />
+    <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            color: #586e75;
-            background-color: #fdf6e3;
+            color: #f8f8f2;
+            background-color: #282a36;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
         }
         h1, h2, h3 {
-            color: #657b83;
+            color: #ff79c6;
         }
         .toc {
-            background: #eee8d5;
+            background: #44475a;
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 20px;
-            border: 1px solid #93a1a1;
+            border: 1px solid #6272a4;
         }
         .question {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #93a1a1;
+            border-bottom: 1px solid #6272a4;
         }
         .question-title {
-            color: #b58900;
+            color: #f1fa8c;
         }
         .answer, .explanation {
-            background: #eee8d5;
+            background: #44475a;
             padding: 15px;
             border-radius: 5px;
             margin: 10px 0;
-            border: 1px solid #93a1a1;
+            border: 1px solid #6272a4;
         }
         details {
             margin: 10px 0;
             padding: 10px;
-            border: 1px solid #93a1a1;
+            border: 1px solid #6272a4;
             border-radius: 5px;
-            background: #eee8d5;
+            background: #44475a;
         }
         summary {
             font-weight: bold;
             cursor: pointer;
-            color: #b58900;
+            color: #f1fa8c;
         }
         pre[class*="language-"] {
             margin: 1em 0;
@@ -66,8 +65,8 @@
             overflow: auto;
             font-size: 0.95em;
             line-height: 1.5;
-            border: 1px solid #93a1a1 !important;
-            background: #fdf6e3 !important;
+            border: 1px solid #6272a4 !important;
+            background: #282a36 !important;
         }
         code[class*="language-"] {
             font-size: 14px;
@@ -76,14 +75,14 @@
         }
         :not(pre) > code {
             padding: 2px 5px;
-            background: #eee8d5;
+            background: #44475a;
             border-radius: 3px;
             font-family: 'Courier New', monospace;
-            color: #cb4b16;
-            border: 1px solid #93a1a1;
+            color: #ffb86c;
+            border: 1px solid #6272a4;
         }
         a {
-            color: #268bd2;
+            color: #8be9fd;
             text-decoration: none;
         }
         a:hover {
@@ -92,26 +91,28 @@
     </style>
 </head>
 <body>
-<div class="container">
-<h1>Machine Learning Learning Resources</h1>
-<div class="toc">
-<h2>Table of Contents</h2>
-<ul id="toc-list"></ul>
-</div>
-<div id="questions-container"><div class="question" id="q-1"><h2 class="question-title">Qn 1: Which algorithm is used for classification problems?</h2><div class="answer"><h3>Answer</h3><p>Logistic Regression</p></div><div class="explanation"><h3>Explanation</h3><p>Logistic regression is used for binary and multi-class classification problems.</p></div></div><div class="question" id="q-2"><h2 class="question-title">Qn 2: What is the purpose of the learning rate in gradient descent?</h2><div class="answer"><h3>Answer</h3><p>To control how much the model is adjusted during each update</p></div><div class="explanation"><h3>Explanation</h3><p>The learning rate determines the step size at each iteration while moving toward a minimum of a loss function.</p></div></div><div class="question" id="q-3"><h2 class="question-title">Qn 3: Which technique is used to reduce the dimensionality of data?</h2><div class="answer"><h3>Answer</h3><p>PCA</p></div><div class="explanation"><h3>Explanation</h3><p>Principal Component Analysis (PCA) is a dimensionality reduction technique that transforms data to a lower-dimensional space.</p></div></div><div class="question" id="q-4"><h2 class="question-title">Qn 4: What is the main goal of unsupervised learning?</h2><div class="answer"><h3>Answer</h3><p>Find hidden patterns or groupings in data</p></div><div class="explanation"><h3>Explanation</h3><p>Unsupervised learning aims to discover the underlying structure of data without predefined labels.</p></div></div><div class="question" id="q-5"><h2 class="question-title">Qn 5: What is overfitting in machine learning?</h2><div class="answer"><h3>Answer</h3><p>When the model performs well on training data but poorly on test data</p></div><div class="explanation"><h3>Explanation</h3><p>Overfitting occurs when a model learns the training data too well, including noise and outliers, which leads to poor generalization to new data.</p></div></div></div>
-</div>
-<!-- PrismJS and plugins -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-<script>
+    <div class="container">
+        <h1>{{TOPIC_NAME}} Learning Resources</h1>
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul id="toc-list"></ul>
+        </div>
+        <div id="questions-container"></div>
+    </div>
+
+    <!-- PrismJS and plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Generate TOC
             const questions = document.querySelectorAll('.question');
