@@ -1,0 +1,1938 @@
+.
+├── assets
+│   └── icons
+│       ├── favicon.ico
+│       └── icon-512x512.png
+├── data
+│   ├── all_topics_questions_answers.md
+│   ├── Data_Analysis
+│   │   ├── data_analysis.html
+│   │   ├── data_analysis_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   │   └── pca_alternatives.html
+│   │   │   │   ├── markdown
+│   │   │   │   │   ├── PCA_explanation.md
+│   │   │   │   │   └── qn_01_answer_01.md
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_02_answer_01.md
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_03_answer_01.md
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_04_answer_01.md
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_05_answer_01.md
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_06_answer_01.md
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_07_answer_01.md
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_08_answer_01.md
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_09_answer_01.md
+│   │   │   │   └── qn_09.json
+│   │   │   ├── qn_10
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_10_answer_01.md
+│   │   │   │   └── qn_10.json
+│   │   │   ├── qn_11
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_11_answer_01.md
+│   │   │   │   └── qn_11.json
+│   │   │   ├── qn_12
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_12_answer_01.md
+│   │   │   │   └── qn_12.json
+│   │   │   ├── qn_13
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_13_answer_01.md
+│   │   │   │   └── qn_13.json
+│   │   │   ├── qn_14
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_14_answer_01.md
+│   │   │   │   └── qn_14.json
+│   │   │   ├── qn_15
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_15_answer_01.md
+│   │   │   │   └── qn_15.json
+│   │   │   ├── qn_16
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_16_answer_01.md
+│   │   │   │   └── qn_16.json
+│   │   │   ├── qn_17
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_17_answer_01.md
+│   │   │   │   └── qn_17.json
+│   │   │   ├── qn_18
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_18_answer_01.md
+│   │   │   │   └── qn_18.json
+│   │   │   ├── qn_19
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_19_answer_01.md
+│   │   │   │   └── qn_19.json
+│   │   │   ├── qn_20
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_20_answer_01.md
+│   │   │   │   └── qn_20.json
+│   │   │   ├── qn_21
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_21_answer_01.md
+│   │   │   │   └── qn_21.json
+│   │   │   ├── qn_22
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_22_answer_01.md
+│   │   │   │   └── qn_22.json
+│   │   │   ├── qn_23
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_23_answer_01.md
+│   │   │   │   └── qn_23.json
+│   │   │   ├── qn_24
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_24_answer_01.md
+│   │   │   │   └── qn_24.json
+│   │   │   ├── qn_25
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_25_answer_01.md
+│   │   │   │   └── qn_25.json
+│   │   │   ├── qn_26
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_26_answer_01.md
+│   │   │   │   └── qn_26.json
+│   │   │   ├── qn_27
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_27_answer_01.md
+│   │   │   │   └── qn_27.json
+│   │   │   ├── qn_28
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_28_answer_01.md
+│   │   │   │   └── qn_28.json
+│   │   │   ├── qn_29
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_29_answer_01.md
+│   │   │   │   └── qn_29.json
+│   │   │   └── qn_30
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       │   └── qn_30_answer_01.md
+│   │   │       └── qn_30.json
+│   │   └── README.md
+│   ├── Data_Cleaning
+│   │   ├── data_cleaning.html
+│   │   ├── data_cleaning_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   ├── qn_10
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_10.json
+│   │   │   ├── qn_11
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_11.json
+│   │   │   ├── qn_12
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_12.json
+│   │   │   ├── qn_13
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_13.json
+│   │   │   ├── qn_14
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_14.json
+│   │   │   ├── qn_15
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_15.json
+│   │   │   ├── qn_16
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_16.json
+│   │   │   ├── qn_17
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_17.json
+│   │   │   ├── qn_18
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_18.json
+│   │   │   ├── qn_19
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_19.json
+│   │   │   ├── qn_20
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_20.json
+│   │   │   ├── qn_21
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_21.json
+│   │   │   ├── qn_22
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_22.json
+│   │   │   ├── qn_23
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_23.json
+│   │   │   ├── qn_24
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_24.json
+│   │   │   ├── qn_25
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_25.json
+│   │   │   ├── qn_26
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_26.json
+│   │   │   ├── qn_27
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_27.json
+│   │   │   ├── qn_28
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_28.json
+│   │   │   ├── qn_29
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_29.json
+│   │   │   ├── qn_30
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_30.json
+│   │   │   ├── qn_31
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_31.json
+│   │   │   ├── qn_32
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_32.json
+│   │   │   ├── qn_33
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_33.json
+│   │   │   ├── qn_34
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_34.json
+│   │   │   ├── qn_35
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_35.json
+│   │   │   ├── qn_36
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_36.json
+│   │   │   ├── qn_37
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_37.json
+│   │   │   ├── qn_38
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_38.json
+│   │   │   ├── qn_39
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_39.json
+│   │   │   ├── qn_40
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_40.json
+│   │   │   ├── qn_41
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_41.json
+│   │   │   ├── qn_42
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_42.json
+│   │   │   ├── qn_43
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_43.json
+│   │   │   ├── qn_44
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_44.json
+│   │   │   ├── qn_45
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_45.json
+│   │   │   ├── qn_46
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_46.json
+│   │   │   ├── qn_47
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_47.json
+│   │   │   ├── qn_48
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_48.json
+│   │   │   ├── qn_49
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_49.json
+│   │   │   └── qn_50
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_50.json
+│   │   └── README.md
+│   ├── Data_Science
+│   │   ├── data_science.html
+│   │   ├── data_science_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   ├── qn_10
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_10.json
+│   │   │   ├── qn_11
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_11.json
+│   │   │   ├── qn_12
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_12.json
+│   │   │   ├── qn_13
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_13.json
+│   │   │   ├── qn_14
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_14.json
+│   │   │   ├── qn_15
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_15.json
+│   │   │   ├── qn_16
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_16.json
+│   │   │   ├── qn_17
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_17.json
+│   │   │   ├── qn_18
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_18.json
+│   │   │   ├── qn_19
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_19.json
+│   │   │   ├── qn_20
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_20.json
+│   │   │   ├── qn_21
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_21.json
+│   │   │   ├── qn_22
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_22.json
+│   │   │   ├── qn_23
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_23.json
+│   │   │   ├── qn_24
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_24.json
+│   │   │   ├── qn_25
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_25.json
+│   │   │   ├── qn_26
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_26.json
+│   │   │   ├── qn_27
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_27.json
+│   │   │   ├── qn_28
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_28.json
+│   │   │   ├── qn_29
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_29.json
+│   │   │   ├── qn_30
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_30.json
+│   │   │   ├── qn_31
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_31.json
+│   │   │   ├── qn_32
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_32.json
+│   │   │   ├── qn_33
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_33.json
+│   │   │   ├── qn_34
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_34.json
+│   │   │   ├── qn_35
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_35.json
+│   │   │   ├── qn_36
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_36.json
+│   │   │   ├── qn_37
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_37.json
+│   │   │   ├── qn_38
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_38.json
+│   │   │   ├── qn_39
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_39.json
+│   │   │   ├── qn_40
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_40.json
+│   │   │   ├── qn_41
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_41.json
+│   │   │   ├── qn_42
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_42.json
+│   │   │   ├── qn_43
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_43.json
+│   │   │   ├── qn_44
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_44.json
+│   │   │   ├── qn_45
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_45.json
+│   │   │   ├── qn_46
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_46.json
+│   │   │   ├── qn_47
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_47.json
+│   │   │   ├── qn_48
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_48.json
+│   │   │   ├── qn_49
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_49.json
+│   │   │   └── qn_50
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_50.json
+│   │   └── README.md
+│   ├── Data_Visualization
+│   │   ├── data_visualization.html
+│   │   ├── data_visualization_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   └── qn_05
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_05.json
+│   │   └── README.md
+│   ├── index_html.json
+│   ├── index.json
+│   ├── IQ
+│   │   ├── iq.html
+│   │   ├── iq_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   ├── qn_10
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_10.json
+│   │   │   ├── qn_11
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_11.json
+│   │   │   ├── qn_12
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_12.json
+│   │   │   ├── qn_13
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_13.json
+│   │   │   ├── qn_14
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_14.json
+│   │   │   ├── qn_15
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_15.json
+│   │   │   ├── qn_16
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_16.json
+│   │   │   ├── qn_17
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_17.json
+│   │   │   ├── qn_18
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_18.json
+│   │   │   ├── qn_19
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_19.json
+│   │   │   ├── qn_20
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_20.json
+│   │   │   ├── qn_21
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_21.json
+│   │   │   ├── qn_22
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_22.json
+│   │   │   ├── qn_23
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_23.json
+│   │   │   ├── qn_24
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_24.json
+│   │   │   ├── qn_25
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_25.json
+│   │   │   ├── qn_26
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_26.json
+│   │   │   ├── qn_27
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_27.json
+│   │   │   ├── qn_28
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_28.json
+│   │   │   ├── qn_29
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_29.json
+│   │   │   ├── qn_30
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_30.json
+│   │   │   ├── qn_31
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_31.json
+│   │   │   ├── qn_32
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_32.json
+│   │   │   ├── qn_33
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_33.json
+│   │   │   ├── qn_34
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_34.json
+│   │   │   ├── qn_35
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_35.json
+│   │   │   ├── qn_36
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_36.json
+│   │   │   ├── qn_37
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_37.json
+│   │   │   ├── qn_38
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_38.json
+│   │   │   ├── qn_39
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_39.json
+│   │   │   ├── qn_40
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_40.json
+│   │   │   ├── qn_41
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_41.json
+│   │   │   ├── qn_42
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_42.json
+│   │   │   ├── qn_43
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_43.json
+│   │   │   ├── qn_44
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_44.json
+│   │   │   ├── qn_45
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_45.json
+│   │   │   ├── qn_46
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_46.json
+│   │   │   ├── qn_47
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_47.json
+│   │   │   ├── qn_48
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_48.json
+│   │   │   ├── qn_49
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_49.json
+│   │   │   └── qn_50
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_50.json
+│   │   └── README.md
+│   ├── Machine_Learning
+│   │   ├── machine_learning.html
+│   │   ├── machine_learning_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   └── qn_05
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_05.json
+│   │   └── README.md
+│   ├── Modelling
+│   │   ├── modelling.html
+│   │   ├── modelling_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_01_answer_long_01.md
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_02_answer_long_01.md
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_03_answer_long_01.md
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_04_answer_long_01.md
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_05_answer_long_01.md
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_06_answer_long_01.md
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_07_answer_long_01.md
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_08_answer_long_01.md
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_09_answer_long_01.md
+│   │   │   │   └── qn_09.json
+│   │   │   ├── qn_10
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_10_answer_long_01.md
+│   │   │   │   └── qn_10.json
+│   │   │   ├── qn_11
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_11_answer_long_01.md
+│   │   │   │   └── qn_11.json
+│   │   │   ├── qn_12
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_12_answer_long_01.md
+│   │   │   │   └── qn_12.json
+│   │   │   ├── qn_13
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_13_answer_long_01.md
+│   │   │   │   └── qn_13.json
+│   │   │   ├── qn_14
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_14_answer_long_01.md
+│   │   │   │   └── qn_14.json
+│   │   │   ├── qn_15
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_15_answer_long_01.md
+│   │   │   │   └── qn_15.json
+│   │   │   ├── qn_16
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_16_answer_long_01.md
+│   │   │   │   └── qn_16.json
+│   │   │   ├── qn_17
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_17_answer_long_01.md
+│   │   │   │   └── qn_17.json
+│   │   │   ├── qn_18
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_18_answer_long_01.md
+│   │   │   │   └── qn_18.json
+│   │   │   ├── qn_19
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_19_answer_long_01.md
+│   │   │   │   └── qn_19.json
+│   │   │   ├── qn_20
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_20_answer_long_01.md
+│   │   │   │   └── qn_20.json
+│   │   │   ├── qn_21
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_21_answer_long_01.md
+│   │   │   │   └── qn_21.json
+│   │   │   ├── qn_22
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_22_answer_long_01.md
+│   │   │   │   └── qn_22.json
+│   │   │   ├── qn_23
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_23_answer_long_01.md
+│   │   │   │   └── qn_23.json
+│   │   │   ├── qn_24
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_24_answer_long_01.md
+│   │   │   │   └── qn_24.json
+│   │   │   ├── qn_25
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_25_answer_long_01.md
+│   │   │   │   └── qn_25.json
+│   │   │   ├── qn_26
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_26_answer_long_01.md
+│   │   │   │   └── qn_26.json
+│   │   │   ├── qn_27
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_27_answer_long_01.md
+│   │   │   │   └── qn_27.json
+│   │   │   ├── qn_28
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_28_answer_long_01.md
+│   │   │   │   └── qn_28.json
+│   │   │   ├── qn_29
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_29_answer_long_01.md
+│   │   │   │   └── qn_29.json
+│   │   │   └── qn_30
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       │   └── qn_30_answer_long_01.md
+│   │   │       └── qn_30.json
+│   │   └── README.md
+│   ├── Pandas
+│   │   ├── pandas.html
+│   │   ├── pandas_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   ├── qn_10
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_10.json
+│   │   │   ├── qn_11
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_11.json
+│   │   │   ├── qn_12
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_12.json
+│   │   │   ├── qn_13
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_13.json
+│   │   │   ├── qn_14
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_14.json
+│   │   │   ├── qn_15
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_15.json
+│   │   │   ├── qn_16
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_16.json
+│   │   │   ├── qn_17
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_17.json
+│   │   │   ├── qn_18
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_18.json
+│   │   │   ├── qn_19
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_19.json
+│   │   │   ├── qn_20
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_20.json
+│   │   │   ├── qn_21
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_21.json
+│   │   │   ├── qn_22
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_22.json
+│   │   │   ├── qn_23
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_23.json
+│   │   │   ├── qn_24
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_24.json
+│   │   │   ├── qn_25
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_25.json
+│   │   │   ├── qn_26
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_26.json
+│   │   │   ├── qn_27
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_27.json
+│   │   │   ├── qn_28
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_28.json
+│   │   │   ├── qn_29
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_29.json
+│   │   │   └── qn_30
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_30.json
+│   │   └── README.md
+│   ├── Probability
+│   │   ├── probability.html
+│   │   ├── probability_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   ├── qn_10
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_10.json
+│   │   │   ├── qn_11
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_11.json
+│   │   │   ├── qn_12
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_12.json
+│   │   │   ├── qn_13
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_13.json
+│   │   │   ├── qn_14
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_14.json
+│   │   │   ├── qn_15
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_15.json
+│   │   │   ├── qn_16
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_16.json
+│   │   │   ├── qn_17
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_17.json
+│   │   │   ├── qn_18
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_18.json
+│   │   │   ├── qn_19
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_19.json
+│   │   │   ├── qn_20
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_20.json
+│   │   │   ├── qn_21
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_21.json
+│   │   │   ├── qn_22
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_22.json
+│   │   │   ├── qn_23
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_23.json
+│   │   │   ├── qn_24
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_24.json
+│   │   │   ├── qn_25
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_25.json
+│   │   │   ├── qn_26
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_26.json
+│   │   │   ├── qn_27
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_27.json
+│   │   │   ├── qn_28
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_28.json
+│   │   │   ├── qn_29
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_29.json
+│   │   │   ├── qn_30
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_30.json
+│   │   │   ├── qn_31
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_31.json
+│   │   │   ├── qn_32
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_32.json
+│   │   │   └── qn_33
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_33.json
+│   │   └── README.md
+│   ├── Python_Advanced
+│   │   ├── python_advanced.html
+│   │   ├── python_advanced_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   │   └── qn_07_answer_long_01.md
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   └── qn_10
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_10.json
+│   │   └── README.md
+│   ├── Python_General
+│   │   ├── python_general.html
+│   │   ├── python_general_questions.json
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   └── qn_09
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_09.json
+│   │   └── README.md
+│   ├── README.md
+│   ├── SQL_General
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   └── qn_10
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_10.json
+│   │   ├── README.md
+│   │   ├── sql_general.html
+│   │   └── sql_general_questions.json
+│   ├── SQL_Sqlite
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   ├── qn_05
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_05.json
+│   │   │   ├── qn_06
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_06.json
+│   │   │   ├── qn_07
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_07.json
+│   │   │   ├── qn_08
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_08.json
+│   │   │   ├── qn_09
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_09.json
+│   │   │   └── qn_10
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_10.json
+│   │   ├── README.md
+│   │   ├── sql_sqlite.html
+│   │   └── sql_sqlite_questions.json
+│   ├── Statistics
+│   │   ├── questions
+│   │   │   ├── qn_01
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_01.json
+│   │   │   ├── qn_02
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_02.json
+│   │   │   ├── qn_03
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_03.json
+│   │   │   ├── qn_04
+│   │   │   │   ├── code
+│   │   │   │   ├── html
+│   │   │   │   ├── markdown
+│   │   │   │   └── qn_04.json
+│   │   │   └── qn_05
+│   │   │       ├── code
+│   │   │       ├── html
+│   │   │       ├── markdown
+│   │   │       └── qn_05.json
+│   │   ├── README.md
+│   │   ├── statistics.html
+│   │   └── statistics_questions.json
+│   └── Timeseries
+│       ├── questions
+│       │   ├── qn_01
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_01.json
+│       │   ├── qn_02
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_02.json
+│       │   ├── qn_03
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_03.json
+│       │   ├── qn_04
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_04.json
+│       │   ├── qn_05
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_05.json
+│       │   ├── qn_06
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_06.json
+│       │   ├── qn_07
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_07.json
+│       │   ├── qn_08
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_08.json
+│       │   ├── qn_09
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_09.json
+│       │   ├── qn_10
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_10.json
+│       │   ├── qn_11
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_11.json
+│       │   ├── qn_12
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_12.json
+│       │   ├── qn_13
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_13.json
+│       │   ├── qn_14
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_14.json
+│       │   ├── qn_15
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_15.json
+│       │   ├── qn_16
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_16.json
+│       │   ├── qn_17
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_17.json
+│       │   ├── qn_18
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_18.json
+│       │   ├── qn_19
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_19.json
+│       │   ├── qn_20
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_20.json
+│       │   ├── qn_21
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_21.json
+│       │   ├── qn_22
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_22.json
+│       │   ├── qn_23
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_23.json
+│       │   ├── qn_24
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_24.json
+│       │   ├── qn_25
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_25.json
+│       │   ├── qn_26
+│       │   │   ├── code
+│       │   │   ├── html
+│       │   │   ├── markdown
+│       │   │   └── qn_26.json
+│       │   └── qn_27
+│       │       ├── code
+│       │       ├── html
+│       │       ├── markdown
+│       │       └── qn_27.json
+│       ├── README.md
+│       ├── timeseries.html
+│       └── timeseries_questions.json
+├── index.html
+├── manifest.json
+├── quiz.js
+├── README.md
+├── run_all_py_scripts.sh
+├── scripts
+│   ├── create_index_json_files.py
+│   ├── create_topic_html.py
+│   ├── html_template_dracula.html
+│   ├── html_template_github.html
+│   ├── html_template_one_dark.html
+│   ├── html_template_solarized_dark.html
+│   ├── html_template_solarized_light.html
+│   ├── remove_index_files.sh
+│   ├── remove_topic_html.py
+│   └── validation.py
+├── styles.css
+└── tree.txt
+
+1451 directories, 485 files
