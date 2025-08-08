@@ -1,7 +1,7 @@
 # Introduction
-- [Main Website](https://bhishanpdl3.github.io)
-- [Github Repo](https://github.com/bhishanpdl3/bhishanpdl3.github.io)
+- [Main Website](https://bhishanpoudel123.github.io)
+- [Github Repo](https://github.com/bhishanpoudel123/bhishanpoudel123.github.io)
 
 # Webapps
-- [Stock Calculator](https://bhishanpdl3.github.io/stock)
-- [Job Calculator ](https://bhishanpdl3.github.io/job)
+- [Stock Calculator](https://bhishanpoudel123.github.io/stock)
+- [Job Calculator](https://bhishanpoudel123.github.io/job/)

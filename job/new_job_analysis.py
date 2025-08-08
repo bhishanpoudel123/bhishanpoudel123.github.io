@@ -34,9 +34,9 @@ def days_to_recover_loss(d1, d2, s1, s2):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate days needed to recover job loss earnings.")
     parser.add_argument("-d1", type=str, default='2024-11-14', help="Leave date (YYYY-MM-DD)")
-    parser.add_argument("-d2", type=str, default='2025-03-01', help="Join date (YYYY-MM-DD)")
+    parser.add_argument("-d2", type=str, default='2025-09-01', help="Join date (YYYY-MM-DD)")
     parser.add_argument("-s1", type=int, default=111000, help="Last job salary per year")
-    parser.add_argument("-s2", type=int, default=140000, help="New job salary per year")
+    parser.add_argument("-s2", type=int, default=130000, help="New job salary per year")
 
     args = parser.parse_args()
 

@@ -4,30 +4,431 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Loss Recovery Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .job-box {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .laid-off {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .old-job {
+            background: #ffcccb;
+            border-left: 4px solid #dc3545;
+        }
+
+        .new-job {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        h3 {
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333;
+        }
+
+        .analysis-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .analysis-table th {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .analysis-table th:last-child {
+            border-right: none;
+        }
+
+        .analysis-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            text-align: center;
+        }
+
+        .analysis-table td:last-child {
+            border-right: none;
+        }
+
+        .analysis-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .analysis-table tr:hover {
+            background: #e9ecef;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, #007bff, #28a745);
+            margin: 40px 0;
+            border-radius: 1px;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                flex-direction: column;
+            }
+
+            .input-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>New Job Calculator</h1>
-        <p>Enter details about your previous and new job:</p>
+        <h1>Enhanced Job Loss Recovery Calculator</h1>
 
-        <label for="leave-date">Last Leave Date:</label>
-        <input type="date" id="leave-date" value="2024-11-14">
+        <!-- Section 1: Single Recovery Calculation -->
+        <h2>📊 Single Recovery Analysis</h2>
+        <p>Enter details about your previous and new job to calculate recovery time:</p>
 
-        <label for="join-date">New Join Date:</label>
-        <input type="date" id="join-date" value="2025-06-01">
+        <div class="input-grid">
+            <div>
+                <label for="leave-date">Last Leave Date:</label>
+                <input type="date" id="leave-date" value="2024-11-14">
+            </div>
 
-        <label for="last-salary">Last Job Salary ($ per year):</label>
-        <input type="number" id="last-salary" value="111000">
+            <div>
+                <label for="join-date">New Join Date:</label>
+                <input type="date" id="join-date" value="2025-09-01">
+            </div>
 
-        <label for="new-salary">New Job Salary ($ per year):</label>
-        <input type="number" id="new-salary" value="140000">
+            <div>
+                <label for="last-salary">Last Job Salary ($ per year):</label>
+                <input type="number" id="last-salary" value="111000" step="1000">
+            </div>
+
+            <div>
+                <label for="new-salary">New Job Salary ($ per year):</label>
+                <input type="number" id="new-salary" value="130000" step="1000">
+            </div>
+        </div>
 
         <button id="calculate">Calculate Recovery Days</button>
 
-        <h2 id="result">Estimated Days to Match Both: 0</h2>
+        <div id="result"></div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="section-divider"></div>
+
+    <div class="container">
+        <!-- Section 2: Range Analysis -->
+        <h2>📈 Salary Range Analysis</h2>
+        <p>Analyze recovery time across different salary ranges in $5k increments:</p>
+
+        <div class="input-grid">
+            <div>
+                <label for="range-leave-date">Last Leave Date:</label>
+                <input type="date" id="range-leave-date" value="2024-11-14">
+            </div>
+
+            <div>
+                <label for="range-join-date">New Join Date:</label>
+                <input type="date" id="range-join-date" value="2025-08-01">
+            </div>
+
+            <div>
+                <label for="range-last-salary">Last Job Salary ($ per year):</label>
+                <input type="number" id="range-last-salary" value="111000" step="1000">
+            </div>
+
+            <div>
+                <label for="range-min-salary">New Job Salary Min ($ per year):</label>
+                <input type="number" id="range-min-salary" value="120000" step="5000">
+            </div>
+
+            <div>
+                <label for="range-max-salary">New Job Salary Max ($ per year):</label>
+                <input type="number" id="range-max-salary" value="200000" step="5000">
+            </div>
+        </div>
+
+        <button id="calculate-range">Generate Salary Range Analysis</button>
+
+        <div id="range-result"></div>
+    </div>
+
+    <script>
+        // Single Recovery Calculation
+        document.getElementById("calculate").addEventListener("click", function () {
+            let leaveDate = new Date(document.getElementById("leave-date").value);
+            let joinDate = new Date(document.getElementById("join-date").value);
+            let lastSalary = parseFloat(document.getElementById("last-salary").value) || 111000;
+            let newSalary = parseFloat(document.getElementById("new-salary").value) || 130000;
+
+            if (isNaN(lastSalary) || isNaN(newSalary) || leaveDate >= joinDate) {
+                document.getElementById("result").innerHTML = '<p style="color: red;">Please enter valid values!</p>';
+                return;
+            }
+
+            let unemploymentDays = Math.round((joinDate - leaveDate) / (1000 * 60 * 60 * 24));
+            let dailyLastSalary = lastSalary / 365;
+            let lostEarnings = Math.round(dailyLastSalary * unemploymentDays);
+
+            let dailyNewSalary = newSalary / 365;
+            if (dailyNewSalary <= dailyLastSalary) {
+                document.getElementById("result").innerHTML = '<p style="color: red;">New salary must be greater than the last salary.</p>';
+                return;
+            }
+
+            let requiredDays = Math.ceil(lostEarnings / (dailyNewSalary - dailyLastSalary));
+            let finalDate = new Date(joinDate.getTime() + requiredDays * 24 * 60 * 60 * 1000);
+
+            function convertDaysToYMD(days) {
+                const start = new Date(2000, 0, 1);
+                const end = new Date(start);
+                end.setDate(start.getDate() + days);
+
+                let years = end.getFullYear() - start.getFullYear();
+                let months = end.getMonth() - start.getMonth();
+                let extraDays = end.getDate() - start.getDate();
+
+                if (extraDays < 0) {
+                    months -= 1;
+                    extraDays += new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+                }
+
+                if (months < 0) {
+                    years -= 1;
+                    months += 12;
+                }
+
+                return `${years} Years, ${months} Months, ${extraDays} Days`;
+            }
+
+            let formattedLeaveDate = leaveDate.toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+            let formattedJoinDate = joinDate.toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+            let formattedFinalDate = finalDate.toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+
+            let totalDaysIfStayed = Math.ceil((finalDate - leaveDate) / (1000 * 60 * 60 * 24));
+            let earningsIfStayed = Math.round(totalDaysIfStayed * dailyLastSalary).toLocaleString();
+            let earningsInNewJob = Math.round(requiredDays * dailyNewSalary).toLocaleString();
+
+            let ymdText = convertDaysToYMD(requiredDays);
+
+            document.getElementById("result").innerHTML = `
+                <div class="summary">
+                    <h3>Recovery Summary</h3>
+                    <p><strong># Days:</strong> ${requiredDays}</p>
+                    <p><strong>Time:</strong> ${ymdText}</p>
+                    <p><strong>Expected Recovery Date:</strong> ${formattedFinalDate}</p>
+                </div>
+                <div class="comparison">
+                    <div class="job-box laid-off">
+                        <h3>📋 Laid Off Period</h3>
+                        <p><strong>Days Laid Off:</strong> ${unemploymentDays}</p>
+                        <p><strong>Daily Amount:</strong> $${Math.round(dailyLastSalary).toLocaleString()}</p>
+                        <p><strong>Total Lost Earnings:</strong> $${lostEarnings.toLocaleString()}</p>
+                    </div>
+                    <div class="job-box old-job">
+                        <h3>📉 Old Job</h3>
+                        <p><strong>From:</strong> ${formattedLeaveDate}</p>
+                        <p><strong>To:</strong> ${formattedFinalDate}</p>
+                        <p><strong>Amount:</strong> $${earningsIfStayed}</p>
+                    </div>
+                    <div class="job-box new-job">
+                        <h3>📈 New Job</h3>
+                        <p><strong>From:</strong> ${formattedJoinDate}</p>
+                        <p><strong>To:</strong> ${formattedFinalDate}</p>
+                        <p><strong>Amount:</strong> $${earningsInNewJob}</p>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Range Analysis Calculation
+        document.getElementById("calculate-range").addEventListener("click", function () {
+            let leaveDate = new Date(document.getElementById("range-leave-date").value);
+            let joinDate = new Date(document.getElementById("range-join-date").value);
+            let lastSalary = parseFloat(document.getElementById("range-last-salary").value) || 111000;
+            let minSalary = parseFloat(document.getElementById("range-min-salary").value) || 120000;
+            let maxSalary = parseFloat(document.getElementById("range-max-salary").value) || 200000;
+
+            if (isNaN(lastSalary) || isNaN(minSalary) || isNaN(maxSalary) || leaveDate >= joinDate || minSalary >= maxSalary || minSalary <= lastSalary) {
+                document.getElementById("range-result").innerHTML = '<p style="color: red;">Please enter valid values! Min salary must be greater than last salary and less than max salary.</p>';
+                return;
+            }
+
+            let unemploymentDays = Math.round((joinDate - leaveDate) / (1000 * 60 * 60 * 24));
+            let dailyLastSalary = lastSalary / 365;
+            let lostEarnings = Math.round(dailyLastSalary * unemploymentDays);
+
+            function convertDaysToYMD(days) {
+                const start = new Date(2000, 0, 1);
+                const end = new Date(start);
+                end.setDate(start.getDate() + days);
+
+                let years = end.getFullYear() - start.getFullYear();
+                let months = end.getMonth() - start.getMonth();
+                let extraDays = end.getDate() - start.getDate();
+
+                if (extraDays < 0) {
+                    months -= 1;
+                    extraDays += new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+                }
+
+                if (months < 0) {
+                    years -= 1;
+                    months += 12;
+                }
+
+                return `${years}y ${months}m ${extraDays}d`;
+            }
+
+            let tableRows = '';
+            const increment = 5000; // Fixed $5k increment
+
+            // Generate rows for each $5k increment from min to max salary
+            for (let currentSalary = minSalary; currentSalary <= maxSalary; currentSalary += increment) {
+                let dailyNewSalary = currentSalary / 365;
+                let requiredDays = Math.ceil(lostEarnings / (dailyNewSalary - dailyLastSalary));
+                let totalAmount = Math.round(requiredDays * dailyNewSalary);
+                let coverTime = convertDaysToYMD(requiredDays);
+
+                tableRows += `
+                    <tr>
+                        <td>$${currentSalary.toLocaleString()}</td>
+                        <td>${coverTime}</td>
+                        <td>$${totalAmount.toLocaleString()}</td>
+                    </tr>
+                `;
+            }
+
+            // Calculate total number of steps
+            let totalSteps = Math.floor((maxSalary - minSalary) / increment) + 1;
+
+            document.getElementById("range-result").innerHTML = `
+                <div class="summary">
+                    <h3>📊 Range Analysis Summary</h3>
+                    <p><strong>Unemployment Period:</strong> ${unemploymentDays} days</p>
+                    <p><strong>Lost Earnings:</strong> $${lostEarnings.toLocaleString()}</p>
+                    <p><strong>Previous Daily Rate:</strong> $${Math.round(dailyLastSalary).toLocaleString()}</p>
+                    <p><strong>Salary Range:</strong> $${minSalary.toLocaleString()} - $${maxSalary.toLocaleString()} (${totalSteps} steps of $5k each)</p>
+                </div>
+                <table class="analysis-table">
+                    <thead>
+                        <tr>
+                            <th>💰 Salary</th>
+                            <th>⏱️ Cover Time</th>
+                            <th>💵 Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${tableRows}
+                    </tbody>
+                </table>
+            `;
+        });
+    </script>
 </body>
 </html>

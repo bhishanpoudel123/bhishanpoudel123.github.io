@@ -2,7 +2,7 @@ document.getElementById("calculate").addEventListener("click", function () {
 	let leaveDate = new Date(document.getElementById("leave-date").value);
 	let joinDate = new Date(document.getElementById("join-date").value);
 	let lastSalary = parseFloat(document.getElementById("last-salary").value) || 111000;
-	let newSalary = parseFloat(document.getElementById("new-salary").value) || 140000;
+	let newSalary = parseFloat(document.getElementById("new-salary").value) || 130000;
 
 	if (isNaN(lastSalary) || isNaN(newSalary) || leaveDate >= joinDate) {
 		document.getElementById("result").textContent = "Enter valid values!";
@@ -22,23 +22,44 @@ document.getElementById("calculate").addEventListener("click", function () {
 	let requiredDays = Math.ceil(lostEarnings / (dailyNewSalary - dailyLastSalary));
 	let finalDate = new Date(joinDate.getTime() + requiredDays * 24 * 60 * 60 * 1000);
 
-	// Adjust for proper date display
+	// Convert required days to Y/M/D
+	function convertDaysToYMD(days) {
+		const start = new Date(2000, 0, 1);
+		const end = new Date(start);
+		end.setDate(start.getDate() + days);
+
+		let years = end.getFullYear() - start.getFullYear();
+		let months = end.getMonth() - start.getMonth();
+		let extraDays = end.getDate() - start.getDate();
+
+		if (extraDays < 0) {
+			months -= 1;
+			extraDays += new Date(end.getFullYear(), end.getMonth(), 0).getDate(); // days in previous month
+		}
+
+		if (months < 0) {
+			years -= 1;
+			months += 12;
+		}
+
+		return `${years} Years, ${months} Months, ${extraDays} Days`;
+	}
+
 	let formattedLeaveDate = leaveDate.toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
 	let formattedJoinDate = joinDate.toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
 	let formattedFinalDate = finalDate.toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
 
-	// Earnings if stayed in old job
 	let totalDaysIfStayed = Math.ceil((finalDate - leaveDate) / (1000 * 60 * 60 * 24));
 	let earningsIfStayed = Math.round(totalDaysIfStayed * dailyLastSalary).toLocaleString();
-
-	// Earnings in new job
 	let earningsInNewJob = Math.round(requiredDays * dailyNewSalary).toLocaleString();
 
-	// Display results with improved formatting
+	let ymdText = convertDaysToYMD(requiredDays);
+
 	document.getElementById("result").innerHTML = `
         <div class="summary">
             <h2>Recovery Summary</h2>
             <p><strong># Days:</strong> ${requiredDays}</p>
+            <p><strong>Time:</strong> ${ymdText}</p>
             <p><strong>Expected Recovery Date:</strong> ${formattedFinalDate}</p>
         </div>
         <div class="comparison">
