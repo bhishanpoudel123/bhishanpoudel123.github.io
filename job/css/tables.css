@@ -1,0 +1,71 @@
+.salary-stack div {
+    margin: 2px 0;
+    line-height: 1.2;
+}
+
+.old-salary { color: #dc3545 !important; font-weight: 600; }
+.new-salary { color: #28a745 !important; font-weight: 600; }
+.difference-value { color: #007bff !important; font-weight: 600; }
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.analysis-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-table th {
+    background: #007bff;
+    color: white;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: bold;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    font-size: 12px;
+    min-width: 80px;
+}
+
+.analysis-table th:last-child {
+    border-right: none;
+}
+
+.analysis-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    text-align: center;
+    font-size: 11px;
+    min-width: 80px;
+    line-height: 1.3;
+}
+
+.analysis-table td:last-child {
+    border-right: none;
+}
+
+.analysis-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.analysis-table tr:hover {
+    background: #e9ecef;
+}
+
+@media (max-width: 768px) {
+    .analysis-table th,
+    .analysis-table td {
+        font-size: 10px;
+        padding: 8px 4px;
+        min-width: 60px;
+    }
+}
