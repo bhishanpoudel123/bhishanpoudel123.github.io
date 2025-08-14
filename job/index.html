@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Job Loss Recovery Calculator</title>
     <style>
         body {
@@ -159,6 +159,7 @@
             text-align: center;
             font-size: 11px;
             min-width: 80px;
+            line-height: 1.3;
         }
 
         .analysis-table td:last-child {
@@ -194,15 +195,19 @@
             border-radius: 8px;
         }
 
+        /* stacked salaries inside a single cell */
+        .salary-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            align-items: center;
+        }
+        .old-salary { color: #dc3545; font-weight: 600; }   /* red */
+        .new-salary { color: #28a745; font-weight: 600; }   /* green */
+
         @media (max-width: 768px) {
-            .comparison {
-                flex-direction: column;
-            }
-
-            .input-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .comparison { flex-direction: column; }
+            .input-grid { grid-template-columns: 1fr; }
             .analysis-table th,
             .analysis-table td {
                 font-size: 10px;
@@ -214,7 +219,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Job Loss Recovery Calculator</h1>
+        <h1>Enhanced Job Loss Recovery Calculator</h1>
 
         <!-- Section 1: Single Recovery Calculation -->
         <h2>📊 Single Recovery Analysis</h2>
@@ -307,14 +312,14 @@
     </div>
 
     <script>
-        // Single Recovery Calculation
+        // ---------- Single Recovery Calculation ----------
         document.getElementById("calculate").addEventListener("click", function () {
             let leaveDate = new Date(document.getElementById("leave-date").value);
             let joinDate = new Date(document.getElementById("join-date").value);
             let lastSalary = parseFloat(document.getElementById("last-salary").value) || 111000;
             let newSalary = parseFloat(document.getElementById("new-salary").value) || 130000;
             let oldAnnualIncrease = parseFloat(document.getElementById("old-annual-increase").value) || 3;
-            let newAnnualIncrease = parseFloat(document.getElementById("new-annual-increase").value) || 4;
+            let newAnnualIncrease = parseFloat(document.getElementById("new-annual-increase").value) || 0;
 
             if (isNaN(lastSalary) || isNaN(newSalary) || leaveDate >= joinDate) {
                 document.getElementById("result").innerHTML = '<p style="color: red;">Please enter valid values!</p>';
@@ -394,7 +399,7 @@
             `;
         });
 
-        // Range Analysis Calculation
+        // ---------- Range Analysis Calculation ----------
         document.getElementById("calculate-range").addEventListener("click", function () {
             let leaveDate = new Date(document.getElementById("range-leave-date").value);
             let joinDate = new Date(document.getElementById("range-join-date").value);
@@ -402,7 +407,7 @@
             let oldAnnualIncrease = parseFloat(document.getElementById("range-old-annual-increase").value) || 3;
             let minSalary = parseFloat(document.getElementById("range-min-salary").value) || 120000;
             let maxSalary = parseFloat(document.getElementById("range-max-salary").value) || 200000;
-            let newAnnualIncrease = parseFloat(document.getElementById("range-new-annual-increase").value) || 4;
+            let newAnnualIncrease = parseFloat(document.getElementById("range-new-annual-increase").value) || 0;
 
             if (isNaN(lastSalary) || isNaN(minSalary) || isNaN(maxSalary) || leaveDate >= joinDate || minSalary >= maxSalary || minSalary <= lastSalary) {
                 document.getElementById("range-result").innerHTML = '<p style="color: red;">Please enter valid values! Min salary must be greater than last salary and less than max salary.</p>';
@@ -443,43 +448,56 @@
             }
 
             let tableRows = '';
-            const increment = 5000; // Fixed $5k increment
+            const increment = 5000;
 
-            // Generate rows for each $5k increment from min to max salary
             for (let currentSalary = minSalary; currentSalary <= maxSalary; currentSalary += increment) {
-                let dailyNewSalary = currentSalary / 365;
-                let requiredDays = Math.ceil(lostEarnings / (dailyNewSalary - dailyLastSalary));
-                let totalAmount = Math.round(requiredDays * dailyNewSalary);
-                let coverTime = convertDaysToYMD(requiredDays);
+                const dailyNewSalary = currentSalary / 365;
+                const requiredDays = Math.ceil(lostEarnings / (dailyNewSalary - dailyLastSalary));
+                const totalAmount = Math.round(requiredDays * dailyNewSalary);
+                const coverTime = convertDaysToYMD(requiredDays);
 
-                // Calculate future salaries with compound growth for new job
                 let futureSalaries = '';
-                let projectedSalary = currentSalary;
+                let cumulativeOldTotal = 0;
+                let cumulativeNewTotal = 0;
+                let annualOld = lastSalary;
+                let annualNew = currentSalary;
+
                 for (let year = 1; year <= 10; year++) {
-                    projectedSalary = projectedSalary * (1 + newAnnualIncrease / 100);
-                    futureSalaries += `<td>${Math.round(projectedSalary).toLocaleString()}</td>`;
+                    annualOld = lastSalary * Math.pow(1 + oldAnnualIncrease / 100, year);
+                    annualNew = currentSalary * Math.pow(1 + newAnnualIncrease / 100, year);
+
+                    cumulativeOldTotal += annualOld;
+                    cumulativeNewTotal += annualNew;
+
+                    futureSalaries += `
+                        <td>
+                            <div class="salary-stack">
+                                <div class="old-salary">$${Math.round(cumulativeOldTotal).toLocaleString()}</div>
+                                <div class="new-salary">$${Math.round(cumulativeNewTotal).toLocaleString()}</div>
+                            </div>
+                        </td>
+                    `;
                 }
 
                 tableRows += `
                     <tr>
-                        <td>${currentSalary.toLocaleString()}</td>
+                        <td>$${currentSalary.toLocaleString()}</td>
                         <td>${coverTime}</td>
-                        <td>${totalAmount.toLocaleString()}</td>
+                        <td>$${totalAmount.toLocaleString()}</td>
                         ${futureSalaries}
                     </tr>
                 `;
             }
 
-            // Calculate total number of steps
-            let totalSteps = Math.floor((maxSalary - minSalary) / increment) + 1;
+            const totalSteps = Math.floor((maxSalary - minSalary) / increment) + 1;
 
             document.getElementById("range-result").innerHTML = `
                 <div class="summary">
                     <h3>📊 Range Analysis Summary</h3>
                     <p><strong>Unemployment Period:</strong> ${unemploymentDays} days</p>
-                    <p><strong>Lost Earnings:</strong> ${lostEarnings.toLocaleString()}</p>
-                    <p><strong>Previous Salary:</strong> ${lastSalary.toLocaleString()} (${oldAnnualIncrease}% annual increase)</p>
-                    <p><strong>Salary Range:</strong> ${minSalary.toLocaleString()} - ${maxSalary.toLocaleString()} (${totalSteps} steps of $5k each)</p>
+                    <p><strong>Lost Earnings:</strong> $${lostEarnings.toLocaleString()}</p>
+                    <p><strong>Previous Salary:</strong> $${lastSalary.toLocaleString()} (${oldAnnualIncrease}% annual increase)</p>
+                    <p><strong>Salary Range:</strong> $${minSalary.toLocaleString()} - $${maxSalary.toLocaleString()} (${totalSteps} steps of $5k each)</p>
                     <p><strong>New Job Annual Increase:</strong> ${newAnnualIncrease}%</p>
                 </div>
                 <div class="table-container">
