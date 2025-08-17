@@ -4,126 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Job Loss Recovery Calculator</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 1400px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-color: #f5f7fa;
             line-height: 1.6;
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            color: #333;
         }
 
         h1 {
-            color: #333;
+            color: #2c3e50;
             text-align: center;
             margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
         }
 
         h2 {
-            color: #444;
-            border-bottom: 2px solid #007bff;
+            color: #2c3e50;
+            margin-top: 30px;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 0;
         }
 
         label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
         }
 
         input {
             width: 100%;
             padding: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border: 2px solid #ddd;
             border-radius: 6px;
             font-size: 16px;
             box-sizing: border-box;
+            transition: border-color 0.3s;
         }
 
         input:focus {
-            border-color: #007bff;
+            border-color: #3498db;
             outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
         }
 
         button {
-            background-color: #007bff;
+            background-color: #3498db;
             color: white;
-            padding: 12px 24px;
+            padding: 14px 24px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: 600;
             width: 100%;
-            margin-bottom: 20px;
+            margin: 20px 0;
             transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #0056b3;
-        }
-
-        .summary {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .comparison {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .job-box {
-            flex: 1;
-            min-width: 250px;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: left;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .laid-off {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-        }
-
-        .old-job {
-            background: #ffcccb;
-            border-left: 4px solid #dc3545;
-        }
-
-        .new-job {
-            background: #d4edda;
-            border-left: 4px solid #28a745;
-        }
-
-        h3 {
-            margin-bottom: 15px;
-            text-align: center;
-            color: #333;
-        }
-
-        .section-divider {
-            height: 2px;
-            background: linear-gradient(to right, #007bff, #28a745);
-            margin: 40px 0;
-            border-radius: 1px;
+            background-color: #2980b9;
         }
 
         .input-grid {
@@ -133,513 +85,60 @@
             margin-bottom: 20px;
         }
 
-        .salary-stack div {
-            margin: 2px 0;
-            line-height: 1.2;
-        }
-
-        .old-salary { color: #dc3545 !important; font-weight: 600; }
-        .new-salary { color: #28a745 !important; font-weight: 600; }
-        .difference-value { color: #007bff !important; font-weight: 600; }
-
-        .error-message {
-            color: red;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ffcccc;
-            border-radius: 4px;
-            background-color: #fff0f0;
-        }
-
-        .table-container {
-            overflow-x: auto;
-            margin-top: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        .analysis-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .analysis-table th {
-            background: #007bff;
-            color: white;
-            padding: 12px 8px;
-            text-align: center;
-            font-weight: bold;
-            border-right: 1px solid rgba(255,255,255,0.2);
-            font-size: 12px;
-            min-width: 80px;
-        }
-
-        .analysis-table th:last-child {
-            border-right: none;
-        }
-
-        .analysis-table td {
-            padding: 10px 8px;
-            border-bottom: 1px solid #eee;
-            border-right: 1px solid #eee;
-            text-align: center;
-            font-size: 11px;
-            min-width: 80px;
-            line-height: 1.3;
-        }
-
-        .analysis-table td:last-child {
-            border-right: none;
-        }
-
-        .analysis-table tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-
-        .analysis-table tr:hover {
-            background: #e9ecef;
-        }
-
-        .debug-info {
-            background: #e7f3ff;
-            border: 1px solid #b3d9ff;
-            border-radius: 4px;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 12px;
-            color: #0056b3;
-        }
+        .old-salary { color: #e74c3c !important; font-weight: 600; }
+        .new-salary { color: #27ae60 !important; font-weight: 600; }
+        .difference-value { color: #3498db !important; font-weight: 600; }
 
         @media (max-width: 768px) {
-            .comparison { flex-direction: column; }
-            .input-grid { grid-template-columns: 1fr; }
-            .analysis-table th,
-            .analysis-table td {
-                font-size: 10px;
-                padding: 8px 4px;
-                min-width: 60px;
+            .input-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Enhanced Job Loss Recovery Calculator</h1>
+        <h1>Job Loss Recovery Calculator</h1>
+        
+        <div class="input-section">
+            <h2>Job Transition Details</h2>
+            <div class="input-grid">
+                <div>
+                    <label for="leave-date">Last Day at Previous Job:</label>
+                    <input type="date" id="leave-date" value="2024-11-14">
+                </div>
 
-        <!-- Section 1: Single Recovery Calculation -->
-        <h2>📊 Single Recovery Analysis</h2>
-        <p>Enter details about your previous and new job to calculate recovery time:</p>
+                <div>
+                    <label for="join-date">First Day at New Job:</label>
+                    <input type="date" id="join-date" value="2025-09-01">
+                </div>
 
-        <div class="input-grid">
-            <div>
-                <label for="leave-date">Last Leave Date:</label>
-                <input type="date" id="leave-date" value="2024-11-14">
+                <div>
+                    <label for="last-salary">Previous Job Salary ($ per year):</label>
+                    <input type="number" id="last-salary" value="111000" step="1000">
+                </div>
+
+                <div>
+                    <label for="new-salary">New Job Salary ($ per year):</label>
+                    <input type="number" id="new-salary" value="130000" step="1000">
+                </div>
+
+                <div>
+                    <label for="old-annual-increase">Previous Job Annual Increase (%):</label>
+                    <input type="number" id="old-annual-increase" value="3" step="0.1" min="0" max="20">
+                </div>
+
+                <div>
+                    <label for="new-annual-increase">New Job Annual Increase (%):</label>
+                    <input type="number" id="new-annual-increase" value="0" step="0.1" min="0" max="20">
+                </div>
             </div>
 
-            <div>
-                <label for="join-date">New Join Date:</label>
-                <input type="date" id="join-date" value="2025-09-01">
-            </div>
-
-            <div>
-                <label for="last-salary">Last Job Salary ($ per year):</label>
-                <input type="number" id="last-salary" value="111000" step="1000">
-            </div>
-
-            <div>
-                <label for="new-salary">New Job Salary ($ per year):</label>
-                <input type="number" id="new-salary" value="130000" step="1000">
-            </div>
-
-            <div>
-                <label for="old-annual-increase">Old Job Annual Salary Increase (%):</label>
-                <input type="number" id="old-annual-increase" value="3" step="0.1" min="0" max="20">
-            </div>
-
-            <div>
-                <label for="new-annual-increase">New Job Annual Salary Increase (%):</label>
-                <input type="number" id="new-annual-increase" value="0" step="0.1" min="0" max="20">
-            </div>
+            <button id="calculate">Calculate Recovery Time</button>
+            <div id="result"></div>
         </div>
-
-        <button id="calculate">Calculate Recovery Days</button>
-        <div id="result"></div>
     </div>
 
-    <div class="section-divider"></div>
-
-    <div class="container">
-        <!-- Section 2: Range Analysis -->
-        <h2>📈 Salary Range Analysis with 10-Year Projections</h2>
-        <p>Analyze recovery time across different salary ranges with future salary projections:</p>
-
-        <div class="input-grid">
-            <div>
-                <label for="range-leave-date">Last Leave Date:</label>
-                <input type="date" id="range-leave-date" value="2024-11-14">
-            </div>
-
-            <div>
-                <label for="range-join-date">New Join Date:</label>
-                <input type="date" id="range-join-date" value="2025-09-01">
-            </div>
-
-            <div>
-                <label for="range-last-salary">Last Job Salary ($ per year):</label>
-                <input type="number" id="range-last-salary" value="111000" step="1000">
-            </div>
-
-            <div>
-                <label for="range-old-annual-increase">Old Job Annual Salary Increase (%):</label>
-                <input type="number" id="range-old-annual-increase" value="3" step="0.1" min="0" max="20">
-            </div>
-
-            <div>
-                <label for="range-min-salary">New Job Salary Min ($ per year):</label>
-                <input type="number" id="range-min-salary" value="120000" step="5000">
-            </div>
-
-            <div>
-                <label for="range-max-salary">New Job Salary Max ($ per year):</label>
-                <input type="number" id="range-max-salary" value="200000" step="5000">
-            </div>
-
-            <div>
-                <label for="range-new-annual-increase">New Job Annual Salary Increase (%):</label>
-                <input type="number" id="range-new-annual-increase" value="0" step="0.1" min="0" max="20">
-            </div>
-        </div>
-
-        <button id="calculate-range">Generate Salary Range Analysis</button>
-        <div id="range-result"></div>
-    </div>
-
-    <script>
-        // Helper function to calculate days between dates
-        function daysBetween(startDate, endDate) {
-            const start = new Date(startDate);
-            const end = new Date(endDate);
-            const timeDiff = end.getTime() - start.getTime();
-            return Math.ceil(timeDiff / (1000 * 3600 * 24));
-        }
-
-        // Helper function to convert days to YMD format
-        function convertDaysToYMD(days) {
-            const years = Math.floor(days / 365);
-            const remainingDaysAfterYears = days % 365;
-            const months = Math.floor(remainingDaysAfterYears / 30);
-            const remainingDays = remainingDaysAfterYears % 30;
-            return `${years}y ${months}m ${remainingDays}d`;
-        }
-
-        // Calculate recovery time for given parameters
-        function calculateRecoveryTime(lostEarnings, newSalary, lastSalary, joinDate, oldAnnualIncrease, newAnnualIncrease) {
-            let cumulativeDifference = 0;
-            let daysCount = 0;
-            let currentDate = new Date(joinDate);
-            let currentOldSalary = lastSalary;
-            let currentNewSalary = newSalary;
-            
-            const maxDays = 3650; // 10 years safety limit
-            
-            while (cumulativeDifference < lostEarnings && daysCount < maxDays) {
-                // Calculate daily earnings difference
-                const dailyOldSalary = currentOldSalary / 365;
-                const dailyNewSalary = currentNewSalary / 365;
-                const dailyDifference = dailyNewSalary - dailyOldSalary;
-                
-                cumulativeDifference += dailyDifference;
-                daysCount++;
-                
-                // Move to next day
-                currentDate.setDate(currentDate.getDate() + 1);
-                
-                // Check for October 1st salary increases
-                if (currentDate.getMonth() === 9 && currentDate.getDate() === 1) {
-                    currentOldSalary *= (1 + oldAnnualIncrease / 100);
-                    currentNewSalary *= (1 + newAnnualIncrease / 100);
-                }
-            }
-            
-            return { daysCount, totalAmount: Math.round(cumulativeDifference) };
-        }
-
-        function calculateSingleRecovery() {
-            console.log("Calculate button clicked"); // Debug log
-            
-            try {
-                // Get input values
-                const leaveDate = new Date(document.getElementById("leave-date").value);
-                const joinDate = new Date(document.getElementById("join-date").value);
-                const lastSalary = parseFloat(document.getElementById("last-salary").value) || 0;
-                const newSalary = parseFloat(document.getElementById("new-salary").value) || 0;
-                const oldAnnualIncrease = parseFloat(document.getElementById("old-annual-increase").value) || 0;
-                const newAnnualIncrease = parseFloat(document.getElementById("new-annual-increase").value) || 0;
-
-                console.log("Input values:", { leaveDate, joinDate, lastSalary, newSalary }); // Debug log
-
-                // Validation
-                if (isNaN(leaveDate.getTime()) || isNaN(joinDate.getTime())) {
-                    throw new Error("Invalid dates provided");
-                }
-                if (lastSalary <= 0 || newSalary <= 0) {
-                    throw new Error("Salaries must be positive numbers");
-                }
-                if (leaveDate >= joinDate) {
-                    throw new Error("Join date must be after leave date");
-                }
-                if (newSalary <= lastSalary) {
-                    throw new Error("New salary must be higher than last salary");
-                }
-
-                // Calculate basic values
-                const unemploymentDays = daysBetween(leaveDate, joinDate);
-                const dailyLastSalary = lastSalary / 365;
-                const dailyNewSalary = newSalary / 365;
-                const dailyDifference = dailyNewSalary - dailyLastSalary;
-                const lostEarnings = Math.round(dailyLastSalary * unemploymentDays);
-
-                console.log("Calculated values:", { unemploymentDays, lostEarnings, dailyDifference }); // Debug log
-
-                // Calculate recovery time
-                const recovery = calculateRecoveryTime(lostEarnings, newSalary, lastSalary, joinDate, oldAnnualIncrease, newAnnualIncrease);
-                const coverTime = convertDaysToYMD(recovery.daysCount);
-
-                // Display results
-                document.getElementById("result").innerHTML = `
-                    <div class="summary">
-                        <h3>💼 Recovery Analysis Summary</h3>
-                        <div class="comparison">
-                            <div class="job-box laid-off">
-                                <h4>📉 Unemployment Period</h4>
-                                <p><strong>Duration:</strong> ${convertDaysToYMD(unemploymentDays)}</p>
-                                <p><strong>Lost Earnings:</strong> $${lostEarnings.toLocaleString()}</p>
-                                <p><strong>Daily Loss:</strong> $${dailyLastSalary.toFixed(2)}/day</p>
-                            </div>
-                            
-                            <div class="job-box old-job">
-                                <h4>🔴 Previous Job</h4>
-                                <p><strong>Salary:</strong> $${lastSalary.toLocaleString()}/year</p>
-                                <p><strong>Daily Rate:</strong> $${dailyLastSalary.toFixed(2)}/day</p>
-                                <p><strong>Annual Increase:</strong> ${oldAnnualIncrease}%</p>
-                            </div>
-                            
-                            <div class="job-box new-job">
-                                <h4>🟢 New Job</h4>
-                                <p><strong>Salary:</strong> $${newSalary.toLocaleString()}/year</p>
-                                <p><strong>Daily Rate:</strong> $${dailyNewSalary.toFixed(2)}/day</p>
-                                <p><strong>Daily Advantage:</strong> $${dailyDifference.toFixed(2)}/day</p>
-                                <p><strong>Annual Increase:</strong> ${newAnnualIncrease}%</p>
-                            </div>
-                        </div>
-                        
-                        <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-top: 20px; text-align: center;">
-                            <h4 style="color: #1976d2; margin-bottom: 10px;">🎯 Recovery Timeline</h4>
-                            <p style="font-size: 18px; margin: 5px 0;"><strong>Time to Break Even:</strong> ${coverTime}</p>
-                            <p style="font-size: 16px; margin: 5px 0;"><strong>Total Recovery Amount:</strong> $${recovery.totalAmount.toLocaleString()}</p>
-                            <p style="font-size: 14px; color: #666;">You'll recover your unemployment losses after earning this much in your new job</p>
-                        </div>
-                    </div>
-                `;
-
-                console.log("Results displayed successfully"); // Debug log
-
-            } catch (error) {
-                console.error("Calculation error:", error);
-                document.getElementById("result").innerHTML = `
-                    <div class="error-message">
-                        <strong>Error:</strong> ${error.message}
-                        <div class="debug-info">
-                            Please check your input values and try again.
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-        function calculateRangeAnalysis() {
-            console.log("Range calculate button clicked"); // Debug log
-            
-            try {
-                // Get input values
-                const leaveDate = new Date(document.getElementById("range-leave-date").value);
-                const joinDate = new Date(document.getElementById("range-join-date").value);
-                const lastSalary = parseFloat(document.getElementById("range-last-salary").value) || 0;
-                const oldAnnualIncrease = parseFloat(document.getElementById("range-old-annual-increase").value) || 0;
-                const minSalary = parseFloat(document.getElementById("range-min-salary").value) || 0;
-                const maxSalary = parseFloat(document.getElementById("range-max-salary").value) || 0;
-                const newAnnualIncrease = parseFloat(document.getElementById("range-new-annual-increase").value) || 0;
-
-                // Validation
-                if (isNaN(leaveDate.getTime()) || isNaN(joinDate.getTime())) {
-                    throw new Error("Invalid dates provided");
-                }
-                if (lastSalary <= 0 || minSalary <= 0 || maxSalary <= 0) {
-                    throw new Error("All salaries must be positive numbers");
-                }
-                if (leaveDate >= joinDate) {
-                    throw new Error("Join date must be after leave date");
-                }
-                if (minSalary >= maxSalary) {
-                    throw new Error("Max salary must be higher than min salary");
-                }
-                if (minSalary <= lastSalary) {
-                    throw new Error("Min salary must be higher than last salary");
-                }
-
-                const unemploymentDays = daysBetween(leaveDate, joinDate);
-                const dailyLastSalary = lastSalary / 365;
-                const lostEarnings = Math.round(dailyLastSalary * unemploymentDays);
-
-                // Generate table header
-                const baseYear = joinDate.getFullYear();
-                let yearHeaders = '';
-                for (let i = 0; i < 10; i++) {
-                    yearHeaders += `<th>${baseYear + i}</th>`;
-                }
-
-                // Generate table rows
-                let tableRows = '';
-                const increment = 5000;
-                const maxRows = Math.floor((maxSalary - minSalary) / increment) + 1;
-
-                for (let i = 0; i < maxRows && i < 50; i++) { // Limit to 50 rows for performance
-                    const currentSalary = minSalary + (i * increment);
-                    if (currentSalary > maxSalary) break;
-
-                    // Calculate recovery for this salary
-                    const recovery = calculateRecoveryTime(lostEarnings, currentSalary, lastSalary, joinDate, oldAnnualIncrease, newAnnualIncrease);
-                    const coverTime = convertDaysToYMD(recovery.daysCount);
-                    const salaryDifference = currentSalary - lastSalary;
-
-                    // Generate future salary projections (simplified for performance)
-                    let futureSalaries = '';
-                    for (let yearOffset = 0; yearOffset < 10; yearOffset++) {
-                        const oldYearSalary = lastSalary * Math.pow(1 + oldAnnualIncrease / 100, yearOffset);
-                        const newYearSalary = currentSalary * Math.pow(1 + newAnnualIncrease / 100, yearOffset);
-                        const difference = Math.round(newYearSalary - oldYearSalary);
-
-                        futureSalaries += `
-                            <td>
-                                <div class="salary-stack">
-                                    <div class="old-salary">${Math.round(oldYearSalary).toLocaleString()}</div>
-                                    <div class="new-salary">${Math.round(newYearSalary).toLocaleString()}</div>
-                                    <div class="difference-value">${difference.toLocaleString()}</div>
-                                </div>
-                            </td>
-                        `;
-                    }
-
-                    tableRows += `
-                        <tr>
-                            <td>
-                                <div class="salary-stack">
-                                    <div class="old-salary">${lastSalary.toLocaleString()}</div>
-                                    <div class="new-salary">${currentSalary.toLocaleString()}</div>
-                                    <div class="difference-value">${salaryDifference.toLocaleString()}</div>
-                                </div>
-                            </td>
-                            <td>${coverTime}</td>
-                            <td>${recovery.totalAmount.toLocaleString()}</td>
-                            ${futureSalaries}
-                        </tr>
-                    `;
-                }
-
-                // Display results
-                document.getElementById("range-result").innerHTML = `
-                    <div class="summary">
-                        <h3>📊 Range Analysis Summary</h3>
-                        <p><strong>Unemployment Period:</strong> ${convertDaysToYMD(unemploymentDays)} (${unemploymentDays} days)</p>
-                        <p><strong>Lost Earnings:</strong> $${lostEarnings.toLocaleString()}</p>
-                        <p><strong>Old Job:</strong> $${lastSalary.toLocaleString()}/year with ${oldAnnualIncrease}% annual increases</p>
-                        <p><strong>New Job Range:</strong> $${minSalary.toLocaleString()} - $${maxSalary.toLocaleString()}/year with ${newAnnualIncrease}% annual increases</p>
-                        <p style="font-size: 12px; color: #666; margin-top: 15px;">
-                            Each year column shows: <span class="old-salary">Old Job Earnings</span> | 
-                            <span class="new-salary">New Job Earnings</span> | 
-                            <span class="difference-value">Difference</span>
-                        </p>
-                    </div>
-                    <div class="table-container">
-                        <table class="analysis-table">
-                            <thead>
-                                <tr>
-                                    <th>💰 Base Salary</th>
-                                    <th>⏱️ Cover Time</th>
-                                    <th>💸 Recovery Amount</th>
-                                    ${yearHeaders}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${tableRows}
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-
-                console.log("Range analysis completed successfully"); // Debug log
-
-            } catch (error) {
-                console.error("Range calculation error:", error);
-                document.getElementById("range-result").innerHTML = `
-                    <div class="error-message">
-                        <strong>Error:</strong> ${error.message}
-                        <div class="debug-info">
-                            Please check your input values and try again.
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-        // Initialize event listeners when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("DOM loaded, setting up event listeners"); // Debug log
-            
-            // Add event listeners
-            const calculateBtn = document.getElementById("calculate");
-            const calculateRangeBtn = document.getElementById("calculate-range");
-            
-            if (calculateBtn) {
-                calculateBtn.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    console.log("Single calculation triggered");
-                    calculateSingleRecovery();
-                });
-                console.log("Single calculate button listener added");
-            }
-            
-            if (calculateRangeBtn) {
-                calculateRangeBtn.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    console.log("Range calculation triggered");
-                    calculateRangeAnalysis();
-                });
-                console.log("Range calculate button listener added");
-            }
-        });
-
-        // Backup event listener setup in case DOMContentLoaded already fired
-        window.addEventListener('load', function() {
-            console.log("Window loaded - backup event listener setup");
-            if (!document.getElementById("calculate").onclick) {
-                document.getElementById("calculate").onclick = function(e) {
-                    e.preventDefault();
-                    calculateSingleRecovery();
-                };
-            }
-            if (!document.getElementById("calculate-range").onclick) {
-                document.getElementById("calculate-range").onclick = function(e) {
-                    e.preventDefault();
-                    calculateRangeAnalysis();
-                };
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
