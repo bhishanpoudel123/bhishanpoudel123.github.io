@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #dc2626;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 500;
+            background: #fee2e2;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .purchases-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 50px;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .input-group input {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .remove-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.2s ease;
+        }
+
+        .remove-btn:hover {
+            background: #dc2626;
+        }
+
+        .add-btn {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .add-btn:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+        }
+
+        .stock-info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-group label {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .info-group input {
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .info-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+
+        .results {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f0fdf4;
+            border-radius: 12px;
+            border: 2px solid #10b981;
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .result-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .result-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .result-label {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .result-value {
+            color: #333;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .result-value.highlight {
+            color: #10b981;
+        }
+
+        .info-box {
+            background: #e0e7ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .info-box h3 {
+            color: #4c51bf;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            color: #4c51bf;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-box strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .input-group {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .remove-btn {
+                width: 100%;
+                height: 36px;
+            }
+
+            .stock-info-section {
+                grid-template-columns: 1fr;
+            }
+
+            .result-value {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .purchases-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📈 Stock Buy Calculator For Loss Status</h1>
+        <p class="subtitle">⚠️ This calculator is useful only when your stock buying average is ABOVE the current stock price and you want to buy more shares to lower the average cost (averaging down strategy)</p>
+
+        <div class="section">
+            <h2>Your Current Purchases</h2>
+            <div class="purchases-section">
+                <div id="inputs">
+                    <div class="input-group">
+                        <input type="text" placeholder="Broker" class="vendor" value="Robinhood">
+                        <input type="number" placeholder="Shares" class="shares" step="1" value="3500">
+                        <input type="number" placeholder="Price/Share ($)" class="price" step="0.01" value="5.72">
+                        <button class="remove-btn" onclick="removeGroup(this)">×</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Broker" class="vendor" value="Webull">
+                        <input type="number" placeholder="Shares" class="shares" step="1" value="3100">
+                        <input type="number" placeholder="Price/Share ($)" class="price" step="0.01" value="6.60">
+                        <button class="remove-btn" onclick="removeGroup(this)">×</button>
+                    </div>
+                </div>
+                <button class="add-btn" onclick="addPurchase()">+ Add Another Purchase</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Stock Information</h2>
+            <div class="stock-info-section">
+                <div class="info-group">
+                    <label for="current-price">Current Stock Price ($)</label>
+                    <input type="number" id="current-price" placeholder="0.00" step="0.01" value="4.0">
+                </div>
+                <div class="info-group">
+                    <label for="target-price">Target Average Price ($)</label>
+                    <input type="number" id="target-price" placeholder="0.00" step="0.01" value="6.0">
+                </div>
+            </div>
+        </div>
+
+        <button class="calculate-btn" onclick="calculate()">Calculate Required Shares</button>
+
+        <div class="results" id="results">
+            <div class="result-item">
+                <div class="result-label">Shares to Buy</div>
+                <div class="result-value highlight" id="requiredShares">0</div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Total Cost for New Purchase</div>
+                <div class="result-value" id="totalCost">$0</div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Current Average Price</div>
+                <div class="result-value" id="avgPrice">$0.00</div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Price Increase Needed for Break-Even</div>
+                <div class="result-value" id="percentIncrease">0%</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>📝 How This Calculator Works</h3>
+            <p><strong>Purpose:</strong> This calculator helps you determine how many additional shares you need to buy at the current price to achieve your desired average cost per share.</p>
+            
+            <p><strong>Example Scenario:</strong> You bought 3,500 shares at $5.72 and 3,100 shares at $6.60 (your average is around $6.14). The stock dropped to $4.00, and you want to lower your average to $6.00. The calculator tells you how many shares to buy at $4.00 to reach that $6.00 average.</p>
+            
+            <p><strong>Key Metrics Explained:</strong></p>
+            <p>• <strong>Shares to Buy:</strong> The number of additional shares needed at the current price to reach your target average</p>
+            <p>• <strong>Total Cost:</strong> How much money you'll need to invest for this new purchase</p>
+            <p>• <strong>Current Average Price:</strong> Your existing average cost per share before buying more</p>
+            <p>• <strong>Price Increase Needed:</strong> The percentage the stock must rise from current price to reach your current average (break-even point)</p>
+            
+            <p><strong>💡 Pro Tip:</strong> This strategy is called "averaging down" when buying at a lower price to reduce your average cost. Only use this strategy if you believe in the stock's long-term potential!</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-calculate on page load with default values
+        window.onload = function() {
+            calculate();
+        };
+
+        function addPurchase() {
+            const inputContainer = document.getElementById('inputs');
+            const newGroup = document.createElement('div');
+            newGroup.className = 'input-group';
+            newGroup.innerHTML = `
+                <input type="text" placeholder="Broker" class="vendor">
+                <input type="number" placeholder="Shares" class="shares" step="1">
+                <input type="number" placeholder="Price/Share ($)" class="price" step="0.01">
+                <button class="remove-btn" onclick="removeGroup(this)">×</button>
+            `;
+            inputContainer.appendChild(newGroup);
+        }
+
+        function removeGroup(button) {
+            const inputContainer = document.getElementById('inputs');
+            const groups = inputContainer.querySelectorAll('.input-group');
+            
+            // Don't allow removing if it's the last group
+            if (groups.length > 1) {
+                button.closest('.input-group').remove();
+            } else {
+                alert('You must have at least one purchase entry!');
+            }
+        }
+
+        function calculate() {
+            const currentPrice = parseFloat(document.getElementById('current-price').value);
+            const targetPrice = parseFloat(document.getElementById('target-price').value);
+            
+            let totalShares = 0;
+            let totalCost = 0;
+
+            // Collect all purchases
+            document.querySelectorAll('.input-group').forEach(group => {
+                const shares = parseFloat(group.querySelector('.shares').value) || 0;
+                const price = parseFloat(group.querySelector('.price').value) || 0;
+                totalShares += shares;
+                totalCost += shares * price;
+            });
+
+            // Validation
+            if (totalShares === 0) {
+                alert('Please enter at least one purchase with shares!');
+                return;
+            }
+
+            if (isNaN(currentPrice) || currentPrice <= 0) {
+                alert('Please enter a valid current stock price!');
+                return;
+            }
+
+            if (isNaN(targetPrice) || targetPrice <= 0) {
+                alert('Please enter a valid target average price!');
+                return;
+            }
+
+            if (currentPrice >= targetPrice) {
+                alert('Current price must be lower than target price to average down!');
+                return;
+            }
+
+            // Calculate current average
+            const avgCost = totalCost / totalShares;
+
+            // Calculate required shares
+            // Formula: (totalCost + requiredShares * currentPrice) / (totalShares + requiredShares) = targetPrice
+            // Solving for requiredShares: requiredShares = (totalCost - targetPrice * totalShares) / (targetPrice - currentPrice)
+            const requiredShares = Math.ceil((totalCost - (targetPrice * totalShares)) / (targetPrice - currentPrice));
+            const requiredAmount = requiredShares * currentPrice;
+
+            // Calculate percent increase needed for break-even
+            const percentIncreaseNeeded = ((avgCost - currentPrice) / currentPrice) * 100;
+
+            // Display results
+            document.getElementById('requiredShares').textContent = requiredShares.toLocaleString();
+            document.getElementById('totalCost').textContent = '$' + requiredAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            document.getElementById('avgPrice').textContent = '$' + avgCost.toFixed(2);
+            document.getElementById('percentIncrease').textContent = percentIncreaseNeeded.toFixed(2) + '%';
+
+            // Show results
+            document.getElementById('results').classList.add('show');
+
+            // Scroll to results on mobile
+            if (window.innerWidth <= 768) {
+                document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Allow Enter key to trigger calculation
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculate();
+            }
+        });
+    </script>
+</body>
+
+</html>
