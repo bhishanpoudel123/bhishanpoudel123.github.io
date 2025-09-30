@@ -6,25 +6,31 @@ const fixedCities = [
         name: "Boulder, CO",
         coords: [40.0150, -105.2705],
         description: "Important place",
-        short_description: "Sanima House" // Short description for distance labels
+        short_description: "Sanima House"
     },
     {
         name: "Minneapolis, MN",
         coords: [44.9778, -93.2650],
-        description: "Mama Ghar",
-        short_description: "Mama Ghar" // Short description for distance labels
+        description: "Subodh Mama",
+        short_description: "Subodh Mama"
+    },
+    {
+        name: "Manassas, VA",
+        coords: [38.7513, -77.4707],
+        description: "Naresh Mama",
+        short_description: "Naresh Mama"
     },
     {
         name: "Mt Prospect, IL",
         coords: [42.0664, -87.9373],
         description: "Manisha's place",
-        short_description: "Manisha" // Short description for distance labels
+        short_description: "Manisha"
     },
     {
         name: "High Point, NC",
         coords: [35.9557, -80.0053],
         description: "Sonisha's place",
-        short_description: "Sonisha" // Short description for distance labels
+        short_description: "Sonisha"
     }
 ];
 
