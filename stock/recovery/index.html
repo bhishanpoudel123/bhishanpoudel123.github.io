@@ -4,7 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Recovery Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Container with responsive width */
+        .container {
+            max-width: 500px;
+            width: 90%;
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+        
+        /* Input groups - stack vertically on mobile */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        
+        .input-group label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px; /* Prevents zoom on iOS */
+        }
+        
+        /* Buttons */
+        button {
+            padding: 12px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        #add {
+            background: #007bff;
+            color: white;
+        }
+        
+        #calculate {
+            background: #28a745;
+            color: white;
+        }
+        
+        #calculate:hover {
+            background: #218838;
+        }
+        
+        .remove {
+            background: #dc3545;
+            color: white;
+            padding: 8px;
+            width: 100%;
+        }
+        
+        /* Result section */
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        #result span {
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        /* Responsive adjustments for larger screens */
+        @media (min-width: 768px) {
+            .container {
+                margin: 50px auto;
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .input-group {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .input-group label {
+                width: 45%;
+                margin-bottom: 0;
+            }
+            
+            .input-group input {
+                width: 50%;
+            }
+            
+            button {
+                width: auto;
+                padding: 10px 20px;
+            }
+        }
+        
+        /* Additional mobile-specific improvements */
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            input {
+                padding: 10px;
+            }
+        }
+        
+        /* Focus states for accessibility */
+        input:focus, button:focus {
+            outline: 2px solid #007bff;
+            outline-offset: 2px;
+        }
+        
+        /* Error styling */
+        .error {
+            color: #dc3545;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -28,9 +204,37 @@
 
         <button id="calculate">🔍 Calculate Required Price</button>
 
-        <h2 id="result">📢 Required price: <span> </span></h2>
+        <h2 id="result">📢 Required price: <span></span></h2>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("calculate").addEventListener("click", function() {
+            let realisedLoss = parseFloat(document.getElementById("realised-loss").value);
+            let currentPrice = parseFloat(document.getElementById("current-price").value);
+            let numShares = parseFloat(document.getElementById("num-shares").value);
+
+            // Validate inputs
+            if (isNaN(realisedLoss) || isNaN(currentPrice) || isNaN(numShares) || numShares <= 0 || currentPrice <= 0) {
+                document.getElementById("result").innerHTML = "⚠️ Please enter valid values!";
+                return;
+            }
+
+            // Calculate required price to recover losses
+            let requiredPrice = (realisedLoss / numShares) + currentPrice;
+
+            // Display result with formatted number
+            document.getElementById("result").innerHTML = `📢 Required price: <strong>$${requiredPrice.toFixed(2)}</strong>`;
+        });
+
+        // Trigger calculation on Enter key press in any input
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("calculate").click();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
