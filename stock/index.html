@@ -1,38 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="master-styles.css">
+    <title>Stock Recovery Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        header {
+            background: linear-gradient(to right, #2c3e50, #4a6491);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .input-with-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .calculate-btn {
+            background: linear-gradient(to right, #27ae60, #2ecc71);
+            color: white;
+            border: none;
+            padding: 16px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        .result-container {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .result-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .result-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #27ae60;
+            margin: 10px 0;
+        }
+
+        .explanation {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .mobile-optimized {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+                margin-top: 10px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            input {
+                padding: 14px 14px 14px 45px;
+            }
+            
+            .mobile-optimized {
+                display: block;
+            }
+            
+            .result-value {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            .content {
+                padding: 15px 10px;
+            }
+            
+            input {
+                padding: 12px 12px 12px 40px;
+                font-size: 0.95rem;
+            }
+            
+            .calculate-btn {
+                padding: 14px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="wrapper">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h2>📊 Stock Calculator</h2>
-            <ul>
-                <li><a href="#" onclick="loadCalculator('./buy/index.html')">📈 Buy Calculator</a></li>
-                <li><a href="#" onclick="loadCalculator('./recovery/index.html')">📉 Recovery Calculator</a></li>
-                <li><a href="#">➕ More Features Coming...</a></li>
-            </ul>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <h1>Welcome to Stock Calculator</h1>
-            <p>
-                This tool helps you perform various stock-related calculations.
-                Use the left menu to navigate between different calculators.
-            </p>
-            <iframe id="calculator-frame" src="" frameborder="0"></iframe>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Stock Recovery Calculator</h1>
+            <p class="subtitle">Calculate the price needed to recover your investment losses</p>
+        </header>
+        
+        <div class="content">
+            <div class="input-group">
+                <label for="realised-loss">
+                    <i class="fas fa-money-bill-wave"></i> Realised Loss ($)
+                </label>
+                <div class="input-with-icon">
+                    <i class="fas fa-dollar-sign input-icon"></i>
+                    <input type="number" id="realised-loss" placeholder="Enter total realised loss" value="41000">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="current-price">
+                    <i class="fas fa-tag"></i> Current Stock Price ($)
+                </label>
+                <div class="input-with-icon">
+                    <i class="fas fa-dollar-sign input-icon"></i>
+                    <input type="number" id="current-price" placeholder="Enter current stock price" value="7.55" step="0.01">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="num-shares">
+                    <i class="fas fa-chart-bar"></i> Number of Shares
+                </label>
+                <div class="input-with-icon">
+                    <i class="fas fa-boxes input-icon"></i>
+                    <input type="number" id="num-shares" placeholder="Enter number of shares you hold" value="3500">
+                </div>
+            </div>
+            
+            <button class="calculate-btn" id="calculate">
+                <i class="fas fa-calculator"></i> Calculate Required Price
+            </button>
+            
+            <div class="mobile-optimized">
+                <i class="fas fa-mobile-alt"></i> Optimized for mobile devices
+            </div>
+            
+            <div class="result-container" id="result">
+                <div class="result-title">Required Stock Price to Break Even:</div>
+                <div class="result-value" id="result-value">$0.00</div>
+                <div class="explanation">
+                    This is the price your stock needs to reach to recover your losses of $<span id="loss-amount">0</span>.
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <div class="info-title">
+                    <i class="fas fa-info-circle"></i> How It Works
+                </div>
+                <p>The calculator determines the price your stock needs to reach to recover your losses based on your current holdings.</p>
+                <p>Formula: <strong>Required Price = (Realised Loss / Number of Shares) + Current Price</strong></p>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calculateBtn = document.getElementById('calculate');
+            const resultContainer = document.getElementById('result');
+            const resultValue = document.getElementById('result-value');
+            const lossAmount = document.getElementById('loss-amount');
+            
+            // Set default values
+            document.getElementById('realised-loss').value = 41000;
+            document.getElementById('current-price').value = 7.55;
+            document.getElementById('num-shares').value = 3500;
+            
+            // Calculate on button click
+            calculateBtn.addEventListener('click', calculateRequiredPrice);
+            
+            // Calculate on Enter key in any input
+            document.querySelectorAll('input').forEach(input => {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        calculateRequiredPrice();
+                    }
+                });
+            });
+            
+            // Calculate function
+            function calculateRequiredPrice() {
+                const realisedLoss = parseFloat(document.getElementById('realised-loss').value);
+                const currentPrice = parseFloat(document.getElementById('current-price').value);
+                const numShares = parseFloat(document.getElementById('num-shares').value);
+                
+                // Validate inputs
+                if (isNaN(realisedLoss) || isNaN(currentPrice) || isNaN(numShares) || 
+                    numShares <= 0 || currentPrice <= 0) {
+                    resultValue.textContent = 'Invalid Input';
+                    resultContainer.style.display = 'block';
+                    return;
+                }
+                
+                // Calculate required price
+                const requiredPrice = (realisedLoss / numShares) + currentPrice;
+                
+                // Display result
+                resultValue.textContent = `$${requiredPrice.toFixed(2)}`;
+                lossAmount.textContent = realisedLoss.toLocaleString();
+                resultContainer.style.display = 'block';
+                
+                // Add animation effect
+                resultContainer.style.animation = 'none';
+                setTimeout(() => {
+                    resultContainer.style.animation = 'fadeIn 0.5s ease';
+                }, 10);
+            }
+            
+            // Calculate on page load with default values
+            calculateRequiredPrice();
+        });
+    </script>
 </body>
-
 </html>
