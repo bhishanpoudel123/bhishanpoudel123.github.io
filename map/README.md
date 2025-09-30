@@ -105,6 +105,3 @@ All distance popups are formatted as **City Name (Short Description)**, providin
 ## 📄 License
 
 This project is open-source and available under the MIT License.
-
-```
-```
