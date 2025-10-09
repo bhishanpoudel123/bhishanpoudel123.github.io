@@ -20,11 +20,11 @@ function convertDaysToYMD(days) {
     const start = new Date(2000, 0, 1); // Base date
     const end = new Date(start);
     end.setDate(start.getDate() + days);
-    
+
     let years = end.getFullYear() - start.getFullYear();
     let months = end.getMonth() - start.getMonth();
     let daysDiff = end.getDate() - start.getDate();
-    
+
     // Handle negative days
     if (daysDiff < 0) {
         months -= 1;
@@ -32,13 +32,13 @@ function convertDaysToYMD(days) {
         const lastDay = new Date(end.getFullYear(), end.getMonth(), 0).getDate();
         daysDiff += lastDay;
     }
-    
+
     // Handle negative months
     if (months < 0) {
         years -= 1;
         months += 12;
     }
-    
+
     return `${years}y ${months}m ${daysDiff}d`;
 }
 
@@ -48,38 +48,38 @@ function calculateRecoveryTime(lostEarnings, newSalary, lastSalary, joinDate, ol
     let currentDate = new Date(joinDate);
     let currentOldSalary = lastSalary;
     let currentNewSalary = newSalary;
-    
+
     const maxDays = 3650; // 10 years safety limit
-    
+
     while (cumulativeDifference < lostEarnings && daysCount < maxDays) {
         // Calculate daily earnings with exact decimal matching Python
         const dailyOldSalary = currentOldSalary / 365;
         const dailyNewSalary = currentNewSalary / 365;
         const dailyDifference = dailyNewSalary - dailyOldSalary;
-        
+
         // Use exact decimal arithmetic like Python
         cumulativeDifference = parseFloat((cumulativeDifference + dailyDifference).toFixed(2));
         daysCount++;
-        
+
         // Move to next day
         currentDate.setDate(currentDate.getDate() + 1);
-        
+
         // Check for October 1st salary increases (month is 0-based in JS)
         if (currentDate.getMonth() === 9 && currentDate.getDate() === 1) {
             currentOldSalary = parseFloat((currentOldSalary * (1 + oldAnnualIncrease / 100)).toFixed(2));
             currentNewSalary = parseFloat((currentNewSalary * (1 + newAnnualIncrease / 100)).toFixed(2));
         }
     }
-    
+
     // Calculate final values with same rounding as Python
     const dailyOld = currentOldSalary / 365;
     const dailyNew = currentNewSalary / 365;
     const cumOld = parseFloat((dailyOld * daysCount).toFixed(2));
     const cumNew = parseFloat((dailyNew * daysCount).toFixed(2));
     const totalAmount = Math.round(cumNew - cumOld);
-    
-    return { 
-        daysCount, 
+
+    return {
+        daysCount,
         totalAmount,
         dailyOld,
         dailyNew,
@@ -92,32 +92,32 @@ function calculateRecoveryTime(lostEarnings, newSalary, lastSalary, joinDate, ol
 function formatBreakevenInfo(recoveryInfo, leaveDate, joinDate) {
     const today = new Date();
     const breakevenDate = recoveryInfo.breakevenDate;
-    
+
     // Calculate time differences matching Python's relativedelta
     function getTimeDiff(start, end) {
         let years = end.getFullYear() - start.getFullYear();
         let months = end.getMonth() - start.getMonth();
         let days = end.getDate() - start.getDate();
-        
+
         if (days < 0) {
             months -= 1;
             // Get days in previous month
             const prevMonthLastDay = new Date(end.getFullYear(), end.getMonth(), 0).getDate();
             days += prevMonthLastDay;
         }
-        
+
         if (months < 0) {
             years -= 1;
             months += 12;
         }
-        
+
         return `${years}y ${months}m ${days}d`;
     }
-    
+
     const fromLeave = getTimeDiff(new Date(leaveDate), breakevenDate);
     const fromJoin = getTimeDiff(new Date(joinDate), breakevenDate);
     const fromToday = getTimeDiff(today, breakevenDate);
-    
+
     return `
         <div class="breakeven-details">
             <h4>📅 Breakeven Date Analysis</h4>
@@ -126,7 +126,7 @@ function formatBreakevenInfo(recoveryInfo, leaveDate, joinDate) {
             <p><strong>Cumulative Old Job Earnings:</strong> $${parseFloat(recoveryInfo.cumOld).toLocaleString()}</p>
             <p><strong>Cumulative New Job Earnings:</strong> $${parseFloat(recoveryInfo.cumNew).toLocaleString()}</p>
             <p><strong>Gap (New - Old):</strong> $${recoveryInfo.totalAmount.toLocaleString()}</p>
-            
+
             <div class="salary-details">
                 <div>
                     <h5>Old Job</h5>
@@ -139,7 +139,7 @@ function formatBreakevenInfo(recoveryInfo, leaveDate, joinDate) {
                     <p>Annual: $${Math.round(recoveryInfo.dailyNew * 365).toLocaleString()}</p>
                 </div>
             </div>
-            
+
             <div class="time-details">
                 <p><strong>Time from leave date:</strong> ${fromLeave}</p>
                 <p><strong>Time from join date:</strong> ${fromJoin}</p>
@@ -180,14 +180,14 @@ function calculateSingleRecovery() {
 
         // Calculate recovery time with exact Python matching
         const recovery = calculateRecoveryTime(
-            lostEarnings, 
-            newSalary, 
-            lastSalary, 
-            joinDate, 
-            oldAnnualIncrease, 
+            lostEarnings,
+            newSalary,
+            lastSalary,
+            joinDate,
+            oldAnnualIncrease,
             newAnnualIncrease
         );
-        
+
         const coverTime = convertDaysToYMD(recovery.daysCount);
         const breakevenInfo = formatBreakevenInfo(recovery, leaveDate, joinDate);
 
@@ -195,14 +195,14 @@ function calculateSingleRecovery() {
         document.getElementById("result").innerHTML = `
             <div class="summary">
                 <h2>📊 Job Loss Recovery Analysis</h2>
-                
+
                 <div class="section unemployment-section">
                     <h3>📉 Unemployment Period</h3>
                     <p><strong>Duration:</strong> ${convertDaysToYMD(unemploymentDays)} (${unemploymentDays} days)</p>
                     <p><strong>Lost Earnings:</strong> $${lostEarnings.toLocaleString()}</p>
                     <p><strong>Daily Loss:</strong> $${dailyLastSalary.toFixed(2)}</p>
                 </div>
-                
+
                 <div class="comparison">
                     <div class="job-box old-job">
                         <h3>🔴 Previous Job</h3>
@@ -210,7 +210,7 @@ function calculateSingleRecovery() {
                         <p><strong>Daily Rate:</strong> $${dailyLastSalary.toFixed(2)}</p>
                         <p><strong>Annual Increase:</strong> ${oldAnnualIncrease}%</p>
                     </div>
-                    
+
                     <div class="job-box new-job">
                         <h3>🟢 New Job</h3>
                         <p><strong>Salary:</strong> $${newSalary.toLocaleString()}/year</p>
@@ -219,7 +219,7 @@ function calculateSingleRecovery() {
                         <p><strong>Annual Increase:</strong> ${newAnnualIncrease}%</p>
                     </div>
                 </div>
-                
+
                 <div class="recovery-section">
                     <h3>🎯 Recovery Timeline</h3>
                     <p><strong>Time to Break Even:</strong> ${coverTime}</p>
