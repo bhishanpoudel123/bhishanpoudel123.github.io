@@ -31,6 +31,15 @@
       </ol>
     </nav>
 
+    <section id="important">
+      <h2>3. Important</h2>
+      <pre><code>
+# map
+ser = pd.Series(['abc_001'])
+ser2 = ser.str.extract(r'(\d+)$').astype(int).map(lambda x: f"new_{x:02d}")
+</code></pre>
+    </section>
+
     <section id="setup">
       <h2>1. Setup</h2>
       <pre><code>pip install pandas
