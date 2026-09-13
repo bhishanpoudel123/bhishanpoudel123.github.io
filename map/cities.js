@@ -5,9 +5,9 @@ const locations = [
     {
         name: "New York City, NY",
         coords: [40.7128, -74.0060],
-        type: "home",
-        description: "Home Base",
-        short_description: "Home" // Short description for distance list
+        type: "city",
+        description: "City",
+        short_description: "City" // Short description for distance list
     },
     {
         name: "Houston, TX",
@@ -19,9 +19,9 @@ const locations = [
     {
         name: "Rutherford, NJ",
         coords: [40.8265, -74.1068],
-        type: "interview",
-        description: "MetLife",
-        short_description: "MetLife" // Short description for distance list
+        type: "home",
+        description: "Home Base",
+        short_description: "Home" // Short description for distance list
     }
 ];
 
