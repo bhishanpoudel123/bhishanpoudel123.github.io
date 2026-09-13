@@ -1,0 +1,15 @@
+<section>
+  <h1>Useful Notes and Caveats</h1>
+
+  <h4>Useful Notes</h4>
+  <ol>
+    <li>Pandas needs <code>openpyxl</code>, <code>pytables</code>, <code>pyarrow</code> to read/write files.</li>
+  </ol>
+
+  <pre><code class="language-python">
+# Pandas dt vs isocalendar
+# isocalendar always starts from Monday, not the actual start.
+pd.Timestamp('2022-01-01').year                # 2022
+pd.Timestamp('2022-01-01').isocalendar().year  # 2021 (iso calendar starts from Monday)
+  </code></pre>
+</section>
