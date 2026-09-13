@@ -71,15 +71,16 @@
   </nav>
 
   <main>
+    <!-- Blog posts (one div per topic folder, display order = top to bottom) -->
+    <div id="pandas-useful"></div>
+    <div id="dec-2021"></div>
+    <div id="jan-2022"></div>
+
     <!-- Reusable snippets -->
     <div id="databricks-snippets"></div>
     <div id="python-snippets"></div>
     <div id="notes-caveats"></div>
     <div id="troubleshoots"></div>
-
-    <!-- Blog posts (one div per topic folder) -->
-    <div id="dec-2021"></div>
-    <div id="jan-2022"></div>
   </main>
 
   <!-- ===================== Scripts ================================ -->
@@ -114,12 +115,16 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+      // Blog posts (order here doesn't affect display order — the <div> order in <main> does)
+      includeHTML('topics/pandas-useful/pandas-useful.html',             'pandas-useful');
+      includeHTML('topics/dec-2021/dec-2021.html',                       'dec-2021');
+      includeHTML('topics/jan-2022/jan-2022.html',                       'jan-2022');
+
+      // Reusable snippets
       includeHTML('topics/databricks-snippets/databricks-snippets.html', 'databricks-snippets');
       includeHTML('topics/python-snippets/python-snippets.html',         'python-snippets');
       includeHTML('topics/notes-caveats/notes-caveats.html',             'notes-caveats');
       includeHTML('topics/troubleshoots/troubleshoots.html',             'troubleshoots');
-      includeHTML('topics/dec-2021/dec-2021.html',                       'dec-2021');
-      includeHTML('topics/jan-2022/jan-2022.html',                       'jan-2022');
     });
   </script>
 </body>

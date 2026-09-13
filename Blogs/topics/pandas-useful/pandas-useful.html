@@ -1,0 +1,14 @@
+</br>
+<section>
+  <h1>Pandas Useful Snippets</h1>
+
+  <pre><code class="language-python">
+import pandas as pd
+
+ser = pd.Series(['hello_001', 'hello_002', 'hello_003'])
+ser2 = ser.str.extract(r'hello_(\d+)').astype(int).map(lambda x: f'hi_{x:02d}')
+# output:   hi_01
+  </code></pre>
+
+</section>
+</br>
