@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Pandas | Learn</title>
+  <link rel="stylesheet" href="../assets/learn.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">&larr; All learning topics</a>
+    <h1>Learn Pandas</h1>
+    <p>A practical cheatsheet for working with DataFrames.</p>
+  </header>
+
+  <main>
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#loading">Loading data</a></li>
+        <li><a href="#inspect">Inspecting a DataFrame</a></li>
+        <li><a href="#select">Selecting rows and columns</a></li>
+        <li><a href="#filter">Filtering</a></li>
+        <li><a href="#missing">Missing values</a></li>
+        <li><a href="#groupby">GroupBy &amp; aggregation</a></li>
+        <li><a href="#merge">Merge &amp; join</a></li>
+        <li><a href="#dates">Dates &amp; time</a></li>
+        <li><a href="#save">Saving data</a></li>
+        <li><a href="#cheatsheet">Quick cheatsheet</a></li>
+      </ol>
+    </nav>
+
+    <section id="setup">
+      <h2>1. Setup</h2>
+      <pre><code>pip install pandas
+# or with conda
+conda install pandas</code></pre>
+      <pre><code>import pandas as pd
+import numpy as np
+
+print(pd.__version__)</code></pre>
+    </section>
+
+    <section id="loading">
+      <h2>2. Loading data</h2>
+      <pre><code>df = pd.read_csv("data.csv")
+df = pd.read_excel("data.xlsx", sheet_name="Sheet1")
+df = pd.read_json("data.json")
+df = pd.read_parquet("data.parquet")
+df = pd.read_sql("SELECT * FROM users", conn)
+
+# Useful read_csv options
+df = pd.read_csv(
+    "data.csv",
+    sep=",",
+    header=0,
+    usecols=["id", "name", "score"],
+    dtype={"id": "int64"},
+    parse_dates=["created_at"],
+    na_values=["", "NA", "N/A"],
+)</code></pre>
+    </section>
+
+    <section id="inspect">
+      <h2>3. Inspecting a DataFrame</h2>
+      <pre><code>df.head()          # first 5 rows
+df.tail(3)         # last 3 rows
+df.sample(5)       # random 5 rows
+df.shape           # (rows, cols)
+df.columns         # column names
+df.dtypes          # column types
+df.info()          # summary: types + non-null counts
+df.describe()      # numeric summary stats
+df.isna().sum()    # count missing per column
+df["col"].value_counts()   # frequency of each value</code></pre>
+    </section>
+
+    <section id="select">
+      <h2>4. Selecting rows and columns</h2>
+      <pre><code># Column (Series)
+df["name"]
+df[["name", "score"]]      # multiple columns → DataFrame
+
+# By position (iloc)
+df.iloc[0]                 # first row
+df.iloc[0:5, 0:3]          # first 5 rows, first 3 cols
+df.iloc[:, -1]             # last column
+
+# By label (loc)
+df.loc[10]                 # row with index 10
+df.loc[10, "name"]         # single cell
+df.loc[10:20, ["name", "score"]]
+
+# Reset / set index
+df.reset_index(drop=True, inplace=True)
+df.set_index("id", inplace=True)</code></pre>
+    </section>
+
+    <section id="filter">
+      <h2>5. Filtering</h2>
+      <pre><code>df[df["score"] &gt; 80]
+df[(df["score"] &gt; 80) &amp; (df["gender"] == "F")]
+df[df["city"].isin(["NY", "LA", "SF"])]
+df[df["name"].str.contains("smith", case=False, na=False)]
+df[df["score"].between(70, 90)]
+
+# Query syntax (cleaner for complex filters)
+df.query("score &gt; 80 and gender == 'F'")</code></pre>
+    </section>
+
+    <section id="missing">
+      <h2>6. Missing values</h2>
+      <pre><code>df.isna().sum()                # count per column
+df.dropna()                    # drop rows with any NaN
+df.dropna(subset=["score"])    # drop rows where score is NaN
+df.fillna(0)                   # replace NaN with 0
+df["score"].fillna(df["score"].mean(), inplace=True)
+df["city"].fillna("Unknown", inplace=True)
+
+# Forward / backward fill (good for time series)
+df["price"].ffill(inplace=True)
+df["price"].bfill(inplace=True)</code></pre>
+    </section>
+
+    <section id="groupby">
+      <h2>7. GroupBy &amp; aggregation</h2>
+      <pre><code>df.groupby("city")["score"].mean()
+df.groupby("city")["score"].agg(["mean", "median", "count"])
+df.groupby(["city", "gender"])["score"].sum()
+
+# Multiple aggregations with named output
+df.groupby("city").agg(
+    avg_score=("score", "mean"),
+    max_score=("score", "max"),
+    n=("score", "size"),
+).reset_index()
+
+# Pivot table
+pd.pivot_table(df, index="city", columns="gender",
+               values="score", aggfunc="mean")</code></pre>
+    </section>
+
+    <section id="merge">
+      <h2>8. Merge &amp; join</h2>
+      <pre><code># Inner join on a common column
+pd.merge(orders, customers, on="customer_id", how="inner")
+
+# Different column names
+pd.merge(orders, customers,
+         left_on="cust_id", right_on="id", how="left")
+
+# Concatenate rows
+pd.concat([df1, df2], ignore_index=True)
+
+# Concatenate columns
+pd.concat([df1, df2], axis=1)</code></pre>
+    </section>
+
+    <section id="dates">
+      <h2>9. Dates &amp; time</h2>
+      <pre><code>df["date"] = pd.to_datetime(df["date"])
+df["year"]  = df["date"].dt.year
+df["month"] = df["date"].dt.month
+df["day"]   = df["date"].dt.day
+df["dow"]   = df["date"].dt.day_name()
+
+# Filter by date range
+df[df["date"] &gt;= "2024-01-01"]
+
+# Resample time series (e.g., monthly mean)
+df.set_index("date").resample("M")["value"].mean()</code></pre>
+    </section>
+
+    <section id="save">
+      <h2>10. Saving data</h2>
+      <pre><code>df.to_csv("out.csv", index=False)
+df.to_excel("out.xlsx", index=False)
+df.to_json("out.json", orient="records")
+df.to_parquet("out.parquet", index=False)</code></pre>
+    </section>
+
+    <section id="cheatsheet">
+      <h2>11. Quick cheatsheet</h2>
+      <table>
+        <thead>
+          <tr><th>Task</th><th>Code</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>First rows</td><td><code>df.head()</code></td></tr>
+          <tr><td>Info &amp; types</td><td><code>df.info()</code></td></tr>
+          <tr><td>Summary stats</td><td><code>df.describe()</code></td></tr>
+          <tr><td>Select column</td><td><code>df["col"]</code></td></tr>
+          <tr><td>Filter rows</td><td><code>df[df["col"] &gt; 0]</code></td></tr>
+          <tr><td>Sort</td><td><code>df.sort_values("col", ascending=False)</code></td></tr>
+          <tr><td>Group mean</td><td><code>df.groupby("k")["v"].mean()</code></td></tr>
+          <tr><td>Missing per col</td><td><code>df.isna().sum()</code></td></tr>
+          <tr><td>Drop NaN</td><td><code>df.dropna()</code></td></tr>
+          <tr><td>Fill NaN</td><td><code>df.fillna(0)</code></td></tr>
+          <tr><td>Rename columns</td><td><code>df.rename(columns={"a":"b"})</code></td></tr>
+          <tr><td>Apply function</td><td><code>df["c"].apply(lambda x: x*2)</code></td></tr>
+          <tr><td>Unique values</td><td><code>df["c"].unique()</code></td></tr>
+          <tr><td>Value counts</td><td><code>df["c"].value_counts()</code></td></tr>
+          <tr><td>Pivot table</td><td><code>pd.pivot_table(df, index="a", values="b")</code></td></tr>
+          <tr><td>Save CSV</td><td><code>df.to_csv("out.csv", index=False)</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Further reading</h2>
+      <ul>
+        <li><a href="https://pandas.pydata.org/docs/user_guide/index.html" target="_blank">Official Pandas User Guide</a></li>
+        <li><a href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf" target="_blank">Official Pandas Cheat Sheet (PDF)</a></li>
+        <li><a href="https://pandas.pydata.org/docs/reference/index.html" target="_blank">Pandas API Reference</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <a href="index.html">&larr; Back to Learn</a>
+  </footer>
+</body>
+</html>
